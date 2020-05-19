@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.axis--x path, .axis--y path {
+  display: none;
+}
+
+html {
+  background: #fcfbf3;
+}
+
+
+
+#title {
+  font-family: Garamond;
+  font-size: 25px;
+  letter-spacing: 0.25em;
+  margin-left: 40px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+#legend {
+  font-family: Archivo Narrow;
+  font-size: 15px;
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  margin-left: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  
+  /*left margin is inducing horizontal scrolling!*/
+  /*margin-left: 60px;*/
+  margin-bottom: 25px;
+}
+
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+
+#chart {
+  width: 100%;
+  height: 82%;
+  margin-left: 10px;
+  position: absolute;
+}
+
+svg {
+  letter-spacing: 0.1em;
+}
+            
+</style>
+
+<head>
+  <title>A CENTURY OF AMERICAN FOOD</title>
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Karla|Strait" rel="stylesheet">
+</head>
+
+<body>
+<div id="title" style="height: 50px; ">A <span id="timeholder"><span id="timeperiod">CENTURY</span></span> OF AMERICAN <span id="category">FOOD</span></div>
+<div id="chart"></div>
+<div id="legend"></div>
+</body>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+var eventType = "D"
+var eventTitle = "Sample Title"
+var eventDesc = "Sample Description"
+var backcolor = "#fcfbf3";
+var xAxis, yAxis, food, foods, legend;
+var legendValues = "foodgroups"; 
+var legMin, legMax;
+
+var svg = d3.select("#chart").append("svg");
+
+
+
+var detail = false;
+var eventdetail = false;
+var zoomed = false;
+
+var margin = {top: 20, right: 80, bottom: 80, left: 80}
+    width = parseInt(d3.select("#chart").style("width")) - margin.left - margin.right;
+    height = parseInt(d3.select("#chart").style("height"))  - margin.top - margin.bottom;
+    chartWrapper = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    
+var x = d3.scaleLinear().range([0, width]),
+    y = d3.scaleLinear().range([height, 0]),
+    z = d3.scaleOrdinal(d3.schemeCategory10);
+
+// path generator for line chart
+var line = d3.line()
+    .curve(d3.curveBasis)
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.percent); });
+    
+var area = d3.area()
+    .curve(d3.curveBasis)
+    .x(function(d) { return x(d.date); })
+    .y0(height)
+    .y1(function(d) { return y(d.percent); });
+    
+d3.queue()
+.defer(d3.csv, "cal_food.csv", fixType)
+.defer(d3.csv, "histevents.csv")
+.await(function(error, data, eventdata) {
+    if (error) throw error;
+    else {
+        initialize(data, eventdata);
+    }
+});
+
+
+
+
+//d3.csv("cal_food.csv", fixType, initialize);
+
+var colors = {
+  meats: "#F36E4B",
+  dairy: "#C8B384",
+  fruits: "#F69431",
+  vegetables: "#C6C752",
+  fats: "#95BAC6",
+  sugars: "#F9B5B2",
+  grains: "#EACC48",
+  eggs: "#B0CC9F",
+  nuts: "#A2A18F"
+}
+
+
+var categories = {
+    foodgroups: ["Total Meat", "Total Fats", "Total Vegetables", "Total Dairy", "Total Fruits", "Grains", "Sugars and Sweeteners", "Nuts and Legumes"],
+    meats: ["Total Meat", "Red Meat", "Poultry", "Fish"],
+    dairy: ["Total Dairy", "Whole Milk", "Lowfat Milk", "Cheese", "Other Dairy"],
+    fruits: ["Total Fruits", "Citrus Fruits", "Non-Citrus Fruits"],
+    vegetables: ["Total Vegetables", "White Potato", "Green Leafy Vegetables", "Tomatoes", "Other Vegetables"],
+    fats: ["Total Fats", "Butter", "Margarine", "Shortening", "Lard and Tallow", "Vegetable Oils"],
+    sugars: ["Sugars and Sweeteners"],
+    grains: ["Grains"],
+    eggs: ["Eggs"],
+    nuts: ["Nuts and Legumes"],
+    // none: ["Grains", "Sugars and Sweeteners", "Nuts and Legumes"]
+}
+
+// given an object of color values creates an array of scaled colors for each value 
+function colorScale (input) {
+  for(var key in input) {
+    // takes position in category list and maps between 0 and 1
+    var normalize = d3.scaleLinear().domain([0, categories[key].length - 1]).range([0, 1])
+    
+    var controler = d3.interpolateHslLong(input[key], "black");
+    // takes 0 to 1 mapped position and maps between color and black
+    var interpol = d3.interpolateHslLong(input[key], controler(0.6));
+    // console.log(interpol(normalize(2)));
+    
+    var allColors = [];
+    
+    for (var i = 0; i < categories[key].length; i++) {
+      allColors.push(interpol(normalize(i)));
+      // console.log(d3.rgb(interpol(normalize(i))).toString())
+    }
+
+    input[key] = allColors;
+    
+  }
+}
+
+// make colors for each category an array of scaled colors
+colorScale(colors);
+
+// outputs array of all foodgroups that contain input
+function classify (input) {
+  var output = [];
+  Object.keys(categories).map(function(group) {
+    if (categories[group].includes(input))
+      output.push(group);
+  })
+  return output;
+}
+
+
+
+function initialize (data, eventdata) {
+  
+
+  // restructure data
+  foods = data.columns.slice(1).map(function(id) {
+      // get food category for each id
+      var cat = classify(id)
+      return {
+        id: id,
+        // color: (classify(id) === undefined || classify(id).length == 0) ? "black" : colors[classify(id)[classify(id).length - 1]],
+        color: (cat === undefined || cat.length == 0) ? "black" : colors[cat[cat.length - 1]][categories[cat[cat.length - 1]].indexOf(id)],
+        values: data.map(function(d) {
+          return {date: d.Year, percent: d[id]}
+        }),
+        legvalues: categories[cat[cat.length - 1]]
+      };
+  });
+  
+  console.log(data)
+  
+  console.log(foods);
+  
+  console.log(foods.filter(function(d) { return d.id == "Total Meat"})[0].color)
+  
+
+  foods = foods.filter(function(d) { return d.id != "Diabetes Incidence"})
+
+
+  // initialize scales
+  x.domain(d3.extent(data, function(d) { return d.Year; }));
+
+  y.domain([
+    //d3.min(foods, function(c) { return d3.min(c.values, function(d) { return d.percent; }); }),
+    0, 
+    d3.max(foods, function(c) { return d3.max(c.values, function(d) { return d.percent + 1; }); })
+  ]);
+
+  z.domain(foods.map(function(c) { return c.id; }));
+  
+  legMin = x(1909);
+  legMax = x(2010);
+
+  // intialize axes
+  xAxis = d3.axisBottom(x);
+  yAxis = d3.axisLeft(y);
+  
+  // bottom axis
+  chartWrapper.append("g")
+      .classed("axis axis--x", true)
+      .attr("transform", "translate(0," + height + ")")
+      .style("font", "14px Archivo Narrow")
+      .call(xAxis)
+      .append("text")
+        // .attr("x", width/2)
+        .attr("x", -15)
+        .attr("y", 70)
+        .attr("fill", "#000")
+        .text("Year")
+
+  // left axis
+  chartWrapper.append("g")
+      .classed("axis axis--y", true)
+      .style("font", "14px Archivo Narrow")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      // .attr("x", -height/2)
+      .attr("x", -height - 40)
+      .attr("y", -75)
+      .attr("dy", "0.71em")
+      .attr("fill", "#000")
+      .attr("text-anchor", "start")
+      .text("Percent of Total Calories")
+      .on("mouseover", function() {
+        d3.select(this)
+          .text("Percent of Total Calories (per Capita per Day)")
+      })
+      .on("mouseout", function() {
+        d3.select(this)
+          .text("Percent of Total Calories")
+      })
+
+  food = chartWrapper.selectAll(".food")
+    .data(foods)
+    .enter().append("g")
+      .attr("class", function(d){ return classify(d.id).join(" ") })
+      .classed("food", true)
+      .style("display", "none")
+      
+  d3.selectAll(".foodgroups") 
+    .style("display", "inline");
+  d3.selectAll(".none")
+    .style("display", "inline");
+    
+    var events = chartWrapper.selectAll(".event")
+    .data(eventdata)
+    .enter().append("g")
+      .attr("class", "event")
+      
+  events.append("text")
+      .attr("x", function(d) { return x(d.Year) + 3 })
+      .attr("y", y(d3.max(y.domain())))
+      .attr("class", "eventletter")
+      .attr("opacity", 0.4)
+      .attr("id", function(d) { return d.Id })
+      .style("font", "15px Archivo Narrow")
+      .text(function(d) { return d.Type })
+      
+      .on("mouseover", function(d) {
+        if (!eventdetail) {
+          d3.select(this)
+            //.transition().duration(50)          
+            .style("font-size", "20px")
+            d3.selectAll("#" + d.Id)
+              .attr("display", "inline")
+            d3.selectAll("#" + d.Id + ":not(.eventtext)")
+              .style("font-weight", "bold")
+              .attr("opacity", 0.5)
+              .attr("stroke-width", 2)
+        }
+      })
+      
+  
+      .on("mouseout", function(d) {
+        d3.select(this)
+          .transition().duration(50)
+          .style("font-size", "15px")
+        d3.selectAll(".eventtext")
+          .attr("display", "none");
+        d3.selectAll("#" + d.Id + ":not(.eventtext)")
+            .style("font-weight", "normal")
+            .attr("opacity", 0.4)
+            .attr("stroke-width", 1)
+      })
+      
+      .on("mouseup", function(d) {
+        eventTitle = d.Name;
+        eventDesc = d.Summary;
+        eventImage = d.Image;
+        eventType = d.Type;
+        if (eventType == "G") {
+          eventdetail = true;
+          eventDisp.html("<img style = 'display: block; height: 100%; margin-left: auto; margin-right: auto; outline: 4px solid #3D342E;' src='" + eventImage + "'>")
+          d3.selectAll(".eventpane")
+          .attr("display", "inline")
+          // eventDisp.html("<h3 style='font-family: Garamond; letter-spacing: 0.15em; font-weight: normal; font-size; 20px;' >" + eventTitle.toUpperCase() + "</h3> <img style = 'display: inline; height: 95%; float: right; margin-left: 100px; outline: 5px solid #3D342E;' src='" + eventImage + "'>")
+          // eventDisp.html("<h3 style='font-family: Garamond; letter-spacing: 0.15em; font-weight: normal; font-size; 20px;' >" + eventTitle.toUpperCase() + "</h3> <p><img style='float: right; height: '" + (height + margin.top + margin.bottom) + "px;' src='" + eventImage + "'>" + eventDesc + "</p>")
+        }
+        // else {
+        //   console.log(eventType);
+        //   eventDisp.html("<h3 style='font-family: Garamond; letter-spacing: 0.15em; font-weight: normal; font-size; 20px;' >" + eventTitle.toUpperCase() + "</h3> <p style='font-size: 20px' >" + eventDesc + "</p>")
+        // }
+          
+        })
+      
+  events.append("line")
+    .attr("class", "eventline")
+    .attr("x1", function(d) { return x(d.Year) })
+    .attr("x2", function(d) { return x(d.Year) })
+    .attr("y1", y(d3.min(y.domain())) - 10)
+    .attr("y2", y(d3.max(y.domain())) - 10)
+    .attr("id", function(d) { return d.Id })
+    .attr("opacity", 0.4)
+    .style("stroke-dasharray", ("3,3"))
+    .attr("stroke-width", 1)
+    .attr("stroke", "black")
+    
+    // .on("mouseover", function(d) {
+    //   if (!eventdetail) {
+    //     d3.selectAll("#" + d.Id)
+    //       .attr("display", "inline")
+    //     d3.selectAll("#" + d.Id + ":not(.eventtext)")
+    //       .style("font-weight", "bold")
+    //       .attr("opacity", 0.5)
+    //       .attr("stroke-width", 2)
+    //   }
+    // })
+
+    // .on("mouseout", function(d) {
+    //   d3.selectAll(".eventtext")
+    //     .attr("display", "none");
+    //   d3.selectAll("#" + d.Id + ":not(.eventtext)")
+    //       .style("font-weight", "normal")
+    //       .attr("opacity", 0.4)
+    //       .attr("stroke-width", 1)
+    // })
+    
+    // .on("mousedown", function(d) {
+    //   eventdetail = true;
+    //   d3.selectAll(".eventpane")  
+    //     .attr("display", "inline")
+    // })
+    
+    
+    events.append("foreignObject")
+      .attr("x", function(d) { 
+        if (d.Year > 1980) {
+          return x(d.Year) - 410
+        }
+        else {
+          return x(d.Year) + 5
+        }
+      })
+      // .attr("y", y(d3.max(y.domain())))
+      .attr("y", 20)
+      .attr("width", 400)
+      .attr("height", 500)
+      //.style("background", "lightgray")
+      .style("margin-top", 0)
+      .style("padding-left", 10)
+      .attr("class", "eventtext")
+      .attr("id", function(d) { return d.Id })
+      .style("font", "16px Archivo Narrow")
+      .style("text-align", function(d) {
+        if (d.Year > 1980) {
+          return "right"
+        }
+        else {
+          return "left"
+        }
+      })
+      .attr("display", "none")
+      .html(function(d) { return "<h3 style='font-family: Garamond; font-weight: normal; font-size: 20px; letter-spacing: 0.22em;'>" + d.Name.toUpperCase() + "</h3> <p style='font-family: Karla; letter-spacing: 0em; '>" + d.Summary + "</p>"})
+    
+
+  updateLegend();
+
+  svg
+    .on("mousedown", function() {
+      // move from detail to overall view
+      if (detail && !eventdetail) {
+        detail = false;
+        d3.selectAll(".food")
+          .style("display", "none")
+        d3.selectAll(".foodgroups")
+          .style("display", "inline")
+        backcolor = "#fcfbf3"
+        d3.select("html")
+          .style("background", backcolor)
+        d3.selectAll(".area")
+          .style("display", "none")
+        d3.select("#category").remove()
+        d3.select("#title")
+          .append("text")
+          .attr("id", "category")
+          .text("FOOD")
+          
+        legendValues = "foodgroups"
+        updateLegend();
+          
+        // x.domain(d3.extent(data, function(d) { return d.Year; }));
+  
+        y.domain([
+          //d3.min(foods, function(c) { return d3.min(c.values, function(d) { return d.percent; }); }),
+          0, 
+          d3.max(foods, function(c) { return d3.max(c.values, function(d) { return d.percent + 1; }); })
+        ]);
+        render();
+      }
+      if (eventdetail) {
+        eventdetail = false;
+        d3.selectAll(".eventpane")
+          .attr("display", "none")
+      }
+    })
+    
+    .on("dblclick", function() { 
+      if (!detail && !eventdetail && zoomed) {
+        console.log(zoomed)
+        zoomed = false;
+        x.domain(d3.extent(data, function(d) { return d.Year; }))
+        d3.select("#timeperiod").remove()
+        d3.select("#timeholder")
+          .append("text")
+          .attr("id", "timeperiod")
+          .text("CENTURY")
+        render();
+      }
+      
+      else if (!detail && !eventdetail && !zoomed) {
+        console.log(zoomed);
+        zoomed = true;
+        var mousepos = Math.floor(x.invert(d3.mouse(this)[0] - margin.left))
+        if (mousepos >= 2000) {
+          x.domain([2000, 2010])
+        }
+        else if (mousepos <= 1919) {
+          x.domain([1909, 1919])
+        }
+        else {
+          x.domain([mousepos - 5, mousepos + 5])
+        }
+        d3.select("#timeperiod").remove()
+        d3.select("#timeholder")
+          .append("text")
+          .attr("id", "timeperiod")
+          .text("DECADE")
+        render();
+      }
+    })
+
+  // fill area beneath lines
+  food.append("path")
+  .attr("class", "area")
+  .attr("id", function(d) { return d.id.replace(/\s+/g, '') })
+  .attr("d", function(d) { return area(d.values) })
+  .style("display", "none")
+  .style("opacity", 0.2)
+  .style("fill", function(d) { return d.color })
+  .style("pointer-events", "none");
+
+
+  // draw lines for each food
+  food.append("path")
+      .classed("line", true)
+      .attr("id", function(d) { return d.id.replace(/\s+/g, '') })
+      .attr("d", function(d) { return line(d.values); })
+      .style("stroke", function(d) { return d.color })
+      .on("mouseover", function(d) {
+        if (!detail) {
+          var toDisplay = d3.select(this.parentNode).attr("class").split(" ")[1]
+          console.log(toDisplay);
+          if (toDisplay != "food") {
+            d3.selectAll(".foodgroups:not(." + toDisplay + ")")
+              .style("opacity", 0.25)
+            d3.selectAll("." + toDisplay + ":not(.foodgroups)")
+              .style("display", "inline")
+              .style("opacity", 0.7)
+              .classed("temp", true)
+          }
+          if (d3.select(this.parentNode).attr("class").includes("foodgroups"))
+            d3.select(this)
+            .style("stroke-width", 3);
+        }
+        else {
+          d3.selectAll("#" + d.id.replace(/\s+/g, ''))
+            .style("display", "inline");
+        }
+        d3.selectAll("#" + d.id.replace(/\s+/g, ''))
+        .style("stroke-width", 3)
+        .style("text-decoration", "underline")
+        
+        // console.log(d3.selectAll(".button").filter(function(c) { return c.value == d.id; }))
+
+          
+      })
+      
+      .on("mouseout", function(d) {
+        d3.selectAll(".foodgroups")
+          .style("opacity", 1)
+        d3.select(this)
+          .style("stroke-width", 1.5);
+        d3.selectAll(".temp")
+          .style("display", "none")
+        d3.selectAll("#" + d.id.replace(/\s+/g, ''))
+          .style("text-decoration", "none")
+          d3.selectAll(".area")
+            .style("display", "none")
+        
+        
+      })
+      
+      .on("mouseup", function(d) {
+        if (!detail) {
+          detail = true;
+          var toDisplay = d3.select(this.parentNode).attr("class").split(" ")[1]
+          legendValues = toDisplay
+          updateLegend();
+          
+          var lastClass = d3.select(this.parentNode).attr("class").split(" ")
+          lastClass = lastClass[lastClass.length - 1]
+          var fromScale = d3.min(d3.selectAll("." + toDisplay).data().map(function(d) { return d3.min(d.values, function(c) { return c.percent })}))
+          var toScale = d3.max(d3.select(this.parentNode).data()[0].values.map(function(entry) { return entry.percent }))
+          console.log(d3.min(d3.selectAll("." + toDisplay).data().map(function(d) { return d3.min(d.values, function(c) { return c.percent })})))
+          console.log(toScale);
+          
+          d3.selectAll(".food")
+            .style("display", "none");
+          if (toDisplay != lastClass) {
+            d3.selectAll("." + toDisplay)
+              .style("display", "inline")
+              .style("opacity", 1)
+          }
+          d3.selectAll(".temp")
+              .classed("temp", false)
+          y.domain([fromScale, toScale])
+          backcolor = d3.color(d.color)
+          backcolor.opacity = 0.15
+          d3.select("html")
+            .style("background", backcolor)
+          render();
+          // d3.selectAll(".area")
+          //   .style("display", "inline");
+          d3.select("#category").remove()
+          d3.select("#title").append("text")
+            .text(toDisplay.toUpperCase())
+            .attr("id", "category")
+            .style("color", d.color)
+      }
+      })
+
+
+  
+    // show x and y values of mouse position on axes
+    svg.on("mousemove", function(d) { 
+      // console.log(this);
+      //d3.select("chartWrapper")
+      // console.log(Math.floor(x.invert(d3.mouse(this)[0] - 50)))
+      // console.log(y.invert(d3.mouse(this)[1] - 20).toFixed(2))
+      var xval = Math.floor(x.invert(d3.mouse(this)[0] - margin.left))
+      var yval = y.invert(d3.mouse(this)[1] - margin.top).toFixed(2)
+      var col = d3.select("html").style("background-color")
+      d3.selectAll(".mousetext")
+        .style("display", "none");
+      if (yval >= y.domain()[0] && yval <= y.domain()[1]) {
+        d3.select(this).append("text")
+          .attr("class", "mousetext")
+          .attr("y", d3.mouse(this)[1])
+          .attr("x", 50)
+          //.attr("fill", "#000")
+          .style("font", "14px Archivo Narrow")
+          .style("alignment-baseline", "middle")
+          .style("text-anchor", "end")
+          .style("fill", "#A39B77")
+          .text(yval)
+      }
+      //&& yval >= y(d3.min(y.domain())) && yval <= d3.max(y.domain()) 
+      if (xval >= 1909 && xval <= 2010) {
+        d3.select(this).append("text")
+          .attr("class", "mousetext")
+          .attr("y", height + 60)
+          .attr("x", d3.mouse(this)[0])
+          //.attr("fill", "#000")
+          .style("font", "14px Archivo Narrow")
+          .style("text-anchor", "middle")
+          .style("fill", "#A39B77")
+          .text(xval)
+      }
+
+    });
+    
+  // svg.append("rect")
+  //   .classed("eventpane", true)
+  //   // .attr("x", 300)
+  //   // .attr("y", 50)
+  //   // .attr("height", height + margin.top + margin.bottom - 140)
+  //   // .attr("width", width + margin.left + margin.right - 600)
+  //   // .attr("x", 0)
+  //   // .attr("y", 30)
+  //   // .attr("height", window.innerHeight)
+  //   // .attr("width", window.innerWidth - 40)
+  //   .attr("fill", "#675E59")
+  //   .attr("opacity", 0.9)
+  //   .attr("display", "none")
+  //   .on("mouseup", function() {
+  //     eventdetail = false;
+  //     d3.selectAll(".eventpane")
+  //       .attr("display", "none")
+  //       // .transition().duration(1000)
+  //       // .attr("height", 0)
+        
+  //     console.log(eventTitle)
+  //   })
+    
+  var eventDisp = svg.append("foreignObject")
+    .classed("eventpane", true)
+    .attr("x", 350)
+    .attr("y", 50)
+    .attr("width", width + margin.left + margin.right - 600 - 50)
+    .attr("height", height + margin.top + margin.bottom - 140 - 50)
+    .style("color", "white")
+    .style("fill", "white")
+    .style("font", "28px Archivo Narrow")
+    .html("<h3>" + eventTitle.toUpperCase() + "</h3> <p>" + eventDesc + "</p>")
+    .attr("display", "none")
+    .on("mouseup", function() {
+      eventdetail = false;
+      d3.selectAll(".eventPane")
+        .attr("display", "none")
+      console.log(eventTitle)
+    })
+    
+    
+  
+  render();
+};
+
+
+
+
+function render () {
+  updateDimensions();
+  
+  // update x and y scale ranges to new dimensions
+  x.range([0, width]);
+  y.range([height, 0]);
+
+  // update svg elements to new dimensions
+  svg
+    .attr('width', width + margin.right + margin.left)
+    .attr('height', height + margin.top + margin.bottom);
+  chartWrapper.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+  // update the axis and lines
+  xAxis = d3.axisBottom(x).tickFormat(d3.format("d")).tickSize(3).tickPadding(6);
+  yAxis = d3.axisLeft(y).tickSize(3).tickPadding(6);
+  
+  svg.select('.axis.axis--x')
+    .transition().duration(1000)
+    .attr('transform', 'translate(0,' + height + ')')
+    .call(xAxis);
+
+  svg.select('.axis.axis--y')
+    .transition().duration(1000)
+    .call(yAxis);
+    
+  svg.selectAll('.area')
+    .transition().duration(1000)
+    .attr('d', function(d) { return area(d.values); })
+    
+  area.y0(height)
+  
+  svg.selectAll('.line')
+    .transition().duration(1000)
+    .attr('d', function(d) { return line(d.values); })
+    
+  svg.selectAll('.eventline')
+    .transition().duration(1000)
+    .attr("x1", function(d) { return x(d.Year) })
+    .attr("x2", function(d) { return x(d.Year) })
+    .attr("y1", y(d3.min(y.domain())) - 10)
+    .attr("y2", y(d3.max(y.domain())) - 10)
+    
+  svg.selectAll('.eventletter')
+    .transition().duration(1000)
+    .attr("x", function(d) { return x(d.Year) + 3 })
+    .attr("y", y(d3.max(y.domain())))
+  
+  svg.selectAll('.eventtext')
+    .transition().duration(1000)
+    .attr("x", function(d) { 
+      if (d.Year > 1980) {
+        return x(d.Year) - 410
+      }
+      else {
+        return x(d.Year) + 5
+      }
+    })
+    // .attr("y", y(d3.max(y.domain())))
+    .attr("y", 20) 
+    
+  
+}
+
+function updateLegend() {
+  // console.log(legend)
+  d3.selectAll(".legitem").remove()
+  var numItems = categories[legendValues].length
+  var legScale = d3.scaleLinear().range([legMin, legMax]).domain([0, 1])
+  console.log(legScale(5))
+  
+  // legend = d3.select("#legend").append("svg")
+  //   .attr("class", "legitem")
+  //   .attr("width", window.innerWidth)
+  //   .attr("height", 100)
+
+
+  console.log(foods.filter(function(d) { return d.id == "Total Meat"})[0].color)
+  
+  
+  // var legitem = legend.selectAll(".legitem")
+  // .data(categories[legendValues])
+  // .enter().append("g")
+  
+  d3.select("#legend").selectAll(".legitem")
+    .data(categories[legendValues])
+    .enter().append("input")
+      .attr("type","button")
+      .classed("button", "true")
+      .classed("legitem", "true")
+      .attr("color", function(d) { return foods.filter(function(c) { return c.id == d })[0].color })
+      // .attr("id", function(d) { d.replace(/\s+/g, '') })
+      .style("font-size", "16px")
+      .style("color", function(d) { return foods.filter(function(c) { return c.id == d })[0].color })
+      .style("border", "none")
+      .style("letter-spacing", "0.1em")
+      .style("background", "#00000000")
+      .style("font-family", "Archivo Narrow")
+      .attr("value", function (d) { return d } )
+      .on("mouseover", function (d) {
+        d3.selectAll("#" + d.replace(/\s+/g, ''))
+          .style("display", "inline-block")
+          .style("stroke-width", 3)
+          .style("font-size", "20px")
+        
+      })
+      
+      .on("mouseout", function (d) {
+        d3.selectAll("#" + d.replace(/\s+/g, ''))
+          .style("stroke-width", 1.5)
+          .style("text-decoration", "none")
+          d3.selectAll(".area")
+            .style("display", "none")
+      })
+      
+      .on("mouseup", function(d) {
+        if (!detail) {
+          d3.selectAll("#" + d.replace(/\s+/g, ''))
+          .style("stroke-width", 1.5)
+          .style("text-decoration", "none")
+          d3.selectAll(".area")
+            .style("display", "none")
+          detail = true;
+          var toDisplay = classify(d)[1]
+          legendValues = toDisplay
+          updateLegend();
+          
+          var fromScale = d3.min(d3.selectAll("." + toDisplay).data().map(function(d) { return d3.min(d.values, function(c) { return c.percent })}))
+          var toScale = d3.max(d3.selectAll("." + toDisplay).data().map(function(d) { return d3.max(d.values, function(c) { return c.percent })}))
+          console.log(d3.min(d3.selectAll("." + toDisplay).data().map(function(d) { return d3.min(d.values, function(c) { return c.percent })})))
+          console.log(toScale);
+          
+          d3.selectAll(".food")
+            .style("display", "none");
+          d3.selectAll("." + toDisplay)
+            .style("display", "inline")
+            .style("opacity", 1)
+          d3.selectAll(".temp")
+              .classed("temp", false)
+          y.domain([fromScale, toScale])
+          backcolor = d3.color(d3.select(this).attr("color"))
+          backcolor.opacity = 0.15
+          d3.select("html")
+            .style("background", backcolor)
+          render();
+          d3.select("#category").remove()
+          d3.select("#title").append("text")
+            .text(toDisplay.toUpperCase())
+            .attr("id", "category")
+            .style("color", d3.select(this).attr("color"))
+      }
+      })
+    
+  
+  // legend.append("rect")
+  //   .attr("x", function(d, i) { return 10*i })
+  //   .attr("y", height)
+  //   .attr("width", 10)
+  //   .attr("height", 10)
+  //   .attr("fill", "red")
+  
+  // legitem.append("text")
+  //   .text(function(d) { return d })
+  //   .attr("id", function(d) { return d.replace(/\s+/g, '') })
+  //   .attr("text-anchor", "middle")
+  //   .attr("x", function(d,i) { return legScale((i + 1)/(numItems + 1)) + 60 })
+  //   .attr("y", 60)
+  //   .attr("padding-left", 20)
+  //   .attr("padding-right", 20)
+  //   // .style("fill", function(d) { foods.filter(function(c) { console.log(c.id == d); return c.id == d })[0].color })
+  //   .style("fill", function(d) { return foods.filter(function(c) { return c.id == d })[0].color })
+    
+  //   .on("mouseover", function (d) {
+  //     d3.selectAll("#" + d.replace(/\s+/g, ''))
+  //       .style("display", "inline")
+  //       .style("stroke-width", 3)
+  //       .style("text-decoration", "underline")
+  //   })
+    
+  //   .on("mouseout", function (d) {
+  //     d3.selectAll("#" + d.replace(/\s+/g, ''))
+  //       .style("stroke-width", 1.5)
+  //       .style("text-decoration", "none")
+  //       d3.selectAll(".area")
+  //         .style("display", "none")
+  //   })
+  
+}
+
+
+function updateDimensions() {
+  // margin = {top: 20, right: 150, bottom: 80, left: 80}
+  width = parseInt(d3.select("#chart").style("width")) - margin.left - margin.right;
+  height = parseInt(d3.select("#chart").style("height"))  - margin.top - margin.bottom;
+}
+
+
+function fixType(d, _, columns) {
+  //d.date = parseTime(d.date);
+  for (var i = 0, n = columns.length, c; i < n; ++i) d[c = columns[i]] = +d[c];
+  return d;
+}
+
+
+d3.select(window).on('resize', render);
+
+
+
+
+
+
+</script>

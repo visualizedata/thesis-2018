@@ -1,0 +1,31 @@
+[
+  {
+    "classification": "Class II",
+    "center_classification_date": "20160421",
+    "report_date": "20160427",
+    "postal_code": "98257-9450",
+    "recall_initiation_date": "20151217",
+    "recall_number": "F-1123-2016",
+    "city": "La Conner",
+    "event_id": "72916",
+    "distribution_pattern": "distributed in CA, FL and WA.",
+    "openfda": {},
+    "recalling_firm": "Swinomish Fish Company, Inc",
+    "voluntary_mandated": "Voluntary: Firm Initiated",
+    "state": "WA",
+    "reason_for_recall": "Traditional flavor of Native Catch Salmon Bacon product is recalled because it has the potential to be contaminated with Clostridium botulinum.  The potential for contamination was noted after a routine Washington State Department of Agriculture (WSDA) inspection discovered that the product had potentially been under processed. ",
+    "initial_firm_notification": "Two or more of the following: Email, Fax, Letter, Press Release, Telephone, Visit",
+    "status": "Ongoing",
+    "product_type": "Food",
+    "country": "United States",
+    "product_description": "Native Catch Salmon Bacon, Traditional flavor.  UPC 7 83583 27965 9.     Traditional Salmon Bacon is ground and seasoned skinless/boneless salmon, extruded, peppered, smoked, cooled and vacuum packed in 8 oz., 14 oz., and 5 lbs. clear vacuum bags.  Label states \u001ckeep refrigerated or frozen\".    ",
+    "code_info": " BEST BY codes 1/23/16 and 3/16/16. ",
+    "address_1": "11455 Moorage Way",
+    "address_2": "",
+    "product_quantity": "66/8 oz. pkgs, 372/14 oz. pkgs, 3/5 lb. pkgs; ",
+    "complete_address": "11455 Moorage Way, La Conner, WA",
+    "latLong": {
+      "lat": 48.3902588,
+      "lng": -122.5014722
+    }
+  }]
