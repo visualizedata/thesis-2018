@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>U.S. Naval Diplomacy, 2012-18</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+<link href="bootstrap.css" rel="stylesheet" /> 
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700'>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/greatarcs.css">
+</head>
+<body>
+<body data-spy="scroll" data-target="#navbar-example">
+<div class="wrapper" >
+    <nav class="nav__wrapper" id="navbar-example">
+      <ul class="nav">
+        <li role="presentation" class="active">
+          <a href="#section1">
+            <span class="nav__counter">01 </span>
+            <h3 class="nav__title">Introduction</h3>
+            <p class="nav__body">To explore the U.S. aircraft carrier data for 2012-2018, scroll down to change sections, or click on a number. <font size="7">&#x2b07;</font><br>
+            </p>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#section2">
+            <span class="nav__counter">02</span>
+            <h3 class="nav__title">U.S. Naval Diplomacy</h3>
+            <p class="nav__body"><i>Naval diplomacy "has relevance in the modern world is because it can be used on a wide variety of occasions to achieve certain tangible results."</i><br><br>-- Malcolm H. Murfett, 1999</p>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#section3">
+            <span class="nav__counter">03</span>
+            <h3 class="nav__title">% of Fleet Deployed</h3>
+            <p class="nav__body"><i>"When word of a crisis breaks out in Washington, it's no accident that the first question that comes to everyone's lips is: 'Where's the nearest carrier?'"</i><br><br>-- Pres. Bill Clinton, aboard USS <i>Theodore Roosevelt</i>, 1993</p>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#section4">
+            <span class="nav__counter">04</span>
+            <h3 class="nav__title">Change in Emphasis</h3>
+            <p class="nav__body"><i>"If you don't have that forward deployed presence, you have less of a voice, less of an influence."</i><br><br>-- Secretary of Defense William Cohen, 1997</p>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#section5">
+            <span class="nav__counter">05</span>
+            <h3 class="nav__title">Mediterranean</h3>
+            <p class="nav__body"><i>"The Mediterranean is both a cross-roads and frontier. The Mediterranean is the point of contact between dissimilar worlds."<br><br>-- T. Rathbone, 1992</i></p>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#section6">
+            <span class="nav__counter">06</span>
+            <h3 class="nav__title">Fewer Suez Crossings</h3>
+            <p class="nav__body"><i>"[T]he problems which we face are so vast and so interrelated that any attempt even to state them compels one to think in terms of five continents and seven seas."</i><br><br>-- Pres. Franklin D. Roosevelt, January 21, 1941</p>
+          </a>
+        </li>
+                <li role="presentation">
+          <a href="#section7">
+            <span class="nav__counter">07</span>
+            <h3 class="nav__title">South China Sea</h3>
+            <p class="nav__body"><i>"The construction of artificial islands in the South China Sea plus the increased capability of the long-range ship attack missiles by China shift, but do not fully reverse, the balance of power in Asia."<br><br>-- Adm. James G. Stavridis (USN), 2017</i></p>
+          </a>
+        </li>
+                        <li role="presentation">
+          <a href="#section8">
+            <span class="nav__counter">08</span>
+            <h3 class="nav__title">Recent Deployments</h3>
+            <p class="nav__body"><i>"Suffer pirates and the commerce of the world must cease."</i><br><br>-- Henry Newton, crown prosecutor in a 1696 admiralty trial in the U.K.</p>
+          </a>
+        </li>
+        <!--
+                        <li role="presentation">
+          <a href="#section8">
+            <span class="nav__counter">09</span>
+            <h3 class="nav__title">Conclusions</h3>
+            <p class="nav__body"><i>"If we could first know where we are, and whither we are tending, we could then better judge what to do, and how to do it."<br><br>-- Abraham Lincoln, 1858</i></p>
+          </a>
+        </li>
+        -->
+      </ul>
+    </nav>
+    <section class="section section1" id="section1">
+<p><strong><font size="7">Strength in Numbers: Mapping U.S. Naval Diplomacy, 2012-2018</font></strong><br>
+    <br><br>Global seapower competition is intensifying. As China dredges up ≈3,200 acres of territory <i>ex nihilo</i> in the South China Sea and emplaces sea missiles astride the Philippine archipelago, and as Russia disperses its submarines more widely across the Mediterranean as it conducts simulated attack strafing runs against NATO vessels in the Baltic Sea, the Obama and Trump national security teams have faced increasingly intricate naval diplomacy and maritime security challenges in recent years.<br><br>With these shifts in mind, this thesis examines the overall patterns in U.S. naval diplomacy worldwide from 2012 to 2018, querying diplomatic tension in the STRATFOR dataset under both the Obama and Trump administrations and comparing them to vessel movements as well as freedom of navigation operations (FONOPS). In addition, this thesis examines the geostrategic impact of Secretary of State Hillary Clinton’s diplomatic pivot to Asia in 2011 and Secretary of Defense Leon Panetta’s decision in 2012 to move 60% of the U.S. fleet to the Pacific, breaking with decades of a roughly even 50%-50% Atlantic-Pacific force posture.</p></section>
+    <section class="section section2" id="section2">
+
+<div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="https://github.com/sieng146/thesis/blob/master/figures/naval_diplomacy2.png?raw=true" alt="Puerto Rico" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>USNS <i>Comfort</i></h3>
+          <p>Humanitarian Assistance/Disaster Relief (HA/DR) Worldwide</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://github.com/sieng146/thesis/blob/master/figures/naval_diplomacy3.png?raw=true" alt="Da Nang" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>USS <i>Carl Vinson</i></h3>
+          <p>South China Sea (SCS) Cooperation with ASEAN Partners</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://github.com/sieng146/thesis/blob/master/figures/naval_diplomacy1.png?raw=true" alt="Tanzania" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>USS <i>Essex/Bonhomme Richard</i></h3>
+          <p>Presidential Summits</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </section>
+    <section class="section section3" id="section3">
+<div class="calendar-map"></div>
+<script type="text/javascript" src="calendarmap.js"></script>
+ <br>
+ NAVAL_DIPLOMACY_INDEX.CSV<br><br>
+ Using publicly available data<br>
+ from STRATFOR and other<br>
+ sources, this study constructed<br>
+ a global index of U.S. carrier<br>
+ activity. The time series begins<br>
+ in January 2012 and continues<br>
+ through present-day (May 2018),<br>
+ with reporting lagged by roughly<br>
+ two weeks. No classified or<br>
+ operationally-sensitive details<br>
+ are contained in this page.<br>
+ The picture that emerges is<br>
+ a complex mosaic of key U.S.<br>
+ interests changing over time.<br><br>
+ Notable instances of U.S. naval<br>
+ diplomacy include May 2014,<br>
+ when the USS Bataan was<br>
+ positioned off the coast of<br>
+ Libya for contingency<br>
+ operations; September 2017,<br>
+ when the USS Kearsarge<br>
+ conducted disaster relief<br>
+ operations in the Caribbean<br>
+ following Hurricanes Irma<br>
+ and Maria; and March 2018,<br>
+ when Vietnam welcomed the<br>
+ USS Carl Vinson, marking<br>
+ the first visit in over<br>
+ 40 years.<br>
+ </section>
+    <section class="section section4" id="section4">
+<p><strong><font size="6"><font color="#ffd400">"...inter-state strategic competition,</font> not terrorism,<br><font color="#ffd400">is now the primary concern in U.S. national security"</font></font></strong><br>
+<font size="5">--U.S. National Defense Strategy, 2018</font></strong><br><br><br>
+<font size="4">Recent naval deployment lanaguage reflects that:</font><br><br><br>
+<font size="3">"The <i>USS Boxer</i> is underway in the Pacific Ocean for . . . a <font color="#ffd400">Missile Exercise (MISSILEX).</font>"<br>-- Vessel report, week of 1/28/2016</font><br><br>
+<font size="3">"The USS <i>Ronald Reagan</i> CSG is underway in the U.S. 7th Fleet Area of Responsibility (AOR) after concluding flight operations in international waters as part of a <font color="#ffd400">three-carrier strike force exercise.</font>"<br>-- Vessel report, week of 11/23/2017</font><br>
+</p></section>
+    <section class="section section5" id="section5">
+<p><strong><font size="7">Increased Mediterranean Presence</font></strong><br><br>
+In recent years, U.S. carrier activity in the Mediterranean has intensified, with more pronounced activity east of Suez (near Europe) than west, in the Middle East. With Russia dispersing its submarines more widely across the Mediterranean, "[c]arrier strike groups [like the <i>USS Harry S. Truman</i> and <i>USS Carl Vinson</i>, for instance, that would just transit through the Mediterranean at maximum speed to get to the Middle East are spending much more time in the Mediterranean, not only contributing to [Syria and Iraq overflights in] <i>Inherent Resolve</i>, but also working the Russian presence problem in the Eastern Mediterranean, Black Sea," and other regions.
+<br><br><strong><font size="5">Net result: <font color="#ffd400">&#9650; 32% increase</font> in U.S. naval activity in the Mediterranean in the most recent reporting period</font></strong></p></section>
+    <section class="section section6" id="section6">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/px_J0khskz8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </section>
+    <section class="section section7" id="section7">
+<p><strong><font size="7">7 U.S. FONOPs in 6 years</font></strong><br><br>
+According to Adm. Philip Davidson -- the U.S. Pacific Commander -- “China is now capable of controlling the South China Sea in all scenarios short of war with the United States.” In order to avoid that high-stakes scenario in Oceania, the U.S., Australia, and other regional allies in the ASEAN region have been conducting freedom of navigation operations (FONOPs) in and around the South China Sea, directly challenging China's assertion of sovereignty and instead asserting the right for all ships to sail through the region.<br><br>
+At the same time, it is worth remembering Secretary of Defense Robert Gates' warning that "if Chinese highly accurate cruise and ballistic missiles, anti-ship cruise and ballistic missiles, can keep our aircraft carriers behind the second island chain in the Pacific, you’ve got to think differently about how you’re going to use aircraft carriers."<br>
+<br><br><strong><font size="5">Net result: <font color="#ffd400">&#9650; 83% increase</font> in U.S. naval activity in the South China Sea (SCS) in the most recent reporting period</font></strong></p></section>
+        <section class="section section8" id="section8">
+    <div class="greatarcs"></div>
+<script type="text/javascript" src="greatarcs.js"></script>
+</section>
+<!--
+        <section class="section section9" id="section9">
+<p><strong><font size="7">Future Challenges for the U.S.</font></strong><br><br>
+<br><br>As global maritime traffic shifts, so too must U.S. naval strategy. In addition to massive physical commodity flows, there is also a virtual dimension to this highly globalized process in the form of accelerating Internet traffic, information, currency, and other financial exchange data flowing through the world’s sprawling network of subsea communications cables. Together, both are creating intriguing security targets for unscrupulous non-state actors who also use the oceans for piracy, contraband, modern-day slavery, and narcotrafficking, as well as for states which sometimes act in brazen disregard of public international law. Equally significant to this process is the ecological domain, where accelerated globalization -- or what Zygmunt Bauman calls “liquid modernity” -- is having a strong adverse impact on various forms of sea life.<br><br>
+In order to understand these complex geostrategic dynamics, this study combines two distinct data sets: one on U.S. carrier movements and the other on diplomatic tensions worldwide, both unclassified and open-source in nature. Drawing from the prior net assessment literature within the public domain, it then examines spatial, programmatic, thematic, and chronological patterns in the aggregate data set, draws inferences as to how officials in Washington, DC define and protect the national interest, and presents conclusions as to the future of U.S. carrier diplomacy/naval aviation. When mapped at the most granular level, the scope and significance of freedom of navigation operations becomes more apparent.</p></section>
+-->
+    </div>
+</body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script  src="js/index.js"></script>
+</body>
+</html>

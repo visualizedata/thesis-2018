@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sea Lines of Communication (SLOC)</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+	<style>
+		html, body {
+			background-color: hsl(55, 1%, 20%);
+			height: 100%;
+			margin: 0;
+		}
+		#map {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+<div id='map'></div>
+<script>
+	var map = L.map('map').setView([0,0], 3);
+	L.tileLayer('https://api.mapbox.com/styles/v1/sieng146/cjdamu0pg1b3p2rl961b9agdn/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2llbmcxNDYiLCJhIjoiY2o5NjJ4NG5pMDA4NjMwbW5ueW5tY3NvNCJ9.AfLSPh6Uo9XOr5ehrfqt3A', {
+		attribution: '&copy; Mapbox'
+	}).addTo(map);
+	var LeafIcon = L.Icon.extend({
+		options: {
+			iconSize:     [30],
+			iconAnchor:   [12, 12],
+			popupAnchor:  [-3, -76]
+		}
+	});
+	var northward = new LeafIcon({iconUrl: 'https://raw.githubusercontent.com/sieng146/thesis/master/public/northward-red.png'}),
+		northeast = new LeafIcon({iconUrl: 'https://raw.githubusercontent.com/sieng146/thesis/master/public/northeast-red.png'}),
+		northwest = new LeafIcon({iconUrl: 'https://raw.githubusercontent.com/sieng146/thesis/master/public/northwest-red.png'}),
+		southward = new LeafIcon({iconUrl: 'https://raw.githubusercontent.com/sieng146/thesis/master/public/southward-red.png'}),
+		southeast = new LeafIcon({iconUrl: 'https://raw.githubusercontent.com/sieng146/thesis/master/public/southeast-red.png'}),
+		southwest = new LeafIcon({iconUrl: 'https://raw.githubusercontent.com/sieng146/thesis/master/public/southwest-red.png'}),
+		eastward = new LeafIcon({iconUrl: 'https://raw.githubusercontent.com/sieng146/thesis/master/public/eastward-red.png'}),
+		westward = new LeafIcon({iconUrl: 'https://raw.githubusercontent.com/sieng146/thesis/master/public/westward-red.png'});
+	L.marker([18.50000000, -67.75000000], {icon: southwest}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Mona Passage -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([9.11722222, -79.71861111], {icon: southwest}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Panama Canal -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([30.45500000, 32.35000000], {icon: northwest}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Suez Canal -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([12.49694444, 43.56055556], {icon: southeast}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Bab-el-Mandeb -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([12.53305556, 47.92472222], {icon: northeast}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Gulf of Aden -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([35.942436 , -5.756836], {icon: westward}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Strait of Gibraltar -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([26.59444444, 56.47194444], {icon: southeast}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Strait of Hormuz -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([58.35222222, 9.93138889], {icon: southwest}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Skagerrak -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([56.95194444, 11.30027778], {icon: northwest}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Kattegat -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([55.76690000, 12.73083333], {icon: northwest}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Øresund -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([55.39861111, 10.97333333], {icon: northward}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Storebælt -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([55.38550000, 9.72194444], {icon: northeast}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Lillebælt -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([62.47805556, -5.58083333], {icon: southwest}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> GIUK Gap -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([41.22111111, 29.12888889], {icon: southwest}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Bosporous/Boğaziçi/Boğazı -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([4.66250000, 99.54500000], {icon: southeast}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Strait of Malacca -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([1.25077778, 104.00722222], {icon: southeast}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Singapore Strait -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([8.65097222, 116.32472222], {icon: northeast}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Lombok Strait/Selat Lombok -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([5.78388889, 115.72972222], {icon: northeast}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Lifamatola Passage -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([8.92416667, 160.52638889], {icon: northeast}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Indispensable Strait -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([20.10500000, 121.94722222], {icon: westward}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Luzon Strait -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([33.94149722, 130.94111111], {icon: northwest}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Kanmon Strait/Strait of Shimonoseki -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([45.72000000, 142.02250000], {icon: southeast}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> La Pérouse Strait/Sōya Strait -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([24.65805556, 119.69777778], {icon: northeast}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> Taiwan Strait/Formosa Strait/Taiwan Haixia -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+    L.marker([34.59916667, 129.79666667], {icon: southwest}).bindPopup("<img src='https://raw.githubusercontent.com/sieng146/thesis/master/public/F35CarrierOverflight.jpg' alt='Image' width='300'> <br> East Korea Strait/Tsushima Strait -- AIRCRAFT CARRIER AND MERCHANT SHIPPING DETAILS WILL GO HERE").addTo(map);
+</script>
+</body>
+</html>

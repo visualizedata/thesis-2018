@@ -1,0 +1,23 @@
+.land {
+  fill: #DCDCDC;
+}
+
+.boundary {
+  fill: none;
+  stroke: #2E4051;
+  stroke-width: .5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.arc {
+  fill: none;
+  stroke: red;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-opacity: .5;
+}
+
+.mapdot_from, .mapdot_to {
+  opacity: .25;
+}

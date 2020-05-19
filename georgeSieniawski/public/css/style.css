@@ -1,0 +1,247 @@
+.wrapper {
+  min-height: 100vh;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  color: #fff;
+  position: relative;
+}
+
+section {
+  height: 100vh;
+  padding-left: 425px;
+  padding-right: 100px;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 18px;
+  font-weight: 300;
+  background-color: #9ecae1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section:nth-child(1) {
+  background: linear-gradient(to bottom, #aed0ef, #9ecae1);
+}
+section:nth-child(2) {
+  background: linear-gradient(to bottom, #9ecae1, #6baed6);
+}
+section:nth-child(3) {
+  background: linear-gradient(to bottom, #6baed6, #4292c6);
+}
+section:nth-child(4) {
+  background: linear-gradient(to bottom, #4292c6, #2171b5);
+}
+section:nth-child(5) {
+  background: linear-gradient(to bottom, #2171b5, #08519c);
+}
+section:nth-child(6) {
+  background: linear-gradient(to bottom, #08519c, #08306b);
+}
+section:nth-child(7) {
+  background: linear-gradient(to bottom, #08306b, #041835);
+}
+section:nth-child(8) {
+  background: linear-gradient(to bottom, #08306b, #041835);
+}
+section:nth-child(9) {
+  background: linear-gradient(to bottom, #08306b, #041835);
+}
+
+#section1 {
+  overflow-wrap: break-word;
+  color: white;
+}
+
+#section3 {
+	width: 100%;
+	font-size: 11px;
+}
+
+#section4 {
+  overflow-wrap: break-word;
+  text-align: right;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#section5 {
+  overflow-wrap: break-word;
+  text-align: right;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  background-image: url("https://raw.githubusercontent.com/sieng146/thesis/master/media/CarrierGibraltar.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#section6 {
+  padding:0;
+}
+
+#section7 {
+  overflow-wrap: break-word;
+  text-align: right;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  background-image: url("https://raw.githubusercontent.com/sieng146/thesis/master/media/SouthChinaSeaFlyover.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#section8 {
+	padding:0;
+  overflow-wrap: break-word;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#section9 {
+  padding:0;
+}
+
+#map {
+			width: 90%;
+			height: 90%;
+		}
+
+.nav__wrapper {
+  position: fixed;
+  height: 100%;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+.carousel-caption {
+    top: 0;
+    bottom: auto;
+    text-shadow: 2px 2px 4px #000000;
+}
+.nav {
+  margin: 0 0 100px 30px;
+}
+.nav__counter {
+  font-size: 24px;
+/*  text-shadow: 2px 2px black; */
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.nav__title {
+  font-size: 25px;
+  font-weight: 400;
+/*  text-shadow: 2px 2px black; */
+  margin: 0 0 0.25em;
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: height 0.3s ease-out, opacity 0.2s ease-out;
+  transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+.nav__body {
+  font-weight: 100;
+  font-size: 12px;
+  overflow-wrap: break-word;
+/*  text-shadow: 2px 2px black; */
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: height 0.3s ease-out, opacity 0.2s ease-out;
+  transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+.nav li {
+  position: relative;
+  filter: drop-shadow(1px 1px black);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  margin-bottom: 1em;
+}
+.nav li:after {
+  content: '';
+  display: block;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  height: 200px;
+  width: 20px;
+  position: absolute;
+  left: -30px;
+  top: 15px;
+}
+.nav li a {
+  display: block;
+  padding: 0;
+  color: #fff;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.nav li a:hover {
+  background-color: transparent;
+  padding-left: 1em;
+}
+.nav li a:focus {
+  background-color: transparent;
+}
+.nav li.active {
+  pointer-events: none;
+  padding-left: 1em;
+}
+.nav li.active:after {
+  width: 35px;
+  height: 400px;
+  top: 35px;
+}
+.nav li.active .nav__counter {
+  font-size: 38px;
+}
+.nav li.active .nav__title {
+  height: 40px;
+  opacity: 1;
+  overflow: visible;
+}
+.nav li.active .nav__body {
+  height: 100px;
+  opacity: 1;
+  overflow: visible;
+}
+
+	#calendar-map {
+      font: 10px sans-serif;
+      shape-rendering: crispEdges;
+    }
+    .day {
+      stroke: #666;
+    }
+    .month {
+      fill: none;
+      stroke: #000;
+      stroke-width: 2px;
+    }
+    .RdYlGn .q0-11{fill:rgb(165,0,38)}
+    .RdYlGn .q1-{fill:rgb(215,48,39)}
+    .RdYlGn .q2-11{fill:rgb(244,109,67)}
+    .RdYlGn .q3-11{fill:rgb(253,174,97)}
+    .RdYlGn .q4-11{fill:rgb(254,224,139)}
+    .RdYlGn .q5-11{fill:rgb(255,255,191)}
+    .RdYlGn .q6-11{fill:rgb(217,239,139)}
+    .RdYlGn .q7-11{fill:rgb(166,217,106)}
+    .RdYlGn .q8-11{fill:rgb(102,189,99)}
+    .RdYlGn .q9-11{fill:rgb(26,152,80)}
+    .RdYlGn .q10-11{fill:rgb(0,104,55)}
+

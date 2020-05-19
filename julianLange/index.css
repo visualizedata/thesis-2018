@@ -1,0 +1,463 @@
+/*********** fonts ***********/
+
+@font-face {font-family: "AvenirNextCondensed-Medium";
+      src:url("fonts/AvenirNextCondensed-Medium.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {font-family: "AvenirNextCondensed-Regular";
+      src:url("fonts/AvenirNextCondensed-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {font-family: "AvenirNextCondensed-UltraLight";
+      src:url("fonts/AvenirNextCondensed-UltraLight.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {font-family: "AvenirNext-Regular";
+      src:url("fonts/AvenirNext-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {font-family: "AvenirNext-UltraLight";
+      src:url("fonts/AvenirNext-UltraLight.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {font-family: "MyriadPro";
+      src:url("fonts/MyriadPro-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {
+    font-family: "Global-Medium";
+    src: url('fonts/Global-Medium-webfont.woff2') format('woff2'),
+         url('fonts/Global-Medium-webfont.woff') format('woff');
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+}
+
+
+/*********** text and general ***********/
+
+.selectException {
+      -webkit-appearance: menuitem; 
+}
+
+body {
+      /*width: 1600;*/
+      text-align: center;
+}
+
+.titleContainer {
+      position: relative;
+}
+
+#photoFinish {
+      /*-webkit-transform: scaleX(-1);*/
+      position: relative;
+      text-align: center;
+}
+
+/*.title {*/
+/*      position: absolute;*/
+/*      bottom: 200px;*/
+/*      left: 40px;*/
+/*      color: #fffff0;*/
+/*      line-height: 0.8em;*/
+/*      min-width: 500px;*/
+/*      margin-left: auto;*/
+/*      margin-right: auto;*/
+/*}*/
+
+#by {
+      font-family: 'Roboto';
+      font-size: 14px;
+      color: #333333;
+      text-align: center;
+      text-decoration: none;
+}
+
+#me {
+      font-family: 'Roboto';
+      font-size: 16px;
+      color: #333333;
+      text-align: center;
+      text-decoration: none;
+}
+
+#me:hover {
+      text-decoration: underline;
+}
+
+h1 {
+      font-family: 'Libre Baskerville';
+      font-size: 40px;
+      color: #fffff0;
+      line-height: 0.8em;
+      min-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+}
+
+h2 {
+      font-family: 'Libre Baskerville';
+      font-size: 20px;
+      color: #fffff0;
+      line-height: 0.1em;
+      min-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+}
+
+h3 {
+      font-family: 'Libre Baskerville';
+      font-size: 18px;
+      color: black;
+      line-height: 1.5em;
+      min-width: 300px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+}
+
+p {
+      font-family: 'Libre Baskerville';
+      font-size: 14px;
+      color: black;
+      line-height: 1.8em;
+      min-width: 600px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+}
+
+.endmark {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      width: 80px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+}
+
+/*********** buttons and dropdowns ***********/
+
+#buffer {
+      margin-top: 40px;
+}
+
+.flex-container-overall {
+      display: flex;
+      flex-direction: column;
+      /*justify-content: space-between;*/
+      align-items: center;
+      text-align: center;
+      height: 190px;
+}
+
+.flex-container-horizontal {
+      margin: 20px 0px 20px 0px;
+      display: flex;
+      flex-direction: row;
+      align-items: top;
+}
+
+.flex-container-vertical {
+      display: flex;
+      flex-direction: column;
+      align-items: top;
+}
+
+.flex-container-radio {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      text-align: left;
+      width: 220px;
+      font-family: 'AvenirNextCondensed-Medium';
+}
+
+#radio1 {
+      text-align: right;
+      float: right;
+}
+
+.hypotheticalText {
+      font-family: 'AvenirNextCondensed-Medium';
+      fill: #333333;
+      font-size: 20px;
+}
+
+.returnText {
+      font-family: 'AvenirNextCondensed-Medium';
+      fill: #333333;
+      font-size: 16px;
+}
+
+#pick {
+      margin-top: -4px;
+      font-family: 'AvenirNextCondensed-Medium';
+      color: #666666;
+      font-size: 12px;
+}
+
+.radioButtons {
+      font-family: 'AvenirNextCondensed-Medium';
+      margin-left: 5%;
+      font-size: 14px;
+      float: right;
+}
+
+.selectSportEvent {
+      font-family: 'AvenirNextCondensed-Medium';
+      position: relative;
+      font-size: 22px;
+      width: 240px;
+      background: 'white';
+      /*left: 50% !important;*/
+      /*right: auto !important;*/
+      /*text-align: center !important;*/
+      /*transform: translate(-100%, 0) !important;*/
+      box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+.selectSwimmingEvent {
+      font-family: 'AvenirNextCondensed-Medium';
+      position: relative;
+      font-size: 22px;
+      width: 240px;
+      background: 'white';
+      /*left: 50% !important;*/
+      /*right: auto !important;*/
+      /*text-align: center !important;*/
+      /*transform: translate(-50%, 0) !important;*/
+      box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+/*********** graphs and plots ***********/
+
+svg {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+}
+
+.medalSVGclass {
+      margin-top: 10px;
+}
+
+
+g {
+      font-family: 'AvenirNextCondensed-Medium';
+      font-size: 16px;
+}
+
+.xAxis line{
+      stroke: #333333;
+      shape-rendering: crispEdges;
+}
+
+.xAxis path{
+      stroke: #333333;
+      shape-rendering: crispEdges;
+}
+
+.xAxis text{
+      fill: #333333;
+      font-size: 14px;
+}
+
+.chartText .chartCountry {
+      fill: #333333;
+      font-size: 16px;
+}
+
+.chartText:hover {
+      text-decoration: underline;
+      cursor: pointer;
+}
+
+.chartYear {
+      fill: #333333;
+      font-size: 18px;
+}
+
+.chartLabel {
+      fill: #333333;
+      font-size: 20px;
+}
+
+.chartData {
+      fill: #666666;
+      font-size: 14px;
+      font-family: 'AvenirNextCondensed-Regular';
+}
+
+.chartKey {
+      fill: #666666;
+      font-size: 14px;
+      font-family: 'AvenirNextCondensed-Regular';
+}
+
+.chartLine {
+    fill: #666666;
+}
+
+.lineKey {
+      stroke: lightgray;
+      stroke-width: 2;
+}
+
+.chartCircle:hover {
+      stroke: gray;
+      opacity: 1;
+      stroke-width: 1;
+      r: 10;
+      z-index: 1000;
+      text-decoration: underline;
+}
+
+div.tooltipSwimming {
+      font-family: 'AvenirNextCondensed-Regular';
+      position: absolute;
+      text-align: left;
+      line-height: 1.2em;
+      /*width: 200px;*/
+      /*height: 30px;*/
+      padding: 8px 10px 8px 10px;
+      background: white;
+      opacity: 0.5;
+      border: 0.5px solid #333333;
+      border-radius: 0px;
+      pointer-events: auto;
+      z-index: 0;
+      font-size: 16px;
+}
+
+.descriptiveText {
+      font-family: 'AvenirNextCondensed-Regular';
+      /*font-style: oblique;*/
+      font-size: 16px;
+}
+
+/*********** animation ***********/
+
+#subcontainer {
+      align: center;
+}
+
+#lugeQuestion {
+      font-family: 'AvenirNextCondensed-Medium';
+      font-size: 24px;
+      color: black;
+      line-height: 1.8em;
+      min-width: 620px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 10px;
+}
+
+#lugeIntro {
+      font-family: 'AvenirNextCondensed-Regular';
+      font-size: 18px;
+      color: black;
+      line-height: 1.3em;
+      text-align: left;
+      min-width: 200px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+}
+
+#lugeFlags {
+      margin-left: 400px;
+}
+
+#competitors{
+      font-family: 'AvenirNextCondensed-Medium';
+      color: #333333;
+      font-size: 20px;
+}
+
+.flags {
+    align: center;
+}
+
+.flag-column {
+      display: flex;
+      /*next line should be row, then center-aligned*/
+      flex-direction: column;
+      align-items: center;
+}
+
+
+/*.flex-container-overall {*/
+/*      display: flex;*/
+/*      flex-direction: column;*/
+      /*justify-content: space-between;*/
+/*      align-items: center;*/
+/*      text-align: center;*/
+/*      height: 190px;*/
+/*}*/
+
+
+.flag-row {
+      display: flex;
+      font-family: 'AvenirNextCondensed-Medium';
+      fill: #333333;
+      font-size: 16px;
+      flex-direction: row;
+      height: 36px;
+      width: 260px;
+}
+
+.flag-text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+}
+
+.flag {
+      margin-right:10px;
+      width: 40px;
+      height: 36px;
+}
+
+#click {
+      font-family: 'AvenirNextCondensed-Regular';
+      background-color: white;
+      border: 2px solid #555555;
+      color: #555555;
+      padding: 12px 28px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 24px;
+      margin-left: 100px;
+      margin-right: 100px;
+      width: 100px;
+      margin-top: 60px;
+      margin-bottom: 60px;
+}
+
+#click:hover {
+      transition-duration: 0.2s;
+      background-color: #555555;
+      color: white;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+ }

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+    <link href="index.css" type="text/css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.sound.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="data/data_accel_all_gap150.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="titleContainer">
+        <img id="photoFinish" src="assets/photoFinish.png" alt="2018 Olympics biathlon photo finish" style="width:100%;">
+    </div>
+
+    <div class="subtitleContainer">
+        <h3 id="by">by</h3>
+        <h3 id="me"><a href="https://www.julianhlange.com" style="text-decoration: none" target="_blank">JULIAN H. LANGE</a></h3>
+    </div>
+
+    <!--Introduction-->
+    <div>
+        <p class="main"><br><br>Olympic Games and World Championships showcase the world’s most elite athletes. While medalists earn a significant premium over fourth place finishers, the margins of victory have become vanishingly small. This series of interactive visualizations
+            examines three stories from – and beyond – the edge. First, situated in the 2018 Winter Olympic Games, you are invited to test hypothetical scenarios in which subsets of athletes improve their performance by thin margins. The second visualization
+            highlights a story from competitive swimming, where advances in swimsuit development effectively changed the parameters of the sport. Finally, you can relive the men's singles luge event at the 2018 Winter Olympic Games. Instead of two hours
+            of luge coverage, the animation runs the top eight athletes side-by-side on the track.</p>
+    </div>
+
+    <br>
+
+    <div>
+        <img class="endmark" src="assets/endmark.png" alt="End Mark">
+    </div>
+
+    <br>
+
+    <!--Hypothetical standings at Olympics-->
+    <div>
+        <h3>Thin Margins at the 2018 Winter Olympic Games</h3>
+        <p class="main">The 2018 Winter Olympic Games in PyeongChang, South Korea were among the most exciting sports events. 30 nations won medals in 102 sporting events. But what makes a winner? What are the margins of victory and of medaling? In other words, what
+            does it take to be a winner? This visualization highlights how close some of the races were. Select options from dropdown menus to see how medals would change if athletes were marginally faster. In many cases, differences as small as 0.1%
+            have would altered the final medal standings.</p><br><br>
+    </div>
+
+    <div id="sectionOWG2018">
+        <select id="selectSport" class="selectSportEvent">
+            <option value="Alpine">Alpine Skiing</option><option value="Bobsleigh">Bobsleigh</option><option value="Cross_Country">Cross Country Skiing</option>
+            <option value="Luge">Luge</option><option value="Skeleton">Skeleton</option><option value="Speed_Skating">Speed Skating</option>
+            </select>
+        <select id="selectEvent" class="selectSportEvent"></select>
+    </div>
+
+    <div id="buffer">
+        <div class="flex-container-overall">
+            <div>
+                <div class="hypotheticalText">Hypothetical scenarios</div>
+                <div id="pick">Pick one from each column</div>
+            </div>
+            <div class="flex-container-horizontal">
+                <div class="flex-container-radio radioButtons" id="radio1">
+                    <div class="flex-container-vertical">
+                        <label>All athletes except the winner<input type="radio" name="radio1" value="1"></label>
+                    </div>
+                    <div class="flex-container-vertical">
+                        <label>All athletes except medalists<input type="radio" name="radio1" value="2"></label>
+                    </div>
+                </div>
+                <div class="flex-container-radio radioButtons" id="radio2">
+                    <div class="flex-container vertical">
+                        <label><input type="radio" name="radio2" value=5>1% faster</label>
+                    </div>
+                    <div class="flex-container vertical">
+                        <label><input type="radio" name="radio2" value=4>0.5% faster</label>
+                    </div>
+                    <div class="flex-container vertical">
+                        <label><input type="radio" name="radio2" value=3>0.2% faster</label>
+                    </div>
+                    <div class="flex-container vertical">
+                        <label><input type="radio" name="radio2" value=2>0.1% faster</label>
+                    </div>
+                    <div class="flex-container vertical">
+                        <label><input type="radio" name="radio2" value=1>0.05% faster</label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label class="returnText"><input type="radio" name="radio1" value="0" checked>Return to actual results</label>
+            </div>
+        </div>
+    </div>
+
+    <div id="olympicsSketch">
+        <script src="js/medals.js" type="text/javascript"></script>
+    </div>
+
+    <br>
+
+    <div>
+        <img class="endmark" src="assets/endmark.png" alt="End Mark">
+    </div>
+
+    <br>
+
+    <!--Swim times at World Championships-->
+    <div>
+        <h3>Development of the polyurethane swimsuit</h3>
+        <p class="main">In 2009, the Adidas brand Arena unveiled the Arena X-Glide, a pure polyurethane competitive swimsuit that was fully impermeable and substantially reduced hydrodynamic drag. At the 2009 World Championships in Rome, where several athletes were using this latest technology,
+            acrimony ensued. Several swimmers, including some who had benefitted from the Speedo LZR Racer in 2008 and who, bound by contractual obligations, were not allowed to swim in the Adidas suit, expressed unfairness.<br><br> The focus on swimsuits
+            before and during the 2009 World Championships forced the Fédération Internationale de Natation (FINA), the governing body of elite swimming, to issue new rules for swimsuit design. Specifically, full-body suits were no longer permitted and
+            materials were only to be textile fabrics that met specific thresholds of buoyancy and permeability. The full-length body suits of 2000 and the polyurethane materials in the LZR Racer of 2008 and Arena X-Glide of 2009 were banned effective
+            January 1, 2010.<br><br> A visualization of races at World Championships between 2003 and 2017 clearly shows the polyurethane suits of 2009 suits to be outliers. In all 16 events analyzed, swim times improved gradually between 2003 and
+            2007, then improved markedly in 2009. After full-body suits and non-textile materials were banned in 2010, swim times were much slower in 2011. Between 2011 and 2017, swim times steadily decreased at rates more consistent with the early 2000s.<br><br><br></p>
+    </div>
+
+    <div id="swimming">
+        <select id="selectSwimDistance" class="selectSwimmingEvent">
+            <option value="men 50">Men's 50-meter events</option><option value="women 50">Women's 50-meter events</option>
+            <option value="men 100">Men's 100-meter events</option><option value="women 100">Women's 100-meter events</option>
+        </select>
+    </div>
+
+    <div id="swimSketch">
+        <script src="js/swimming.js" type="text/javascript"></script>
+    </div>
+
+    <br>
+
+    <div>
+        <img class="endmark" src="assets/endmark.png" alt="End Mark">
+    </div>
+
+    <br>
+
+    <!--Animation of men's singles luge at 2018 Winter Olympics-->
+    <div>
+        <h3>Animation of the 2018 Winter Olympics men's singles luge event</h3>
+        <p class="main">Luge is a winter sliding sport in which one athlete, or a two-person team of athletes, lies face up on a racing sled and steers the sled down an ice track. The highest level of international competition is governed by the Fédération Internationale
+            de Luge de Course (FIL) and is carried out on artificially constructed tracks. At the Olympics, each athlete in a singles competition completes four runs of the course, and the aggregate time of the four runs is determined to the thousandth
+            of a second.<br><br> For the purposes of assessing the provisional standings of competitors while they are on the course, timing wands are placed at positions along the track. At the 2018 Winter Olympic Games in PyeongChang, such ‘split times’
+            were taken at four locations along the track as well as at the finish line. Thus, a viewer watching the competition could get a sense of provisional standings as well as assess the impact of steering. For example, a steering error that brought
+            a sled into contact with a wall would show up in a subsequent split time comparison.<br><br> In PyeongChang, the men’s singles competition was held over two days: two runs on consecutive days. Forty athletes competed, each completing either
+            three or four runs of around 47–50 seconds per run. Thus, spread over two days, there were roughly two hours of actual racing, plus gaps between racers.<br><br> I wanted to meet several objectives in making a visualization of the men’s singles
+            competition. First, I wanted to shorten the time taken to view the competition, from two hours spread over two days down to less than one minute. Second, I wanted to display the results in a way that viewers could observe how close the racers
+            were at any time and could potentially see where athletes made up or lost ground on their competitors. To meet these objectives, I animated the top eight finishers, using split times, finishing times, and racing speeds published by the IOC.<br><br></p>
+    </div>
+
+    <div id="container">
+        <div id="subcontainer">
+            <div id="lugeQuestion">Who won the men's singles luge at the 2018 Winter Olympic Games?</div>
+            <div id="lugeIntro">The men's singles luge event was contested over four runs of the track. For each athlete, the times from four runs were aggregated. Forty athletes competed. This animation uses available split-time data to display the top eight finishers side-by-side.
+                The winning margin between gold and silver was 0.026 seconds.<br><br></div>
+            <!--<div id="competitors">Competitors</div>-->
+
+            <div class="flags">
+                <div class="flag-column">
+
+                    <div>
+                        <div class="flag-row">
+                            <img class="flag" src="assets/flags/austria.png">
+                            <div class="flag-text-container">David GLEIRSCHER</div>
+                        </div>
+
+                        <div class="flag-row">
+                            <img class="flag" src="assets/flags/united-states-of-america.png">
+                            <div class="flag-text-container">Chris MAZDZER</div>
+                        </div>
+
+                        <div class="flag-row">
+                            <img class="flag" src="assets/flags/germany.png">
+                            <div class="flag-text-container">Johannes LUDWIG</div>
+                        </div>
+
+                        <div class="flag-row">
+                            <img class="flag" src="assets/flags/italy.png">
+                            <div class="flag-text-container">Dominik FISCHNALLER</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flag-row">
+                            <img class="flag" src="assets/flags/germany.png">
+                            <div class="flag-text-container">
+                                <div>Felix LOCH</div>
+                            </div>
+                        </div>
+
+                        <div class="flag-row">
+                            <img class="flag" src="assets/flags/canada.png">
+                            <div class="flag-text-container">
+                                <div>Sam EDNEY</div>
+                            </div>
+                        </div>
+
+                        <div class="flag-row">
+                            <img class="flag" src="assets/flags/italy.png">
+                            <div class="flag-text-container">
+                                <div>Kevin FISCHNALLER</div>
+                            </div>
+                        </div>
+
+                        <div class="flag-row">
+                            <img class="flag" src="assets/flags/russia.png">
+                            <div class="flag-text-container">
+                                <div>Roman REPILOV</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="click" onClick="startRun()">Start</div>
+        </div>
+    </div>
+
+    <div>
+        <script src="js/luge.3.js" type="text/javascript"></script>
+    </div>
+
+    <div>
+        <img class="endmark" src="assets/endmark.png" alt="End Mark">
+    </div>
+
+</body>
+
+</html>
