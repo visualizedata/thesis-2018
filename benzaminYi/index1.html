@@ -1,0 +1,2227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!--<script src="lariots.js"></script>-->
+    <link rel="stylesheet" href="lariots.css">
+    <!--<script src="d3-tip.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		  (function(d) {
+    var config = {
+      kitId: 'fyi0asp',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+	</script>
+</head>
+
+<body>
+<!--MAIN-->
+<div id='container' class="wrapper" style="top:0%;left:0%;">
+	<!-- Background -->
+	<div id="background" class="artboard" height='3456' width="3456" style="top:0%;left:0%;">
+		<img class="background" src="background.png"/>
+		<!--<img class="background" src="guidelines-01.png"/>-->
+		<div id="dayOneCircle" style="top: 1257px;left: 1257px;"></div>
+		<div id="dayTwoCircle" style="top: 983px;left: 983px;"></div>
+		<div id="dayThreeCircle" style="top: 685px;left: 685px;"></div>
+		<div id="dayFourCircle" style="top: 388px;left: 388px;"></div>
+		<div id="dayFiveCircle" style="top: 100px;left: 100px;"></div>
+		<div id="resetCircle" class='tooltipR' style="top: 1625px;left: 1625px;"><span class='tooltiptextR'>Click to Reset</span></div>
+		<div id="dayOneHover" style="top: 1269px;left: 1262px;"></div>
+		<div id="dayTwoHover" style="top: 991px;left: 991px;"></div>
+		<div id="dayThreeHover" style="top: 709px;left: 700px;"></div>
+		<div id="dayFourHover" style="top: 430px;left: 411px;"></div>
+		<div id="dayFiveHover" style="top: 135px;left: 135px;"></div>
+
+
+		<!--Title Section-->
+		<div class="absolute" style="top:1.3021%;left:40.0938%;">
+			<p class="title"><a href="https://benzyi.github.io/thesis/index.html">The 1992 Los Angeles Riots</a></p>
+		</div>
+		<div class="absolute" style="top:75.9838%;left:3.2067%;width:7.9572%;">
+			<p class="title">Sa-i-Gu</p>
+		</div>
+		<div class="absolute" style="top:78.2118%;left:3.1925%;width:19.5313%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-title" style="width: 105%; height: 686px;"></div>
+			<p class="summary">On April 29, 1992, the Los Angeles riots began with a gathering on Florence and Normandie where the police set a precedence that would recur throughout the coming days: they retreated. Sparked by the acquittal for the four officers involved in the Rodney King beating, and fueled by a growing distrust of the Korean-American community by the African-American community in Los Angeles after an incident a year prior when a Korean storeowner of Empire Liquor was essentially acquitted for the shooting and killing 15-year old Latisha Harlins, Los Angeles became a war zone with its targets set on Korean-American businesses. Over 2,000 of the 3,100 businesses looted or destroyed were owned by Korean-Americans. The police abandoned Angelenos to fend for themselves, which resulted in a surge of gun purchases by the Korean-American community to defend their businesses.</p>
+			<p>&nbsp;</p>
+			<p class="summary">This graphic takes a look at the hour-by-hour rundown of the chaos and action taken as detailed by the Los Angeles Times&rsquo; 2002 article titled &ldquo;Charting the Hours of Chaos.&rdquo; The events have been aligned to the hour of the day it took place, while the day of the event has been mapped starting from the inner circle moving outwards to show the progression of days. The red circle indicates violence occuring over 24 hours with 12 hours representing one full cycle. Darker red means two 12-hour cycles.</p>
+		</div>
+		
+<!--FLEXBOX DAYONE-->
+	<!--3PM d1-->
+<div class="flex-container images dayOneImages absolute" style="top:49.5%;left:63%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id="acquittal" src="./images/dayOne/acquittal.jpg" />
+            <figcaption id="acquittal" class="caption" style="display: none;">Members of the jury that found four Los Angeles police officers not guilty in the Rodney King assault case file aboard a Ventura County Sheriff's Department bus outside the Simi Valley courthouse.<br><i>KNBC-TV</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='acquittal_1' src="./images/dayOne/acquittal_1.jpg" />
+            <figcaption id="acquittal_1" class="caption" style="display: none;">Sgt. Stanley Koon, one of the four acquitted officers, leaves the Simi Valley courthouse immediately following the verdict.<br><i>KNBC-TV</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='simivalley_protest' src="./images/dayOne/simivalley_protest.jpg" />
+            <figcaption id="simivalley_protest" class="caption" style="display: none;">Protestors upset over the verdict in the Rodney King beating trial in Simi Valley, California, demonstrate outside of the Fraternal Order of Police headquarters in Washington D.C. 30 April 1992. The acquittal of four police officers in the beating of King led to widespread anger and rioting. <br><i>Paul J. Richards / PRI</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayOneImages absolute" style="top:49.5%;left:75%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='acquittal_2' src="./images/dayOne/acquittal_2.jpg" />
+            <figcaption id="acquittal_2" class="caption" style="display: none">Laurence Powell, center, and Timothy Wind hug shortly after the verdicts were read in their assault trial. Stacy Koon, back right, looks on. Only one count in the trial did not end in acquittal. The jury could not agree on that count, against Koon. The acquittals come at 3:15 p.m. April 29.<br><i>Unknown Credit</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='acquittal_3' src="./images/dayOne/acquittal_3.jpg" />
+            <figcaption id="acquittal_3" class="caption" style="display: none">Sgt. Stacey C. Koon, Officer Theodore J. Briseno, Officer Timothy E. Wind and Officer Laurence Powell<br><i>AP Photo</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+	<!--5PM d1-->
+<div class="flex-container images dayOneImages absolute" style="top:59.5%;left:49%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <a href="https://www.google.com/maps/@33.9745624,-118.3002684,3a,75y,326.87h,81.12t/data=!3m7!1e1!3m5!1s9Ac-tRDTEea0s-3PZHayhA!2e0!6s%2F%2Fgeo1.ggpht.com%2Fcbk%3Fpanoid%3D9Ac-tRDTEea0s-3PZHayhA%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D121.035545%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192" target="_blank"><img id='fn_4' src="./images/dayOne/fn_7.jpg" /></a>
+            <figcaption id="fn_4" class="link" style="display: none">A rioter attacks a car on Florence and Normandie avenues.<br><i>Kirk McKoy / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@33.9745624,-118.3002684,3a,75y,101.95h,84.6t/data=!3m6!1e1!3m4!1s9Ac-tRDTEea0s-3PZHayhA!2e0!7i16384!8i8192" target="_blank">
+            <img id='fn_5' src="./images/dayOne/fn_5.jpg" /></a>
+            <figcaption id="fn_5" class="link" style="display: none">Rioters at Florence and Normandie.<br><i>Kirk McKoy / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='fn_2' src="./images/dayOne/fn_2.jpg" />
+            <figcaption id="fn_2" class="caption" style="display: none;">A female motorist stumbles as she gets out of her car, which was pelted with rocks at Florence and Normandie.<br><i>Kirk McKoy / Los Angeles Times</i>
+            <img id='fn_2' src="./images/dayOne/fn_3.jpg" style='width: 50%;' /></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--6PM d1-->
+<div class="flex-container images dayOneImages absolute" style="top:67%;left:36.6%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <a href="https://youtu.be/NM8Y6uPH-R4?t=40s" target="_blank"><img id='denny' src="./images/dayOne/denny_2.jpg" /></a>
+            <figcaption id="denny" class="link" style="display: none">Reginald Denny is pulled from a truck and beaten as the LA riots begin at the intersection of Florence and Normandie.<br><i>KNBC-TV</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0524758,-118.2415686,3a,75y,127.53h,95.06t/data=!3m6!1e1!3m4!1s7-7qMIas_66w6ZG9TO_pxQ!2e0!7i13312!8i6656" target="_blank">
+            <img id='pc_4' src="./images/dayOne/pc_4.jpg" /></a>
+            <figcaption id="pc_4" class="link" style="display: none">A demonstrator protesting the verdict in the trial of four Los Angeles police officers accused of beating motorist Rodney King holds a placard aloft before a line of police as protesters gathered at Parker Center, the former headquarters of the Los Angeles Police Department.<br><i>Mike Nelson / AFP / Getty Images</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0524758,-118.2415686,3a,75y,76.65h,96.08t/data=!3m6!1e1!3m4!1s7-7qMIas_66w6ZG9TO_pxQ!2e0!7i13312!8i6656" target="_blank">
+            <img id='pc_5' src="./images/dayOne/pc_5.jpg" /></a>
+            <figcaption id="pc_5" class="link" style="display: none;">Demonstrators protest outside the LAPD headquarters at Parker Center in the wake of the verdict in the Rodney King case.<br><i>Bob Riha Jr / Getty Images</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--7PM d1-->
+<div class="flex-container images dayOneImages absolute" style="top:62%;right:67.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='p_1' src="./images/dayOne/protest_1.jpg" />
+            <figcaption id="p_1" class="caption" style="display: none">Protestors on Crenshaw.<br><i>Kirk McKoy / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+	<div class="flex-item">
+        <figure>
+            <img id='p_2' src="./images/dayOne/protest_2.jpg" />
+            <figcaption id="p_2" class="caption" style="display: none;">A police officer uses his baton on a protester at the corner of First St. and Broadway.<br><i>Kirk McKoy/Los Angeles Times via Getty Images</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--9PM-->
+<div class="flex-container images dayOneImages absolute" style="top:42.4%;right:72.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='pc_6' src="./images/dayOne/pc_6.jpg" />
+            <figcaption id="pc_6" class="caption" style="display: none">Police officers form a line as demonstrators make their point about the verdicts in the Rodney King beating trial. The all-white jury's decision to acquit four Los Angeles police officers sparked days of violent<br><i>OC Register</i></figcaption>
+        </figure>
+    </div>
+	<div class="flex-item">
+        <figure>
+            <img id='pc_3' src="./images/dayOne/pc_3.jpg" />
+            <figcaption id="pc_3" class="caption" style="display: none;">Violent demonstrators overturn and set fire to police car at the Parker Center.<br><i>Unknown Credits</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayOneImages absolute" style="top:42.4%;right:84.6%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='pc_2' src="./images/dayOne/pc_2.jpg" />
+            <figcaption id="pc_2" class="caption" style="display: none">The early demonstrations in front of Parker Center were relatively peaceful as police faced off against the growing crowd. Once night fell, the group grew more violent.<br><i>Rosemary Kaul / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+        <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0524758,-118.2415686,3a,75y,76.65h,96.08t/data=!3m6!1e1!3m4!1s7-7qMIas_66w6ZG9TO_pxQ!2e0!7i13312!8i6656" target="_blank">
+            <img id='pc_1' src="./images/dayOne/pc_1.jpg" /></a>
+            <figcaption id="pc_1" class="link" style="display: none;">Violent demonstrators overturn and set fire to a kiosk at the Parker Center.<br><i>Los Angeles Daily News file photo/SCNG</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--INTO THE NIGHT d1-->
+<div class="flex-container images dayOneImages absolute" style="top:20%;left:36.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0480135,-118.3440028,3a,75y,205.85h,91.83t/data=!3m6!1e1!3m4!1sW38F_kyIyyuffD7Al6xJow!2e0!7i16384!8i8192 " target="_blank">
+            <img id='r_1' src="./images/dayOne/riots_7.jpg" /></a>
+            <figcaption id="r_1" class="link" style="display: none">A shopping mall goes up in flames at La Brea Avenue and Pico Boulevard, where someone spray-painted a statement about violence.<br><i>Kirk McKoy / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+	<div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0552315,-118.2430586,3a,53.7y,217.72h,87.05t/data=!3m6!1e1!3m4!1sP43B7T6Wdd8gRdxcghnD3A!2e0!7i13312!8i6656" target="_blank">
+            <img id='r_2' src="./images/dayOne/riots_8.jpg" /></a>
+            <figcaption id="r_2" class="link" style="display: none;">A rioter breaks a glass door of the Criminal Courts building in downtown Los Angeles.<br><i>Hal Garb/AFP/Getty Images</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayOneImages absolute" style="top:20%;left:49%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@33.9746723,-118.3000715,3a,75y,18.58h,84.54t/data=!3m6!1e1!3m4!1sCfr69oppadBkEGoZi3N1ng!2e0!7i16384!8i8192" target="_blank">
+            <img id='r_3' src="./images/dayOne/riots_9.jpg" /></a>
+            <figcaption id="r_3" class="link" style="display: none">The first of many businesses (and Korean-American-owned) looted and burned is Tom's Liquor.<br><i>Kirk McKoy / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/place/S+Vermont+Ave+%26+W+Vernon+Ave,+Los+Angeles,+CA+90037/@34.0036652,-118.2896601,161a,35y,270h,39.49t/data=!3m1!1e3!4m5!3m4!1s0x80c2c81b3ce2c7fb:0x2b4e4e51242781b6!8m2!3d34.0036791!4d-118.2915549" target="_blank">
+            <img id='r_4' src="./images/dayOne/riots_6.jpg" /></a>
+            <figcaption id="r_4" class="link" style="display: none">Air view of fires burning out of control in the vicinity of Vermont and Vernon avenues southwest of the L.A. Memorial Coliseum.<br><i>Randy Leffingwell / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+
+<!--dayTwo Images-->
+<!--1AM d2-->
+<div class="flex-container images dayTwoImages absolute" style="top:12.4%;right:24.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='fire_1' src="./images/dayTwo/fire_1.jpg" />
+            <figcaption id="fire_1" class="caption" style="display: none">Fire fighters put out a fire started overnight<br><i>ABC News</i></figcaption>
+        </figure>
+    </div>
+	<div class="flex-item">
+        <figure>
+            <img id='fire_2' src="./images/dayTwo/fire_2.jpg" />
+            <figcaption id="fire_2" class="caption" style="display: none;">Cornelius Pettus, owner of Payless market, throws a bucket of water on the flames at neighboring business Ace Glass during the first night of the Los Angeles Riots in Los Angeles.<br><i>Hyungwon Kang/Los Angeles Times/Files/Reuters</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayTwoImages absolute" style="top:12.4%;right:36.6%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='aerial_fire_1' src="./images/dayTwo/aerial_fire_1.jpg" />
+            <figcaption id="aerial_fire_1" class="caption" style="display: none">Midtown showing plumes of smoke from the numerous building fires in the city on April 30, 1992.<br><i>Ken Lubas / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+        <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0904861,-118.3100443,182a,35y,90h,44.97t/data=!3m1!1e3" target="_blank">
+            <img id='aerial_fire_2' src="./images/dayTwo/aerial_fire_2.jpg" /></a>
+            <figcaption id="aerial_fire_2" class="link" style="display: none;">Fires rage on both sides of Western Avenue along Santa Monica Boulevard in Hollywood on April 30.<br><i>Ken Lubas / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--3PM d2-->
+<div class="flex-container images dayTwoImages absolute" style="top:34.5%;left:69%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id="l_10" src="./images/dayTwo/looter_10.jpg" />
+            <figcaption id="l_10" class="caption" style="display: none;">"The second day of the riots on 3rd street, I photographed this guy running past a burning Jon's market with a shopping cart full of diapers. I affectionately call this image 'A Huggies Run,'" says Kirk McKoy, who took this photo on April 30, 1992.<br><i>Kirk McKoy / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='l_0' src="./images/dayTwo/looter_0.jpg" />
+            <figcaption id="l_0" class="caption" style="display: none;">An LAPD officer falls while chasing a suspected looter on Vermont near Martin Luther King Boulevard on April 30, 1992. The man was caught and subdued soon after.<br><i>Steve Dykes / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='l_2' src="./images/dayTwo/looter_2.jpg" />
+            <figcaption id="l_2" class="caption" style="display: none;">A man removes a couch from a store in South Central Los Angeles.<br><i>Nick Ut / AP Photo</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='l_1' src="./images/dayTwo/looter_1.jpg" />
+            <figcaption id="l_1" class="caption" style="display: none;">Western Beauty Supply was just one of many businesses looted in the area of Venice Boulevard and Western Avenue.<br><i>Lacy Atkins / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayTwoImages absolute" style="top:34.5%;left:81%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='l_7' src="./images/dayTwo/looter_7.jpg" />
+            <figcaption id="l_7" class="caption" style="display: none">A young boy helps his father loot the Big 5 Sporting Goods store at Western Avenue and Wilshire Boulevard.<br><i>J. Albert Diaz / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='l_6' src="./images/dayTwo/looter_6.jpg" />
+            <figcaption id="l_6" class="caption" style="display: none">People drag goods across Vermont Avenue at 2nd Street in Koreatown while a newly ignited strip mall burns behind them<br><i>Jim Mendenhall / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--5PM d2-->
+<div class="flex-container images dayTwoImages absolute" style="top:59.5%;left:49%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='police_3' src="./images/dayTwo/police_3.jpg" />
+            <figcaption id="police_3" class="caption" style="display: none">Los Angeles police form a line to keep a crowd from entering a building on April 30, 1992. <br><i>Nick Ut / AP Photo</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<img id='police_1' src="./images/dayTwo/police_1.jpg" />
+            <figcaption id="police_1" class="caption" style="display: none">APD officers stand guard as fire units battle a blaze near 19th Street and Adams Boulevard on April 30.<br><i>Patrick Downs / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<img id='police_7' src="./images/dayTwo/police_7.jpg" />
+            <figcaption id="police_7" class="caption" style="display: none">Los Angeles County sheriffs deputies keep watch on a group of people arrested after a store on Martin Luther King Boulevard was looted on April 30, 1992.<br><i>Steve Dykes / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--6PM d2-->
+<div class="flex-container images dayTwoImages absolute" style="top:72%;left:36.6%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='police_5' src="./images/dayTwo/police_5.jpg" />
+            <figcaption id="police_5" class="caption" style="display: none">A Los Angeles police officer takes aim at a looter in a market at Alvarado and Beverly Boulevard in Los Angeles, April 30, 1992, during the second night of rioting in the city. <br><i>John Gaps III / AP Photo</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='police_6' src="./images/dayTwo/police_6.jpg" />
+            <figcaption id="police_6" class="caption" style="display: none">A California Highway Patrol officer checks for looters in a Chief Auto Parts store at Washington Boulevard and Western Avenue during the L.A. riots May 1, 1992 in Los Angeles, California.<br><i>Rick Meyer/Los Angeles Times via Getty Images</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--9PM d2-->
+<div class="flex-container images dayTwoImages absolute" style="top:42.4%;right:72.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0652616,-118.3090833,3a,75y,50.86h,91.63t/data=!3m6!1e1!3m4!1sdONGuuzwr94c0qaqCMnxZA!2e0!7i16384!8i8192" target="_blank">
+            <img id='korean_7' src="./images/dayTwo/korean_7.jpg" /></a>
+            <figcaption id="korean_7" class="link" style="display: none">Armed volunteers take position behind cabbage boxes as they guard a California market from approaching looters during the second day of the Los Angeles Riots in Koreatown.<br><i>Hyungwon Kang/Los Angeles Times/Reuters</i></figcaption>
+        </figure>
+    </div>
+	<div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0652616,-118.3090833,3a,75y,50.86h,91.63t/data=!3m6!1e1!3m4!1sdONGuuzwr94c0qaqCMnxZA!2e0!7i16384!8i8192" target="_blank">
+            <img id='korean_5' src="./images/dayTwo/korean_5.jpg" /></a>
+            <figcaption id="korean_5" class="link" style="display: none;">Two Korean men stand on the roof of a grocery store with rifles to prevent looters from entering the store <br><i>John Gaps III / AP Photo</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0652616,-118.3090833,3a,75y,50.86h,91.63t/data=!3m6!1e1!3m4!1sdONGuuzwr94c0qaqCMnxZA!2e0!7i16384!8i8192" target="_blank">
+            <img id='korean_2' src="./images/dayTwo/korean_2.jpg" /></a>
+            <figcaption id="korean_2" class="link" style="display: none;">Armed Korean-Americans take cover behind a forklift as they defend the California Market in Koreatown on Western Ave. and Fifth.<br><i>Hyungwon Kang / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.1221117,-118.1846142,3a,75y,33.68h,83.68t/data=!3m6!1e1!3m4!1spsH6m5gnZc1gZx8Ck_KElQ!2e0!7i13312!8i6656" target="_blank">
+            <img id='guard_2' src="./images/dayTwo/guard_2.jpg" /></a>
+            <figcaption id="guard_2" class="link" style="display: none;">A store employee stands guard at a Calimex Market in Los Angeles following two days of wide spread rioting in Los Angeles.<br><i>David Longstreath / AP Photo</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayTwoImages absolute" style="top:42.4%;right:84.6%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='korean_4' src="./images/dayTwo/korean_4.jpg" />
+            <figcaption id="korean_4" class="caption" style="display: none">An unidentified owner of a clothing store reacts to seeing her burning business in Los Angeles, Thursday, April 30, 1992.<br><i>Nick Ut / AP Photo</i></figcaption>
+        </figure>
+    </div>
+        <div class="flex-item">
+        <figure>
+            <img id='korean_3' src="./images/dayTwo/korean_3.jpg" />
+            <figcaption id="korean_3" class="caption" style="display: none;">A woman enters a Popeye's restaurant spared by the looters because of the sign saying "This is a Black-owned Business! Not Korean!" posted in the window.<br><i>Kevork Djansezian / AP Photo</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0698017,-118.2916148,3a,75y,246.12h,91.88t/data=!3m6!1e1!3m4!1sjhnSilzEzpevGICUVmL4cA!2e0!7i16384!8i8192" target="_blank">
+            <img id='korean_8' src="./images/dayTwo/korean_8.jpg" /></a>
+            <figcaption id="korean_8" class="link" style="display: none;">A Korean shopping mall burns near Third Street and Vermont Avenue in Los Angeles Thursday, April 30, 1992, on the second day of rioting in the city.<br><i>Nick Ut / AP Photo</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayTwoImages absolute" style="top:42.4%;right:60.6%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0652616,-118.3090833,3a,75y,50.86h,91.63t/data=!3m6!1e1!3m4!1sdONGuuzwr94c0qaqCMnxZA!2e0!7i16384!8i8192" target="_blank">
+            <img id='korean_9' src="./images/dayTwo/korean_9.jpg" /></a>
+            <figcaption id="korean_9" class="link" style="display: none">An employee of a Korean supermarket returns fire from drive-by shooters at the corner of Western Avenue and 5th Street while attempting to protect the market from looters.<br><i>Hyungwon Kang/Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+        <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0652616,-118.3090833,3a,75y,50.86h,91.63t/data=!3m6!1e1!3m4!1sdONGuuzwr94c0qaqCMnxZA!2e0!7i16384!8i8192" target="_blank">
+            <img id='korean_10' src="./images/dayTwo/korean_10.jpg" /></a>
+            <figcaption id="korean_10" class="link" style="display: none;">A security guard takes cover and waits for trouble at the California Market in a mini-mall at 5th Street and Western Avenue in Koreatown.<br><i>Hyungwon Kang / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@33.9596499,-118.2915051,3a,75y,139.72h,80.86t/data=!3m6!1e1!3m4!1sboHJBAAYp0xY-SB3Ka-gWw!2e0!7i16384!8i8192" target="_blank">
+            <img id='guard_1' src="./images/dayTwo/guard_1.jpg" /></a>
+            <figcaption id="guard_1" class="link" style="display: none;">Tony Meeks, left, loads a pistol to help Norman Simples protect his store at Vermont and Manchester avenues while they wait for help from the National Guard.<br><i> Lacy Atkins / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+</div>
+<!--INTO THE NIGHT d2-->
+<div class="flex-container images dayTwoImages absolute" style="top:15%;left:18.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='m_1' src="./images/dayTwo/military_1.jpg" />
+            <figcaption id="m_1" class="caption" style="display: none">LAPD officer Delwin Fields guards the intersection at Central Avenue and 46th Street on April 30.<br><i>Gary Friedman / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+	<div class="flex-item">
+        <figure>
+            <img id='m_2' src="./images/dayTwo/military_2.jpg" />
+            <figcaption id="m_2" class="caption" style="display: none;">A National Guardsman stands at alert near graffiti that spells out support for Rodney King.<br><i>Randy Leffingwell / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='m_4' src="./images/dayTwo/military_4.jpg" />
+            <figcaption id="m_4" class="caption" style="display: none">National Guardsmen watch a business go up in flames in South Los Angeles.<br><i>Hal Garb/AFP/Getty Images</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayTwoImages absolute" style="top:9%;left:31%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='m_3' src="./images/dayTwo/military_3.jpg" />
+            <figcaption id="m_3" class="caption" style="display: none">A National Guardsman stands guard in a burned out business area at Vermont Avenue and Wilshire Boulevard in Los Angeles, April 30, 1992 during the second day of rioting in the city.<br><i>David Longstreath / AP Photo</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0577447,-118.2915578,3a,36.6y,7.75h,93.46t/data=!3m7!1e1!3m5!1sjif-b-PxLafiRiMfAuvK-w!2e0!6s%2F%2Fgeo3.ggpht.com%2Fcbk%3Fpanoid%3Djif-b-PxLafiRiMfAuvK-w%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D108.794716%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192" target="_blank">
+            <img id='m_5' src="./images/dayTwo/military_5.jpg" /></a>
+            <figcaption id="m_5" class="link" style="display: none">A National Guardsman patrols a burned area near Wilshire and Vermont in Los Angeles.<br><i>David Longstreath / AP Photo</i></figcaption>
+        </figure>
+    </div>
+</div>
+	
+<!--dayThree Images-->
+<!--1AM d3-->
+<div class="flex-container images dayThreeImages absolute" style="top:22.4%;right:15.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='rodney' src="./images/dayThree/rodney.jpg" />
+            <figcaption id="rodney" class="caption" style="display: none;">LAPD beating victim Rodney King meets the press outside his lawyer's office in Beverly Hills to call for an end to the violence.<br><i>LARRY DAVIS / LOS ANGELES TIMES</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayThreeImages absolute" style="top:9.4%;right:39.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='peace_1' src="./images/dayThree/peace_1.jpg" />
+            <figcaption id="peace_1" class="caption" style="display: none">At Pico Boulevard and Fairfax Avenue, Bobby Wade holds a sign asking for peace.<br><i>MARILYN WEISS / LOS ANGELES TIMES</i></figcaption>
+        </figure>
+    </div>
+<div class="flex-item">
+        <figure>
+            <img id='fire_5' src="./images/dayThree/fire_5.jpg" />
+            <figcaption id="fire_5" class="caption" style="display: none">Children walk past a building destroyed by fire during the riots.<br><i>David Butow/Corbis via Getty Images</i></figcaption>
+        </figure>
+    </div>
+<div class="flex-item">
+        <figure>
+            <img id='fire_4' src="./images/dayThree/fire_4.jpg" />
+            <figcaption id="fire_4" class="caption" style="display: none">Residents fight fire with a water hose from an apartment building during the third night of the Los Angeles Riots in Koreatown.<br><i>Hyungwon Kang/Los Angeles Times/Files/Reuters</i></figcaption>
+        </figure>
+    </div>
+<div class="flex-item">
+        <figure>
+            <img id='clean_1' src="./images/dayThree/clean_1.jpg" />
+            <figcaption id="clean_1" class="caption" style="display: none">Actor Edward James Olmos uses a dumpster and broom in an effort to start cleaning up in South Central Los Angeles on May 1, 1992. Residents acted to take back neighborhoods damaged by looters and arsonists during the riots.<br><i>John Gaps III / AP Photo</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayThreeImages absolute" style="top:16.4%;right:27.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='korean_2' src="./images/dayThree/korean_2.jpg" />
+            <figcaption id="korean_2" class="caption" style="display: none;">A crowd of more than a thousand rallied in Los Angeles, calling for healing between Koreans and the African-American community.<br><i>David Longstreath / AP Photo</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--3PM d3-->
+<div class="flex-container images dayThreeImages absolute" style="top:52.5%;left:69%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id="military_7" src="./images/dayThree/military_7.jpg" />
+            <figcaption id="military_7" class="caption" style="display: none;">A convoy of U.S. Marines from Camp Pendleton in San Diego County, right, make their way to the Tustin U.S. Marine Corps Air Station in Tustin, California, Friday, May 1, 1992 as President George Bush ordered military units from the Army and the Marines to stand ready to help the police and the National Guard to restore order in Los Angeles. Civilian traffic on the road near the air station was stopped while the convoy moved through.<br><i>Paul Sakuma / AP Photo</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayThreeImages absolute" style="top:52.5%;left:81%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='looter_3' src="./images/dayThree/looter_3.jpg" />
+            <figcaption id="looter_3" class="caption" style="display: none">A woman holding two packages of toilet paper and dripping from an overhead sprinkler makes her way through looted grocery store in South Central Los Angeles on May 1, 1992.<br><i>Dayna Smith/The Washington Post/Getty Images</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='fire_3' src="./images/dayThree/fire_3.jpg" />
+            <figcaption id="fire_3" class="caption" style="display: none">Onlookers watch as an electronics shop on Olympic Boulevard burns during the third day of the Los Angeles Riots in Koreatown.<br><i>Hyungwon Kang/Los Angeles Times/Files/Reuters</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--5PM d3-->
+<div class="flex-container images dayThreeImages absolute" style="top:56.5%;left:49%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='military_3' src="./images/dayThree/military_3.jpg" />
+            <figcaption id="military_3" class="caption" style="display: none">Members of the California National Guard get organized at the Coliseum in Los Angeles, Friday, May 1, 1992, before heading out to the streets. The Guard was called to duty to help stop fires and looting.<br><i>AP Photo</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<a href="https://youtu.be/LBzPygKIAhA?t=1m4s" target="_blank">
+        	<img id='bush' src="./images/dayThree/bush.jpg" /></a>
+            <figcaption id="bush" class="link" style="display: none">George H.W. Bush live broadcasts on NBC to address the Los Angeles Riots.<br><i>NBC / Nelson Rolfe on YouTube</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--6PM d3-->
+<div class="flex-container images dayThreeImages absolute" style="top:54.5%;left:9%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='society_1' src="./images/dayThree/society_1.jpg" />
+            <figcaption id="society_1" class="caption" style="display: none">Hundreds of people wait in front of the Hancock Station of the U.S. Post Office to collect their mail in Los Angeles, May 1, 1992. Many of the people were at the post office to pick up their Social Security checks which are usually delivered on the first day of the month. The postal officials halted mail delivery in certain areas of the city due to the continuing violence.<br><i>AP Photo</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayThreeImages absolute" style="top:44.5%;left:32%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='military_1' src="./images/dayThree/military_1.jpg" />
+            <figcaption id="military_1" class="caption" style="display: none">National Guard troops patrol near Martin Luther King Boulevard and Vermont Avenue as a mini-mart burns.<br><i>LORI SHEPLER / LOS ANGELES TIMES</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='military_2' src="./images/dayThree/military_2.jpg" />
+            <figcaption id="military_2" class="caption" style="display: none">National Guardsmen patrol a destroyed area in central Los Angeles.<br><i>Hal Garb/AFP/Getty Images</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0108991,-118.2928251,3a,75y,13.39h,85.9t/data=!3m6!1e1!3m4!1sRiwIi9jUO37p9ZB7j1QFnQ!2e0!7i16384!8i8192" target="_blank">
+            <img id='military_4' src="./images/dayThree/military_4.jpg" /></a>
+            <figcaption id="military_4" class="link" style="display: none">National Guardsmen stand guard outside the ABC Market at Martin Luther King Boulevard and Vermont Street during the 1992 riots.<br><i>Nick Ut / AP Photo</i></figcaption>
+        </figure>
+    </div>
+</div>
+<!--9PM d3-->
+<div class="flex-container images dayThreeImages absolute" style="top:16.4%;right:65.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='korean_1' src="./images/dayThree/korean_1.jpg" />
+            <figcaption id="korean_1" class="caption" style="display: none">An armed volunteer takes a cigarette break while guarding a Korean-American owned business during the third day of the Los Angeles Riots in Koreatown.<br><i>Hyungwon Kang/Los Angeles Times/Reuters</i></figcaption>
+        </figure>
+    </div>
+	<div class="flex-item">
+        <figure>
+            <img id='fire_1' src="./images/dayThree/fire_1.jpg" />
+            <figcaption id="fire_1" class="caption" style="display: none;">People and their belongings line a sidewalk across from a burned out apartment on May 1, 1992, in Los Angeles. The apartment was attached to a row of stores that were burned and looted.<br><i>Hal Garb/AFP/Getty Images</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='looter_1' src="./images/dayThree/looter_1.jpg" />
+            <figcaption id="looter_1" class="caption" style="display: none;">Looters carry televisions out of a Fedco Department Store at La Cienega Boulevard and Rodeo Road in Los Angeles on May 1, 1992.<br><i>Paul Sakuma / AP</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayThreeImages absolute" style="top:32.4%;right:79.6%;visibility: hidden">
+
+    <div class="flex-item">
+        <figure>
+            <img id='fire_2' src="./images/dayThree/fire_2.jpg" />
+            <figcaption id="fire_2" class="caption" style="display: none;">Merchants and volunteers cleaning up in front of a market that was burned and looted during riots in South Los Angeles.<br><i>Hal Garb/AFP/Getty Images</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--dayFour Images-->
+<!--1AM d4-->
+<div class="flex-container images dayFourImages absolute" style="top:22.4%;right:27.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='fire_1' src="./images/dayFour/fire_1.jpg" />
+            <figcaption id="fire_1" class="caption" style="display: none;">South Los Angeles near the intersection of Vermont and Manchester avenues was among the areas hardest hit by the violence in spring 1992. Every store on the east side of Vermont was gutted, beginning with a Korean-owned swap meet. Vermont runs from top to bottom.<br><i>JIM MENDENHALL / LOS ANGELES TIMES</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayFourImages absolute" style="top:22.4%;right:56.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='korean_1' src="./images/dayFour/korean_1.jpg" />
+            <figcaption id="korean_1" class="caption" style="display: none">People march calling for peace during the Los Angeles Riots in Koreatown.<br><i>Hyungwon Kang/Los Angeles Times/Files/Reuters</i></figcaption>
+        </figure>
+    </div>
+<div class="flex-item">
+        <figure>
+            <img id='korean_2' src="./images/dayFour/korean_2.jpg" />
+            <figcaption id="korean_2" class="caption" style="display: none">A peace march down 3rd Street.<br><i>Marissa Roth / For The Times</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--3PM d4-->
+<div class="flex-container images dayFourImages absolute" style="top:49.5%;left:69%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id="military_4" src="./images/dayFour/military_4.jpg" />
+            <figcaption id="military_4" class="caption" style="display: none;">Marines at a staging area at Alameda and Elm streets in Compton.<br><i>Karen Tapia / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--6PM d4-->
+<div class="flex-container images dayFourImages absolute" style="top:44.5%;left:32%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='military_1' src="./images/dayFour/military_1.jpg" />
+            <figcaption id="military_1" class="caption" style="display: none">A National Guardsman escorts a surfer off Venice Beach in Los Angeles Saturday, May 2, 1992, as area beaches were closed in the wake of disturbances following the King verdict.<br><i>AP Photo / Paul Sakuma</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='clean_1' src="./images/dayFour/clean_1.jpg" />
+            <figcaption id="clean_1" class="caption" style="display: none">Couple cleaning up after 1992 riots, South Central Los Angeles, California<br><i>Visions of America/UIG via Getty Images</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='society_1' src="./images/dayFour/society_1.jpg" />
+            <figcaption id="society_1" class="caption" style="display: none">Guillermina Moreno and her 2-month-old daughter Karen rest at a shelter at Dorsey High School on May 2, 1992. Their apartment building on Olympic Boulevard was burned and they lost all their possessions.<br><i>Lori Shepler / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--9PM d4-->
+<div class="flex-container images dayFourImages absolute" style="top:33.4%;right:72.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='looter_1' src="./images/dayFour/looter_1.jpg" />
+            <figcaption id="looter_1" class="caption" style="display: none">A looter is led away by an officer at the intersection of Pico Boulevard and Hoover near the Koreatown section of Los Angeles on May 2, 1992. Sporadic incidents of arson and looting occurred throughout the city despite a dusk-to-dawn curfew.<br><i>Reed Saxon/AP</i></figcaption>
+        </figure>
+    </div>
+	<div class="flex-item">
+        <figure>
+            <img id='military_2' src="./images/dayFour/military_2.jpg" />
+            <figcaption id="military_2" class="caption" style="display: none;">Two Los Angeles police officers and a National Guardsman position themselves to respond to semi-automatic gunfire in the Mid-Wilshire district of Los Angeles, Saturday, May 2, 1992.<br><i>AP Photo/Chris Martinez</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='military_3' src="./images/dayFour/military_3.jpg" />
+            <figcaption id="military_3" class="caption" style="display: none;">A National Guard member hunkers down as shots are fired after midnight at 6th Street and Western Avenue on May 2, 1992.<br><i>J. ALBERT DIAZ / LOS ANGELES TIMES</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--dayFive Images-->
+<!--1AM d5-->
+<div class="flex-container images dayFiveImages absolute" style="top:38.4%;right:11.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='society_6' src="./images/dayFive/society_6.jpg" />
+            <figcaption id="society_6" class="caption" style="display: none">LAPD officers act as crossing guards at 50th Place and Vermont Avenue on May 4, 1992, for a student on his way to Audubon Junior High School, one of the campuses closed by the violence.<br><i>KEN LUBAS / LOS ANGELES TIMES</i></figcaption>
+        </figure>
+    </div>
+<div class="flex-item">
+        <figure>
+            <img id='clean_2' src="./images/dayFive/clean_2.jpg" />
+            <figcaption id="clean_2" class="caption" style="display: none">Juan Mocinos and his wife Istali, from Mexico, walk past a burned-out store with a message at Pico and LaBrea in the Mid-City area of Los Angeles, May 4, 1992. People began the long process of cleanup after several days of rioting.<br><i>AP</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='clinton' src="./images/dayFive/clinton.jpg" />
+            <figcaption id="clinton" class="caption" style="display: none;">Democratic presidential candidate Bill Clinton tours the devastation in Los Angeles, California, May 4, 1992.<br><i>AP/David Longstreath</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--6PM d5-->
+<div class="flex-container images dayFiveImages absolute" style="top:44.5%;left:33%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='military_1' src="./images/dayFive/military_1.jpg" />
+            <figcaption id="military_1" class="caption" style="display: none">Los Angeles police officers patrol a street, May 3, 1992 in Los Angeles.<br><i>HAL GARB/AFP/Getty Images</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='military_2' src="./images/dayFive/military_2.jpg" />
+            <figcaption id="military_2" class="caption" style="display: none">Armed troops in trucks and two young girls walking down a street make for a different picture of life in Los Angeles, Monday, May 4, 1992. Troops protected the city while it tried to get back to normal operations.<br><i>AP/John Gaps III</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='military_3' src="./images/dayFive/military_3.jpg" />
+            <figcaption id="military_3" class="caption" style="display: none">Marine Lance Cpl. Jason P. Brown gets a hug of support from Kayla Man, 17, of Carson just before curfew fell on May 6, 1992, in Long Beach.<br><i>RICK CORRALES / LOS ANGELES TIMES</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--9PM d5-->
+<div class="flex-container images dayFiveImages absolute" style="top:16.4%;right:64.5%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='society_3' src="./images/dayFive/society_3.jpg" />
+            <figcaption id="society_3" class="caption" style="display: none">Jesse Jackson comforts Charlotte McKoy.<br><i>Iris Schneider/Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+	<div class="flex-item">
+        <figure>
+            <img id='society_2' src="./images/dayFive/society_2.jpg" />
+            <figcaption id="society_2" class="caption" style="display: none;">ommunity members giving lunch to policeman, South Central Los Angeles, California.<br><i>Visions of America/UIG via Getty Images</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='society_1' src="./images/dayFive/society_1.jpg" />
+            <figcaption id="society_1" class="caption" style="display: none;">Donell Moore, 7, carries his 3-year-old sister, Deshe, in front of a graffiti-sprayed wall of a burned-out drugstore in Los Angeles, Saturday, May 3, 1992 as their family walked the streets of the riot-torn city. The children’s father, Larry Moore said the experience will not be forgotten by his kids and may even make them stronger.<br><i>AP Photo/Mark Elias</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--10pm d5-->
+<div class="flex-container images dayFiveImages absolute" style="top:32.4%;right:79.6%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='society_4' src="./images/dayFive/society_4.jpg" />
+            <figcaption id="society_4" class="caption" style="display: none;">Tony Ellis flips burgers on a grill outside his riot-ransacked lingerie store in South Central Los Angeles, Saturday, May 3, 1992. Ellis and some friends were out to make a couple of dollars to refurbish and protect what remains of his looted shop while at the same time help the community where he lives by providing inexpensive food throughout the night.<br><i>AP</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='society_5' src="./images/dayFive/society_5.jpg" />
+            <figcaption id="society_5" class="caption" style="display: none;">A cross, flowers and a banner urging an end to violence adorn the ruins of a service station at Florence and Normandie avenues in South Central Los Angeles, May 3, 1992. The intersection was the site of the first reported violence that led to days of rioting, looting and burning as people angrily reacted to the acquittal of four Los Angeles police officers in the Rodney King assault case.<br><i>Reed Saxon / AP Photo</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--1pm d5-->
+<div class="flex-container images dayFiveImages absolute" style="top:15.4%;right:32.6%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='clean_1' src="./images/dayFive/clean_1.jpg" />
+            <figcaption id="clean_1" class="caption" style="display: none;">Two members of the National Guard talk to a volunteer clean-up worker May 3, 1992 on a street in south central Los Angeles as the city starts to return to normal after days of rioting.<br><i>JONATHAN UTZ/AFP/Getty Images</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='clean_3' src="./images/dayFive/clean_3.jpg" />
+            <figcaption id="clean_3" class="caption" style="display: none;">At Vermont Avenue and 27th Street, Tom Sedry and Arturo Pallacios were among those helping to clean up a building in which space had been shared by a discount store and the Exposition Park Church of the Nazarene. Many of the people were members of the congregation, but many others simply wanted to help.<br><i>TONY BARNARD / LOS ANGELES TIMES</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='military_4' src="./images/dayFive/military_4.jpg" />
+            <figcaption id="military_4" class="caption" style="display: none;">Marine Lance Cpl. Jason P. Brown gets a hug of support from Kayla Man, 17, of Carson just before curfew fell on May 6, 1992, in Long Beach.<br><i>RICK CORRALES / LOS ANGELES TIMES</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='military_3' src="./images/dayFive/military_3.jpg" />
+            <figcaption id="military_3" class="caption" style="display: none;">A boy checks out Marine's M-16 in front of a supermarket in Compton on May 3, 1992.<br><i>LARRY DAVIS / LOS ANGELES TIMES</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--PERSON IMAGES-->
+	<!--EDWARD SONG LEE-->
+	<div class='edwardimg absolute' style="top:33%;right:61%;">
+		<img src="./images/dayTwo/edward-death.jpg" />
+		<div class='edcaption'>Edward Song Lee, 18, foreground, was shot to death and three other Koreans were injured in an exchange of gunfire with looters at 3rd Street and Hobart Boulevard in Koreatown on April 30, 1992. Police questioned the survivors of the attack who were shot while trying to protect a Korean-owned pizza parlor.<br><i>Hyungwon Kang / Los Angeles Times</i></div>
+	</div>
+		<div class='edwardimg absolute' style="top:33%;right:18%;">
+		<img src="./images/dayTwo/edwardsong_funeral.jpg" />
+		<div class='edcaption'>Jung Hui Lee, center, mourns at funeral services for her son, Edward Song Lee, in Los Angeles, Tuesday, May 5, 1992. Lee was caught in the cross-fire between police and rioters during disturbances in the Los Angeles area. At right is Jenny Lee, sister of the victim. Woman at left is unidentified.<br><i>AP Photo/Paul Sakuma</i></div>
+	</div>
+	
+	<div class='edwardimg absolute' style="top:23%; right: 61%;">
+		<img src='./images/dayTwo/koreanmarch.jpg' />
+		<div class='edcaption'>A young man carries a framed photo of Eddie Song Lee, the lone Korean American casualty of the riots.<br><i>Pacific Ties/Kore file</i></div>
+	</div>
+	
+	<div class='edwardimg absolute' style="top:43.5%; right: 44.5%;">
+		<a href="https://www.google.com/maps/@34.0689839,-118.3054392,3a,37.8y,214.47h,90.37t/data=!3m6!1e1!3m4!1sXFVRKnGt5KQueDiLbqoYpA!2e0!7i16384!8i8192" target="_blank">
+		<img src='./images/people_loc/pizzashop_esl.jpg' /></a>
+		<div class='edcaption'>Location of the pizza shop in Koreatown where Eddie Song Lee was killed.<br><i>Google Maps</i></div>
+	</div>
+	
+	<!--DWIGHT TAYLOR-->
+	<div class='dtaylorimg absolute' style="top:43.5%; right: 43.5%;">
+		<a href="https://www.google.com/maps/@34.004552,-118.2916108,3a,75y,286.79h,86.88t/data=!3m6!1e1!3m4!1srAmLlSuqVab7-NHFsRdFPQ!2e0!7i16384!8i8192" target="_blank">
+		<img class='dtaylor' src='./images/people_loc/swapmeet_dt.jpg' /></a>
+		<div class='dtaylorcaption'>Location of the swap meet where Dwight Taylor was killed.<br><i>Google Maps</i></div>
+	</div>
+	
+	<!--JAMES TAYLOR-->
+	<div class='jtaylorimg absolute' style="top:43.5%; right: 44%;">
+		<a href="https://www.google.com/maps/@34.0981826,-118.3037441,3a,60y,63.54h,69.34t/data=!3m6!1e1!3m4!1sAU5SKI2qcUh28nFC6SEgJg!2e0!7i16384!8i8192" target="_blank">
+		<img class='jtaylor' src='./images/people_loc/sunset_jt.jpg' /></a>
+		<div class='jtaylorcaption'>Location where James Taylor was killed.<br><i>Google Maps</i></div>
+	</div>
+		<div class='jtaylorimg absolute' style="top:32%; right: 30.5%;">
+		<a href="https://www.google.com/maps/@34.0981826,-118.3037441,3a,60y,63.54h,69.34t/data=!3m6!1e1!3m4!1sAU5SKI2qcUh28nFC6SEgJg!2e0!7i16384!8i8192" target="_blank">
+		<img class='jtaylor' src='./images/dayTwo/james_taylor.jpg' /></a>
+		<div class='jtaylorcaption'>A paramedic and a Los Angeles police officer stand over the body of a man killed during the rioting on Sunset Boulevard in Los Angeles.<br><i>David Longstreath / AP Photo</i></div>
+	</div>
+	
+	<!--FRANK LOPEZ-->
+	<div class='flopezimg absolute' style="top:43.5%; right: 43.5%;">
+		<a href="https://www.google.com/maps/@34.004552,-118.2916108,3a,75y,286.79h,86.88t/data=!3m6!1e1!3m4!1srAmLlSuqVab7-NHFsRdFPQ!2e0!7i16384!8i8192" target="_blank">
+		<img class='flopez' src='./images/people_loc/frank_lopez_loc.jpg' /></a>
+		<div class='flopezcaption'>Location of where Frank Lopez was killed. Wall seems to be removed looking at the infrastructure grooves under the bridge.<br><i>Google Maps</i></div>
+	</div>
+	<div class='flopezimg absolute' style="top:32%; right: 30.5%;">
+		<a href="https://www.google.com/maps/@34.0981826,-118.3037441,3a,60y,63.54h,69.34t/data=!3m6!1e1!3m4!1sAU5SKI2qcUh28nFC6SEgJg!2e0!7i16384!8i8192" target="_blank">
+		<img class='flopez' src='./images/dayTwo/frank_lopez.jpg' /></a>
+		<div class='flopezcaption'>Paramedics cover the body of a man found dead under Interstate 10.<br><i>Kirk Mckoy / Getty Images</i></div>
+	</div>
+	
+	<!--MATTHEW HAINES-->
+	<div class='hainesimg absolute' style="top:43.5%; right: 43.5%;">
+		<a href="https://www.google.com/maps/@33.7900051,-118.1784452,3a,75y,192.32h,78.79t/data=!3m6!1e1!3m4!1sgnSCwUYCQaQguZvXWwdFYw!2e0!7i16384!8i8192" target="_blank">
+		<img class='haines' src='./images/people_loc/haines.jpg' /></a>
+		<div class='hainescaption'>Location of where Matthew Haines was killed on the corner of this intersection.<br><i>Google Maps</i></div>
+	</div>
+	
+	<!--EDWARD TRAVENS-->
+	<div class='travensimg absolute' style="top:43.5%; right: 43.5%;">
+		<a href="https://www.google.com/maps/@34.2840465,-118.4430992,3a,75y,42.22h,83.65t/data=!3m6!1e1!3m4!1shk8-2zgz-4JiboR1TqNH_g!2e0!7i13312!8i6656" target="_blank">
+		<img class='travens' src='./images/people_loc/travens_loc.jpg' /></a>
+		<div class='travenscaption'>Location of the intersection where Edward Travens was killed.<br><i>Google Maps</i></div>
+	</div>
+	<div class='travensimg absolute' style="top:32%; right: 30.5%;">
+		<img class='travens' src='./images/dayOne/travens.jpg' />
+		<div class='travenscaption'>Family members mourn Edward A. Travens, a 15-year-old who was killed in a drive-by shooting on the first night of the riots. His father, Allen Travens, left, mother Rosie Travens, center, and sister Jamie Travens, right, attend his funeral at the San Fernando Mission Cemetery one week after the verdicts in the case of the LAPD officers charged in the beating of Rodney King.<br><i>AL SEIB / LOS ANGELES TIMES</i></div>
+	</div>
+	
+	
+	
+		<!--Time-->
+		
+		<!--12 o clock-->
+		<div id="event" class="g-hours absolute dayTwo" style="top:31.8766%;margin-top:-9.7px;left:50.0393%;width:133px;">
+			<p class="thursday-time">Just before midnight</p>
+		</div>
+		<div id="event" class="g-12 absolute dayTwo" style="top:29.7164%;left:50.0249%;width:8.044%;">
+			<p class="thursday">Bradley and Wilson announce they have requested more National Guard troops to bring the Los Angeles County total to 6,000. They also ask the U.S. military to be placed "on alert."</p>
+		</div>
+		<div id="event" class="g-hours absolute dayTwo" style="top:33.9599%;margin-top:-9.7px;left:50.0393%;width:102px;">
+			<p class="thursday-time">12 to 2:30 p.m.</p>
+		</div>
+		<div id="event" class="g-12 absolute dayTwo" style="top:32.2917%;left:50.0249%;width:6.9734%;">
+			<p class="thursday">The National Guard is officially deployed. By late afternoon, hundreds of troops take up positions in hot spots around the city.</p>
+		</div>
+		<div id="event" class="g-hours absolute dayTwo" style="top:36.0722%;margin-top:-9.7px;left:50.0393%;width:84px;">
+			<p class="thursday-time">12 to 3 p.m.</p>
+		</div>
+		<div id="event" class="g-12 absolute dayTwo" style="top:34.375%;left:50.0249%;width:5.1505%;">
+			<p class="thursday">The Rapid Transit District announces that all bus service will be suspended as of 6 p.m.</p>
+		</div>
+				
+		
+		<!--1 o clock-->
+		<div id="event" class="g-1 absolute dayThree" style="top:26.6204%;left:62.4662%;width:7.6389%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-ne" style="width: 24%; height: 107px;"></div>
+			<p class='friday edward'>More than 1,000 Korean Americans and others gather at a peace rally at Western Avenue and Wilshire Boulevard.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:28.3754%;margin-top:-9.7px;left:62.5291%;width:89px;">
+			<p class="friday-time">About 1 p.m.</p>
+		</div>
+		<div id="event" class="g-1 absolute dayThree" style="top:28.9931%;left:60.7832%;width:6.9734%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-ne" style="width: 35%; height: 150px;"></div>
+			<p class='friday'>Gov. Wilson and Mayor Bradley talk with President George H.W. Bush and other officials in Washington about deployment of federal troops.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:31.24%;margin-top:-9.7px;left:60.9375%;width:110px;">
+			<p class="friday-time">1:15 to 5:30 a.m.</p>
+		</div>
+		<div id="event" class="g-1 absolute dayTwo" style="top:34.9248%;left:57.0602%;width:8%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-ne" style="width: 39%; height: 187px;"></div>
+			<p class="thursday">Smoke along Washington Boulevard becomes so thick that it impairs visibility of Blue Line train operators. Passengers are taken off the train and shuttled by bus from the 7th and Figueroa station to the station at Washington and Long Beach Avenue.</p>
+		</div>
+		<div id="event" class="g-hours absolute dayTwo" style="top:38.3118%;margin-top:-18.1px;left:56.9734%;width:77px;">
+			<p class="thursday-time">1 to 6 p.m.</p>
+		</div>
+		<div id="event" class="g-1 absolute dayFive" style="top:12.3843%;left:71.1325%;width:4.1088%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-ne" style="width: 24%; height: 54px;"></div>
+			<p class="thursday">Harbor Freeway (110) off-ramps are reopened.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:13.6474%;margin-top:-9.7px;left:71.0693%;width:54px;">
+			<p class="sunday-time">1 p.m.</p>
+		</div>
+		
+		<!--2 o clock-->
+		<div id="event" class="g-2 absolute dayThree" style="top:38.6285%;left:67.8941%;width:7.61%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-ne" style="width: 43%; height: 60px;"></div>
+			<p class="g-pstyle10">Pomona declares a state of emergency and imposes a dusk-to-dawn curfew.</p>
+		</div>
+		<div id="event" class="g-hours absolute" style="top:34.1046%;margin-top:-9.7px;left:77.7502%;width:108px;">
+			<p class="friday-time">About 2:45 p.m.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:36.4889%;margin-top:-18.1px;left:74.0259%;width:108px;">
+			<p class="friday-time">About 2:30 p.m.</p>
+		</div>
+		<div id="event" class="g-2 absolute dayThree" style="top:36.4873%;left:70.9227%;width:14.0914%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-ne" style="width: 33.25%; height: 92px;"></div>
+			<p class="g-pstyle10">Officials in Washington and Los Angeles announce that a federal grand jury has been convened and indicate that the Justice Department is likely to seek criminal indictments of the four officers involved in the King beating.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:38.659%;margin-top:-18.1px;left:70.3281%;width:91px;">
+			<p class="friday-time">About 2 p.m.</p>
+		</div>
+		<div id="event" class="g-2 absolute dayThree" style="top:34.375%;left:74.2514%;width:15.3519%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-ne" style="width: 34%; height: 98px;"></div>
+			<p class="g-pstyle10">Rodney G. King, the man whose videotaped beating created a national furor over police brutality, breaks his long silence to speak out about the violence inflicted in his name. In a brief emotional statement he asks: "People ... can we all get along?"</p>
+		</div>
+		
+		<!--3 o clock-->
+		<div id="event" class="g-3 absolute dayOne" style="top:50%;left:53.6169%;width:8.3333%;">
+			<p>Three LAPD officers are acquitted and one is partially acquitted in the videotaped beating of motorist Rodney G. King, setting off a powerful chain reaction.</p>
+		</div>
+		<div id="event" class="g-hours absolute dayTwo" style="top:50.1926%;margin-top:-9.7px;right:33.7%;width:73px;">
+			<p class="thursday-time">3:30 p.m.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:50.1906%;margin-top:-9.6px;right:46.4494%;width:73px;">
+			<p class="g-pstyle15">3:15 p.m. </p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:50.4356%;margin-top:-18.1px;left:72.6296%;width:79px;">
+			<p class="friday-time">3 to 5 p.m.</p>
+		</div>
+		<div id="event" class="g-3 absolute dayTwo" style="top:50.4919%;left:64.1567%;width:6.2789%;">
+			<p class="thursday">U.S. Atty. Gen. William P. Barr announces that the Justice Department will resume its investigation into possible civil rights violations in the King beating.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:51.8109%;margin-top:-9.6px;right:43.4366%;width:116px;">
+			<p class="g-pstyle15">3:30 to 3:45 p.m. </p>
+		</div>
+		<div id="event" class="g-3 absolute dayOne" style="top:51.6204%;left:56.6117%;width:5.353%;">
+			<p>The crowd outside the Simi Valley courthouse in Ventura County swells to more than 300, most of them protesting the verdicts.</p>
+		</div>
+		<div id="event" class="g-3 absolute dayOne" style="top:53.7037%;left:59.8338%;width:4.1377%;">
+			<p>Community activists and leaders meet to urge calm.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:53.8943%;margin-top:-9.6px;right:40.2465%;width:99px;">
+			<p class="g-pstyle15">3:30 to 5 p.m. </p>
+		</div>
+		<div id="event" class="g-3 absolute dayThree" style="top:50.4919%;left:72.6296%;width:6.5972%;">
+			<p>About 4,000 federal troops, Marines and soldiers begin arriving at Marine Corps Air Stations in Tustin and El Toro.</p>
+		</div>
+		
+		<!--4 o clock-->
+		<div id="event" class="g-hours absolute " style="top:66.946%;margin-top:-9.7px;left:78.2721%;width:56px;">
+			<p class="saturday-time">4 p.m.</p>
+		</div>
+		<div id="event" class="g-4 absolute dayFour" style="top:67.2454%;right:18.3569%;width:5.0347%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-se" style="width: 62%; height: 57px;"></div>
+			<p class="right-align">The first Marine Corps units arrive in Compton.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:71.2284%;margin-top:-9.7px;left:85.6623%;width:56px;">
+			<p class="sunday-time">4 p.m.</p>
+		</div>
+		<div id="event" class="g-4 absolute dayFive" style="top:71.4988%;right:9.809%;width:7.3206%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-se" style="width: 74%; height: 115px;"></div>
+			<p class="right-align">The number of inmates at the County Jail tops a record 25,000.</p>
+		</div>
+		
+		<!--5 o clock-->
+		<div id="event" class="g-hours absolute " style="top:54.1836%;margin-top:-9.6px;right:47.6154%;width:79px;">
+			<p class="g-pstyle15">5 to 6 p.m.</p>
+		</div>
+		<div id="event" class="g-5 absolute dayOne" style="top:54.456%;left:50.1674%;width:6.5373%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-se" style="width: 124%; height: 485px;"></div>
+			<p class="right-align">More than two dozen officers confront a growing crowd near Florence and Normandie avenues in <span class="g-cstyle1">South Central Los Angeles</span>. Outnumbered, police back off and do not return. The crowd vents its anger on passing motorists.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:64.2666%;margin-top:-18.1px;right:41.2%;width:72px;">
+			<p class="thursday-time">5:10 p.m.</p>
+		</div>
+		<div id="event" class="g-5 absolute dayTwo" style="top:64.294%;right:40.3991%;width:7.4%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-se" style="width: 35%; height: 158px;"></div>
+			<p class="right-align thursday">Wilson holds a news conference, carried live statewide, urging an end to violence and promising enough law enforcement to bring the trouble under control.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:78.9541%;margin-top:-9.7px;left:65.3271%;width:71px;">
+			<p class="saturday-time">5:15 p.m.</p>
+		</div>
+		<div id="event" class="g-5 absolute dayFour" style="top:79.2245%;right:31.55%;width:8.5069%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-se" style="width: 37%; height: 182px;"></div>
+			<p class="right-align">Bradley names former Olympics organizer Peter V. Ueberroth to serve as the unpaid "czar" for the Rebuild L.A. effort. At the same news conference, Gov. Wilson announces that President Bush has declared Los Angeles a disaster area.</p>
+		</div>
+		
+		<!--6 o clock-->
+		<div id="event" class="g-hours absolute " style="top:54.01%;margin-top:-9.6px;right:50.0604%;width:78px;">
+			<p class="g-pstyle15">6 to 7 p.m.</p>
+		</div>
+		<div id="event" class="g-6 absolute dayOne" style="top:54.2824%;right:50.0556%;width:2.7778%;">
+			<p class="right-align">Police begin arriving at a command post at a bus depot at 54th Street and Arlington Avenue.</p>
+		</div>
+		<div id="event" class="g-6 absolute dayOne" style="top:57.8414%;right:50.0436%;width:5.2373%;">
+			<p class="right-align dtaylor">Looting and rioting begin in earnest. One of the first targets: Tom's Liquor and Deli at Florence and Normandie. Demonstrators begin torching buildings in South-Central Los Angeles. The first fire call is received about 7:45 p.m.</p>
+		</div>
+		<div id="event" class="g-hours absolute dayTwo" style="top:67.3222%;margin-top:-9.7px;right:49.3%;width:108px;">
+			<p class="thursday-time">About 6:30 p.m.</p>
+		</div>
+		<div id="event" class="g-hours absolute dayOne-time" style="top:65.1211%;margin-top:-9.6px;right:54.0977%;width:108px;">
+			<p class="g-pstyle15">About 6:30 p.m.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:62.0829%;margin-top:-9.6px;right:54.1135%;width:79px;">
+			<p class="g-pstyle15">6 to 8 p.m.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:62.0829%;margin-top:-9.6px;right:50.0456%;width:73px;">
+			<p class="g-pstyle15">6:45 p.m.</p>
+		</div>
+		<div id="event" class="g-6 absolute dayOne" style="top:62.3553%;right:50.0594%;width:3.559%;">
+			<p class="right-align">In one of the most startling images of the riots, truck driver Reginald O. Denny is pulled from his cab and severely beaten. Four people, some of whom saw the beating on TV, come to his aid.</p>
+		</div>
+		<div id="event" class="g-6 absolute dayOne" style="top:62.3553%;right:54.1185%;width:3.3565%;">
+			<p class="right-align">More than 2,000 gather for a peaceful rally at the First African Methodist Episcopal Church.</p>
+		</div>
+		<div id="event" class="g-6 absolute dayTwo" style="top:67.6215%;right:50.0434%;width:10.0405%;">
+			<p class="right-align thursday">Long Beach declares a state of emergency and imposes a 7 p.m. to 6 a.m. curfew. But the move is not enough to protect a Department of Motor Vehicles office that is burned to the ground. Curfews are imposed in Carson, Culver City, Hawthorne, Hermosa Beach, Huntington Park, Inglewood, Pomona, San Fernando, Torrance and West Hollywood. A countywide curfew is imposed from the Long Beach Freeway (710) in the east, the Santa Ana (5) and Santa
+				Monica (10) freeways in the north, the San Diego Freeway (405) in the west and Lomita Boulevard in the south.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:73.9194%;margin-top:-9.7px;right:50.0612%;width:72px;">
+			<p class="g-pstyle17">By 6 p.m.</p>
+		</div>
+		<div id="event" class="g-6 absolute dayThree" style="top:74.2188%;right:49.9774%;width:13.1944%;">
+			<p class="right-align">Most of the 6,000 National Guard troops sent to Los Angeles are deployed.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:75.0768%;margin-top:-9.7px;right:50.0306%;width:56px;">
+			<p class="g-pstyle17">6 p.m.</p>
+		</div>
+		<div id="event" class="g-6 absolute dayThree" style="top:75.3183%;right:50.022%;width:9.9826%;">
+			<p class="right-align">Bush, speaking from the Oval Office, addresses the nation on the violence in Los Angeles and elsewhere. He announces that he will place 6,000 National Guard members under federal control.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:90.7597%;margin-top:-9.7px;left:49.0082%;width:56px;">
+			<p class="sunday-time">6 a.m.</p>
+		</div>
+		<div id="event" class="g-6 absolute dayFive" style="top:91.0301%;right:50.0193%;width:6.3368%;">
+			<p class="right-align">RTD resumes some service into South Central Los Angeles during the day.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:83.1787%;margin-top:-9.7px;left:48.4897%;width:73px;">
+			<p class="saturday-time">6:40 p.m.</p>
+		</div>
+		<div id="event" class="g-6 absolute dayFour" style="top:83.4491%;right:50.0301%;width:8.3333%;">
+			<p class="right-align">Bradley signs an executive order prohibiting landlords from imposing late fees on renters unable to withdraw money from damaged banks.</p>
+		</div>
+		<div id="event" class="g-6 absolute dayOne" style="top:65.3935%;right:54.1184%;width:4.8032%;">
+			<p class="right-align">Several hundred demonstrators gather outside Parker Center, the police headquarters, in downtown Los Angeles.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:57.569%;margin-top:-9.6px;right:50.0551%;width:79px;">
+			<p class="g-pstyle15 dtaylor">6 to 8 p.m.</p>
+		</div>
+
+		<!--7 o clock-->
+		<div id="event" class="g-hours absolute" style="top:53.3734%;margin-top:-9.6px;right:52.0454%;width:78px;">
+			<p class="g-pstyle15">7 to 8 p.m.</p>
+		</div>
+		<div id="event" class="g-7 absolute dayOne" style="top:53.6458%;right:52.1123%;width:3.8484%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-sw" style="width: 37%; height: 95px;"></div>
+			<p class="right-align">Police commanders order all officers to report for duty.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:56.1069%;margin-top:-18.1px;right:53.4471%;width:79px;">
+			<p class="g-pstyle15 dtaylor">7 to 9 p.m.</p>
+		</div>
+		<div id="event" class="g-7 absolute dayOne" style="top:56.1343%;right:53.5651%;width:7.0023%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-sw" style="width: 16%; height: 84px;"></div>
+			<p class="right-align dtaylor">Rioting erupts in Inglewood, prompting officials to declare a state of emergency.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:57.9836%;margin-top:-17.9px;right:54.53%;width:96px;">
+			<p class="g-pstyle15">7:30 to 8 p.m.</p>
+		</div>
+		<div id="event" class="g-7 absolute dayOne" style="top:58.015%;right:54.5946%;width:4.2535%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-sw" style="width: 64%; height: 160px;"></div>
+			<p class="right-align">Los Angeles Unified School District announces plans to close schools in the affected areas.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:68.6243%;margin-top:-9.7px;right:60.8256%;width:70px;">
+			<p class="g-pstyle17">7:15 a.m.</p>
+		</div>
+		<div id="event" class="g-7 absolute dayThree" style="top:68.8947%;right:60.89%;width:7.3495%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-sw" style="width: 22%; height: 99px;"></div>
+			<p class="right-align">Officials announce that 3,000 to 4,000 federal troops and 1,000 riot-trained federal law officers will be sent to Los Angeles.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:70.7076%;margin-top:-9.7px;right:62%;width:107px;">
+			<p class="g-pstyle17">About 7:30 a.m.</p>
+		</div>
+		<div id="event" class="g-7 absolute dayThree" style="top:70.9491%;right:62.03%;width:6.6134%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-sw" style="width: 28%; height: 98px;"></div>
+			<p class="right-align">Three LAPD officers are fired on by a sniper but are not seriously hurt.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:72.2991%;margin-top:-9.7px;right:62.9779%;width:119px;">
+			<p class="g-pstyle17">7 p.m. to midnight</p>
+		</div>
+		<div id="event" class="g-7 absolute dayThree" style="top:72.5694%;right:63%;width:5.5556%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-sw" style="width: 38%; height: 128px;"></div>
+			<p class="right-align">The curfew begins to take a heavy toll on area merchants, with some reporting $40,000 to $50,000 in losses per day.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:83.8731%;margin-top:-9.7px;left:28.8933%;width:73px;">
+			<p class="sunday-time">7:50 p.m.</p>
+		</div>
+		<div id="event" class="g-7 absolute dayFive" style="top:84.1435%;right:69.68%;width:8.5938%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-sw" style="width: 25%; height: 131px;"></div>
+			<p class="right-align">National Guard members shoot a motorist they say was trying to run them down. The man, a Latino, dies at 10:05 p.m. It is the first use of deadly force by the Guard since troops' arrival Thursday.</p>
+		</div>
+		
+		<!--8 o clock-->
+		<div id="event" class="g-hours absolute " style="top:51.4348%;margin-top:-9.6px;right:52.6511%;width:79px;">
+			<p class="g-pstyle15"> 8:45 p.m. </p>
+		</div>
+		<div id="event" class="g-8 absolute dayThree" style="top:61.169%;right: 69.24%;width:7.2338%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-sw" style="width: 89%; height: 128px;"></div>
+			<p class="right-align">Hundreds begin crowding South Central Los Angeles post offices to get mail not delivered to their homes due to the crisis.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:64.9495%;margin-top:-9.7px;left:22.743%;width:55px;">
+			<p class="saturday-time">8 a.m.</p>
+		</div>
+		
+		<div id="event" class="g-8 absolute dayFour" style="top:65.2199%;right:76.3%;width:9%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-sw" style="width: 74%; height: 134px;"></div>
+			<p class="right-align">The first of 6,000 alleged looters and arsonists are scheduled to begin appearing in court, but due to the volume of cases, arraignments don't begin until midafternoon.</p>
+		</div>
+		<div id="event" class="g-8 absolute dayOne" style="top:51.7072%;right:52.84%;width:8.7384%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-sw" style="width: 77%; height: 134px;"></div>
+			<p class="right-align">Mayor Tom Bradley calls a local state of emergency. Moments later, Gov. Pete Wilson, at Bradley's request, orders the National Guard to activate 2,000 reserve soldiers.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:60.8986%;margin-top:-9.7px;right:69.13%;width:94px;">
+			<p class="g-pstyle17">Before 8 a.m.</p>
+		</div>
+		
+		<!--9 o clock-->
+		<div id="event" class="g-9 absolute dayThree" style="top:47.68%;right:73.2205%;width:5.4977%;">
+			<p class="right-align">Bradley announces that the dusk-to-dawn curfew will be expanded citywide. The directive also prohibits the sale of ammunition and the sale of gasoline except for automobiles.</p>
+		</div>
+		<div id="event" class="g-9 absolute dayOne" style="top:42.7373%;right:64.8582%;width:8.4201%;">
+			<p class="right-align">About 200 to 300 demonstrators gathered at Hansen Dam Recreation Center in Lake View Terrace march to the nearby LAPD Foothill Division headquarters.</p>
+		</div>
+		<div id="event" class="g-9 absolute dayOne" style="top:44.3287%;right:60.489%;width:12.9051%;">
+			<p class="right-align">The California Highway Patrol closes exit ramps off the Harbor Freeway (110) from the Santa Monica Freeway (10) junction to Century Boulevard to keep unsuspecting motorists from wandering into the path of violence. Eventually the closure is moved south,
+				stretching from Martin Luther King Boulevard to Imperial Highway.</p>
+		</div>
+		<div id="event" class="g-9 absolute dayOne" style="top:46.441%;right:58.4491%;width:13.831%;">
+			<p class="right-align">The Federal Aviation Administration shifts the landing pattern of jetliners approaching LAX for safety reasons, after the LAPD notifies the FAA that a police helicopter was fired upon.</p>
+		</div>
+		<div id="event" class="g-hours absolute" style="top:47.1524%;margin-top:-9.6px;right:56.7013%;width:73px;">
+			<p class="g-pstyle15">9:05 p.m.</p>
+		</div>
+		<div id="event" class="g-9 absolute dayOne" style="top:47.5694%;right:56.7708%;width:11.6898%;">
+			<p class="right-align">`The demonstration outside Parker Center turns violent as the crowd throws rocks, smashes windows and torches a kiosk. Other demonstrators vandalize several downtown buildings and snarl traffic on the Hollywood Freeway (101).</p>
+		</div>
+		<div id="event" class="g-9 absolute dayOne" style="top:49.1%;left:33.5214%;width:12.1238%;">
+			<p class="right-align">Bus service is shut down in portions of South-Central Los Angeles at the request of the LAPD. The restrictions eventually affect 27 bus lines throughout the area.</p>
+		</div>
+		<div id="event2" class="g-hours absolute " style="top:43.9116%;margin-top:-9.6px;right:62.1598%;width:106px;">
+			<p class="g-pstyle15">About 9:15 p.m.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:48.7727%;margin-top:-9.6px;right:54.544%;width:90px;">
+			<p class="g-pstyle15">About 9 p.m.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:46.0239%;margin-top:-9.6px;right:58.7617%;width:73px;">
+			<p class="g-pstyle15">9:05 p.m.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:49.9032%;margin-top:-9.7px;right:71.4632%;width:73px;">
+			<p class="g-pstyle17">9:30 a.m.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:49.9012%;margin-top:-9.6px;right:52.1243%;width:90px;">
+			<p class="g-pstyle15">About 9 p.m.</p>
+		</div>	
+		
+		<!--10 o clock-->
+		<div id="event" class="g-hours absolute " style="top:27.7967%;margin-top:-9.7px;left:11.8623%;width:113px;">
+			<p class="sunday-time">About 10:30 a.m.</p>
+		</div>
+		<div id="event" class="g-10 absolute dayFive" style="top:26.6204%;left:9.43%;width:12.65%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-nw" style="width: 36.25%; height: 92px;"></div>
+			<p class='edward'>The Rev. Jesse Jackson meets with leaders in Koreatown to urge an end to animosity between African American and Korean American communities.</p>
+		</div>
+		<div id="event" class="g-10 absolute dayFive" style="top:28.2118%;left:12.2%;width:10.5%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-nw" style="width: 46.25%; height: 92px;"></div>
+			<p class='edward'>L.A. County Sheriff Sherman Block calls for federal prosecution of those who targeted Korean American merchants and beat a white truck driver during the unrest.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:29.909%;margin-top:-9.7px;left:15.379%;width:78px;">
+			<p class="sunday-time">10:45 a.m.</p>
+		</div>
+		<div id="event" class="g-10 absolute dayFour" style="top:31.0764%;left:17.17%;width:8.6516%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-nw" style="width: 75.25%; height: 128px;"></div>
+			<p class="haines">Long Beach City Council meets in emergency session to report on violence there. The tally: one death, 334 injuries and nearly 300 businesses destroyed by fire.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:33.2944%;margin-top:-9.7px;left:21.2428%;width:61px;">
+			<p class="saturday-time">10 a.m.</p>
+		</div>
+		<div id="event" class="g-10 absolute dayOne" style="top:43.45%;left:38.6%;width:8.1%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-nw" style="width: 58.1%; height: 92px;"></div>
+			<p>Bradley issues a taped message to the residents of Los Angeles calling for peace. The message is broadcast later. </p>
+		</div>
+		<div id="event" class="g-10 absolute dayTwo" style="top:41.05%;left:34.35%;width:7.5%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-nw" style="width: 44.5%; height: 63px;"></div>
+			<p class="thursday">Bradley expands the curfew to cover more of the area scarred by violence.</p>
+		</div>
+		<div id="event" class="g-10 absolute dayTwo" style="top:39.4387%;left:31.55%;width:7.1%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-nw" style="width: 70.25%; height: 92px;"></div>
+			<p class="thursday">Wilson takes a helicopter tour around the perimeter of the troubled area.</p>
+		</div>
+		<div id="event" class="g-hours absolute dayTwo" style="top:40.8581%;margin-top:-18.1px;left:33.9481%;width:96px;">
+			<p class="thursday-time">About 10 p.m.</p>
+		</div>
+		<div id="event" class="g-hours absolute dayTwo" style="top:42.2933%;margin-top:-9.7px;right:61.25%;width:76px;">
+			<p class="thursday-time">10:15 a.m.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:45.1558%;margin-top:-9.6px;right:56.5886%;width:78px;">
+			<p class="g-pstyle15">10:30 p.m.</p>
+		</div>
+		
+		<!--11 o clock-->
+		<div id="event" class="g-11 absolute dayFive" style="top:12.8762%;left:28.55%;width:9.375%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-nw" style="width: 17.25%; height: 99px;"></div>
+			<p>Bradley announces that he is lifting the dusk-to-dawn curfew on Monday. He says he expects inquiries into LAPD and National Guard delays in responding to the crisis.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:14.5444%;margin-top:-9.7px;left:29.658%;width:76px;">
+			<p class="sunday-time">11:30 a.m.</p>
+		</div>
+		<div id="event" class="g-11 absolute dayFour" style="top:18.8079%;left:31.95%;width:5.787%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-nw" style="width: 27.25%; height: 92px;"></div>
+			<p>Bradley announces that the citywide curfew will be in effect indefinitely.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:19.9842%;margin-top:-9.7px;left:32.7045%;width:76px;">
+			<p class="saturday-time">11:30 a.m.</p>
+		</div>
+		<div id="event" class="g-11 absolute dayFour" style="top:20.3993%;left:32.9%;width:6.9734%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-nw" style="width: 24.25%; height: 102px;"></div>
+			<p class='edward'>An estimated 30,000 people march for racial healing and in support of beleaguered merchants in Koreatown.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:22.1254%;margin-top:-9.7px;left:33.9205%;width:58px;">
+			<p class="saturday-time">11 a.m.</p>
+		</div>
+		
+		<div id="event" class="g-11 absolute dayThree" style="top:26.6493%;left:36.5%;width:8.7963%;">
+			<div id='g-ai0-38' class="g-1 g-polygon-nw" style="width: 25.25%; height: 133px;"></div>
+			<p>During a news conference with Patricia Sakai, administrator of the Small Business Administration, Bradley announces that Wilson will seek an official federal disaster declaration from Bush.</p>
+		</div>
+		<div id="event" class="g-hours absolute " style="top:28.8095%;margin-top:-9.7px;left:37.7741%;width:76px;">
+			<p class="friday-time">11:45 a.m.</p>
+		</div>
+			
+	<!--throughout the day-->
+	<!--throughout day2-->
+	<div id="g-ai0-51" class="g-hours absolute dayTwo" style="top:38.2713%;margin-top:-9.7px;left:63.4949%;width:131px;">
+			<p class="thursday-time">Throughout the day:</p>
+		</div>
+	<div id="event" class="g-throughout_day absolute dayTwo" style="top:38.5127%;right:31.901%;width:10.1852%;">
+			<p class="g-pstyle14 edward haines thursday">Thousands loot retail outlets in South-Central Los Angeles, Koreatown, Hollywood, Mid-Wilshire, Watts and Westwood as well as Beverly Hills, Compton, Culver City, Hawthorne, Long Beach, Norwalk and Pomona.</p>
+		</div>
+	<div id="g-ai0-49" class="g-throughout_day absolute dayTwo" style="top:40.5093%;right:30.9125%;width:8.6516%;">
+			<p class="g-pstyle14 thursday">Professional sports teams cancel games, including the NBA playoff game between the Clippers and the Utah Jazz, and the matchup between the Dodgers and the Philadelphia Phillies.</p>
+		</div>
+		<div id="g-ai0-58" class="g-throughout_day absolute dayTwo" style="top:42.5347%;right:30.4541%;width:7.0891%;">
+			<p class="g-pstyle14 thursday">The Los Angeles Unified School District expands its school closure to include every school and child-care center in the district.</p>
+		</div>
+		<div id="g-ai0-64" class="g-throughout_day absolute dayTwo" style="top:44.0683%;right:30.036%;width:6.9444%;">
+			<p class="g-pstyle14 thursday">Cal State Los Angeles, Dominguez Hills and Northridge cancel classes. Final exams are postponed at USC.</p>
+		</div>
+		<div id="g-ai0-71" class="g-throughout_day absolute dayTwo" style="top:45.6019%;right:29.7137%;width:6.8866%;">
+			<p class="g-pstyle14 thursday">Government offices, courthouses, libraries, shopping malls and many businesses are shut down for the day.</p>
+		</div>
+		<div id="g-ai0-80" class="g-throughout_day absolute dayTwo" style="top:47.2222%;right:29.6883%;width:6.3368%;">
+			<p class="g-pstyle14 thursday">Mail service is suspended to 14 ZIP Codes.</p>
+		</div>
+		<div id="g-ai0-83" class="g-throughout_day absolute dayTwo" style="top:47.8299%;right:29.4795%;width:6.9734%;">
+			<p class="g-pstyle14 thursday">A power outage leaves thousands in the dark.</p>
+		</div>
+		<div id="g-ai0-85" class="g-throughout_day absolute dayTwo" style="top:48.4664%;right:29.485%;width:6.9155%;">
+			<p class="g-pstyle14 thursday">Long lines form at supermarkets and gas stations throughout the city as residents, fearing shortages, stock up.</p>
+		</div>
+	<!--throughout day3-->
+	<div id="g-ai0-51" class="g-hours absolute dayThree" style="top:41.4252%;margin-top:-9.7px;left:74.5764%;width:131px;">
+			<p class="friday-time">Throughout the day:</p>
+		</div>
+	<div id="g-ai0-56" class="g-throughout_day absolute dayThree" style="top:41.6956%;right:21.6532%;width:7.61%;">
+			<p class="g-pstyle14 friday">Cleanup efforts begin along heavily hit Vermont Avenue and other areas, including the Mid-City, Mid-Wilshire and Hollywood sections.</p>
+		</div>
+		<div id="g-ai0-61" class="g-throughout_day absolute dayThree" style="top:43.316%;right:21.4094%;width:7.6389%;">
+			<p class="g-pstyle14 haines friday">In addition to Los Angeles, schools are closed in Beverly Hills, Compton, Inglewood, Long Beach, Lynwood, Paramount and Torrance.</p>
+		</div>
+		<div id="g-ai0-67" class="g-throughout_day absolute dayThree" style="top:44.9074%;right:21.3144%;width:6.4525%;">
+			<p class="g-pstyle14 friday">Colleges and universities remain closed.</p>
+		</div>
+		<div id="g-ai0-70" class="g-throughout_day absolute dayThree" style="top:45.544%;right:20.9608%;width:6.2211%;">
+			<p class="g-pstyle14 friday">Many airlines cancel flights into LAX, and many travelers opt instead to use airports in outlying cities.</p>
+		</div>
+		<div id="g-ai0-78" class="g-throughout_day absolute dayThree" style="top:47.1354%;right:21.0671%;width:7.7546%;">
+			<p class="g-pstyle14 friday">Up to 25,000 residents still are without electricity.</p>
+		</div>
+	<!--throughout day4-->
+	<div id="g-ai0-52" class="g-hours absolute dayFour" style="top:41.4252%;margin-top:-9.7px;left:83.5107%;width:131px;">
+			<p class="saturday-time">Throughout the day:</p>
+		</div>
+	<div id="g-ai0-54" class="g-throughout_day absolute dayFour" style="top:41.6956%;right:12.6061%;width:8.1308%;">
+			<p class="g-pstyle14 saturday">Legions of volunteers armed with grit, gumption and cleaning supplies hit the streets. The effort attracts residents from all races and all segments of the county. People also pitch in to help direct traffic, hand out food and shuttle residents.</p>
+		</div>
+		<div id="g-ai0-65" class="g-throughout_day absolute dayFour" style="top:44.2708%;right:12.5498%;width:7.3206%;">
+			<p class="g-pstyle14 saturday">Authorities report no new major fires and few major riot-related criminal incidents for the first time since the violence erupted Wednesday.</p>
+		</div>
+		<div id="g-ai0-73" class="g-throughout_day absolute dayFour" style="top:45.8912%;right:12.3457%;width:6.6551%;">
+			<p class="g-pstyle14 saturday">County officials close an eight-mile stretch of beach in Venice and Playa del Rey.</p>
+		</div>
+		<div id="g-ai0-77" class="g-throughout_day absolute dayFour" style="top:47.0486%;right:12.2902%;width:6.8866%;">
+			<p class="g-pstyle14 saturday">More than 3,500 National Guard troops are on the streets, with 1,000 more in staging areas. Army and Marine forces remain largely in staging areas.</p>
+		</div>
+	<!--throughout day5-->
+	<div id="g-ai0-53" class="g-hours absolute dayFive" style="top:41.4252%;margin-top:-9.7px;left:92.7867%;width:104px;">
+			<p class="sunday-time">During the day:</p>
+		</div>
+	<div id="g-ai0-55" class="g-throughout_day absolute dayFive" style="top:41.6956%;right:4.2728%;width:7.147%;">
+			<p class="g-pstyle14 sunday">Delivering homilies at churches throughout the area, including South-Central, Cardinal Roger M. Mahony urges looters to return stolen merchandise.</p>
+		</div>
+		<div id="g-ai0-63" class="g-throughout_day absolute dayFive" style="top:43.7789%;right:4.2103%;width:7.3785%;">
+			<p class="g-pstyle14 sunday">Ueberroth and Wilson take separate tours of riot-damaged sections of Los Angeles County.</p>
+		</div>
+	<div id="g-ai0-68" class="g-throughout_day absolute dayFive" style="top:44.9363%;right:4.0895%;width:5.6134%;">
+			<p class="g-pstyle14 sunday">Police acting on tips recover truckloads of looted merchandise.</p>
+		</div>
+	<div id="g-ai0-74 edward-song-lee" class="g-throughout_day absolute dayFive" style="top:46.0359%;right:4.005%;width:7.2338%;">
+			<p class="g-pstyle14 edward sunday">Federal authorities announce that the FBI and U.S. attorney general's office will investigate the torching of Korean-owned businesses and the attack on Denny, the truck driver.</p>
+		</div>
+		<div id="g-ai0-84 edward-song-lee" class="g-throughout_day absolute dayFive" style="top:48.1481%;right:3.9958%;width:6.9734%;">
+			<p class="g-pstyle14 edward sunday">The South Korean Foreign Ministry announces that its government will send a delegation to Los Angeles to seek reparation for Korean American merchants who suffered damage during the unrest.</p>
+		</div>
+	<div id="g-ai0-96" class="g-throughout_day absolute dayFive" style="top:50.7234%;right:4.0633%;width:7.0602%;">
+			<p class="g-pstyle14 sunday">Federal, state and local emergency officials announce that one-stop disaster-assistance centers will open by week's end.</p>
+		</div>
+
+		<div id="g-ai0-101" class="g-throughout_day absolute dayFive" style="top:52.3438%;right:4.0232%;width:6.8287%;">
+			<p class="g-pstyle14 sunday">Many school districts, including Los Angeles, Inglewood and Beverly Hills, announce that classes will resume Monday.</p>
+		</div>
+		
+		<div id="g-ai0-107" class="g-throughout_day absolute dayFive" style="top:53.9352%;right:4.2789%;width:7.2049%;">
+			<p class="g-pstyle14 sunday">Normal class schedules also are announced for USC and University of California campuses.</p>
+		</div>
+		<div id="g-ai0-111" class="g-throughout_day absolute dayFive" style="top:55.0637%;right:4.3638%;width:7.1759%;">
+			<p class="g-pstyle14 sunday">Democratic presidential hopeful Bill Clinton arrives in Los Angeles to meet with community leaders and to inspect the hard-hit areas.</p>
+		</div>
+
+		<div id="g-ai0-114" class="g-throughout_day absolute dayFive" style="top:56.684%;right:4.6565%;width:5.9606%;">
+			<p class="g-pstyle14 sunday">Authorities say most of the 1,200 backup federal law enforcement officers will leave Monday.</p>
+		</div>
+
+		<div id="g-ai0-119" class="g-throughout_day absolute dayFive" style="top:58.2755%;right:4.8043%;width:6.0185%;">
+			<p class="g-pstyle14 sunday">Nearly 8,500 members of the Marines, Army and National Guard are posted throughout the county.</p>
+		</div>
+
+		<!--NOON CLOCK-->
+
+		<!--<div id="noon" class="g-crosshair absolute " style="top:47.9968%;margin-top:-12.8px;left:49.3%;width:61px;">-->
+		<!--	<p>12:00</p>-->
+		<!--</div>-->
+		
+		<!--names-->
+		<div id="arturo-c-miranda" class="g-deaths absolute tooltip" style="top:26.6493%;right:90.3073%;">
+			<n class="d1-names">Arturo C. Miranda</p>
+			<span class='tooltiptext'>Arturo C. Miranda, a 23-year-old Latino, was fatally shot Wednesday, April 29, 1992, near the intersection of 120th Street and Central Avenue in Green Meadows.<br>
+				Miranda was riding home from a soccer game with friends when a bullet tore through the vehicle, striking him in the head. His friends rushed him to Memorial Hospital in Gardena, where he was pronounced dead.<br>
+				Miranda had arrived in Los Angeles from Mexico less than a year before and had worked for a textile company. His co-workers raised enough money so his body could be returned to his hometown of Guerrero, Mexico.
+				</span>
+		</div>
+		<div id="elias-garcia-rivera" class="g-deaths absolute tooltip" style="top:28.125%;right:91.103%">
+			<n class="d1-names">Elias Garcia Rivera</p>
+			<span class='tooltiptext'>Elias Garcia Rivera, a 32-year-old Latino, died Dec. 16, 1992, at St. Joseph Medical Center in Burbank. He had been in critical condition with a fractured skull for nearly eight months. Garcia had been struck at the base of the skull during an altercation on Wednesday, April 29, at an apartment complex in the 12800 block of Vanowen Street in Valley Glen.
+			<br>On Oct. 25, 1993, Traville J. Craig, 19, was convicted of first-degree murder and sentenced to life in prison.</span>
+		</div>
+		<div id="jimmie-harris" class="g-deaths absolute tooltip" style="top:27.3727%;right:90.6979%;">
+			<n class="d1-names">Jimmie Harris</p>
+			<span class='tooltiptext'>Jimmie Harris, a 38-year-old black man, died Monday, May 4, 1992, at a local hospital. Harris was involved in a car accident April 29 at the intersection of Avalon Boulevard and Slauson Avenue in South Park.</span>
+		</div>
+		<div id="dwight-taylor" class="g-deaths absolute tooltip" style="top:25.897%;right:89.8153%;">
+			<n class="d1-names dtaylor">Dwight Taylor</p>
+			<span class='tooltiptext'>Dwight Taylor, a 42-year-old black man, was fatally shot Wednesday, April 29, 1992, in the 4300 block of South Vermont Avenue in Vermont Square.<br>
+			Taylor was taken to a local hospital, where he died.<br>
+			Taylor, a former Cal State Long Beach basketball player, still loved to show off his ball handling to youngsters on the courts around South Los Angeles.<br>
+			In recent years, Taylor worked cutting fish at a neighborhood market.<br>
+			"Fishman," as friends called him, was on his way to visit his estranged wife and their children on the first night of the riots. When he stopped at a supermarket at Vermont and Vernon avenues to pick up some milk, he was shot in the parking lot along with two teenagers. </span>
+		</div>
+		<div id="edward-anthony-travens" class="g-deaths absolute tooltip" style="top:25.1447%;right:89.3524%;">
+			<n class="d1-names travens">Edward Anthony Travens</p>
+			<span class='tooltiptext'>Edward A. Travens, a 15-year-old white youth, was fatally shot Wednesday, April 29, 1992, near the intersection of San Fernando Road and Mission Boulevard in San Fernando.<br>
+			Travens was driving to a video store with his brother, Allen, 21, and a friend, Dan Ortiz. About 9:25 p.m., at the intersection of San Fernando Road and Mission Boulevard, they were approached by a man on foot.<br>
+			"All they heard was 'Where you from?' and 'Boom, boom, boom, boom, boom,'" said Travens' uncle, Richard Ballasteros. Five bullets pierced Travens' wiry body. Ortiz drove him to a hospital while Allen Travens cradled his brother in his arms. Eddie Travens died three hours later.
+			</span>
+		</div>
+		<div id="edurado-c-vela" class="g-deaths absolute tooltip" style="top:24.5081%;right:88.9329%;">
+			<n class="d1-names">Eduardo C. Vela</p>
+			<span class='tooltiptext'>Eduardo C. Vela, a 33-year-old Latino, was shot and killed Wednesday, April 29, 1992, in the 5100 block of West Slauson Avenue in Ladera Heights.<br>
+			Vela, a Mexican immigrant who ran a Japanese restaurant in Bakersfield, was visiting Los Angeles on the day the riots broke out. He was killed as he waited behind the steering wheel of his disabled car while a co-worker, Estevan Ortigoza, went to make a telephone call.
+			</span>
+		</div>
+		<div id="louis-a-watson" class="g-deaths absolute tooltip" style="top:23.7847%;right:88.4482%;">
+			<n class="d1-names">Louis A. Watson</p>
+			<span class='tooltiptext'>Louis A. Watson, an 18-year-old black man, was fatally shot Wednesday, April 29, 1992, in the 4300 block of South Vermont Avenue in Vermont Square.<br>
+			Struck by a single bullet to the head outside a swap meet, Watson was taken to a local hospital, where he died.<br>
+			Watson,  the oldest of seven boys, lived with his mother, Sherry Ann Johnson, and his stepfather on West 43rd.<br>
+			Friends said Watson had toyed briefly with a gang, then rejected it.  His friend, Drama, said Watson decided "it wasn't worth it. He didn't want to die from gangbanging." So Watson went back to school and to playing the drums, playing football and running track.<br>
+			At Watson's funeral, 600 people, many of them teenagers, filled the church to capacity. The service began quietly, with testimony from friends and relatives. Then the grief and tension seemed to escalate to a point where the church was filled with the sound of weeping and wailing.
+			</span>
+		</div>
+		<div id="john-h-willers" class="g-deaths absolute tooltip" style="top:22.9456%;right:87.872%;">
+			<n class="d1-names">John H. Willers</p>
+			<span class='tooltiptext'>John H. Willers, a 37-year-old white man, was shot and killed Wednesday, April 29, 1992, in the 10600 block of North Sepulveda Boulevard in Mission Hills.<br>
+			The tile-setter, who was working at a Mission Hills supermarket with his Salt Lake City-based construction crew, was gunned down outside the motel where he was staying.<br>
+			The crew members had stayed up that night watching riot coverage on television. Around 10:45 p.m., they heard the sound of cars colliding outside the motel -- the conclusion of a chase in which, according to police, three people in one car pursued two robbery suspects in another. The crash brought many of the motel guests out onto the street.<br>
+			Willers stayed outside until the injured motorists were taken away by ambulance. According to co-workers, he returned to his room but decided to go back out half an hour later. Shots rang out, and he was found dead in the middle of the street.<br>
+			"He was caught up in the moment when the city was erupting," said Det. Woodrow Parks of the LAPD's Foothill Division. "It probably was a riot-related thing."
+			</span>
+		</div>
+		<div id="willie-bernard-williams" class="g-deaths absolute tooltip" style="top:22.1644%;right:87.2907%;">
+			<n class="d1-names">Willie Bernard Williams</p>
+			<span class='tooltiptext'>Willie Bernard Williams, a 29-year-old black man, died Wednesday, April 29, 1992, in Chesterfield Square. Williams was thrown from a truck in an accident at Gage and Western avenues in which traffic signals had failed.</span>
+		</div>
+		
+		<div id="tranh-lam" class="g-deaths absolute tooltip" style="top:9.4329%;right:72.6568%;">
+			<n class="d2-names tranh">Tranh Lam</p>
+			<span class='tooltiptext'>Thanh Lam, a 25-year-old Asian man, was shot and killed Thursday, April 30, 1992, in Compton.
+			Lam was leaving his family's market in Compton, which had been looted and burned the night before. The traffic signal at Willowbrook Avenue and Alondra Boulevard had turned yellow, and Lam slowed to a stop.<br>
+			A car bumped him from the rear and pulled up in the next lane. At least two gunmen leaned out with handguns and began firing. One bullet shattered the truck's window; a volley of shots ripped into the cab.<br>
+			Four bullets hit Lam, and within minutes he was dead.
+			</span>
+		</div>
+		<div id="edward-song-lee" class="g-deaths absolute tooltip" style="top:8.7095%;right:71.2872%;">
+			<n class="d2-names edward">Edward Song Lee</p>
+			<span class='tooltiptext'>Edward Song Lee, an 18-year-old Asian man, was shot and killed Thursday, April 30, 1992, in Koreatown. Lee, a Korean American, was attempting to protect shops near 3rd Street and Hobart Boulevard when he was apparently shot by fellow Korean Americans who mistook him for a looter.</span>
+		</div>
+		<div id="g-ai0-43" class="g-deaths absolute tooltipRT" style="top:3.7905%;right:42.3%;">
+			<n class="d2-names">Elbert O. Wilkins </p>
+			<span class='tooltiptextRT'>Elbert O. Wilkins, a 33-year-old black man, was shot to death Thursday, April 30, 1992, in Gramercy Park. Wilkins and Ernest Neal Jr., 27, were killed as they stood outside a liquor store at 92nd Street and Western Avenue. </span>
+		</div>
+		<div id="g-ai0-44" class="g-deaths absolute tooltip" style="top:8.044%;right:69.7633%;">
+			<n class="d2-names flopez">Frank D. Lopez</p>
+			<span class='tooltiptext'>Frank D. Lopez, a 36-year-old Latino, died Thursday, April 30, 1992, after he was struck by a truck driven by a hit-and-run motorist at 16th Street and Central Avenue south of downtown Los Angeles.</span>
+		</div>
+		<div id="g-ai0-45" class="g-deaths absolute tooltipRT" style="top:4.3403%;right:39.1%;">
+			<n class="d2-names">Wallace Tope</p>
+			<span class='tooltiptextRT'>Wallace Tope, a 54-year-old white man, died Nov. 24, 1993. Tope had been in coma since he was assaulted April 30, 1992, in the 5500 block of West Sunset Boulevard in Hollywood.<br>
+			A street evangelist, Tope went to a shopping mall at the corner of Western Avenue and Sunset Boulevard, where hundreds of people had gathered to watch looters ransack a Sav-On drugstore. There he began to preach, urging the crowd to stop the looting and place their faith in Jesus. As he was preaching, two men began to beat him. When he tried to flee, he fell to the ground, and the men kicked him repeatedly in the head for nearly three minutes, witnesses said.<br>
+			Tope was rescued by a passing ambulance, but he lapsed into a coma shortly after arriving at the hospital.<br>
+			Two men charged with murder in the last major case of the Los Angeles riots each pleaded no contest in the fatal beating of Tope and were sentenced to prison May 9, 1994.<br>
+			Fidel Ortiz, 22, and Leonard Sosa, 24, both former warehouse workers for a Dodger Stadium concessionaire, entered the pleas to reduced charges of voluntary manslaughter on the same day they were to go on trial for the April 30, 1992, attack.<br>
+			Under a plea agreement, the judge in the case sentenced Ortiz to an 11-year prison term and Sosa to a six-year term.
+			</span>
+		</div>
+		<div id="g-ai0-46" class="g-deaths absolute tooltip" style="top:7.2627%;right:67.9982%;">
+			<n class="d2-names">Darnell R. Mallory</p>
+			<span class='tooltiptext'>Darnell R. Mallory, an 18-year-old black man, Jerel L. Channell, a 26-year-old black man, and Juanita Pettaway, a 37-year-old black woman, were killed in an auto accident Thursday, April 30, 1992, in Hollywood.<br>
+			The trio fled after Beverly Hills police officers noticed a defective taillight on their car and tried to stop them. After a high-speed chase down side streets, their car jumped a curb and crashed into a wall at Santa Monica Boulevard and Seward Street.<br>
+			An investigation showed that the three had robbed a man of his wallet in West Los Angeles. "We have no reason to believe this was anything more than a common street robbery," said police.<br>
+			"This is considered a riot case because of the riot-related robbery," the coroner's report says.
+			</span>
+		</div>
+		<div id="g-ai0-47" class="g-deaths absolute tooltipRT" style="top:5.0347%;right:35.2%;">
+			<n class="d2-names jtaylor">James L. Taylor</p>
+			<span class='tooltiptextRT'>James L. Taylor, a 26-year-old black man, was shot and killed Thursday, April 30, 1992, in East Hollywood. Taylor was shot in the back at the scene of a looted video store and cleaners in the 5200 block of Sunset Boulevard.</span>
+		</div>
+		<div id="g-ai0-48" class="g-deaths absolute tooltip" style="top:6.5104%;right:65.9728%;">
+			<n class="d2-names">Ira F. McCurry</p>
+			<span class='tooltiptext'>Ira F. McCurry, a 45-year-old white man, was shot and killed Thursday, April 30, 1992, near the intersection of 102nd Street and Avalon Boulevard in Green Meadows.<br> 
+			McCurry was shot in the head as he tried to stop looters from starting a fire in a liquor store that could have spread to the adjacent residence he shared with a friend.<br>
+			An Army veteran, McCurry had fallen on hard times before meeting county golf course maintenance worker John Huff two years ago. McCurry, who was homeless, was employed at the same golf course as part of a general relief workfare program when Huff took him into his Watts-area home.<br>
+			"Over time, he became a part of my family," Huff, 50, said.
+			</span>
+		</div>
+		<div id="g-ai0-49" class="g-deaths absolute tooltipRT" style="top:5.787%;right:31.6%;">
+			<n class="d2-names">Anthony J. Taylor</p>
+			<span class='tooltiptextRT'>Anthony Taylor, a 31-year-old black man, was shot and killed Thursday, April 30, 1992, in Watts. Taylor and Dennis Ray Jackson, 38, both longtime residents of Watts, had been drinking beer in a parking lot adjacent to the Nickerson Gardens housing project when they were caught in a firefight between police and an alleged sniper.</span>
+		</div>
+		<div id="g-ai0-50" class="g-deaths absolute tooltip" style="top:5.7581%;right:63.8798%;">
+			<n class="d2-names">Nissar Mustafa</p>
+			<span class='tooltiptext'>Nissar Mustafa (John Doe #172). The charred and decomposed body of John Doe #172 was discovered Aug. 12, 1992, in Harvard Heights in the 1600 block of South Western Avenue.  The body was found by a demolition crew clearing the rubble inside a J.J. Newberry store that was burned by looters on the first night of riots.<br>
+			The body was later identified as Nissar Mustafa, a 20-year-old white man.
+			</span>
+		</div>
+		<div id="juan-a-pineda" class="g-deaths absolute tooltipRT" style="top:6.5683%;right:29.9%;">
+			<n class="d2-names">Juan A. Pineda</p>
+			<span class='tooltiptextRT'>Juan A. Pineda, a 20-year-old Latino, was fatally shot Thursday, April 30, 1992, at 4028 Santa Monica Blvd. in Silver Lake. He was taken to a local hospital, were he died.<br>
+			Pineda, a cook at a Mexican restaurant on Wilshire Boulevard, was struck by several bullets during a firefight outside Auto Color Plus Inc., a car paint and supply shop near the corner of Santa Monica and Sunset boulevards. </span>
+		</div>
+		<div id="ernest-neal-jr" class="g-deaths absolute tooltip" style="top:5.0058%;right:60.967%;">
+			<n class="d2-names">Ernest Neal Jr.</p>
+			<span class='tooltiptext'>Ernest Neal Jr., a 27-year-old black man, was shot to death Thursday, April 30, 1992, in Gramercy Park. Neal and Elbert Wilkins, 33, were killed as they stood outside a liquor store at 92nd Street and Western Avenue.</span>
+		</div>
+		<div id="george-a-sosa" class="g-deaths absolute tooltipRT" style="top:7.3206%;left:68.1955%;">
+			<n class="d2-names">George A. Sosa</p>
+			<span class='tooltiptextRT'>George A. Sosa, a 20-year-old Latino, was fatally shot Thursday, April 30, 1992, in the 2600 block of Florence Avenue in Huntington Park.<br>
+			Sosa was visiting his girlfriend when a gang member who had been drinking asked him what gang he was in and then opened fire, authorities said. Sosa was dead on arrival at County-USC Medical Center.
+			</span>
+		</div>
+		<div id="anthony-netherly" class="g-deaths absolute tooltip" style="top:4.2824%;right:57.8613%;">
+			<n class="d2-names">Anthony Netherly</p>
+			<span class='tooltiptext'>Anthony Netherly, a 21-year-old black man, was shot to death Thursday, April 30, 1992, in Florence.  Netherly was struck in the head by a random bullet while riding in a car at the intersection of 78th and San Pedro streets.</span>
+		</div>
+		<div id="juanita-pettaway" class="g-deaths absolute tooltip" style="top:3.6748%;right:53.6175%;">
+			<n class="d2-names">Juanita Pettaway</p>
+			<span class='tooltiptext'>Darnell R. Mallory, an 18-year-old black man, Jerel L. Channell, a 26-year-old black man, and Juanita Pettaway, a 37-year-old black woman, were killed in an auto accident Thursday, April 30, 1992, in Hollywood.<br>
+			The trio fled after Beverly Hills police officers noticed a defective taillight on their car and tried to stop them. After a high-speed chase down side streets, their car jumped a curb and crashed into a wall at Santa Monica Boulevard and Seward Street.<br>
+			An investigation showed that the three had robbed a man of his wallet in West Los Angeles. "We have no reason to believe this was anything more than a common street robbery," said police.<br>
+			"This is considered a riot case because of the riot-related robbery," the coroner's report says.
+			</span>
+		</div>
+		<div id="g-ai0-11" class="g-deaths absolute tooltip" style="top:20.978%;right:86.2853%;">
+			<n class="d2-names">Cesar A. Aguilar </p>
+			<span class="tooltiptext">Cesar Aguilar, an 18-year-old Latino, was shot and killed Thursday, April 30, 1992, in Westlake.  
+			Aguilar, a Honduran immigrant, was arrested with more than 40 other alleged looters near Sam's Corner Liquor Store at 6th Street and Westlake Avenue.  Officers say he was ordered to lie prone, and that he then pulled what appeared to be a gun from his waistband and pointed it toward them.<br>
+			Officers fired at Aguilar with a 9-millimeter pistol and a shotgun. He was struck in the chest and died at the scene, according to an initial coroner's account.<br>
+			The "gun," however, was a plastic toy with a black barrel and brown grips, officials said.<br>
+			Aguilar had lived for five months in the Park View Luxury Apartments, a $450-a-month hotel at MacArthur Park. Friends said he delivered newspapers for a living.<br>
+			A father of two, Aguilar had planned to return to Honduras to be reunited with his pregnant girlfriend.
+			Aguilar's body was flown back to Honduras at that government's expense because Aguilar's family could not pay the $1,976, Consul General Rene Francisco Umana said.<br>
+			"It's so sad," Umana said. "Maybe he didn't have an idea to hurt anybody . . . but the situation was so difficult, so grave. In L.A., things can happen."
+			</span>
+		</div>
+		<div id="g-ai0-13" class="g-deaths absolute tooltip" style="top:20.11%;right:85.4896%;">
+			<n class="d2-names">Brian E. Andrew</p>
+			<span class='tooltiptext'>Brian E. Andrew, a 30-year-old black man, was shot and killed Thursday, April 30, 1992, near Rosecrans and Chester avenues in Compton.<br>
+			Andrew, who worked odd jobs in construction, went out Thursday night and never returned.<br>
+			After trying in vain to locate her son, Gloria Andrew filed a missing-persons report six days later. The next day, a Compton police officer knocked on her door to tell her the news.<br>
+			Andrew was seen running from a nearby shoe store with other looters, police said, and was carrying boxes of shoes and a large bottle of beer.<br>
+			Andrew had dropped the shoes and was waving the bottle when a Compton police officer caught up with him in an alley and shot him once in the face as they grappled, police said.<br>
+			Andrew, the father of two 14-year-old girls, had had minor run-ins with police, his mother said, and once served six months in the California Youth Authority on an assault conviction.<br>
+			But she said it was "inconceivable" that he would strike an armed officer.  "He wasn't that type of person."
+			</span>
+		</div>
+		<div id="g-ai0-15" class="g-deaths absolute tooltip" style="top:19.3287%;right:84.9494%;">
+			<n class="d2-names">Franklin Benavidez</p>
+			<span class='tooltiptext'>Franklin Benavidez, a 27-year-old Latino, was shot and killed Thursday, April 30, 1992, in the 4400 block of South Western Avenue in Vermont Square.<br> 
+			According to authorities, Benavidez was shot after fleeing from a gas station he had tried to rob at Western and Vernon avenues. Benavidez pointed a shotgun at officers after being ordered to drop it, they said.<br>
+			Two LAPD Metro Division officers fired 10 rounds, investigators said.<br>
+			A second suspect, Victor Munoz, 19, was struck in the stomach, police said, after he appeared to arm himself with a handgun. Munoz, who was hospitalized for two weeks, was not arrested. Investigators later determined that Munoz was carrying a beer can.<br>
+			Munoz said Benavidez did not have a gun and did not try to rob the gas station.<br>
+			J.C. Wilburn, who operates the Shell station, said two Latino men -- one with a shotgun -- tried to rob his business moments before the shooting, but left when he and two co-workers displayed guns of their own.<br>
+			Almost immediately after the would-be robbers turned the corner, Wilburn said, gunfire rang out.<br>
+			Benavidez, who moved to the United States in 1985, was born in El Salvador and had served in the Salvadoran Army. In Los Angeles, he repaired cars and delivered telephone books.
+			</span>
+		</div>
+		<div id="g-ai0-17" class="g-deaths absolute tooltip" style="top:18.5185%;right:84.2767%;">
+			<n class="d2-names">Patrick Bettan</p>
+			<span class='tooltiptext'>Patrick Bettan, a 30-year-old white man, was shot and killed Thursday, April 30, 1992, in Koreatown. Bettan, a security guard at a Koreatown mini-mall in the 2700 block of West Olympic Boulevard, was accidentally shot by a co-worker during a looting incident.</span>
+		</div>
+		<div id="g-ai0-19" class="g-deaths absolute tooltip" style="top:17.7951%;right:83.5237%;">
+			<n class="d2-names">Hector Castro</p>
+			<span class='tooltiptext'>Hector Castro, a 49-year-old Latino, was shot and killed Thursday, April 30, 1992, in Koreatown.<br>
+			Castro was shot outside a block of retail shops at Vermont and Leeward avenues  by an unknown gunman during a looting melee. The fatal bullet passed through the Central American immigrant's neck and was never found, authorities said.<br>
+			"There were 150 to 300 people out there," said LAPD Det. Steven Sena. "Not only were there Korean merchants shooting their weapons to scare off looters, but possible gang members and looters were shooting at the Koreans to get them out of the stores."<br>
+			"It makes the case almost impossible" to solve,  Sena said.
+			</span>
+		</div>
+		<div id="g-ai0-21" class="g-deaths absolute tooltip" style="top:17.0428%;right:82.789%;">
+			<n class="d2-names">Jerel L. Channell</p>
+			<span class='tooltiptext'>Darnell R. Mallory, an 18-year-old black man, Jerel L. Channell, a 26-year-old black man, and Juanita Pettaway, a 37-year-old black woman, were killed in an auto accident Thursday, April 30, 1992, in Hollywood.<br>
+			The trio fled after Beverly Hills police officers noticed a defective taillight on their car and tried to stop them. After a high-speed chase down side streets, their car jumped a curb and crashed into a wall at Santa Monica Boulevard and Seward Street.<br>
+			An investigation showed that the three had robbed a man of his wallet in West Los Angeles. "We have no reason to believe this was anything more than a common street robbery," said police.<br>
+			"This is considered a riot case because of the riot-related robbery," the coroner's report says.
+			</span>
+		</div>
+		<div id="g-ai0-23" class="g-deaths absolute tooltip" style="top:16.2905%;right:82.0029%;">
+			<n class="d2-names">Gregory Davis Jr.</p>
+			<span class='tooltiptext'>Gregory Davis Jr., a 15-year-old black teen, was fatally shot Wednesday, April 29, 1992, near the intersection of Vermont Avenue and 43rd Street in Vermont Square. He was transported by friends to County-USC Medical Center, where he died.</span>
+		</div>
+		<div id="g-ai0-25" class="g-deaths absolute tooltip" style="top:15.5382%;right:81.1324%;">
+			<n class="d2-names">Kevin J. Edwards</p>
+			<span class='tooltiptext'>Kevin Edwards, a 35-year-old black man, was shot and killed Thursday, April 30, 1992, in the 600 block of South Locust Avenue in Compton. Edwards was shot after an apparent argument with a friend at a home far from the scene of any disturbances. "It may have been a domestic dispute," said Det. John Swanson.</span>
+		</div>
+		<div id="g-ai0-27" class="g-deaths absolute tooltip" style="top:14.7569%;right:80.2764%;">
+			<n class="d2-names">Howard Epstein</p>
+			<span class='tooltiptext'>Howard Epstein, a 45-year-old white man, was shot and killed Thursday, April 30, 1992, near Slauson and 7th avenues in Hyde Park.<br>
+			Epstein, who had flown from his Northern California home to check on his South Los Angeles metal manufacturing business, was struck in the head by a bullet that apparently came from a pickup truck that had pulled alongside his car.<br>
+			His car careened into a liquor store parking lot, where a crowd quickly gathered. Onlookers broke into applause when someone yelled that the dead driver was white, witnesses said, and Epstein's cellular telephone, camera, briefcase and pistol were stolen.<br>
+			Hostility was so intense after the shooting of Epstein that detectives towed away the Epstein's Thunderbird while his body was still behind the wheel -- an unusual step.
+			</span>
+		</div>
+		<div id="g-ai0-29" class="g-deaths absolute tooltip" style="top:14.0336%;right:79.4349%;">
+			<n class="d2-names">Jose L. Garcia</p>
+			<span class='tooltiptext'>Jose L. Garcia, a 15-year-old Latino, was shot and killed Thursday, April 30, 1992, in the 1000 block of South Fresno Street in Boyle Heights. Garcia died from a gunshot wound to the chest, reportedly after a fight. His death may have been gang-related.</span>
+		</div>
+		<div id="g-ai0-31" class="g-deaths absolute tooltip" style="top:13.2813%;right:78.4656%;">
+			<n class="d2-names">Mark Garcia</p>
+			<span class='tooltiptext'>Mark Garcia, a 15-year-old Latino youth, was shot and killed Thursday, April 30, 1992, in Lennox.<br>
+			Friends said he was drawn by curiosity to the looting and fires in a mini-mall at Hawthorne Boulevard and 101st Street but did not participate.<br>
+			An initial Sheriff's Department report alleged that Mark was one of four jewelry shop looters who fled in a black Ford Tempo and engaged in a shootout with Deputies Wayne Beckley and Jeffrey Moore.<br>
+			The suspected looters bailed out of their car six blocks away. Deputies caught up with them in a nearby parking lot and returned fire, killing Mark.<br>
+			The boy turned out to be unarmed. Witnesses, including two youths in the Tempo, have told The Times that Mark had not been in the car with them.<br>
+			Sheriff's investigators later confirmed that Mark was already at the parking lot when the looting suspects arrived and was shot while fleeing with them from deputies.
+			</span>
+		</div>
+		<div id="g-ai0-35" class="g-deaths absolute tooltip" style="top:11.6898%;right:76.2424%;">
+			<n class="d2-names haines">Matthew D. Haines</p>
+			<span class='tooltiptext'>Matthew Haines, a 32-year-old white man, was beaten and shot in the head, Thursday, April 30, 1992, in Long Beach.<br>
+			Haines and his nephew, Scott Coleman, 26, were pulled from Haines'  motorcycle at the corner of Lemon Avenue and Pacific Coast Highway. Haines was beaten, kicked and fatally shot in the head. Coleman was shot but survived.<br>
+			In February 1993, a Superior Court jury acquitted Larry Williams, 24, Fabian Nixon, 19, and Brent Lamar Jones, 18,  of murder. Instead they were found guilty of assault with a deadly weapon and conspiring to assault, loot and rob. The jury said the three weren't guilty of murder because "there wasn't evidence proving that the three defendants actually did shoot the victim," the forewoman said at the time.<br> 
+			Williams and Nixon were sentenced to nearly six years in prison and ordered to pay restitution.  Jones, who was a minor at the time, was  sentenced to five years and eight months in the California Youth Authority and ordered to pay $5,000 to a crime victims' restitution fund.<br>
+			</span>
+		</div>
+		<div id="g-ai0-37" class="g-deaths absolute tooltip" style="top:10.9086%;right:75.1259%">
+			<n class="d2-names">DeAndre Harrison</p>
+			<span class='tooltiptext'>DeAndre Harrison, a 17-year-old-black man, was fatally shot Thursday, April 30, 1992, near the intersection of Central Avenue and 112th Street in Green Meadows.  He was taken to Martin Luther King Jr./Drew Medical Center, where he died.<br>
+			Less than four hours after truck driver Reginald O. Denny and others were attacked at Florence and Normandie, four LAPD officers in a patrol car said they came under intense fire from looters outside a Korean American-owned store in Green Meadows at Central Avenue and 112th Street.<br>
+			The officers returned fire and then sped off to await reinforcements. One of seven rounds they fired had hit a heavyset, shirtless gunman.<br>
+			When they returned, the victim and his weapon had vanished. LAPD officials later learned that 17-year-old Harrison had died of a gunshot wound at the hospital, and ballistics tests showed that he had been struck by a 9-millimeter bullet fired by an LAPD officer.<br>
+			Harrison was angry over the verdicts in the King beating case, relatives said, and had helped loot clothing stores earlier in the night.<br>
+			But whether he was the shirtless suspect who shot at police is another question.<br>
+			About 10:30 p.m., there was a soft knock on the door of an apartment Harrison's girlfriend shared with her mother, Myra Collins. It was Harrison, Collins said later, and he was wearing a blood-drenched T-shirt with a small bullet hole in the chest.<br>
+			"It was just like when you watch these westerns and they stagger in the door," she said.<br>
+			"I don't know what DeAndre was doing," Collins said. "I don't know if he was an angel or a devil. But he did have on a white T-shirt."<br>
+			"He was just a kid that got caught up in a vicious cycle," said Verbum Dei High School Principal Robert Mendoza, who had known Harrison for years. "It's very difficult to live around here."</span>
+					</div>
+		<div id="g-ai0-39" class="g-deaths absolute tooltip" style="top:10.1273%;right:73.8624%">
+			<n class="d2-names">Dennis Ray Jackson</p>
+			<span class='tooltiptext'>Dennis Ray Jackson, a 38-year-old black man, was shot and killed Thursday, April 30, 1992, in Watts. Jackson and Anthony Taylor, 31, both longtime residents of Watts, had been drinking beer in a parking lot adjacent to the Nickerson Gardens housing project when they were caught in a firefight between police and an alleged sniper.</span>
+		</div>
+		<div id="g-ai0-33" class="g-deaths absolute tooltip" style="top:12.4711%;right:77.3588%;">
+			<n class="d2-names">Andreas Garnica</p>
+			<span class='tooltiptext'>Andreas Garnica, a 36-year-old Latino, was stabbed to death Thursday, April 30, 1992, in Pico-Union. Garnica was attacked in the 2000 block of West Pico Boulevard during a drug deal and street robbery.<br>
+			Detectives were unable to find the family of Adolfo Morales, also known as Andres J. Garnica, until they received a lead through a wire service reporter's inquiry.
+			</span>
+		</div>
+		
+		
+		<div id="g-ai0-12" class="g-deaths absolute tooltipRT" style="top:8.9699%;right:24.9%;">
+			<n class="d3-names">George Alvarez</p>
+			<span class='tooltiptextRT'>George Alvarez, a 42-year-old Latino, died Friday, May 1, 1992, in Chinatown.  Alvarez was beaten to death by some homeless people after he allegedly stole less than $5 worth of recyclable cans and bottles. His body was found in front of a recycling center, near Main and College streets.</span>
+		</div>
+		<div id="g-ai0-32" class="g-deaths absolute tooltipRT" style="top:16.6667%;right:13.4%;">
+			<n class="d3-names">Charles W. Orebo</p>
+			<span class='tooltiptextRT'>Charles Orebo, a 21-year-old black man, was shot and killed Friday, May 1, 1992, near the intersection of Florence Avenue and Flower Street in Florence.<br>
+			Charles "Sticks" Orebo and two friends, Andre Webb and Lavelle "Frog" Williams were driving toward a South Los Angeles house where Webb planned to spend the night.<br>
+			Near Florence Avenue and the 110 Freeway, Orebo tried to make a lane change, nearly cutting off a car behind him. The other driver honked and pulled alongside at a stoplight.<br>
+			Williams drew a handgun, loaded it and pointed it past Orebo toward the other driver, an LAPD officer who was out of uniform and en route to work.<br>
+			"The guy looked at us," Webb said, "and he jumped like he was in shock. Then he pulled up his gun. . . . Then he shot like three times and hit Sticks."<br>
+			Orebo, mortally wounded, punched the accelerator. The car lurched into a wall and caught fire.<br>
+			Orebo, a dropout and the father of a 4-year-old son, had planned to get married the next month and become an auto mechanic, said his mother, Georgia Alfred.<br>
+			He had been jailed a couple of times for traffic tickets and other small offenses, she said. "But nothing violent. No guns or anything like that."<br>
+			Alfred said her son and Williams watched the verdicts in the King beating case together and were angry, "but he wasn't going out beating anyone or carrying a gun."<br>
+			"From what I gathered, my son didn't know [Williams] had the gun until he pulled it up," she said. "I'm angry, but I'm angry with the young man."
+			</span>
+		</div>
+		<div id="g-ai0-34" class="g-deaths absolute tooltipRT" style="top:17.419%;right:13.3%">
+			<n class="d3-names">Aaron Ratinoff</p>
+			<span class='tooltiptextRT'>Aaron Ratinoff, a 68-year-old white man, died Friday, May 1, 1992, in the 11600 block of Gateway Boulevard in Sawtelle.  Ratinoff was strangled by a supermarket produce manager in a dispute over corn husks.<br>
+			Ratinoff would never have ended up at the Bob's Market on Gateway Boulevard in West Los Angeles if the store where he normally shopped had remained open during the riots. The produce manager apparently got angry when Ratinoff dropped some corn husks on the floor while shopping for vegetables, and the pair tussled.<br>
+			Coroner's spokesman Bob Dambacher said the criterion his office has used for riot-related deaths was simple: "Would this person have died at that particular time and that particular place if the riots had not occurred?"
+			</span>
+		</div>
+		<div id="g-ai0-36" class="g-deaths absolute tooltipRT" style="top:18.2002%;right:13.05%;">
+			<n class="d3-names">William Ross</p>
+			<span class='tooltiptextRT'>William Ross, a 33-year-old white man, died Friday, May 1, 1992, in Koreatown. Ross' body was found Saturday, May 2, inside a market that had been firebombed in the 2800 block of West 9th Street and identified 10 days later through dental records.</span>
+		</div>
+		<div id="g-ai0-38" class="g-deaths absolute tooltipRT" style="top:18.9236%;right:11.55%;">
+			<n class="d3-names">Juan V. Salgado</p>
+			<span class='tooltiptextRT'>The body of Juan V. Salgado, a 20-year-old Latino, was found May 20, 1992, inside a burned clothing store in the 3100 block of South Main Street called Collective Merchandise Inc., where he was last seen.</span>
+		</div>
+		<div id="g-ai0-40" class="g-deaths absolute tooltipRT" style="top:19.7049%;right:11.05%;">
+			<n class="d3-names">Jose Solorzano</p>
+			<span class='tooltiptextRT'>Jose Solorzano, a 25-year-old Latino, was shot and killed Friday, May 1, 1992, in East Hollywood. Solorzano was shot by a security guard while looting at a store at Vermont Avenue and Santa Monica Boulevard.</span>
+		</div>
+		<div id="g-ai0-14" class="g-deaths absolute tooltipRT" style="top:9.7222%;right:23.4%;">
+			<n class="d3-names">Wilson Alvarez</p>
+			<span class='tooltiptextRT'>Wilson Alvarez, a 40-year-old Latino, died of head injuries at County-USC Medical Center on May 23, 1992. According to authorities, Alvarez was assaulted while throwing rocks at looters Friday, May 1.</span>
+		</div>
+		<div id="g-ai0-16" class="g-deaths absolute tooltipRT" style="top:10.5324%;right:22.5%;">
+			<n class="d3-names">Harry Doller</p>
+			<span class='tooltiptextRT'>Harry Doller, a 56-year-old white man, died Friday, May 1, 1992, in Silver Lake.  Doller, who lived alone in a cottage in the 3500 block Winslow Drive, "fell asleep with a cigarette and his bed caught fire," said Det. Andrew Cicoria.<br>
+			The coroner's office concluded that he died of a drug and alcohol overdose and that his cigarette may have started the fire.
+			</span>
+		</div>
+		<div id="g-ai0-18" class="g-deaths absolute tooltipRT" style="top:11.2847%;right:19.52%;">
+			<n class="d3-names">Kevin A. Evanahen</p>
+			<span class='tooltiptextRT'>Kevin A. Evanahen, a 24-year-old white man, died Friday, May 1, 1992, in Del Rey. Evanahen fell through the roof of a check-cashing store at Braddock Drive and Inglewood Avenue while trying to put out a fire.</span>
+		</div>
+		<div id="g-ai0-20" class="g-deaths absolute tooltipRT" style="top:12.066%;right:19.7%;">
+			<n class="d3-names">Meeker Gibson</p>
+			<span class='tooltiptextRT'>Meeker Gibson, a 35-year-old black man, was shot and killed Friday, May 1, 1992, in an apparent drive-by shooting at a telephone stand at a gas station at Holt and Loranne avenues in Pomona.</span>
+		</div>
+		<div id="g-ai0-22" class="g-deaths absolute tooltipRT" style="top:12.8183%;right:18.65%;">
+			<n class="d3-names">Paul D. Horace</p>
+			<span class='tooltiptextRT'>Paul D. Horace, a 38-year-old black man, was shot and killed Friday, May 1, 1992, in the 1400 block of East Walnut Avenue in Central-Alameda.  Horace, of Benicia, was fatally shot while trying to buy cocaine on the edge of Los Angeles' garment district, police said. </span>
+		</div>
+		<div id="g-ai0-24" class="g-deaths absolute tooltipRT" style="top:13.5995%;right:18.05%;">
+			<n class="d3-names">Betty Jackson</p>
+			<span class='tooltiptextRT'>Betty Jackson, a 56-year-old black woman, died Friday, May 1, 1992, in South Park while rushing to deliver some barbecued chicken to a friend before the citywide evening curfew began.<br>
+			The small car that Jackson and her sister were in was struck by a van at Main and 51st streets. Traffic lights were out throughout the area.<br>
+			"Betty was very generous," said Ingrid Chamberlin, a relative. "Betty was like the one person you would want to win the lottery. If she's rich, everybody's rich. That's the kind of person she is."
+			</span>
+		</div>
+		<div id="g-ai0-26" class="g-deaths absolute tooltipRT" style="top:14.3808%;right:15.76%;">
+			<n class="d3-names">Lucie R. Maronian</p>
+			<span class='tooltiptextRT'>Lucie Maronian, a 51-year-old white woman, was stabbed to death Friday, May 1, 1992, in the 1800 block of East New York Drive in Altadena.<br>
+			Maronian was found stabbed in her home. According to sheriff's investigators, she was killed after confronting a group of teenagers who had been chasing her 14-year-old son and his friend from a nearby intersection.<br>
+			In October 1994, two Altadena teenagers, previously accused of the murder of Maronian, were given five years' probation on related charges. O'Dell Whitley Jr., 19, and Leonard Hampton, 18, were sentenced in Pasadena Superior Court for commercial burglary of an Arcadia sporting goods store and attempted robbery of a pedestrian.<br>
+			The two originally were charged with a series of crimes that included the stabbing of Maronian.<br>
+			In April 1993, Whitley and Hampton were found guilty of the lesser crimes. But a mistrial was declared on the murder charge when only four of the 12 jurors voted for conviction. The district attorney decided not to retry the two for murder.
+			</span>
+		</div>
+		<div id="g-ai0-28" class="g-deaths absolute tooltipRT" style="top:15.1331%;right:15.54%;">
+			<n class="d3-names">Alfred V. Miller</p>
+			<span class='tooltiptextRT'>Alfred V. Miller, a 32-year-old black man, was fatally shot Friday, May 1, 1992, in Chesterfield Square. Miller was wounded as he rode in a car at the intersection of Florence Avenue and Cimarron Street.  He was taken to Daniel Freeman Memorial Hospital, where he was pronounced dead.<br>
+			The drive-by shooting of Miller, who was wearing a body cast from a previous shooting, may have been connected to a past feud, authorities said.<br>
+			"There was no exchange of words, no confrontation -- just the shots fired," said LAPD Det. Rosemary Sanchez.<br>
+			A suspect was arrested in the Miller slaying, but the district attorney's office decided that the witness' identification was too shaky. 
+			</span>
+		</div>
+		<div id="g-ai0-30" class="g-deaths absolute tooltipRT" style="top:15.9144%;right:13.8%;">
+			<n class="d3-names">Suzanne R. Morgan</p>
+			<span class='tooltiptextRT'>Suzanne R. Morgan, a 24-year-old black woman, was shot and killed Friday, May 1, 1992, in the 2100 block of East 115th Street in Watts.  Morgan was allegedly shot at her apartment by her boyfriend. Police say he obtained the gun because of the rioting.</span>
+		</div>
+		
+		
+		<div id="g-ai0-7" class="g-deaths absolute tooltipRT" style="top:21.1516%;right:10.4%;">
+			<n class="d4-names">Carol Benson</p>
+			<span class='tooltiptextRT'>Carol Benson, a 42-year-old black woman, was struck on the 110 Freeway near Slauson Avenue in a hit-and-run accident on Saturday, May 2, 1992.<br>
+			Little is known about Benson, who was struck and dragged 180 feet.  Authorities say she lived by herself in an apartment across from a small church in South Los Angeles. No relatives claimed her body, so her funeral was like those offered for all indigents: a cremation at County-USC Medical Center.
+			</span>
+		</div>
+		<div id="g-ai0-8" class="g-deaths absolute tooltipRT" style="top:21.875%;right:9.5%;">
+			<n class="d4-names">John Doe #80</p>
+			<span class='tooltiptextRT'>John Doe #80 was found Saturday, May 2, 1992, in a burned-out Pep Boys auto parts store in the 5800 block of South Vermont Avenue. The store in Vermont-Slauson had been torched a few days earlier.<br>
+			Investigators succeeded in lifting a single print from the body's left middle finger -- a critical piece of information in the identification process. In addition, they X-rayed the body's teeth and recovered from the scene a pair of blue bikini underwear, a .38-caliber bullet casing and parts of a pair of blue jeans.
+			</span>
+		</div>
+		<div id="g-ai0-9" class="g-deaths absolute tooltipRT" style="top:22.6273%;right:8.65%;">
+			<n class="d4-names">Juana Espinosa</p>
+			<span class='tooltiptextRT'>Juana Espinosa, a 65-year-old Latina, was shot and killed Saturday, May 2, 1992, in the 7600 block of South Compton Avenue in Willowbrook. Espinosa was shot in the stomach by a 15-year-old boy who authorities say was aiming for two other youths.</span>
+		</div>
+		<div id="g-ai0-10" class="g-deaths absolute tooltipRT" style="top:23.3507%;right:8.43%;">
+			<n class="d4-names">Fredrick Ward</p>
+			<span class='tooltiptextRT'>Fredrick Ward, a 20-year-old black man, was shot and killed Saturday, May 2, 1992, in the 11900 block of Cometa Avenue in Pacoima.</span>
+		</div>
+		
+		
+		<div id="g-ai0-2" class="g-deaths absolute tooltipRT" style="top:24.9132%;right:7.67%;">
+			<n class="d5-names">Vivian Austin</p>
+			<span class='tooltiptextRT'>Vivian Austin, an 87-year-old black woman, died Sunday, May 3, 1992, in the 1600 block of West 60th Street. Austin suffered a fatal heart attack at her home in Harvard Park.<br>
+			Friends said she had been distraught by the rioting.<br>
+			"This is considered a riot case because the stress from the riot was well documented and is a contributing factor in death from arteriosclerotic disease," the coroner's report says.
+			</span>
+		</div>
+		<div id="g-ai0-3" class="g-deaths absolute tooltipRT" style="top:25.6944%;right:4.62%;">
+			<n class="d5-names">Howard Eugene Martin</p>
+			<span class='tooltiptextRT'>Howard Eugene Martin, a 22-year-old black man, was shot and killed Sunday, May 3, 1992, near the intersection of North Los Robles Avenue and Claremont Street in Pasadena.<br>
+			He was known as "Nine Lives."<br>
+			Twice in the last five years, Martin had been a passenger in cars where the driver was killed.<br>
+			Once, it was a late-night automobile crash. The other time a friend was shot in the head by masked gunmen. "The boy just fell into Howard's lap," recalls his sister, Wanda.<br>
+			Martin's luck finally ran out three days after the verdicts in the King beating case. The father of three, who grew up only a couple of blocks from King, was killed by a stray bullet.<br>
+			The incident began, police said, when two officers tried to disperse more than 150 party-goers at a Pasadena apartment complex but were greeted with rocks and bottles -- and gunshots.<br>
+			Nearly 25 more officers arrived quickly, and 10 of them fired a total of 70 rounds at several assailants.<br>
+			Martin, relatives said, was visiting friends at a nearby apartment when he stepped onto a balcony to look at what was going on. He was struck in the head by a police bullet that apparently ricocheted off the street, police said.<br>
+			Martin's sister and other relatives said police should have shown more control over their gunfire. "They probably felt they were under attack," she said. "But that doesn't justify firing 70 rounds."</span>
+		</div>
+		<div id="g-ai0-4" class="g-deaths absolute tooltipRT" style="top:26.4468%;right:5.6%;">
+			<n class="d5-names">Hugo G. Ramirez</p>
+			<span class='tooltiptextRT'>Hugo Ramirez, a 23-year-old Latino, was shot and killed Sunday, May 3, 1992, in Baldwin Park. Ramirez was found face-down in the street, with a gunshot wound to the head, in the 12700 block of Bess Street.</span>
+		</div>
+		<div id="g-ai0-5" class="g-deaths absolute tooltipRT" style="top:27.1991%;right:5.95%">
+			<n class="d5-names">Victor R. Rivas</p>
+			<span class='tooltiptextRT'>Victor R. Rivas, a 26-year-old Latino, was shot and killed Sunday, May 3, 1992, in Pico-Union. Rivas was shot after he allegedly refused to stop his car at a barricade and tried several times to run a National Guardsman down at the intersection of Pico Boulevard and Vermont Avenue.</span>
+		</div>
+		<div id="g-ai0-6" class="g-deaths absolute tooltipRT" style="top:27.9803%;right:6.17%;">
+			<n class="d5-names">Imad Sharaf</p>
+			<span class='tooltiptextRT'>Imad Sharaf's body was found the morning of Sunday, May 3, 1992, when firefighters answered a report of a brush fire near the on-ramp to the 405 Freeway at San Fernando Mission Boulevard in Mission Hills.<br> 
+			At first, Sharaf, a Granada Hills resident who emigrated from Jordan three years ago, was listed as a riot victim. Detectives now believe that he was drugged before he was set ablaze and that the fire may have been an attempt to make the slaying appear riot-related.<br>
+			Police said that Sharaf, who was a photo lab technician, had been doused with a flammable substance and set afire.
+			</span>
+		</div>
+		
+		
+		<div id="g-ai0-2" class="absolute" style="top:4.1053%;margin-top:-34.9px;left:47.6783%;">
+			<p class="g-pstyle30">Memorial</p>
+		</div>
+
+
+		<div id="g-ai0-161" class="g-source absolute" style="top:95.0324%;left:78.9319%;width:20%;">
+			<p class="g-pstyle32">Sources: Los Angeles Times Staff, &ldquo;Charting the Hours of Chaos,&rdquo; <span class="g-cstyle3">LA Times</span>, Los Angeles, CA, April 29, 2002; Los Angeles Times Staff, &ldquo;Deaths during the L.A. riots,&rdquo; <span class="g-cstyle3">LA Times</span>,  Los Angeles, CA, April 25, 2012; Wikipedia, <span class="g-cstyle3">1992 Los Angeles Riots, </span>accessed October 22, 2017.</p><br><p class="g-pstyle32"><b>Designed by Benzamin Yi </b><a href="www.benzaminyi.com">(contact)</a></p>
+		</div>
+		
+	</div>
+</div>
+<div class="jquery"></div>
+
+<script>
+var dayOne = d3.selectAll('.dayOne');
+var dayTwo = d3.selectAll('.dayTwo p.thursday');
+var dayThree = d3.selectAll('.dayThree');
+var dayFour = d3.selectAll('.dayFour');
+var dayFive = d3.selectAll('.dayFive');
+
+var dayOneHover = d3.select('#dayOneHover');
+var dayTwoHover = d3.select('#dayTwoHover');
+var dayThreeHover = d3.select('#dayThreeHover');
+var dayFourHover = d3.select('#dayFourHover');
+var dayFiveHover = d3.select('#dayFiveHover');
+
+var dayOneImages = d3.selectAll('.dayOneImages');
+var dayTwoImages = d3.selectAll('.dayTwoImages');
+var dayThreeImages = d3.selectAll('.dayThreeImages');
+var dayFourImages = d3.selectAll('.dayFourImages');
+var dayFiveImages = d3.selectAll('.dayFiveImages');
+
+var edward = d3.selectAll('n.edward');
+var tranh = d3.selectAll('#tranh-lam p.tranh');
+var dtaylor = d3.selectAll('n.dtaylor');
+var jtaylor = d3.selectAll('n.jtaylor');
+var flopez = d3.selectAll('n.flopez');
+var haines = d3.selectAll('n.haines');
+var travens = d3.selectAll('n.travens');
+
+// ORIGINAL POSITION CREATOR
+let names = d3.selectAll('.g-deaths')
+var arr = names.nodes(); //nodes() turns the htmlcollection into an array
+
+arr.map(function(x){  //separates out the array
+	let el = d3.select(x) //select individually
+	
+	// get the style attribute of each x
+	let style = el.attr('style')
+	
+	// save that attribute to d-original to each x
+	el.attr('d-original', style)
+	
+	// console.log(el)
+})
+
+//START OF NAME POSITIONING TO ORIGINAL POSITION
+
+var status = "original";
+var originalTop, originalRight; //var to be filled later. currently a placeholder.
+var button, centerButton;
+var nameIsCenter=0;
+
+names.on('click', function() {
+	button = d3.select(this)
+	// let records = d3.selectAll('p.edward')
+	let allP = d3.selectAll('p');
+	let edImage = d3.selectAll('.edwardimg');
+	let dtaylorimg = d3.selectAll('.dtaylorimg');
+	let jtaylorimg = d3.selectAll('.jtaylorimg');
+	let flopezimg = d3.selectAll('.flopezimg');
+	let hainesimg = d3.selectAll('.hainesimg');
+	let travensimg = d3.selectAll('.travensimg');
+	// console.log("button", button)
+	var originalStyle = this.getAttribute("d-original");
+	// console.log(originalStyle);
+	if(nameIsCenter==1) {
+		// console.log("there's a center name");
+		// console.log(centerButton.id);
+
+		var centerOriginalStyle = centerButton.getAttribute("d-original");
+        d3.select("#"+centerButton.id).attr('style', centerOriginalStyle);
+        d3.select("#"+centerButton.id).style('transition', 'all 3s');
+
+	    switch (status) {
+	        case "center": //move to center
+				// console.log(button)
+	        	button.style('top', '42%');
+	        	allP.style('opacity', '0.2');
+	        	button.style('right', '45%');
+	            button.style('transition', 'all 3s');
+	            button.style('font-size', '50px');
+	            status = "original";
+	            nameIsCenter = 1;
+	            centerButton = button;
+	            break;
+	
+	        case "original":
+	            button.attr('style', originalStyle);
+	            button.style('transition', 'all 3s');
+	            allP.style('opacity', '1');
+	            edImage.transition().delay(3001).style('visibility', 'hidden'); //has to be later than the click delay because it reappears after 3000 on click below
+	            dtaylorimg.transition().delay(3001).style('visibility', 'hidden');
+	            jtaylorimg.transition().delay(3001).style('visibility', 'hidden');
+	            flopezimg.transition().delay(3001).style('visibility', 'hidden');
+	            hainesimg.transition().delay(3001).style('visibility', 'hidden');
+	            travensimg.transition().delay(3001).style('visibility', 'hidden');
+	            status = "center";
+	            nameIsCenter = 0;
+	            centerButton = this;
+	            break;
+	    }
+	}
+	
+	else {
+		switch (status) {
+	        case "center": //move to center
+	        	button.style('top', '42%');
+	        	allP.style('opacity', '0.2');
+	        	button.style('right', '45%');
+	            button.style('transition', 'all 3s');
+	            button.style('font-size', '50px');
+	            status = "original";
+	            nameIsCenter = 1;
+	            centerButton = this;
+	            break;
+
+	        case "original":
+	            button.attr('style', originalStyle);
+	            button.style('transition', 'all 3s');
+	            allP.style('opacity', '1');
+	            edImage.transition().delay(3001).style('visibility', 'hidden'); //has to be later than the click delay because it reappears after 3000 on click below
+	            status = "center";
+	            nameIsCenter = 0;
+	            centerButton = this;
+	            break;
+	    }
+	}
+});
+
+
+// START CIRCLES 	
+d3.select('#dayOneCircle') //select dayOne records
+	.on('click', function() {
+		// console.log('circle works');
+		dayOne.style('opacity', '1');
+		dayTwo.style('opacity', '0.2');
+		dayThree.style('opacity', '0.2');
+		dayFour.style('opacity', '0.2');
+		dayFive.style('opacity', '0.2');
+		dayOneHover.style('visibility', 'visible');
+		dayOneImages.style('visibility', 'visible'); //brings up images
+		dayTwoImages.style('visibility', 'hidden');
+		dayThreeImages.style('visibility', 'hidden');
+		dayFourImages.style('visibility', 'hidden');
+		dayFiveImages.style('visibility', 'hidden');
+	})
+	.on('mouseover', function() {
+		console.log('mouseover working')
+		dayOneHover.style('visibility', 'visible');
+		dayTwoHover.style('visibility', 'hidden');
+		dayThreeHover.style('visibility', 'hidden');
+		dayFourHover.style('visibility', 'hidden');
+	})
+	.on('mouseout', function() {
+		// dayOneHover.style('visibility', 'hidden');
+	});
+	
+d3.select('#dayTwoCircle') //select dayTwo records
+	.on('click', function() {
+		// console.log('circle 2 works');
+		dayOne.style('opacity', '0.2');
+		dayTwo.style('opacity', '1');
+		dayThree.style('opacity', '0.2');
+		dayFour.style('opacity', '0.2');
+		dayFive.style('opacity', '0.2');
+		dayOneImages.style('visibility', 'hidden'); //hides dayOneImages
+		dayTwoImages.style('visibility', 'visible'); //brings up images
+		dayThreeImages.style('visibility', 'hidden');
+		dayFourImages.style('visibility', 'hidden');
+		dayFiveImages.style('visibility', 'hidden');
+		dayOneHover.style('visibility', 'hidden');
+	})
+	.on('mouseover', function() {
+		dayOneHover.style('visibility', 'hidden');
+		dayTwoHover.style('visibility', 'visible');
+		dayThreeHover.style('visibility', 'hidden');
+	});
+	
+d3.select('#dayThreeCircle') //select dayThree records
+	.on('click', function() {
+		// console.log('circle 3 works');
+		dayOne.style('opacity', '0.2');
+		dayTwo.style('opacity', '0.2');
+		dayThree.style('opacity', '1');
+		dayFour.style('opacity', '0.2');
+		dayFive.style('opacity', '0.2');
+		dayOneImages.style('visibility', 'hidden');
+		dayTwoImages.style('visibility', 'hidden'); //brings up images
+		dayThreeImages.style('visibility', 'visible');
+		dayFourImages.style('visibility', 'hidden');
+		dayFiveImages.style('visibility', 'hidden');
+		dayOneHover.style('visibility', 'hidden');
+	})
+	.on('mouseover', function() {
+		dayTwoHover.style('visibility', 'hidden');
+		dayThreeHover.style('visibility', 'visible');
+		dayFourHover.style('visibility', 'hidden');
+	});
+	
+d3.select('#dayFourCircle') //select dayFour records
+	.on('click', function() {
+		// console.log('circle 4 works');
+		dayOne.style('opacity', '0.2');
+		dayTwo.style('opacity', '0.2');
+		dayThree.style('opacity', '0.2');
+		dayFour.style('opacity', '1');
+		dayFive.style('opacity', '0.2');
+		dayOneImages.style('visibility', 'hidden');
+		dayTwoImages.style('visibility', 'hidden'); //brings up images
+		dayThreeImages.style('visibility', 'hidden');
+		dayFourImages.style('visibility', 'visible');
+		dayFiveImages.style('visibility', 'hidden');
+		dayOneHover.style('visibility', 'hidden');
+	})
+	.on('mouseover', function() {
+		dayThreeHover.style('visibility', 'hidden');
+		dayFourHover.style('visibility', 'visible');
+		dayFiveHover.style('visibility', 'hidden');
+	});
+	
+d3.select('#dayFiveCircle') //select dayFive records
+	.on('click', function() {
+		// console.log('circle 5 works');
+		dayOne.style('opacity', '0.2');
+		dayTwo.style('opacity', '0.2');
+		dayThree.style('opacity', '0.2');
+		dayFour.style('opacity', '0.2');
+		dayFive.style('opacity', '1');
+		dayOneImages.style('visibility', 'hidden');
+		dayTwoImages.style('visibility', 'hidden'); //brings up images
+		dayThreeImages.style('visibility', 'hidden');
+		dayFourImages.style('visibility', 'hidden');
+		dayFiveImages.style('visibility', 'visible');
+		dayOneHover.style('visibility', 'hidden');
+	})
+	.on('mouseover', function() {
+		dayFourHover.style('visibility', 'hidden');
+		dayFiveHover.style('visibility', 'visible');
+	})
+	.on('mouseout', function() {
+		dayFiveHover.style('visibility', 'hidden');
+	});
+
+d3.select('#resetCircle') //resets all circles
+	.on('click', function() {
+		// console.log('reset works');
+		dayOne.style('opacity', '1');
+		dayTwo.style('opacity', '1');
+		dayThree.style('opacity', '1');
+		dayFour.style('opacity', '1');
+		dayFive.style('opacity', '1');
+		dayOneImages.style('visibility', 'hidden');
+		dayTwoImages.style('visibility', 'hidden');
+		dayThreeImages.style('visibility', 'hidden');
+		dayFourImages.style('visibility', 'hidden');
+		dayFiveImages.style('visibility', 'hidden');
+		dayOneHover.style('visibility', 'hidden');
+	})
+	.on('mouseover', function() {
+		dayOneHover.style('visibility', 'hidden');
+		dayTwoHover.style('visibility', 'hidden');
+		dayThreeHover.style('visibility', 'hidden');
+		dayFourHover.style('visibility', 'hidden');
+		dayFiveHover.style('visibility', 'hidden');
+	});
+
+//START HOVER FOR NAMES
+d3.selectAll('.d1-names') //hover effect for all names
+	.on('mouseover',function() {
+		console.log(d3.select(this))
+		d3.select(this)
+			.style('color', 'white')
+			.style('transition', 'color 1s');
+		})
+	.on('mouseout', function() {
+		d3.select(this)
+			.style('color', null)
+			.style('transition', 'color 1s');
+		});
+		
+d3.selectAll('.d2-names') //hover effect for all names
+	.on('mouseover',function() {
+		console.log(d3.select(this))
+		d3.select(this)
+			.style('color', 'white')
+			.style('transition', 'color 1s');
+		})
+	.on('mouseout', function() {
+		d3.select(this)
+			.style('color', null)
+			.style('transition', 'color 1s');
+		});
+		
+d3.selectAll('.d3-names') //hover effect for all names
+	.on('mouseover',function() {
+		console.log(d3.select(this))
+		d3.select(this)
+			.style('color', 'white')
+			.style('transition', 'color 1s');
+		})
+	.on('mouseout', function() {
+		d3.select(this)
+			.style('color', null)
+			.style('transition', 'color 1s');
+		});
+		
+d3.selectAll('.d4-names') //hover effect for all names
+	.on('mouseover',function() {
+		console.log(d3.select(this))
+		d3.select(this)
+			.style('color', 'white')
+			.style('transition', 'color 1s');
+		})
+	.on('mouseout', function() {
+		d3.select(this)
+			.style('color', null)
+			.style('transition', 'color 1s');
+		});
+		
+d3.selectAll('.d5-names') //hover effect for all names
+	.on('mouseover',function() {
+		console.log(d3.select(this))
+		d3.select(this)
+			.style('color', 'white')
+			.style('transition', 'color 1s');
+		})
+	.on('mouseout', function() {
+		d3.select(this)
+			.style('color', null)
+			.style('transition', 'color 1s');
+		});
+//END NAME HOVERS
+
+//START NAME CLICK FUNCTIONS
+edward.on('click', function () {
+	let records = d3.selectAll('p.edward')
+	let photo = d3.selectAll('.edwardimg')
+    	records.transition().delay(3000).style('opacity', '1'); //edward-specific
+    	photo.transition().delay(3000).style('visibility', 'visible');
+});
+
+tranh.on('click', function () {
+	// let lines = d3.select('svg.edwardlee')
+	let records = d3.selectAll('p.tranh')
+    	records.transition().delay(3000).style('opacity', '1');
+});
+
+dtaylor.on('click', function () {
+	let photo = d3.selectAll('.dtaylorimg')
+	let records = d3.selectAll('p.dtaylor')
+	records.transition().delay(3000).style('opacity', '1');
+	photo.transition().delay(3000).style('visibility', 'visible');
+});
+
+jtaylor.on('click', function () {
+	let photo = d3.selectAll('.jtaylorimg')
+	jtaylor.transition().delay(3000).style('opacity', '1');
+	photo.transition().delay(3000).style('visibility', 'visible');
+});
+
+flopez.on('click', function () {
+	let photo = d3.selectAll('.flopezimg')
+	flopez.transition().delay(3000).style('opacity', '1');
+	photo.transition().delay(3000).style('visibility', 'visible');
+});
+
+haines.on('click', function () {
+	let records = d3.selectAll('p.haines')
+	let photo = d3.selectAll('.hainesimg')
+    	records.transition().delay(3000).style('opacity', '1');
+    	photo.transition().delay(3000).style('visibility', 'visible');
+});
+
+travens.on('click', function () {
+	let records = d3.selectAll('p.travens')
+	let photo = d3.selectAll('.travensimg')
+    	records.transition().delay(3000).style('opacity', '1');
+    	photo.transition().delay(3000).style('visibility', 'visible');
+});
+
+
+//need to create an onclick for each name. also each name needs id of their name. would be clean to make them each a variable.
+
+
+//FLEXBOX SCRIPT
+d3.selectAll('.flex-item img')
+                .on('mouseover', function (d, i, nodes, currentElement) {
+                    // console.log(d3.select('#' + this.id))
+                    d3.selectAll('#' + this.id)
+                        .attr('style', 'display: block');
+                })
+                .on('mouseout', function () {
+                    d3.selectAll('.caption')
+                        .attr('style', 'display: none');
+                	d3.selectAll('.link')
+                        .attr('style', 'display: none');
+                });
+                
+//END FLEXBOX SCRIPT
+
+//MOUSE NAVIGATION START
+            // d3 mouse move
+            $(document).ready(function(){
+                var svg = d3.select('#container')
+                .on('mousemove', function() {
+                  console.log('Mouse', d3.event.clientX, d3.event.clientY ) // log the mouse x,y position
+                  
+                  // computed container width
+                  var w = d3.select(this).node().getBoundingClientRect().width;
+                  var h = d3.select(this).node().getBoundingClientRect().height;
+                  console.log('Container width', w, 'height', h);
+                  console.log(window.innerHeight);
+
+                  d3.select(this) //so this is moving the image's left and top by a certain amount of pixels based on the mouse
+                    .style('left', function() {
+                        return (window.innerWidth/3.5-w/3.5+((window.innerWidth/3.5-d3.event.clientX)*w/window.innerWidth/3.5))+'px'; //was 3.8
+                    })
+                    .style('top', function() {
+                        return (window.innerHeight/1.5-h/1.5+((window.innerHeight/1.5-d3.event.clientY)*h/window.innerHeight/1.5))+'px'; //was 1.6
+                    });
+                });
+            });
+            
+            // jQuery mouse move
+            $(document).ready(function(){
+              $(document).mousemove(function(e){
+                  $('.jquery').css({'top': e.pageY,'left': e.pageX});
+              });
+            });
+            
+
+</script>
+
+
+<!--</body>-->
+</html>
