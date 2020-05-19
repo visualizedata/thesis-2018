@@ -1,0 +1,382 @@
+[
+  {
+    "quote": "I'm in Los Angeles and it's freezing. Global warming is a total, and very expensive, hoax!",
+    "category": "It still gets cold sometimes",
+    "catcode": 2,
+    "who": "Donald Trump",
+    "when": 2013,
+    "r": 51,
+    "g": 153,
+    "b": 255
+  },
+  {
+    "quote": "It is not proven, it’s not science. It’s more of a religion than a science.",
+    "category": "Alternative Facts",
+    "catcode": 1,
+    "who": "Steve King",
+    "when": 2013,
+    "r": 255,
+    "g": 140,
+    "b": 140
+  },
+  {
+    "quote": "The volcano that erupted actually poured more CO2 into the air in that single act of nature than all of humans have in something like the past 100 years.",
+    "category": "Alternative Facts",
+    "catcode": 1,
+    "who": "Mike Huckabee",
+    "when": 2013,
+    "r": 255,
+    "g": 140,
+    "b": 140
+  },
+  {
+    "quote": "The President was wearing a trench coat it was so cold, but he's talking about global warming.",
+    "category": "It still gets cold sometimes",
+    "catcode": 2,
+    "who": "Steve Scalise",
+    "when": 2013,
+    "r": 51,
+    "g": 153,
+    "b": 255
+  },
+  {
+    "quote": "The government can’t change the weather. So we can pass a bunch of laws or executive orders that will do nothing to change the climate or the weather but will devastate our economy.",
+    "category": "It's not worth the money",
+    "catcode": 3,
+    "who": "Marco Rubio",
+    "when": 2013,
+    "r": 102,
+    "g": 204,
+    "b": 0
+  },
+  {
+    "quote": "There are very few facts. There are a lot of theories.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Tim Murphy",
+    "when": 2013,
+    "r": 192,
+    "g": 192,
+    "b": 192
+  },
+  {
+    "quote": "I haven’t been shown any definitive proof yet that [climate change] is what caused [Sandy]. And this is just, listen, this is a distraction. I’ve got a place to rebuild here and people want to talk to me about esoteric theories.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Chris Christie",
+    "when": 2013,
+    "r": 192,
+    "g": 192,
+    "b": 192
+  },
+  {
+    "quote": "There are scientists who think lots of different things about climate change.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Mike Pompeo",
+    "when": 2013,
+    "r": 192,
+    "g": 192,
+    "b": 192
+  },
+  {
+    "quote": "The emissions that are being put in the air by that volcano are a thousand years’ worth of emissions that would come from all of the vehicles, all of the manufacturing in Europe.",
+    "category": "Alternative Facts",
+    "catcode": 1,
+    "who": "Lisa Murkowski",
+    "when": 2014,
+    "r": 255,
+    "g": 140,
+    "b": 140
+  },
+  {
+    "quote": "Calling CO2 a pollutant is doing a disservice the country, and I believe a disservice to the world.",
+    "category": "Alternative Facts",
+    "catcode": 1,
+    "who": "Rick Perry",
+    "when": 2014,
+    "r": 255,
+    "g": 140,
+    "b": 140
+  },
+  {
+    "quote": "How long will it take for the sea level to rise two feet? I mean, think about it, if your ice cube melts in your glass it doesn’t overflow; it’s displacement. I mean, this is some of the things they’re talking about mathematically and scientifically don’t make sense.",
+    "category": "Alternative Facts",
+    "catcode": 1,
+    "who": "Steve Stockman",
+    "when": 2014,
+    "r": 255,
+    "g": 140,
+    "b": 140
+  },
+  {
+    "quote": "The simple fact is that for the last 16 years the earth's temperature has not warmed.",
+    "category": "Alternative Facts",
+    "catcode": 1,
+    "who": "Tom Cotton",
+    "when": 2014,
+    "r": 255,
+    "g": 140,
+    "b": 140
+  },
+  {
+    "quote": "I do not believe that human activity is causing these dramatic changes to our climate the way these scientists are portraying it.",
+    "category": "Alternative Facts",
+    "catcode": 1,
+    "who": "Marco Rubio",
+    "when": 2014,
+    "r": 255,
+    "g": 140,
+    "b": 140
+  },
+  {
+    "quote": "We have 186 percent of normal snow pack. That’s global warming?",
+    "category": "It still gets cold sometimes",
+    "catcode": 2,
+    "who": "Mike Enzi",
+    "when": 2014,
+    "r": 51,
+    "g": 153,
+    "b": 255
+  },
+  {
+    "quote": "And the problem with climate change is there’s never been a day in the history of the world in which the climate is not changing.",
+    "category": "It still gets cold sometimes",
+    "catcode": 2,
+    "who": "Ted Cruz",
+    "when": 2014,
+    "r": 51,
+    "g": 153,
+    "b": 255
+  },
+  {
+    "quote": "This very expensive global warming bullshit has got to stop.",
+    "category": "It's not worth the money",
+    "catcode": 3,
+    "who": "Donald Trump",
+    "when": 2014,
+    "r": 102,
+    "g": 204,
+    "b": 0
+  },
+  {
+    "quote": "I’m not qualified to debate the science over climate change.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "John Boehner",
+    "when": 2014,
+    "r": 192,
+    "g": 192,
+    "b": 192
+  },
+  {
+    "quote": "I do not believe that human activity is causing these dramatic changes to our climate the way these scientists are portraying it.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Marco Rubio",
+    "when": 2014,
+    "r": 192,
+    "g": 192,
+    "b": 192
+  },
+  {
+    "quote": "I’m not sure anybody exactly knows why.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Rand Paul",
+    "when": 2014,
+    "r": 192,
+    "g": 192,
+    "b": 192
+  },
+  {
+    "quote": "I don’t know the answer to that question. I don’t think science does, either.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Paul Ryan",
+    "when": 2014,
+    "r": 192,
+    "g": 192,
+    "b": 192
+  },
+  {
+    "quote": "Climate change, as they have defined it, can never be disproved, because whether it gets hotter or whether it gets colder, whatever happens, they’ll say, well, it’s changing, so it proves our theory.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Ted Cruz",
+    "when": 2014,
+    "r": 192,
+    "g": 192,
+    "b": 192
+  },
+  {
+    "quote": "We haven’t seen a lot of warming lately. I remember back in the ’70s we were talking about the coming Ice Age.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Mike Pence",
+    "when": 2014,
+    "r": 192,
+    "g": 192,
+    "b": 192
+  },
+  {
+    "quote": "Carbon pollution is CO2, and that’s really not a pollutant; that’s a plant food, and it doesn’t harm anybody except that it might include temperature increases.",
+    "category": "Alternative Facts",
+    "catcode": 1,
+    "who": "Jeff Sessions",
+    "when": 2015,
+    "r": 255,
+    "g": 140,
+    "b": 140
+  },
+  {
+    "quote": "The temperature's either going up or down at any point in time, so it really is not a big deal.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Ben Carson",
+    "when": 2015,
+    "r": "",
+    "g": "",
+    "b": ""
+  },
+  {
+    "quote": "We are not going to destroy our economy, make America a harder place to create jobs, in order to pursue a policy that will do nothing, nothing to change our climate, to change our weather.",
+    "category": "It's not worth the money",
+    "catcode": 3,
+    "who": "Marco Rubio",
+    "when": 2015,
+    "r": 102,
+    "g": 204,
+    "b": 0
+  },
+  {
+    "quote": "for the people to say the science is decided on this is just really arrogant.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Jeb Bush",
+    "when": 2015,
+    "r": 192,
+    "g": 192,
+    "b": 192
+  },
+  {
+    "quote": "I think man has had an influence…the degree to what that influence is..?",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Ryan Zinke",
+    "when": 2015,
+    "r": 192,
+    "g": 192,
+    "b": 192
+  },
+  {
+    "quote": "For everybody who thinks it’s warming, I can find somebody who thinks it isn’t.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Mitch McConnell",
+    "when": 2015,
+    "r": 192,
+    "g": 192,
+    "b": 192
+  },
+  {
+    "quote": "We need to be able to do our jobs and continue to recruit companies and recruit jobs without additional mandates.",
+    "category": "It's not worth the money",
+    "catcode": 3,
+    "who": "Nikki Haley",
+    "when": 2015,
+    "r": 102,
+    "g": 204,
+    "b": 0
+  },
+  {
+    "quote": "CPP will raise energy costs, reduce jobs, and hurt our state's economic competitiveness.",
+    "category": "It's not worth the money",
+    "catcode": 3,
+    "who": "Roy Blunt",
+    "when": 2015,
+    "r": 102,
+    "g": 204,
+    "b": 0
+  },
+  {
+    "quote": "We all understand the need for a healthy environment, but we represent a wide range of viewpoints regarding the extent to which man contributes to climate change and the costs and benefits of any proposed fix.",
+    "category": "It's not worth the money",
+    "catcode": 3,
+    "who": "Scott Pruitt",
+    "when": 2016,
+    "r": 102,
+    "g": 204,
+    "b": 0
+  },
+  {
+    "quote": "Donald Trump and I say, let’s follow the science, but for heaven’s sakes let’s not go rushing into the kind of restrictions on our economy that are putting Americans out of work and, frankly, are driving jobs out of this country.",
+    "category": "It's not worth the money",
+    "catcode": 3,
+    "who": "Mike Pence",
+    "when": 2016,
+    "r": 102,
+    "g": 204,
+    "b": 0
+  },
+  {
+    "quote": "Scientists continue to disagree about the degree and extent of global warming and its connection to the actions of mankind.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Scott Pruitt",
+    "when": 2016,
+    "r": 192,
+    "g": 192,
+    "b": 192
+  },
+  {
+    "quote": "the underlying cause of these climactic shifts is ultimately not well-understood and is a matter of vigorous debate.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Mike Crapo",
+    "when": 2016,
+    "r": "",
+    "g": "",
+    "b": ""
+  },
+  {
+    "quote": "This final rule would add more burdensome regulations that will destroy jobs and raise energy costs.",
+    "category": "It's not worth the money",
+    "catcode": 3,
+    "who": "Paul Ryan",
+    "when": 2016,
+    "r": 102,
+    "g": 204,
+    "b": 0
+  },
+  {
+    "quote": "Federal overreach from agencies like the EPA is hurting family farms.",
+    "category": "It's not worth the money",
+    "catcode": 3,
+    "who": "Eric Greitens",
+    "when": 2016,
+    "r": 102,
+    "g": 204,
+    "b": 0
+  },
+  {
+    "quote": "Scientists have a lot of different views on that.",
+    "category": "We can never truly know",
+    "catcode": 4,
+    "who": "Rob Portman",
+    "when": 2016,
+    "r": 192,
+    "g": 192,
+    "b": 192
+  },
+  {
+    "quote": "These regulations... will continue to cause economic distress while yielding negligible benefits for our environment.",
+    "category": "It's not worth the money",
+    "catcode": 3,
+    "who": "Pat Toomey",
+    "when": 2016,
+    "r": 102,
+    "g": 204,
+    "b": 0
+  }
+]

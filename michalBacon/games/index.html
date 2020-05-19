@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://d3js.org/d3.v4.js"></script>
+  </head>
+  <body>
+
+ <div class="container">
+  	<div class="selector">
+  		<div id="title"> Escaping Social Dilemmas</div>
+  		<div class="games">
+
+            <span> Choose a social dilemma to explore. </span> 
+            
+            <label for="PD"> <a href='./stag.html'> 
+            <img src="PD.svg"> <span> Prisoner's Dilemma </span>
+            </a></label>
+
+            <label for="Stag"> <a href='./stag.html'>
+            <img src="Stag.svg"> <span>Stag Hunt</span>
+            </a></label>
+
+            
+            <label for="Chicken"> <a href='./stag.html'>
+            <img src="chicken.svg"> <span> Chicken </span>
+            </a></label>
+      </div>
+
+  	</div>
+
+  	<div class="viewer"> 
+  		<div class="top_navigation"> 
+	      <a href='../games/' id="hit"> games</a>
+	      <a href='../strategies'> strategies</a>
+	      <a href='../main'> interaction</a>
+	      <a href='../heat'> cooperate rate</a>
+	    </div>
+      <br>  
+      <br>
+  		<div class="pagetitle"> The games </div>
+  		<p id="subtitle">In game theory, social dilemmas are situations where the interests of the individual stand in direct opposition to the interests of the many. Game theory has demonstrated that in these scenarios the most rational choice for the individual is to act selfishly rather than for the collective good. </p>
+
+  		<div class="content">
+  			<div id="chart"></div>
+    <!-- <div id="dataset-picker"> -->
+	    </div>
+	    <script type="text/javascript" src="heat.js"></script>
+
+	   </div>
+	</div>
+</body>
+</html>

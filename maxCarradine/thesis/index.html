@@ -1,0 +1,2166 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+    <title>The Influencers</title>
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">
+</head>
+
+
+<style>
+body {
+font-family: 'Poppins', sans-serif;
+        background-color: #E9E3CA
+
+;
+        color: #222;
+        padding: 0px;
+        font-size: 12px;
+ margin:0;
+ right:0;
+ bottom:0;
+ margin-top: 20px;
+     cursor: default;
+      }
+
+h1 {
+font-family: 'Poppins', sans-serif;
+    color: #222;
+    font-size: 50px;
+    text-align: right;
+      }
+
+
+
+
+ h5 {
+font-family: 'Poppins', sans-serif;
+    color: #222;
+    text-align: right;
+      }
+  
+
+.explained{
+font-family: 'Poppins', sans-serif;
+    color: #222;
+    text-align: right;
+         width: 470px;
+  line-height: 22px;
+
+            float: left;
+  }
+p{
+font-family: 'Poppins', sans-serif;
+    color: #222;
+    font-size: 18px;
+margin-right: 5px;
+
+  
+}
+
+div.tooltip {
+  text-align: left;
+  padding: 2px;
+  width:300px;
+  font: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-style: 300;
+  background: #E8E6DE;
+  opacity: 10;
+  border: 1px;
+  position:absolute;
+  z-index:1000px;
+    border-radius: 10px;
+ border-style: solid;
+    border-color: black;
+    padding:10px;
+}
+div.tooltip:hover .tooltip {
+    display: block;
+     border-style: solid;
+       border: 1px;
+       cursor: pointer;
+    border-color: black;
+}
+a:link {
+   color: #78B76A;
+}
+/* visited link */
+a:visited {
+   color: #78B76A;
+}
+/* mouse over link */
+a:hover {
+   color: #78B76A;
+}
+/* selected link */
+a:active {
+   color: #78B76A;
+}
+.key
+{
+ text-align: left;
+  padding: 2px;
+  width:300px;
+  font: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-style: 300;
+  background: #F9F9F9
+
+;
+  border: 2px;
+  position:absolute;
+  z-index:1000px;
+    border-radius: 10px;
+ border-style: solid;
+    border-color: black;
+}
+#moretext{
+ text-align: left;
+  padding: 2px;
+  width:300px;
+  font: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-style: 300;
+  background: #F9F9F9
+
+;
+  border: 2px;
+  position:absolute;
+  z-index:1000px;
+    border-radius: 10px;
+ border-style: solid;
+    border-color: black;
+    cursor: default;
+}
+
+.tooltip {
+  text-align: right;
+  padding: 2px;
+  width:300px;
+  font: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-style: 300;
+  background: #F9F9F9;
+  opacity: 10;
+  border: 1px;
+  position:absolute;
+  z-index:1000px;
+    border-radius: 10px;
+ border-style: solid;
+    border-color: black;
+}
+
+
+#moretext text {
+  color: #222;
+    cursor: pointer;
+    font-size: 18px
+}
+
+.moretext2 text {
+  color: #222;
+    cursor: pointer;
+    text-align: right;
+    font-size: 18px
+}
+
+
+.btn1{
+         width: 160px;
+
+           height: 30px;
+           line-height: 27px;
+           text-align: center;
+           border-radius: 1px;
+           box-shadow: 0 0 1px;
+           cursor: pointer;
+           font-size: 14px;
+            float: left;
+      }
+       .btn1:hover{
+         background-color: #ccc;
+      }
+.btn2{
+         width: 160px;
+
+           height: 30px;
+           line-height: 27px;
+           text-align: center;
+           border-radius: 1px;
+           box-shadow: 0 0 1px;
+           cursor: pointer;
+           font-size: 14px;
+              float: left;
+      }
+       .btn2:hover{
+         background-color: #ccc;
+      }
+.btn3{
+         width: 160px;
+
+           height: 30px;
+           line-height: 27px;
+           text-align: center;
+           border-radius: 1px;
+                      float: left;
+           box-shadow: 0 0 1px;
+           cursor: pointer;
+           font-size: 14px;
+      }
+       .btn3:hover{
+         background-color: #ccc;
+      }
+.btn4{
+         width: 160px;
+
+           height: 30px;
+           line-height: 27px;
+           text-align: center;
+           border-radius: 1px;
+                      float: left;
+           box-shadow: 0 0 1px;
+           cursor: pointer;
+           font-size: 14px;
+      }
+       .btn4:hover{
+         background-color: #ccc;
+      }
+  .btn5{
+         width: 160px;
+
+           height: 30px;
+           line-height: 27px;
+           text-align: center;
+           border-radius: 1px;
+            float: left;
+           box-shadow: 0 0 1px;
+           cursor: pointer;
+           font-size: 14px;
+      }
+       .btn5:hover{
+         background-color: #ccc;
+      }
+  .btn6{
+         width: 160px;
+
+           height: 30px;
+           line-height: 27px;
+           text-align: center;
+           border-radius: 1px;
+                      float: left;
+           box-shadow: 0 0 1px;
+           cursor: pointer;
+           font-size: 14px;
+      }
+       .btn6:hover{
+         background-color: #ccc;
+      }
+        .btn7{
+         width: 160px;
+
+           height: 30px;
+           line-height: 27px;
+           text-align: center;
+           border-radius: 1px;
+                      float: left;
+           box-shadow: 0 0 1px;
+           cursor: pointer;
+           font-size: 14px;
+      }
+       .btn7:hover{
+         background-color: #ccc;
+      }
+        .btn8{
+         width: 160px;
+
+           height: 30px;
+           line-height: 27px;
+           text-align: center;
+           border-radius: 1px;
+              float: left;
+           box-shadow: 0 0 1px;
+           cursor: pointer;
+           font-size: 14px;
+                       display: inline-block;
+
+      }
+       .btn8:hover{
+         background-color: #ccc;
+      }
+        .btn9{
+         width: 160px;
+
+           height: 30px;
+           line-height: 27px;
+           text-align: center;
+           border-radius: 1px;
+            float: left;
+           box-shadow: 0 0 1px;
+           cursor: pointer;
+           font-size: 14px;
+                       display: inline-block;
+
+      }
+       .btn9:hover{
+         background-color: #ccc;
+      }
+      .btn10{
+         width: 160px;
+
+           height: 30px;
+           line-height: 27px;
+           text-align: center;
+           border-radius: 1px;
+            float: left;
+           box-shadow: 0 0 1px;
+           cursor: pointer;
+           font-size: 14px;
+                       display: inline-block;
+
+      }
+       .btn10:hover{
+         background-color: #ccc;
+      }
+.btn11{
+         width: 160px;
+
+           height: 30px;
+           line-height: 27px;
+           text-align: center;
+           border-radius: 1px;
+           cursor: pointer;
+           font-size: 14px;
+           box-shadow: 0 0 1px;
+            float: left;
+                        display: inline-block;
+
+      }
+       .btn11:hover{
+         background-color: #ccc;
+      }
+.btn12{
+         width: 160px;
+
+           height: 30px;
+           line-height: 27px;
+           text-align: center;
+           border-radius: 1px;
+           cursor: pointer;
+           box-shadow: 0 0 1px;
+           font-size: 14px;
+            float: left;
+                        display: inline-block;
+
+      }
+       .btn12:hover{
+         background-color: #ccc;
+      }
+.btn13{
+         width: 160px;
+
+           height: 30px;
+           line-height: 27px;
+           text-align: center;
+           border-radius: 1px;
+           box-shadow: 0 0 1px;
+           cursor: pointer;
+           font-size: 14px;
+            float: left;
+            display: inline-block;
+
+      }
+       .btn13:hover{
+         background-color: #ccc;
+      }
+
+
+  .reset{
+         width: 30px;
+
+           height: 30px;
+       
+         
+      
+            float: left;
+            display: inline-block;
+            cursor: pointer;
+
+      }
+       .reset:hover{
+
+        
+      }
+.node rect {
+  cursor: default;
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+.node text {
+  color: #222;
+    cursor: default;
+}
+.link {
+  fill: none;
+  stroke-opacity: .5;
+}
+.link:hover {
+ stroke-opacity: 100;
+}
+.link:active {
+  stroke-opacity: 100;
+  fill:none;
+}
+h3 {
+         width: 160px;
+
+           height: 30px;
+           text-align: center;
+            float: left;
+           cursor: pointer;
+           font-size: 14px;
+           position: absolute;
+      }
+
+</style>
+
+
+<div style="  margin-top: 28px; right: 20px;  position: absolute; color: #222; ">
+
+<div>
+
+<p> Who were the financial forces behind the most expensive 2016 Senate races?</p>
+
+
+</div> 
+
+</div>
+
+<div style="  margin-top: -50px; right: 20px;  position: absolute;">
+
+
+
+<h1>
+
+The Influencers
+</h1>
+
+
+
+
+
+   <div class='btn1'>Conservative Sources</div> <div class='btn2'>Liberal Sources</div> <div class='btn3'>Independent Sources</div>
+   <br> <div class='btn4'>Over $1M</div>
+   <div class='btn5'>Dark Sources</div> <div class='btn6'>Women</div><br>
+    <div class='btn9'>Over 65yrs Old</div>
+   <div class='btn10'>People</div> <br> <div class='btn11'>Super PACs</div><br><div class='btn8'>Family</div>
+   <div class='btn12'>PACs</div> <br> 
+   <div class='btn13'>Others</div><br>
+
+
+<div class='reset'><div style="  margin-top: -75px; opacity: .7; margin-left: -50px;">
+   <img src="reset.png" alt="Reset">
+</div>
+
+
+<div class='explained'><div style="  margin-top: 25px; font-size: 14px; position: absolute;">
+<br>
+<br>
+The cost of a top-six senate race quadrupled from 2010 to 2016.
+These are the top donors from the top ten groups who spent money in the most expensive top-six 2016 races.
+
+<!-- Outside spending in a top six senate election quadrupled between 2010 and 2016.
+From left to right, these are the top donors for the 
+top ten groups who spent in these 2016 races. -->
+ </div>
+
+</div>
+</div>
+
+
+
+
+
+<body>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script src="sankey.js"></script>
+
+
+<script>
+// set the dimensions and margins of the graph
+var margin = {top: 10, right: 25, bottom: 30, left: 25},
+  
+width = 1800;   
+width2 = (window.innerWidth)
+height2 = (window.innerHeight)
+   
+   // width = 1500 - margin.left - margin.right,
+   // height = 1500 - margin.top - margin.bottom;
+height= 1500;
+//height = (window.innerHeight)*2.25
+// format variables
+// var formatNumber = d3.format(",.0f"),    // zero decimal places
+//     format = function(d) { return formatNumber(d); },
+//     //color = 
+//     color = d3.scaleOrdinal(d3.Greys);
+
+var div = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);  
+
+
+// append the svg object to the body of the page
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", 
+          "translate(" + margin.left + "," + margin.top + ")")
+    .style("fill", "#222");
+
+// Set the sankey diagram properties
+var sankey = d3.sankey()
+    .nodeWidth(210)
+    .nodePadding(21.9)
+    .size([width, height]);
+
+var path = sankey.link();
+// load the data
+d3.json("sankey.json", function(error, graph) {
+  sankey
+      .nodes(graph.nodes)
+      .links(graph.links)
+      .layout(32);
+//Text block under buttons
+
+//<div style="  margin-top: -50px; right: 20px;  position: absolute;">
+
+    var language = [{
+      x: width2 -60,
+      y: height - (height - 255),
+      all_line1: "A blurb",
+      all_line2: "Another blurb",
+      all_line3: "yeah yeah yeah",
+
+      con_line1: "Various conservative-aligned entities shown here",
+      con_line2: "combined for a raw total of $323M dollars. Republicans",
+      con_line3: "won four of the six races, retaining senate control.",
+
+      // con_line1: "Various conservative-aligned individuals and ",
+      // con_line2: "groups combined to spend a raw total of $323M dollars.",
+      // con_line3: "Republicans won four of the six races.",
+
+      lib_line1: "Liberal-aligned entities shown here combined for a",
+      lib_line2: "raw total of $303M dollars. Democrats won only two of the",
+      lib_line3: "six races, giving Republicans a 52-48 majority.",
+
+      ind_line1: "Entities giving to both parties are very rare. The two",
+      ind_line2: "candidates supported by Indepence USA won, and voted on",
+      ind_line3: "party lines for tax legislation and Obamacare repeal.",
+
+      o1m_line1: "State-specific super PACs (Granite State Solutions and",
+      o1m_line2: "Fighting for Ohio) were funded by 1-2 entities giving over",
+      o1m_line3: "$1M. Most dark sources gave over $1M.",
+
+      dark_line1: "'Dark' sources have no FEC disclosure requirements,",
+      dark_line2: "so their sources of funding are unknown. Dark groups could",
+      dark_line3: "be corporations, unions or '501c'-type non-profit groups.",
+
+      wom_line1: "Only 6 of the 36 individual top donors were women (17%).",
+      wom_line2: "Conservative females contributed a total of $21.9M to these",
+      wom_line3: "outside sources, while liberal females contributed $3.4M.",
+
+      o65_line1: "People over the age of 65 are heavily represented. ",
+      o65_line2: "72% of people were over the age of 65 at the time of ",
+      o65_line3: "their donations during the 15-16 cycle.",
+
+      ppl_line1: "Some groups relied heavily on gifts from people",
+      ppl_line2: "Contributions from conservative people accounted for",
+      ppl_line3: "$77M and liberal people accounted for $42M.",
+
+      spacs_line1: "Super PACs were created in 2010 after the Citizens",
+      spacs_line2: "United and Speechnow court decisions. They allow limitless,",
+      spacs_line3: "contributions and must report activity to the FEC.",
+
+      pacs_line1: "Political Action Committees were created in 1944. Like super",
+      pacs_line2: "PACs they require FEC reporting. Unlike super PACs, there are",
+      pacs_line3: "limits to how much money an entity can donate.",
+
+
+      others_line1: "Parties, 527s, Joint Fundraising and Principal Campaign",
+      others_line2: "Committees also funnel money into races. Each group has",
+      others_line3: "rules for disclosure, limits and how money can be moved."
+
+
+      // others_line1: "There are other types of funding vehicles used in campaigns such as Joint",
+      // others_line2: "Fundraising Committees, parties, 527s, or Principal Campaign Committees--all with",
+      // others_line3: "different rules for disclosure, limits and how money can be spent or transfered."
+    }];
+    //TO DO
+   // x: width2 -65,
+   //    y: height2*.30,
+//color key
+svg.selectAll("#moretext"
+
+) 
+      .data(language)
+      .enter().append("line")
+      .style("stroke", "#AE3942"
+
+)  
+            .style("stroke-width", 3)
+
+    .attr("x1", (width2 - 205))     
+    .attr("y1", height * .945)      
+    .attr("x2", (width2 - 255))    
+    .attr("y2", height * .945);
+     svg.selectAll("#moretext"
+
+) 
+      .data(language)
+      .enter().append("text")
+      .text("Conservative")
+      .style("font-size", 18)
+      .attr("x", (width2 - 200))
+      .attr("y", height *.945);
+    svg.selectAll("#moretext"
+
+) 
+      .data(language)
+      .enter().append("line")
+      .style("stroke", "#06495F"
+
+) 
+            .style("stroke-width", 3)
+ 
+    .attr("x1", (width2 - 205))     
+    .attr("y1", height * .955)      
+    .attr("x2", (width2 - 255))     
+    .attr("y2", height * .955);
+    svg.selectAll("#moretext"
+
+) 
+      .data(language)
+      .enter().append("text")
+      .text("Liberal")
+            .style("font-size", 18)
+
+      .attr("x", (width2 - 200))
+      .attr("y", height *.955);
+        svg.selectAll("#moretext"
+
+) 
+      .data(language)
+      .enter().append("line")
+      .style("stroke", "#F79711"
+
+
+
+)
+            .style("stroke-width", 3)
+  
+    .attr("x1", (width2 - 205))     
+    .attr("y1", height * .965)      
+    .attr("x2", (width2 - 255))    
+    .attr("y2", height * .965);
+       svg.selectAll("#moretext"
+
+) 
+      .data(language)
+      .enter().append("text")
+      .text("Independent")
+            .style("font-size", 18)
+
+      .attr("x", (width2 - 200))
+      .attr("y", height *.965);
+   
+       svg.selectAll("#moretext"
+
+) 
+      .data(language)
+      .enter().append("line")
+      .style("stroke", "black") 
+      .style("stroke-dasharray", 5) 
+      .style("stroke-width", 3)
+    .attr("x1", (width2 - 204))     
+    .attr("y1", height * .975)      
+    .attr("x2", (width2 - 255))    
+    .attr("y2", height * .975);
+       svg.selectAll("#moretext"
+
+) 
+      .data(language)
+      .enter().append("text")
+      .text("Dark")
+      .style("font-size", 18)
+
+      .attr("x", (width2 - 200))
+      .attr("y", height *.975);
+
+
+
+//Explainer footer
+ svg.selectAll("moretext2") 
+      .data(language)
+      .enter().append("text")
+      .text("METHODOLOGY + SOURCES")
+            .style("font-size", 22)
+
+
+      .attr("x", (width2 - 355))
+      .attr("y", (height)*1.01)
+      .style("text-align","right")
+    .on("mouseover", function(d) {
+       div.transition()
+         .duration(10)
+         .style("opacity", .9);
+    div.html(
+      "This biographical tool seeks to familiarize its users with the backgrounds of these election-influencing forces along with showing the different financial mechanisms for inserting large amounts of money into a federal election." + "<br>" + "<br>"
+      
+      +
+      "Most expensive races were identified via the " + 
+       '<a href="https://www.opensecrets.org/overview/topraces.php?cycle=2016&display=currcandsout" target="_blank">Center for Responsive Politics' +  "</a>"  + "." 
+       + "<br>" + "<br>" +
+"Top outside sources per race identified by referencing data from the " + 
+       '<a href="https://www.fec.gov/data/" target="_blank">Federal Election Commission' + 
+       //with a link
+           "</a>"   + "." +
+        "<br>" + "<br>" +
+        " Receipts for each outside group (excluding dark sources) were also sourced from the FEC and aggregated to identify top ten sources of their receipts. " 
+       + "<br>" + "<br>" +
+        "Biographical data sourced from publicly available online sources." 
+)
+     //  "All quantitative data sourced from the Center for Responsive Politics and the Federal Election Commission.")
+      .style("left", (d3.event.pageX) - 300 + "px")
+         .style("top", (d3.event.pageY - 425) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+
+
+   var bubbles = 
+   [{x: width - 550, y: 480, c: 0, st: 83, vr:"https://projects.fivethirtyeight.com/congress-trump-score/patrick-j-toomey/", name: "Pat Toomey", blurb: "The PA senate race ended up being the most expensive senate race in US history, costing $180M dollars. Republican Pat Toomey defeated Democrat Kathleen McGinty by 100k votes (1.7% points). Here is his ", res: "https://www.politico.com/2016-election/results/map/senate/pennsylvania/"}, 
+
+   {x: width - 550, y: 585, c: 1, st:84, vr: "https://projects.fivethirtyeight.com/congress-trump-score/margaret-wood-hassan/", name: "Margaret Hassan", blurb: "The total cost of the NH senate race was $141M dollars (the second most expensive senate race of 2016 and of all time). Democrat Maggie Hassan defeated Republican incumbent Kelly Ayotte by 743 votes (0.1% points). Here is her ", res: "https://www.politico.com/2016-election/results/map/senate/new-hampshire/"}, 
+
+   {x: width - 550, y: 690, c:1, st:85, vr:"https://projects.fivethirtyeight.com/congress-trump-score/catherine-cortez-masto/", name: "Catherine Cortez Masto", blurb: "The total cost of the NV senate race was $127M dollars. Democrat Catherine Cortez Masto defeated Republican Joe Heck by 26k votes (2.4% points). Here is her ", res: "https://www.politico.com/2016-election/results/map/senate/nevada/"}, 
+
+   {x: width - 550, y: 795, c:0, st:86, vr:"https://projects.fivethirtyeight.com/congress-trump-score/richard-burr/", name: "Richard Burr",  blurb: "The total cost of the NC senate race was $97M dollars. Republican Richard Burr defeated Democrat Deobrah Ross by 269k votes (5.8% points). Here is his ", res: "https://www.politico.com/2016-election/results/map/senate/north-carolina/"}, 
+
+   {x: width - 550, y: 900, c:0, st:87, vr:"https://projects.fivethirtyeight.com/congress-trump-score/marco-rubio/", name: "Marco Rubio", blurb: "The total cost of the FL senate race was $91M dollars. Republican Marco Rubio defeated Democrat Patrick Murphy by 717k votes (7.7% points). Here is his ", res: "https://www.politico.com/2016-election/results/map/senate/florida/"}, 
+
+   {x: width - 550, y: 1005, c:0, st:88, vr:"https://projects.fivethirtyeight.com/congress-trump-score/rob-portman/", name: "Rob Portman", blurb: "The total cost of the OH senate race was $90M. Republican Rob Portman defeated Democrat Ted Strickland by 1.1M votes (21.4% points). Here is his ", res: "https://www.politico.com/2016-election/results/map/senate/ohio/"}]
+
+//add winners circles
+svg.selectAll("circle")
+    .data(bubbles)
+    .enter().append("circle")
+    .attr("cx", function(d) { return d.x; })
+    .attr("cy", function(d) { return d.y; }) 
+    .attr("r", 35)
+.on("mouseover", function(d) {
+       div.transition()
+         .duration(200)
+         .style("opacity", .9);
+    
+    // div.html(d.blurb + "<br>" + "<br>" + '<a href= "'+d.res+'" target="_blank">' + //with a link
+    //     "               Results" +
+    //     "</a>")
+
+
+  div.html(
+        '<a href= "'+d.res+'" target="_blank">' +   
+           '<p>' + d.name   + '</p>'  +  "</a>"  +  d.blurb +   '<a href= "'+ d.vr + '" target="_blank">' 
+          + "voting record."   +  "</a>"  )
+
+
+      .style("left", (d3.event.pageX) - 250 + "px")
+         .style("top", (d3.event.pageY - 200) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1500)
+         .style("opacity", 0)})
+    .style("stroke", function (d) {
+        if(d.c==0) 
+        {return "#AE3942"
+
+;} 
+      else if(d.c==1) 
+        {return "#06495F"
+
+;} 
+    else {
+        return 0;}
+      })
+    .style("stroke-width", 4)
+    .style("stroke-opacity", .7)
+.style("fill", function (d) {
+        if(d.st==83) 
+        {return "url(#toomey)"} 
+      else if(d.st==85) 
+        {return "url(#masto)";} 
+      else if(d.st==84) 
+        {return "url(#hassan)";} 
+      else if(d.st==86) 
+        {return "url(#burr)";} 
+      else if(d.st==87) 
+        {return "url(#rubio)";} 
+      else if(d.st==88) 
+        {return "url(#portman)";} 
+    else {
+        return 0;}
+      }
+      );
+
+//draw default links
+
+  var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+     // .style("stroke-opacity", .5) 
+   .on("mouseover", function(d) {
+       div.transition()
+         .duration(1)
+         .style("opacity", .9)
+         ;
+div.html(
+        '<a href= "'+d.source.url+'" target="_blank">' +   
+        '<b>'  +  '<p>' + d.source.name   + '</p>' + '</b>' +  "</a>"  + '<b>' + 
+        d.amt + '</b>' + " to " + d.target.name + "\n" +  "<br>"
+         +  "<br>" + d.abt2 + "\n")
+
+
+      .style("left", (d3.event.pageX) + 20 + "px")
+         .style("top", (d3.event.pageY - 100) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+      .style("stroke-dasharray", function (d) {
+        if(d.value==20.2) 
+        {return 10;} 
+      else if(d.value==20.4) 
+        {return 10;} 
+    else {
+        return 0;}
+      })  
+      .style("stroke-width", function(d) { return Math.max(2, d.dy); }) 
+      .style("stroke", function (d) {
+        if(d.conlib == 0) 
+        {return "#AE3942";} 
+      else if(d.conlib==2)
+      {return "#F79711";}
+    else {
+        return "#06495F";}
+      })
+      .sort(function(a, b) { return b.dy - a.dy; });
+
+function resetter() {
+    var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+     // .style("stroke-opacity", .5) 
+   .on("mouseover", function(d) {
+       div.transition()
+         .duration(1)
+         .style("opacity", .9)
+         ;
+div.html(
+        '<a href= "'+d.source.url+'" target="_blank">' +   
+        '<b>'  +  '<p>' + d.source.name   + '</p>' + '</b>' +  "</a>"  + '<b>' + 
+        d.amt + '</b>' + " to " + d.target.name + "\n" +  "<br>"
+         +  "<br>" + d.abt2 + "\n")
+
+
+      .style("left", (d3.event.pageX) + 20 + "px")
+         .style("top", (d3.event.pageY - 100) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+      .style("stroke-dasharray", function (d) {
+        if(d.value==20.2) 
+        {return 10;} 
+      else if(d.value==20.4) 
+        {return 10;} 
+    else {
+        return 0;}
+      })  
+      .style("stroke-width", function(d) { return Math.max(2, d.dy); }) 
+      .style("stroke", function (d) {
+        if(d.conlib == 0) 
+        {return "#AE3942";} 
+      else if(d.conlib==2)
+      {return "#F79711";}
+    else {
+        return "#06495F";}
+      })
+      .sort(function(a, b) { return b.dy - a.dy; });
+  
+}
+
+
+
+
+// add in the nodes and center the center node text
+  
+
+  var node = svg.append("g").selectAll(".node")
+      .data(graph.nodes)
+    .enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { 
+        if(d.node==40)
+          {return "translate(" + (d.x - 35 ) + "," + d.y + ")"; }
+        else if (d.node==74)
+        {return "translate(" + (d.x - 27) + "," + d.y + ")"; }
+       else if (d.node==42)
+        {return "translate(" + (d.x - 30 ) + "," + d.y + ")"; }
+       else if (d.node==30)
+        {return "translate(" + (d.x +3 ) + "," + d.y + ")"; }
+          else if (d.node==53)
+        {return "translate(" + (d.x - 35) + "," + d.y + ")"; }
+           else if (d.node==10)
+        {return "translate(" + (d.x - 30 ) + "," + d.y + ")"; }
+               else if (d.node==20)
+        {return "translate(" + (d.x - 40 ) + "," + d.y + ")"; }
+                   else if (d.node==65)
+        {return "translate(" + (d.x - 10 ) + "," + d.y + ")"; }
+     else if (d.node==64)
+        {return "translate(" + (d.x - .1 ) + "," + d.y + ")"; }
+                else if (d.node==89)
+        {return "translate(" + (d.x + 4 ) + "," + d.y + ")"; }
+
+      else if(d.node==88) //FL
+      {return "translate(" + d.x + ","  + (d.y  = (0, (d.dy + 905))) + ")";}
+       else if (d.node==87) //OH
+      {return "translate(" + d.x + ","  + (d.y  = (0, (d.dy + 1010))) + ")"; }
+       else if (d.node==86) //NC
+      {return "translate(" + d.x + ","  + (d.y  = (0, (d.dy + 800))) + ")"; }
+          else if (d.node==85) //NV
+      {return "translate(" + d.x + ","  + (d.y  = (0, (d.dy + 695))) + ")"; }
+                  else if (d.node==84) //Nh
+      {return "translate(" + d.x + ","  + (d.y  = (0, (d.dy + 590))) + ")"; }
+      else if (d.node==83) //PA
+      {return "translate(" + d.x + ","  + (d.y  = (0, (d.dy + 485))) + ")"; }
+     
+     // else if (d.node==31)
+     //  {return "translate(" + d.x  + ","  + (d.y  = (0, (d.dy + 400))) + ")"; }
+        else
+      return "translate(" + d.x + "," + d.y + ")"; }) //manipulate node offset here
+    
+      // .call(d3.drag()
+      //   .subject(function(d) {
+      //     return d;
+      //   })
+      //   .on("start", function() {
+      //     this.parentNode.appendChild(this);
+      //   })
+      //   .on("start", movestuff));
+sankey.relayout()
+link.attr("d", path);
+// add in the title for the nodes
+  node.append("text")
+      .attr("x", 2)
+      .attr("y", function(d) { return d.dy / 6; })
+      .attr("dy", ".05em")
+     // .attr("text-anchor", "start") //
+     // .attr("transform", null)
+      .text(function(d) { return d.name; })
+       .attr("text-anchor", "start") 
+    .filter(function(d) { return d.x < width / 2; })
+      .attr("x", -5 + sankey.nodeWidth())
+      .attr("text-anchor", "end")
+        .attr("x", -5 + sankey.nodeWidth())
+      .style("fill", "#222")
+    ;
+
+//button 8 reset
+// d3.selectAll(".btn8").on("click",function(){
+//     location.reload()
+//   })
+
+
+d3.selectAll(".reset").on("click",function(){
+    location.reload()
+  })
+
+
+
+
+
+
+//button1 Conservative Sources
+d3.selectAll(".btn1")
+.on("click",function(){
+
+var val = d3.select(event.target).html();
+  if(val="Conservative Sources"){
+    var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-dasharray", function (d) {
+        if(d.value==20.2) 
+        {return 10;} 
+      else if(d.value==20.4) 
+        {return 10;} 
+    else {
+        return 0;}
+      })  
+     
+      .style("stroke-width", 3)
+      .style("stroke", function (d) {
+        if(d.conlib ==0) 
+        {return "#AE3942"
+
+;} 
+      else if(d.conlib==2)
+      {return "#E9E3CC";}
+    else {
+        return "#E9E3CC"
+
+
+
+;}
+      })
+  .sort(function(a, b) { return b.dy - a.dy; })
+ .on("mouseover", function(d) {
+       div.transition()
+         .duration(10)
+         .style("opacity", .9);
+
+    div.html(
+        '<a href= "'+d.source.url+'" target="_blank">' +   
+        '<b>'  +  '<p>' + d.source.name   + '</p>' + '</b>' +  "</a>"  + 
+        d.amt  + " to " + d.target.name + "\n" +  "<br>"
+         +  "<br>" + d.abt2 + "\n")
+
+  .style("left", (d3.event.pageX) + 20 + "px")
+         .style("top", (d3.event.pageY - 100) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+}
+
+
+// d3.select(".explained").remove();
+
+
+
+//   svg.selectAll(".explained")
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {
+//         return d.con_line1;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y;})
+//       .style("font-size", 16)
+//           .attr("text-anchor", "end")
+
+
+// //line2
+//        svg.selectAll(".explained")
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.con_line2;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 20;})
+//           .attr("text-anchor", "end")
+//       .style("font-size", 16)
+
+// //line3
+//       svg.selectAll(".explained"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.con_line3;})
+//       .style("font-size", 16)
+
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 40;})
+//       .attr("text-anchor", "end")
+  })
+//button 3 Independent Sources
+d3.selectAll(".btn3").on("click",function(){
+  var val = d3.select(event.target).html();
+  if(val="Independent Sources"){
+    var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-dasharray", function (d) {
+        if(d.value==20.2) 
+        {return 10;} 
+      else if(d.value==20.4) 
+        {return 10;} 
+    else {
+        return 0;}
+      })  
+          .style("stroke-width", 2)
+    //  .style("stroke-width", function(d) { return Math.max(2, d.dy); }) 
+      .style("stroke", function (d) {
+        if(d.conlib ==0) 
+        {return "#E9E3CC"
+
+
+
+;} 
+      else if(d.conlib==2)
+      {return "#F79711"
+
+
+;}
+    else {
+        return "#E9E3CC"
+
+;}
+      })
+      .sort(function(a, b) { return b.dy - a.dy; })
+       .on("mouseover", function(d) {
+       div.transition()
+         .duration(10)
+         .style("opacity", .9);
+ div.html(
+        '<a href= "'+d.source.url+'" target="_blank">' +   
+        '<b>'  +  '<p>' + d.source.name   + '</p>' + '</b>' +  "</a>"  + 
+        d.amt  + " to " + d.target.name + "\n" +  "<br>"
+         +  "<br>" + d.abt2 + "\n")
+      .style("left", (d3.event.pageX) + 20 + "px")
+         .style("top", (d3.event.pageY - 100) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+}
+// d3.select(".explained").remove()
+//   svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {
+//         return d.ind_line1;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y;})
+//             .style("font-size", 16)
+
+//             .attr("text-anchor", "end")
+// //line2
+//        svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.ind_line2;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 20;})
+//             .style("font-size", 16)
+
+//           .attr("text-anchor", "end")
+// //line3
+//       svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.ind_line3;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 40;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+  })
+//button2 liberal sources  
+d3.selectAll(".btn2").on("click",function(){
+  var val = d3.select(event.target).html();
+  if(val="Liberal Sources"){
+    var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-dasharray", function (d) {
+        if(d.value==20.2) 
+        {return 10;} 
+      else if(d.value==20.4) 
+        {return 10;} 
+    else {
+        return 0;}
+      })  
+      .style("stroke-width", 3)
+      .style("stroke", function (d) {
+        if(d.conlib ==0) 
+        {return "#E9E3CC"
+
+
+
+;} 
+      else if(d.conlib==2)
+      {return "#E9E3CC"
+
+
+
+;}
+    else {
+        return "#06495F"
+
+;}
+      })
+      .sort(function(a, b) { return b.dy - a.dy; })
+      .on("mouseover", function(d) {
+       div.transition()
+         .duration(10)
+         .style("opacity", .9);
+   
+
+ div.html(
+        '<a href= "'+d.source.url+'" target="_blank">' +   
+        '<b>'  +  '<p>' + d.source.name   + '</p>' + '</b>' +  "</a>"  + 
+        d.amt  + " to " + d.target.name + "\n" +  "<br>"
+         +  "<br>" + d.abt2 + "\n")
+
+
+
+  .style("left", (d3.event.pageX) + 20 + "px")
+         .style("top", (d3.event.pageY - 100) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+}
+
+// d3.select(".explained").remove()
+//  svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {
+//         return d.lib_line1;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line2
+//        svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.lib_line2;})
+//             .style("font-size", 16)
+
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 20;})
+//       .attr("text-anchor", "end")
+// //line3
+//       svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.lib_line3;})
+//             .style("font-size", 16)
+
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 40;})
+//       .attr("text-anchor", "end")
+  })
+//button 4 Over 1m
+d3.selectAll(".btn4").on("click",function(){
+  var val = d3.select(event.target).html();
+  if(val="Over $1m"){
+    var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-dasharray", function (d) {
+        if(d.value==20.2) 
+        {return 10;} 
+      else if(d.value==20.4) 
+        {return 10;} 
+    else {
+        return 0;}
+      })  
+           .style("stroke-width", 2)
+     // .style("stroke-width", function(d) { return Math.max(2, d.dy); }) 
+      .style("stroke", function (d) {
+        if(d.conlib ==0 && d.source.over1m ==1)
+        {return "#AE3942"
+
+;} 
+      else if(d.conlib==2 && d.source.over1m==1)
+      {return "#F79711"
+
+
+
+;}
+     else if(d.conlib==1 && d.source.over1m==1)
+      {return "#06495F"
+
+;}
+    else {
+        return "#E9E3CC"
+
+
+
+;}
+      })
+      .sort(function(a, b) { return b.dy - a.dy; }) .on("mouseover", function(d) {
+       div.transition()
+         .duration(10)
+         .style("opacity", .9);
+ div.html(
+        '<a href= "'+d.source.url+'" target="_blank">' +   
+        '<b>'  +  '<p>' + d.source.name   + '</p>' + '</b>' +  "</a>"  + 
+        d.amt  + " to " + d.target.name + "\n" +  "<br>"
+         +  "<br>" + d.abt2 + "\n")
+     .style("left", (d3.event.pageX) + 20 + "px")
+         .style("top", (d3.event.pageY - 100) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+}
+// d3.select(".explained").remove()
+//  svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {
+//         return d.o1m_line1;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line2
+//        svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.o1m_line2;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 20;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line3
+//       svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.o1m_line3;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 40;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+  })
+//button 5 Dark Sources
+d3.selectAll(".btn5").on("click",function(){
+  var val = d3.select(event.target).html();
+  if(val="Dark Sources"){
+    var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-dasharray", function (d) {
+        if(d.value==20.2) 
+        {return 10;} 
+      else if(d.value==20.4) 
+        {return 10;} 
+    else {
+        return 0;}
+      })  
+      .style("stroke-width", 3)
+     // .style("stroke-width", function(d) { return Math.max(2, d.dy); }) 
+      .style("stroke", function (d) {
+        if(d.conlib ==0 && d.source.darkgroups==1)
+        {return "#AE3942"
+
+;} 
+      else if(d.conlib==2 && d.source.darkgroups==1)
+      {return "#F79711"
+
+
+
+
+
+
+
+;}
+     else if(d.conlib==1 && d.source.darkgroups==1)
+      {return "#06495F"
+
+;}
+    else {
+        return "#E9E3CC"
+
+
+
+;}
+      })
+      .sort(function(a, b) { return b.dy - a.dy; }) .on("mouseover", function(d) {
+       div.transition()
+         .duration(10)
+         .style("opacity", .9);
+ div.html(
+        '<a href= "'+d.source.url+'" target="_blank">' +   
+        '<b>'  +  '<p>' + d.source.name   + '</p>' + '</b>' +  "</a>"  + 
+        d.amt  + " to " + d.target.name + "\n" +  "<br>"
+         +  "<br>" + d.abt2 + "\n")
+   .style("left", (d3.event.pageX) + 20 + "px")
+         .style("top", (d3.event.pageY - 100) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+}
+// d3.select(".explained").remove()
+//  svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {
+//         return d.dark_line1;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line2
+//        svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.dark_line2;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 20;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line3
+//       svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.dark_line3;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 40;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+  })
+//button 6 women
+d3.selectAll(".btn6").on("click",function(){
+  var val = d3.select(event.target).html();
+  if(val="Dark Sources"){
+    var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-dasharray", function (d) {
+        if(d.value==20.2) 
+        {return 10;} 
+      else if(d.value==20.4) 
+        {return 10;} 
+    else {
+        return 0;}
+      })  
+          .style("stroke-width", 2)
+    //  .style("stroke-width", function(d) { return Math.max(2, d.dy); }) 
+      .style("stroke", function (d) {
+        if(d.conlib ==0 && d.source.gender==1)
+        {return "#AE3942"
+
+;} 
+      else if(d.conlib==2 && d.source.gender==1)
+      {return "#F79711"
+
+
+
+
+
+
+
+;}
+     else if(d.conlib==1 && d.source.gender==1)
+      {return "#06495F"
+
+;}
+    else {
+        return "#E9E3CC"
+
+
+
+;}
+      })
+      .sort(function(a, b) { return b.dy - a.dy; }) .on("mouseover", function(d) {
+       div.transition()
+         .duration(10)
+         .style("opacity", .9);
+ div.html(
+        '<a href= "'+d.source.url+'" target="_blank">' +   
+        '<b>'  +  '<p>' + d.source.name   + '</p>' + '</b>' +  "</a>"  + 
+        d.amt  + " to " + d.target.name + "\n" +  "<br>"
+         +  "<br>" + d.abt2 + "\n")
+     .style("left", (d3.event.pageX) + 20 + "px")
+         .style("top", (d3.event.pageY - 100) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+}
+// d3.select(".explained").remove()
+//   svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {
+//         return d.wom_line1;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line2
+//        svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.wom_line2;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 20;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line3
+//       svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.wom_line3;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 40;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+  })
+//button 9 Over 65
+d3.selectAll(".btn9").on("click",function(){
+  var val = d3.select(event.target).html();
+  if(val="Under 65 Yrs Old"){
+    var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-dasharray", function (d) {
+        if(d.value==20.2) 
+        {return 10;} 
+      else if(d.value==20.4) 
+        {return 10;} 
+    else {
+        return 0;}
+      })  
+      .style("stroke-width", 3)
+     // .style("stroke-width", function(d) { return Math.max(2, d.dy); }) 
+      .style("stroke", function (d) {
+        if(d.conlib ==0 && d.source.over65==1)
+        {return "#AE3942"
+
+;} 
+      else if(d.conlib==2 && d.source.over65==1)
+      {return "#F79711"
+
+
+
+
+
+
+
+;}
+     else if(d.conlib==1 && d.source.over65==1)
+      {return "#06495F"
+
+;}
+    else {
+        return "#E9E3CC"
+
+
+
+;}
+      })
+      .sort(function(a, b) { return b.dy - a.dy; }) 
+      .on("mouseover", function(d) {
+       div.transition()
+         .duration(10)
+         .style("opacity", .9);
+ div.html(
+        '<a href= "'+d.source.url+'" target="_blank">' +   
+        '<b>'  +  '<p>' + d.source.name   + '</p>' + '</b>' +  "</a>"  + 
+        d.amt  + " to " + d.target.name + "\n" +  "<br>"
+         +  "<br>" + d.abt2 + "\n")
+    .style("left", (d3.event.pageX) + 20 + "px")
+         .style("top", (d3.event.pageY - 100) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+}
+// d3.select(".explained").remove()
+//   svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {
+//         return d.o65_line1;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line2
+//        svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.o65_line2;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 20;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line3
+//       svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.o65_line3;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 40;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+  })
+//button 10 People
+d3.selectAll(".btn10").on("click",function(){
+  var val = d3.select(event.target).html();
+  if(val="Individual"){
+    var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-dasharray", function (d) {
+        if(d.value==20.2) 
+        {return 10;} 
+      else if(d.value==20.4) 
+        {return 10;} 
+    else {
+        return 0;}
+      })  
+      .style("stroke-width", 3)
+     // .style("stroke-width", function(d) { return Math.max(2, d.dy); }) 
+      .style("stroke", function (d) {
+        if(d.conlib ==0 && d.source.person==1)
+        {return "#AE3942"
+
+;} 
+      else if(d.conlib==2 && d.source.person==1)
+      {return "#F79711"
+
+
+
+;}
+     else if(d.conlib==1 && d.source.person==1)
+      {return "#06495F"
+
+;}
+    else {
+        return "#E9E3CC"
+
+;}
+      })
+      .sort(function(a, b) { return b.dy - a.dy; })
+       .on("mouseover", function(d) {
+       div.transition()
+         .duration(10)
+         .style("opacity", .9);
+ div.html(
+        '<a href= "'+d.source.url+'" target="_blank">' +   
+        '<b>'  +  '<p>' + d.source.name   + '</p>' + '</b>' +  "</a>"  + 
+        d.amt  + " to " + d.target.name + "\n" +  "<br>"
+         +  "<br>" + d.abt2 + "\n")
+  .style("left", (d3.event.pageX) + 20 + "px")
+         .style("top", (d3.event.pageY - 100) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+}
+// d3.select(".explained").remove()
+//   svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {
+//         return d.ppl_line1;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line2
+//        svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.ppl_line2;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 20;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line3
+//       svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.ppl_line3;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 40;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+  })
+//button 11 Super PACs
+d3.selectAll(".btn11").on("click",function(){
+  var val = d3.select(event.target).html();
+  if(val="Individual"){
+    var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-dasharray", function (d) {
+        if(d.value==20.2) 
+        {return 10;} 
+      else if(d.value==20.4) 
+        {return 10;} 
+    else {
+        return 0;}
+      })  
+      .style("stroke-width", 3)
+     // .style("stroke-width", function(d) { return Math.max(2, d.dy); }) 
+      .style("stroke", function (d) {
+        if(d.conlib ==0 && d.type==2)
+        {return "#AE3942"
+
+;} 
+      else if(d.conlib==2 && d.type==2)
+      {return "#F79711"
+
+;}
+     else if(d.conlib==1 && d.type==2)
+      {return "#06495F"
+
+;}
+    else {
+        return "#E9E3CC"
+
+
+;}
+      })
+      .sort(function(a, b) { return b.dy - a.dy; })
+       .on("mouseover", function(d) {
+       div.transition()
+         .duration(10)
+         .style("opacity", .9);
+ div.html(
+        '<a href= "'+d.source.url+'" target="_blank">' +   
+        '<b>'  +  '<p>' + d.source.name   + '</p>' + '</b>' +  "</a>"  + 
+        d.amt  + " to " + d.target.name + "\n" +  "<br>"
+         +  "<br>" + d.abt2 + "\n")
+  .style("left", (d3.event.pageX) + 20 + "px")
+         .style("top", (d3.event.pageY - 100) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+}
+// d3.select(".explained").remove()
+//   svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {
+//         return d.spacs_line1;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line2
+//        svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.spacs_line2;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 20;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line3
+//       svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.spacs_line3;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 40;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+  })
+//button 11 PACs
+d3.selectAll(".btn12").on("click",function(){
+  var val = d3.select(event.target).html();
+  if(val="Individual"){
+    var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-dasharray", function (d) {
+        if(d.value==20.2) 
+        {return 10;} 
+      else if(d.value==20.4) 
+        {return 10;} 
+    else {
+        return 0;}
+      })  
+      .style("stroke-width", 3)
+     // .style("stroke-width", function(d) { return Math.max(2, d.dy); }) 
+      .style("stroke", function (d) {
+        if(d.conlib ==0 && d.type==3)
+        {return "#AE3942"
+
+;} 
+      else if(d.conlib==2 && d.type==3)
+      {return "#F79711"
+
+
+;}
+     else if(d.conlib==1 && d.type==3)
+      {return "#06495F"
+
+;}
+    else {
+        return "#E9E3CC"
+
+;}
+      })
+      .sort(function(a, b) { return b.dy - a.dy; })
+       .on("mouseover", function(d) {
+       div.transition()
+         .duration(10)
+         .style("opacity", .9);
+ div.html(
+        '<a href= "'+d.source.url+'" target="_blank">' +   
+        '<b>'  +  '<p>' + d.source.name   + '</p>' + '</b>' +  "</a>"  + 
+        d.amt  + " to " + d.target.name + "\n" +  "<br>"
+         +  "<br>" + d.abt2 + "\n")
+  .style("left", (d3.event.pageX) + 20 + "px")
+         .style("top", (d3.event.pageY - 100) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+}
+// d3.select(".explained").remove()
+//   svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {
+//         return d.pacs_line1;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line2
+//        svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.pacs_line2;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 20;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line3
+//       svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.pacs_line3;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 40;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+  })
+//button 8 Fam
+d3.selectAll(".btn8").on("click",function(){
+  var val = d3.select(event.target).html();
+  if(val="Individual"){
+    var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-dasharray", function (d) {
+        if(d.value==20.2) 
+        {return 10;} 
+      else if(d.value==20.4) 
+        {return 10;} 
+    else {
+        return 0;}
+      })  
+      .style("stroke-width", 3)
+     // .style("stroke-width", function(d) { return Math.max(2, d.dy); }) 
+      .style("stroke", function (d) {
+        if(d.conlib ==0 && d.source.fam==1)
+        {return "#AE3942"
+
+;} 
+      else if(d.conlib==2 && d.source.fam==1)
+      {return "#F79711"
+
+
+;}
+     else if(d.conlib==1 && d.source.fam==1)
+      {return "#06495F"
+
+;}
+    else {
+        return "#E9E3CC"
+
+;}
+      })
+      .sort(function(a, b) { return b.dy - a.dy; })
+       .on("mouseover", function(d) {
+       div.transition()
+         .duration(10)
+         .style("opacity", .9);
+ div.html(
+        '<a href= "'+d.source.url+'" target="_blank">' +   
+        '<b>'  +  '<p>' + d.source.name   + '</p>' + '</b>' +  "</a>"  + 
+        d.amt  + " to " + d.target.name + "\n" +  "<br>"
+         +  "<br>" + d.abt2 + "\n")
+  .style("left", (d3.event.pageX) + 20 + "px")
+         .style("top", (d3.event.pageY - 100) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+}
+ })
+
+//button 12 Others
+d3.selectAll(".btn13").on("click",function(){
+  var val = d3.select(event.target).html();
+  if(val="Individual"){
+    var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-dasharray", function (d) {
+        if(d.value==20.2) 
+        {return 10;} 
+      else if(d.value==20.4) 
+        {return 10;} 
+    else {
+        return 0;}
+      })  
+      .style("stroke-width", 3)
+     // .style("stroke-width", function(d) { return Math.max(2, d.dy); }) 
+      .style("stroke", function (d) {
+        if(d.conlib ==0 && d.type>3)
+        {return "#AE3942"
+
+;} 
+      else if(d.conlib==2 && d.type>3)
+      {return "#F79711"
+
+
+;}
+     else if(d.conlib==1 && d.type>3)
+      {return "#06495F"
+
+;}
+    else {
+        return "#E9E3CC"
+;}
+      })
+      .sort(function(a, b) { return b.dy - a.dy; })
+       .on("mouseover", function(d) {
+       div.transition()
+         .duration(10)
+         .style("opacity", .9);
+ div.html(
+        '<a href= "'+d.source.url+'" target="_blank">' +   
+        '<b>'  +  '<p>' + d.source.name   + '</p>' + '</b>' +  "</a>"  + 
+        d.amt  + " to " + d.target.name + "\n" +  "<br>"
+         +  "<br>" + d.abt2 + "\n")
+  .style("left", (d3.event.pageX) + 20 + "px")
+         .style("top", (d3.event.pageY - 100) + "px");
+  })
+   .on("mouseout", function(d) {
+       div.transition()
+         .duration(1600)
+         .style("opacity", 0)})
+}
+// d3.select(".explained").remove()
+//   svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {
+//         return d.others_line1;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line2
+//        svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.others_line2;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 20;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+// //line3
+//       svg.selectAll("#moretext"
+
+// )
+//       .data(language)
+//       .enter().append("text")
+//       .text(function(d) {return d.others_line3;})
+//       .attr("x", function(d) {return d.x;})
+//       .attr("y", function(d) {return d.y + 40;})
+//             .style("font-size", 16)
+
+//       .attr("text-anchor", "end")
+  })
+
+
+
+
+
+
+ 
+});
+</script>
+<svg>
+<pattern id="masto" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+<image height="1" width="1" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="NVmasto.png">
+</image>
+</pattern>
+
+<pattern id="toomey" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+<image height="1" width="1" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="PAToomey.png">
+</image>
+</pattern>
+
+
+<pattern id="hassan" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+<image height="1" width="1" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="NHhassan.png">
+</image>
+</pattern>
+
+
+<pattern id="burr" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+<image height="1" width="1" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="NCburr.png">
+</image>
+</pattern>
+
+
+<pattern id="portman" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+<image height="1" width="1" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="OHportman.png">
+</image>
+</pattern>
+
+
+<pattern id="rubio" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+<image height="1" width="1" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="FLrubio.png">
+</image>
+</pattern>
+
+</svg>
+
+</body>

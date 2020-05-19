@@ -1,0 +1,34 @@
+body {
+	font-family: Helvetica
+}
+.content {
+	margin: 10vw;
+	height: 100%;
+	width: 50vw;
+}
+
+.intro{
+	margin-top: 40vh;
+	/*margin-left: 20vw;*/
+	font-size: 40px;
+
+}
+
+.subtitle {
+	font-size: 40px;
+	/*margin-left: 20vw;*/
+	color: #c8c8c8;
+	line-height: 38px;
+
+}
+
+a {
+	text-decoration: none;
+	margin-top: 150px;
+	color:black;
+}
+
+a span:hover {
+	border-bottom: 4px solid;
+}
+

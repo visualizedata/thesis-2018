@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+h1 {
+  font: 55px "Helvetica Neue";
+  background-color: black;
+  color: white;
+/*  text-align: left;*/
+  width: 1200px;
+  height: 150px;
+  margin: 0;
+  position: absolute;
+}
+
+
+
+</style>
+<h1> </h1>
+
+<script src="//d3js.org/d3.v4.0.0-alpha.23.min.js"></script>
+
+<script>
+
+d3.select("h1")
+  .transition()
+    .duration(2500)
+    .on("start", function repeat() {
+      var t = d3.active(this)
+          .style("opacity", 0)
+          .remove();
+
+      d3.select("body").append("h1")
+          .style("opacity", 0)
+          .text("How heat vulnerability has become the lethal new normal in NYC")
+        .transition(t)
+          .style("opacity", 1)
+        .transition()
+          .delay(1000)
+          .on("start");
+    });
+
+</script>

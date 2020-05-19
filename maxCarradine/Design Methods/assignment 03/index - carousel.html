@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Raleway" rel="stylesheet">
+
+	<meta charset="utf-8"/>
+	<title></title>
+</head>
+<body>
+<a href="#" id="prev">GO</a>
+	<div class="sportcarousel">
+	<br>
+	<h1>Sport</h1>
+		<img src="images/sport1.png" id="item-1.jpg"/>
+		<img src="images/sport2.png" id="item-2.jpg"/>
+		<img src="images/sport3.png" id="item-3.jpg"/>
+		<img src="images/sport4.png" id="item-4.jpg"/>
+		<img src="images/sport5.png" id="item-5.jpg"/>
+		<img src="images/sport66.png" id="item-6.jpg"/>
+		<img src="images/sport7.png" id="item-7.jpg"/>
+		<img src="images/sport8.png" id="item-8.jpg"/>
+		<img src="images/sport9.png" id="item-9.jpg"/>
+	</div>
+
+
+		<div class="journcarousel">
+				<br>
+				<h1>Journalism</h1>
+
+		<img src="images/journ1.png" id="item-1.jpg"/>
+		<img src="images/journ2.png" id="item-2.jpg"/>
+		<img src="images/journ3.png" id="item-3.jpg"/>
+		<img src="images/journ4.png" id="item-4.jpg"/>
+		<img src="images/journ5.png" id="item-5.jpg"/>
+		<img src="images/journ6.png" id="item-6.jpg"/>
+		<img src="images/journ7.png" id="item-7.jpg"/>
+	</div>
+
+		<div class="newscarousel">
+				
+				<br><h1>News</h1>
+
+		<img src="images/news01.png" id="item-1.jpg"/>
+		<img src="images/news02.png" id="item-2.jpg"/>
+		<img src="images/news03.png" id="item-3.jpg"/>
+		<img src="images/news04.png" id="item-4.jpg"/>
+		<img src="images/news05.png" id="item-5.jpg"/>
+		<img src="images/news06.png" id="item-6.jpg"/>
+		<img src="images/news07.png" id="item-7.jpg"/>
+	</div>
+
+	<a href="#" id="prev">GO</a>
+	<!-- 	<a href="#" id="next">prev</a>
+-->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.waterwheelCarousel.js"></script>
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var sportcarousel = $(".sportcarousel").waterwheelCarousel({
+			flankingItems: 3
+		});
+			var journcarousel = $(".journcarousel").waterwheelCarousel({
+			flankingItems: 3
+		});
+		var newscarousel = $(".newscarousel").waterwheelCarousel({
+			flankingItems: 3
+		});
+$('#prev').bind('click',function()
+		{
+			journcarousel.prev();
+			sportcarousel.prev();
+			newscarousel.prev();
+			return false;
+		});
+		// $('#prev').bind('click',function()
+		// {
+		// 	journcarousel.prev();
+		// 	sportcarousel.prev();
+		// 	return false;
+		// });
+		// $('#next').bind('click',function(){
+			
+		// 	journcarousel.prev();
+		// 	sportcarousel.next();
+		// 	return false;
+		// });
+	});
+	</script>
+	<style> 
+body {
+    background-color: #FFFFFA;
+font-family: 'Libre Franklin', sans-serif;
+    font-size: 12px;
+}
+div{
+    height:400px;
+    width:100%;
+    float:center;
+}
+.sportcarousel{
+    margin-top:10px;
+    margin-left:-10px;
+    background-color: darkgray;
+    float:center;
+}
+.journcarousel{
+    margin-top:10px;
+    margin-left:-10px;
+    background-color: gray;
+    float:center;
+}
+.newscarousel{
+    margin-top:10px;
+    margin-left:-10px;
+    background-color: black;
+    float:center;
+}
+  h1 {
+  color: #F3F0E9;
+font-family: 'Libre Franklin', sans-serif;
+font-weight: bold;
+ text-align: left;
+ font-size: 72px;
+  line-height: 46px;
+   margin-left: 40px;
+   	letter-spacing: 12px;
+} 
+p {
+    color: #F3F0E9;
+     text-align: justify;
+    position: absolute;
+	top: 0px;
+	letter-spacing: 2px;
+	line-height: 20px;
+	 font-size: 18px;
+} 
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+     font-size: 14px;
+     	top: 0px;
+}
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+        font-size: 14px;
+        	top: 0px;
+}
+a:hover {
+    color: gray;
+    background-color: transparent;
+    text-decoration: underline;
+        font-size: 16px;
+}
+a:active {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+        font-size: 14px;
+}
+</style>
+</body>
+</html>
