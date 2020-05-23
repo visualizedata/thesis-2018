@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:600|Roboto|Roboto+Condensed|Cabin" rel="stylesheet">
+<!-- Example based on http://bl.ocks.org/mbostock/3887118 -->
+<!-- Tooltip example from http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html -->
+<!-- Coding style based on http://gist.github.com/mbostock/5977197 -->
+</head>
+<style>
+@import "compass/css3";
+
+.header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+}
+body {
+  font: 11px sans-serif;
+  background: rgb(52, 52, 52);
+  padding: 2em; 
+}
+
+.dot, .dot2, .ClusterClass0, .ClusterClass1, .ClusterClass2, .ClusterClass3, .ClusterClass4, .ClusterClass5, .ClusterClass6, .ClusterClass7, .ClusterClass8 {
+  stroke: #555;
+}
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+div.textHere {
+    position: absolute;	
+    top: 0%;
+    right: 7%;
+    text-align: center;			
+    width: 85%;					
+    height: 11%;					
+    padding: 1%;				
+    font: 1em Cabin, sans-serif;		
+    background: rgba(245, 214, 205, .99);
+    z-index: 3;
+    border: 0px;
+}
+
+.wrapper {
+    display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  flex-flow: row wrap;
+  flex-direction: row;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+.header {
+  background: rgb(152, 152, 152);
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.footer {
+ background: rgb(152, 152, 152);
+  flex: 100%;
+}
+
+.main {
+  text-align: left;
+  background: rgb(52, 52, 52);
+}
+
+.aside-1 {
+  background: rgb(152, 152, 152);
+  flex: 5%; 
+  flex-direction: column;
+  display: flex;  
+  flex-flow: row wrap;
+  /*padding-top: 500px;*/
+  /*flex: .5;*/
+}
+
+.aside-2 {
+  background: rgb(152, 152, 152);
+  flex: 5%;
+  flex-direction: column;
+  display: flex;  
+  flex-flow: row wrap;
+  
+}
+
+.button1 {
+  flex-grow: 1;
+  padding: 1em;
+  
+}
+.button2 {
+  flex-grow: 1;
+  padding: 1em;
+  
+}
+.button3 {
+  flex-grow: 1;
+  padding: 1em;
+  
+}
+.button4 {
+  flex-grow: 1;
+  padding: 1em;
+  
+}
+
+.gender {
+  flex-grow: 1;
+  padding: 1em;
+  
+}
+.widthdrawl {
+  flex-grow: 1;
+  padding: 1em;
+  
+}
+.engagement {
+  flex-grow: 1;
+  padding: 1em;
+  
+}
+.enrollment {
+  flex-grow: 1;
+  padding: 1em;
+  
+}
+
+@media all and (min-width: 300px) {
+  /*.aside { flex: 1 auto; }*/
+}
+
+@media all and (min-width: 700px) {
+  .main    { flex: 50%; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+
+</style>
+
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+var margin = {top: (screen.height)/15, right: (screen.width)/20, bottom: (screen.height)/15, left: (screen.width)/20},
+    width = .75*(screen.width - margin.left - margin.right),
+    height = .8*(screen.height - margin.top - margin.bottom);
+
+var xValue = function(d) { return d.xVal;}, // data -> value
+    xEnd = function(d) { return d.spiralGX;},
+    xScale = d3.scaleLinear().range([0, width]), // value -> display
+    xMap = function(d) { return xScale(xValue(d));},
+    xMend = function(d) { return xScale(xEnd(d));}; // data -> display
+
+var yValue = function(d) { return d["yVal"];},
+    yEnd = function(d) { return d['spiralGY'];},// data -> value
+    yScale = d3.scaleLinear().range([height, 0]), // value -> display
+    yMap = function(d) { return yScale(yValue(d));},
+    yMend = function(d) { return yScale(yEnd(d));};// data -> display
+
+var cValue = function(d) { return d.newClusters;},
+     color = d3.scaleOrdinal(["rgb(117, 223, 233)", "rgb(158, 58, 156)","rgb(241, 244, 91)", "rgb(177, 62, 36)", "rgb(31, 92, 232)","rgb(220, 105, 200)", "rgb(210, 110, 50)"]);
+    
+
+// add the tooltip area to the webpage
+var tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+    
+// load data
+d3.csv("spiralTest7.csv", function(error, data) {
+  // change string (from CSV) into number format
+  data.forEach(function(d) {
+    d.xVal = +d.xVal;
+    d["yVal"] = +d["yVal"];
+    d.spiralGX = +d.spiralGX;
+    d['spiralGY'] = +d['spiralGY'];
+  });
+  
+  // don't want dots overlapping axis, so add in buffer to data domain
+  xScale.domain([d3.min(data, xValue)-1.2, d3.max(data, xValue)+1.2]);
+  yScale.domain([d3.min(data, yValue)+.13, d3.max(data, yValue)-.13]);
+
+  
+var svg = d3.select("div.dvCluster").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .on("click", function(d) {
+            NewDots()
+            });
+            
+var dots = svg.selectAll()
+      .data(data)
+      .enter().append("rect")
+      .attr("rx", 6)
+      .attr("ry", 6)
+      .attr("x", xMap)
+      .attr("y", yMap)
+      .attr("width", 30)
+      .attr("height", 30)
+      .attr("class", "dot")
+      .style("fill", function(d) { return color(cValue(d));})
+      .on("mouseover", function(d) {
+          tooltip.transition()
+               .duration(200)
+               .style("opacity", .9);
+          tooltip.html(d["point"] + "<br/> (" + d['spiralGX'] 
+	        + ", " + d['spiralGY'] + ")")
+               .style("left", (d3.event.pageX + 5) + "px")
+               .style("top", (d3.event.pageY - 28) + "px");
+      })
+      .on("mouseout", function(d) {
+          tooltip.transition()
+               .duration(500)
+               .style("opacity", 0);
+      });
+      
+d3.selectAll("input")
+                .on("click", changed);
+                
+            var timeout = d3.timeout(function() {
+                d3.select("input[value=\"Box Spiral\"]")
+                .property("clicked", true)
+                .dispatch("change");
+            }, 1000000);
+            
+            function changed() {
+                timeout.stop();
+                if (this.value === "Box Spiral") NewDots();
+                else if (this.value === "Spirals") NewDots();
+                else if (this.value === "Mean Years of School") transitionStacked();
+                else transitionDifference();
+            }
+      
+  
+ function NewDots() {
+      
+xScale.domain([d3.min(data, xEnd), d3.max(data, xEnd)]);
+yScale.domain([d3.min(data, yEnd), d3.max(data, yEnd)]);
+
+  var smallDot = svg.selectAll(".dot")
+    .transition()
+      .duration(2000)
+      .attr("rx", 6)
+      .attr("ry", 6)
+      .attr("x", xMend)
+      .attr("y", yMend)
+      .attr("width", 15)
+      .attr("height", 15)
+      .attr("class", function(d) { return "ClusterClass"+d.newClusters;})
+      .style("fill", function(d) { return color(cValue(d));});
+   
+   
+    var scatterDot = d3.selectAll(".ClusterClass3")
+     scatterDot.on('click', function()
+     {
+         console.log("mario")
+        //  svg.selectAll('.dot2')
+        //     .style("opacity", 0)
+        // tooltip.transition()
+        //     .style("opacity", .1)
+        // zeroAppCluster.transition(d);
+        
+         });
+
+      
+function zeroAppCluster(d) {
+    svg.selectAll('.0C')
+        .style("opacity", 100);
+      
+  }
+
+}
+
+
+});
+</script>
+<div class="wrapper">
+  <header class="header">Header</header>
+  <aside class="aside aside-1"><div class="button1"><label><input type="button" name="mode" value="Box Spiral" autofocus></label></div><div class="button2"><label><input type="button" name="mode" value="Spirals" autofocus></label></div><div class="button3">button3</div><div class="button4">button4</div>Aside 1</aside>
+  <article class="main">
+    <div class='dvCluster'></div>  
+  </article>
+  <aside class="aside aside-2"><div class="gender">Gender</div><div class="withdrawl">Withdrawl</div><div class="engagement">Engagement</div><div class="enrollment">Enrollment</div>Aside 2</aside>
+  <footer class="footer">Footer</footer>
+</div>
+
+</body>
+</html>

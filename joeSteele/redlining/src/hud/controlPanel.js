@@ -1,29 +1,28 @@
 import React, {PureComponent} from 'react';
 import { MapMode, MapBase, OLD_COLORS } from '../constants/map_constants';
 import PropTypes from 'prop-types';
-import {Title, ControlContainer} from './styledInfo';
+import { BarLoader } from 'react-spinners';
+import { ControlContainer} from './styledInfo';
 import { connect } from 'react-redux';
-import { Button, Badge, Grid, Row, Col, ButtonGroup} from 'react-bootstrap';
+import { Button, Badge, Grid, Glyphicon, Row, Col, ButtonGroup} from 'react-bootstrap';
 import Waypoint from 'react-waypoint';
 import MAP_STYLE from '../../data/mapStyles/philMapRaster'
 import DEF_STYLE from '../../data/mapStyles/philMap'
 import {fromJS} from "immutable";
 import * as d3 from "d3-ease";
 import {LinearInterpolator, FlyToInterpolator} from 'react-map-gl';
-import {DiscreteColorLegend} from 'react-vis';
 import { bootstrapUtils } from 'react-bootstrap/lib/utils';
 
 bootstrapUtils.addStyle(Badge, 'white');
+bootstrapUtils.addStyle(Badge, 'wh');
 bootstrapUtils.addStyle(Badge, 'poc');
-
-
-
-const OLD_ITEMS = [
-    'White',
-    'Person of Color'
-];
-
-const OLD_LEGEND = ['#0080ff', 'f45006'];
+bootstrapUtils.addStyle(Badge, 'black');
+bootstrapUtils.addStyle(Badge, 'asian');
+bootstrapUtils.addStyle(Badge, 'latino');
+bootstrapUtils.addStyle(Badge, 'a');
+bootstrapUtils.addStyle(Badge, 'b');
+bootstrapUtils.addStyle(Badge, 'c');
+bootstrapUtils.addStyle(Badge, 'd');
 
 
 const rasterMapStyle = fromJS(MAP_STYLE);
@@ -39,12 +38,9 @@ class ControlRoot extends PureComponent {
 
         this.state = {
             width: '100%',
+            opacity: '0',
             background: '-webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #ffa7a0 100%)',
             visibility: 'visible',
-            oldLoad : false,
-            popLoad : false,
-            incLoad : false,
-            hsLoad : false,
             defaultView : {
                 longitude: -75.07386546961281,
                 latitude: 39.94791260958592,
@@ -64,11 +60,16 @@ class ControlRoot extends PureComponent {
         this.props.viewUpdateFunc(updatedState);
     };
 
+    _handleWidthClick(){
+        this.setState({width: '40%'});
+    }
+
     _handleLeave0(c){
 
         if(c.currentPosition == 'above'){
             this.setState({visibility: 'hidden'});
             this.setState({width: '40%'});
+            this.setState({opacity: '1'});
             this.props.rasterSetFunc(rasterMapStyle);
             this.setState({background: '-webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%'});
 
@@ -88,6 +89,7 @@ class ControlRoot extends PureComponent {
     _handleLeave1(c){
         if(c.currentPosition == 'below'){
             this.setState({width: '100%'});
+            this.setState({opacity: '0'});
             this.setState({background: '-webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #ffa7a0 100%)'});
             this.props.selectModeFunc(MapMode.NONE);
             this.props.rasterSetFunc(defaultMapStyle);
@@ -100,6 +102,7 @@ class ControlRoot extends PureComponent {
     _handleEnter1(c){
         if(c.previousPosition == 'below'){
             this.setState({width: '40%'});
+            this.setState({opacity: '1'});
             this.props.rasterSetFunc(rasterMapStyle);
             this.setState({visibility: 'hidden'});
             this.setState({background: '-webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%'});
@@ -139,6 +142,8 @@ class ControlRoot extends PureComponent {
     _handleLeave2(c){
         if(c.currentPosition == 'below') {
             this.flyCam(this.state.view1);
+            this.props.selectModeFunc(MapMode.NONE);
+
         }
     }
 
@@ -181,7 +186,7 @@ class ControlRoot extends PureComponent {
             this.flyCam(updatedView);
             this.props.rasterSetFunc(defaultMapStyle);
             if(this.props.mapMode == MapMode.OLD){
-                setTimeout(() => this.props.selectModeFunc(MapMode.DOTS), 1000);
+                setTimeout(() => this.props.selectModeFunc(MapMode.DOTS), 3000);
             }
 
         }
@@ -193,16 +198,41 @@ class ControlRoot extends PureComponent {
             this.props.rasterSetFunc(rasterMapStyle);
             if(this.props.mapMode == MapMode.DOTS){
                 // this.props.selectModeFunc(MapMode.OLD);
-                setTimeout(() => this.props.selectModeFunc(MapMode.OLD), 500);
+                setTimeout(() => this.props.selectModeFunc(MapMode.OLD), 3000);
             }
+
+        }
+    }
+
+    _handleEnter5(c){
+        if(c.previousPosition == 'below') {
+            const updatedView = {
+                zoom: 11.017839842367197,
+                latitude:  40.05956642191818,
+                longitude: -75.11831041438738,
+                pitch: 55.44616742850198,
+                bearing: -91.25,
+                transitionDuration: 3000,
+                transitionInterpolator: new FlyToInterpolator(),
+                transitionEasing: d3.easeCubic
+            };
+            this.setState({view5: updatedView});
+            this.flyCam(updatedView);
+
+        }
+    }
+
+    _handleLeave5(c){
+        if(c.currentPosition == 'below') {
+            this.flyCam(this.state.view4);
+            this.props.selectModeFunc(MapMode.NONE);
 
         }
     }
 
     _handleBtClick(mode){
         const { mapMode } = this.props;
-        console.log(MapMode.OLD === mapMode);
-        if (mode === mapMode) {
+        if (mode === mapMode && mapMode != MapMode.DOTS) {
             this.props.selectModeFunc(MapMode.NONE);
             return;
         }
@@ -223,7 +253,8 @@ class ControlRoot extends PureComponent {
 
     render() {
         const {mapMode} = this.props;
-        const {width, background, visibility} = this.state;
+        const {width, background, visibility, opacity} = this.state;
+        const leadOpacity = (opacity == 1 ? 0 : 1)
         return (
 
             <ControlContainer style={{
@@ -250,14 +281,39 @@ class ControlRoot extends PureComponent {
                                         <h1 className="text-center">
                                             MOVING THE LINE
                                         </h1>
-                                        <h3 className="text-center">
+                                        <h3 className="text-center"
+                                            style={{ marginBottom: '10%'}}>
                                             SHIFTING BORDERS AND DISPARITIES IN AMERICAN CITIES
                                         </h3>
+
+                                        <BarLoader
+                                            className="text-center"
+                                            color={'#D0021B'}
+                                            width={"100%"}
+                                            loading={this.props.oldDots === null}
+                                        />
+                                        {this.props.oldDots === null && <p className="text-center">Loading Data...</p>}
+
+
                                     </div>
                                 </Col>
                             </Row>
 
                             <Row style={{ height: '30%'}}></Row>
+
+                            <Row>
+                                <Col xs={6} xsOffset={3}>
+                                    <p style={{fontSize: '20px'}} >
+                                        In 2017, a Pew Research poll showed, by a 66-23% margin, that Americans believe interpersonal prejudice plays a larger role in discrimination than institutional causes.
+                                        But more than determining the import of one such contributing factor over the other, the way Pew phrased this question omitted any consideration of how they intertwine in structural,
+                                        self-perpetuating ways. American institutions and beliefs feed into one another continuously and cyclically- something exemplified by a particular historical trend, dating back to the
+                                        beginning of the country itself.
+                                    </p>
+                                </Col>
+                            </Row>
+
+                            <Row style={{ height: '80%'}}></Row>
+
 
                             <Row>
                                 <Col xs={6} xsOffset={3}>
@@ -276,13 +332,18 @@ class ControlRoot extends PureComponent {
 
                             <Row>
                                 <Col xs={6} xsOffset={3}>
-                                    <p style={{fontSize: '20px'}} >
+                                    <p style={{
+                                        fontSize: '20px',
+                                        opacity: leadOpacity,
+                                        transition: "opacity 3s ease-in-out",
+                                        visibility: visibility}} >
                                         In the 20th Century, this practice came to be known generally as "redlining" - the selective denial of credit and services to physically-defined spaces, on the basis of race.
                                         However, the term grew out of a reference to something more specific:
-                                        the Home Owner's Loan Corporation. Part of the New Deal, the federal program was conceived to underwrite loans to in-need Americans.
-                                        But by the late 1930's, with the program supposedly winding down, HOLC began drawing maps of "residential security" for American cities -
+                                        the Home Owner's Loan Corporation. Formed as part of the New Deal, the federal program was conceived to underwrite loans to in-need Americans.
+                                        But by the late 1930's, with the program supposedly winding down, HOLC began drawing maps of "residential security" for longer-term real estate investment in American cities -
                                         maps which often divided areas according to racial desirability.
                                     </p>
+
                                 </Col>
                             </Row>
 
@@ -292,6 +353,8 @@ class ControlRoot extends PureComponent {
                                 <Col xs={6} xsOffset={3}>
                                         <p style={{
                                             fontSize: '20px',
+                                            opacity: leadOpacity,
+                                            transition: "opacity 3s ease-in-out",
                                             visibility: visibility}} >
                                             In cities like Philadelphia, the HOLC borders
                                             made certain divisions more pronounced, across the lines of
@@ -301,42 +364,28 @@ class ControlRoot extends PureComponent {
                                         onLeave={(evt) => this._handleLeave0(evt)}
                                     />
                                 </Col>
+                                {/*<Col xs={1} xsOffset={1}>*/}
+                                    {/*<Button bsSize="large"  onClick={() => this._handleWidthClick()}>*/}
+                                        {/*<Glyphicon glyph="chevron-right" />*/}
+                                    {/*</Button>*/}
+                                {/*</Col>*/}
                             </Row>
-
-                            <Row style={{ height: '50%'}}/>
+                            <Row style={{ height: '20%'}}/>
                             <Row>
-                                <Col xs={8} xsOffset={2}>
+                                <Col xs={8} xsOffset={2} style={{opacity: opacity,
+                                    transition: "opacity 5s ease-in-out",}}>
                                     <Waypoint
                                         onEnter={(evt) => this._handleEnter1(evt)} onLeave={(evt) => this._handleLeave1(evt)}
                                     />
                                     <h1 className="text-center">
                                         PHILADELPHIA <br/>
-                                        HOLC MAP, 1936
+                                        HOLC MAP, 1937
                                     </h1>
-                                    <style type="text/css">{`
-                                    .badge-a {
-                                        background-color: #0080ff;
-                                        margin-right: 10%;
-                                        line-height:2;
-                                    }
-                                    .badge-b {
-                                        line-height:2;
-                                        margin-left: 10%;
-                                         background-color: #f45006;
-                                    }
-                                    .badge-c {
-                                        line-height:2;
-                                         background-color: #ff0080;
-                                    }
-                                    .badge-d {
-                                        line-height:2;
-                                         background-color: #89f442;
-                                    }
-                                    `}</style>
-                                    <p style={{fontSize: '20px'}} >
-                                        The maps bracketed cities into 4 categories (A-D) - measures of supposed residential security.
-                                        Across the country, the lowest-ranked D neighbourhoods showed repeated difference in racial composition
-                                        from the other, higher-rated areas.
+                                    <p style={{fontSize: '16px',
+                                           }} >
+                                        The maps bracketed cities neighborhoods into 4 categories (A-D). Among other factors, the lowest ranked D areas were marked
+                                        by internal documents as suffering from "infiltration of lower grade populations"; across the country, these neighbourhoods showed repeated differences in racial composition
+                                        from the other, higher-rated areas- even when controlling for housing value.
                                     </p>
                                 </Col>
                             </Row>
@@ -346,11 +395,45 @@ class ControlRoot extends PureComponent {
                             />
                             <Row>
 
-                                <Col xs={8} xsOffset={2}>
-                                    <p style={{fontSize: '20px'}} >
-                                        In this case, the most apparent instance of the trend is in West Philadelphia, on a border defined by Market Street-
+                                <Col xs={8} xsOffset={2} style={{opacity: opacity,
+                                    transition: "opacity 5s ease-in-out",}}>
+                                    <style type="text/css">{`
+                                    .badge-a {
+                                        background-color: #3ead4d;
+                                        line-height:2;
+                                        margin-right: 5%;
+                                        min-width:30px;
+                                        border-radius:0px;
+                                    }
+                                    .badge-b {
+                                        line-height:2;
+                                         background-color: #3e56ad;
+                                         min-width:30px;
+                                         margin-right: 2.5%;
+                                         border-radius:0px;
+                                    }
+                                    .badge-c {
+                                        line-height:2;
+                                         background-color: #a5ad3e;
+                                         margin-left:2.5%;
+                                         min-width:30px;
+                                         border-radius:0px;
+                                    }
+                                    .badge-d {
+                                        line-height:2;
+                                        margin-left:5%;
+                                         background-color: #ad3e3e;
+                                         min-width:30px;
+                                         border-radius:0px;
+                                    }
+                                    `}</style>
+                                    <p style={{fontSize: '16px'}} >
+                                        In Philadelphia, the most apparent instance was west of the Schuylkill River, on a border defined by Market Street-
                                         the area north of which was shaded entirely in red.
                                     </p>
+                                    <div style={{marginTop:'10%', display: 'flex', justifyContent: 'center'}}>
+                                        <Badge bsStyle="a">A</Badge> <Badge bsStyle="b">B</Badge><Badge bsStyle="c">C</Badge><Badge bsStyle="d">D</Badge>
+                                    </div>
                                 </Col>
                             </Row>
                             <Row style={{ height: '70%'}}></Row>
@@ -359,38 +442,65 @@ class ControlRoot extends PureComponent {
                             />
                             <Row style={{ height: '100%'}}>
                                 <Col xs={8} xsOffset={2}>
-                                    <p style={{fontSize: '20px'}} >
-                                        If we overlay demographic data from the 1940 US census along this border, the racial divide becomes readily apparent; in general, virtually every
+                                    <h1 className="text-center">
+                                        PHILADELPHIA, <br/>
+                                        1940
+                                    </h1>
+                                    <p style={{fontSize: '16px'}} >
+                                        If we overlay demographic data from along this border, the racial divide becomes readily apparent; in general, virtually every
                                         minority-populated area in the city was also redlined.
 
                                     </p>
-                                    <Button className="text-center" active={mapMode === MapMode.OLD} onClick={() => this._handleBtClick(MapMode.OLD)} block> 1940 Census</Button>
-                                    <p style={{fontSize: '20px'}}>Each dot represents a single person from the census; the colour of the dot corresponds to whether that person was White or PoC</p>
+                                    <Button className="text-center" active={mapMode === MapMode.OLD} onClick={() => this._handleBtClick(MapMode.OLD)} block> 1940 Data</Button>
                                     <style type="text/css">{`
                                     .badge-white {
+                                        margin-right:5%;
                                         background-color: #0080ff;
+                                        min-width:30px;
                                         line-height:2;
+                                        border-radius: 15px;
+                                    }
+                                    .badge-wh {
+                                        margin-right:2.5%;
+                                        background-color: #0080ff;
+                                        min-width:30px;
+                                        line-height:2;
+                                        border-radius: 15px;
                                     }
                                     .badge-poc {
                                         line-height:2;
-                                         background-color: #f45006;
+                                        margin-left:2.5%
+                                        min-width:30px;
+                                         background-color: #ff0080;
+                                         border-radius: 15px;
                                     }
                                     .badge-black {
+                                        margin-right:2.5%;
                                         line-height:2;
-                                         background-color: #ff0080;
+                                        min-width:30px;
+                                        background-color: #ff0080;
+                                        border-radius: 15px;
                                     }
                                     .badge-asian {
                                         line-height:2;
+                                        margin-left:2.5%;
+                                        min-width:30px;
                                          background-color: #89f442;
+                                         border-radius: 15px;
                                     }
                                     .badge-latino {
                                         line-height:2;
+                                        margin-left:5%;
+                                        min-width:30px;
                                          background-color: #f49542;
+                                         border-radius: 15px;
                                     }
                                     `}</style>
                                     <div style={{marginTop:'10%', display: 'flex', justifyContent: 'center'}}>
-                                        <Badge bsStyle="white">White</Badge> <Badge bsStyle="poc">PoC</Badge>
+                                        <Badge bsStyle="wh">White</Badge> <Badge bsStyle="poc">Black</Badge>
                                     </div>
+                                    <p style={{fontSize: '16px', marginTop:'10%'}}>Each dot represents a single person, living in Philadelphia in 1940, accurate to the tract-level; the colour of the dot corresponds to whether that person was White or Black.
+                                        Hover over the map to inspect the underlying HOLC lines.</p>
 
                                 </Col>
                             </Row>
@@ -401,25 +511,60 @@ class ControlRoot extends PureComponent {
                                     <Waypoint
                                         onEnter={(evt) => this._handleEnter4(evt)} onLeave={(evt) => this._handleLeave4(evt)}
                                     />
-                                    <p style={{fontSize: '20px'}} >
+                                    <h1 className="text-center">
+                                        PHILADELPHIA, <br/>
+                                        2016
+                                    </h1>
+                                    <p style={{fontSize: '16px'}} >
                                         These lines of segregation may have shifted over time, but they haven't dissolved.
-                                        The 2010 census allows us to overlay more granular demographic information from the present.
+                                        Although the segregating effects of the HOLC maps reached their worst point in the 1960's, before the passage of federal civil rights laws
+                                        such as the Fair Housing and Community Reinvestment Acts, research efforts in 2017 showed still-lingering borders along the original C-D boundaries.
+                                        With the more granular demographic information that is now available on a census tract basis, we can distinguish an array of spatial disparities and divisions in Philadelphia from the current decade.
+                                        Now when you hover over the map, you can inspect contemporary Philly neighbourhoods- and see how many are defined by the racial divides seen here.
                                     </p>
-                                    <Button className="text-center" active={mapMode === MapMode.DOTS} onClick={() => this._handleBtClick(MapMode.DOTS)} block> 2010 Census</Button>
+                                    <Button className="text-center" active={mapMode === MapMode.DOTS} onClick={() => this._handleBtClick(MapMode.DOTS)} block> 2016 Data</Button>
                                     <div style={{marginTop:'10%', display: 'flex', justifyContent: 'center'}}>
                                         <Badge bsStyle="white">White</Badge> <Badge bsStyle="black">Black</Badge><Badge bsStyle="asian">Asian</Badge><Badge bsStyle="latino">Latino</Badge>
                                     </div>
                                 </Col>
                             </Row>
                             <Row style={{ height: '50%'}}></Row>
-                            <Row>
+                            <Row style={{ height: '100%'}}>
 
                                 <Col xs={8} xsOffset={2}>
-                                    <p style={{fontSize: '20px'}} >
-                                        These borders don't just express racial divides;
-                                        the disparities in socioeconomic which exist in general in America can be seen along these boundaries too. </p>
+                                    <Waypoint
+                                        onEnter={(evt) => this._handleEnter5(evt)} onLeave={(evt) => this._handleLeave5(evt)}
+                                    />
+                                    <h1 className="text-center">
+                                        PLACE <br/>
+                                        MATTERS
+                                    </h1>
+                                    <p style={{marginBottom: '10%', fontSize: '16px'}} >
+                                        The city borders don't just express purely racial divides;
+                                        the income and wealth disparities which exist in general in America can be seen along these boundaries too.
+                                        The average black man in 2016 earned 70% of the wage a white man did, while wealth is even more concentrated, with the average black family in 2017 owning 1/13th of the wealth the average white one does.
+                                        These kinds of gaps can be mapped by aggregating the 2016 demographic data up to the overall tract level that it came from, then scaling it according to
+                                        certain economic metrics from that tract.
+
+                                    </p>
+                                    <ButtonGroup vertical block>
+                                        <Button className="text-center" active={mapMode === MapMode.POLYINC} onClick={() => this._handleBtClick(MapMode.POLYINC)}> Scale Tracts by Income</Button>
+                                        <Button className="text-center" active={mapMode === MapMode.POLYHS} onClick={() => this._handleBtClick(MapMode.POLYHS)}> Scale Tracts by Housing Value</Button>
+
+                                    </ButtonGroup>
+
+                                    <div style={{marginTop:'10%', display: 'flex', justifyContent: 'center'}}>
+                                        <Badge bsStyle="white">White</Badge> <Badge bsStyle="black">Black</Badge><Badge bsStyle="asian">Asian</Badge><Badge bsStyle="latino">Latino</Badge>
+                                    </div>
+
+                                    <p style={{marginTop:'10%', fontSize: '16px'}}>
+                                       Here, each census tract is colour-coded according to the same legend as before, to represent the most prevalent racial group within the tract. Its height will scale according to the selection above-
+                                        with the gap growing even starker when scaling for housing value as a proxy for wealth.
+                                    </p>
+
                                 </Col>
                             </Row>
+
 
 
                         </Grid>;
@@ -441,7 +586,10 @@ function mapStateToProps(state) {
     return {
         mapViewState: state.rootReducer.mapViewState,
         mapMode: state.rootReducer.mapMode,
-        mapStyle: state.rootReducer.mapStyle
+        mapStyle: state.rootReducer.mapStyle,
+        polygons: state.rootReducer.polygons,
+        oldDots: state.rootReducer.oldDots,
+        popDots: state.rootReducer.popDots,
     }
 }
 const ControlPanel = connect(mapStateToProps)(ControlRoot);

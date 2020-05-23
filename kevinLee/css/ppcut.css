@@ -1,0 +1,207 @@
+	path {
+	    stroke: steelblue;
+	    stroke-width: 3;
+	    fill: none;
+	}
+	.axis {
+	    shape-rendering: crispEdges;
+	}
+	.x.axis line {
+	    stroke: #000;
+	}
+	.x.axis .minor {
+	    stroke-opacity: .5;
+	}
+	.x.axis line, .x.axis path {
+	    fill: none;
+	    stroke: #000;
+	}
+	.y.axis path {
+	    fill: none;
+	    stroke: #000;
+	}
+	.bar {
+	    xfill: steelblue;
+      xstroke: #000;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+	}
+	.bar:hover,
+	.mentionDot:hover {
+		stroke: #333 !important;
+		stroke-width:1.3px !important;
+	}
+	/*.bar::after {
+		 box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  		opacity: 0;
+  		transition: opacity 0.3s ease-in-out;
+	}
+	.bar:hover::after {
+		opacity: 1;
+	}*/
+	.domain {
+		stroke-width:1px;
+		stroke: #869791 !important;
+	}
+	.axis text {
+		font-size:12px;
+	}
+
+	#mainContainer {xwidth:1040px;display:grid;grid-template-columns: 40px 960px 40px;}
+
+	#container {margin-left:-10px;}
+
+#prevBox {float:left;width:40px;z-index:9;}
+    #nextBox {float:right;width:40px;}
+    .owl-prev {width:40px;border-radius:3px;}
+    .owl-next {width:40px;border-radius:3px;}
+    .owl-stage-outer {height:240px;} /*need this for dots to be at right position if many dots*/
+
+    .owl-dots {
+    	height:132px;
+    	display: grid;
+    	grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px;
+    	margin-left:18px;
+	}
+	.owl-dot {
+		margin-top: -80px; /*necessary if not doing mini charts for pagination*/
+		/*z-index: 9;*/
+		padding:3px;
+	}
+	.owl-dot svg,
+	.owl-dot svg rect {
+		/*z-index: -5 !important;*/
+		position:relative; /* allows onclick of svg elements to trigger button click of carousel*/
+		margin-top:6px; /*push minichart down a bit to show pageTitle*/
+		margin-left:2px; /*to center minichart after making pilltab nav style change*/
+	}
+	.owl-dot span {
+		width:50px !important;
+		height:5px !important;
+		border-radius:3px !important;
+		vertical-align: top;
+		/*z-index: 10;*/
+		background:transparent !important;
+	}
+	.owl-dot.active span {xbackground:#869791 !important;}
+	.owl-dot,.owl-dot:active,owl-dot:hover {outline:none !important;}
+
+    .carouselButton button {
+    	xborder:1px solid #ddd;
+    	border: none;
+    	outline: none;
+    	height:200px;
+    	margin-top:30px;
+    	background: transparent;
+    }
+ 	.carouselButton button:hover {
+ 		background: #f3f3f3;
+ 		cursor: pointer;
+ 	}
+
+ 	.pageTitle {
+ 		font-family: 'akkurat3';
+ 		font-size:10px;
+ 		xpadding-top:10px;
+ 		xpadding:3px;
+ 		position: relative;
+ 		z-index: -3;
+ 		xcolor:#D6D6D6;
+ 		xcolor:#869791;
+ 		color:#929daf;
+ 		font-weight:bold;
+ 		width:100%;
+ 	}
+ 	.owl-dot.active .pageTitle,
+ 	.owl-dot.active:hover .pageTitle
+ 	.owl-dot:hover .pageTitle {
+ 		font-weight: bold;
+ 		xcolor:#869791;
+ 		color:#fff !important;
+ 		/*background:#428BFF !important;*/ /*blue*/
+ 		background:#333 !important;
+ 		xpadding:3px;
+ 		border-radius:1px;
+ 	}
+ 	.owl-dot:hover .pageTitle {background:transparent; color:#333;}
+
+    /*.owl-prev:before {
+    	content: '←';
+    }*/
+
+/*	.discreet {fill: #fee5d9; fill-opacity:0.6;}
+	.background {fill: #fcae91;fill-opacity:0.6;}
+	.subtle {fill: #fb6a4a;fill-opacity:0.6;}
+	.obvious {fill: #de2d26;fill-opacity:0.6;}
+	.closeup {fill: #a50f15;fill-opacity:0.6;} */
+
+	.electronics {fill: #b2df8a; fill-opacity:1;}
+	.entertainment {fill: #33a02c; fill-opacity:1;}
+	.advertising {fill: #a6cee3; fill-opacity:1;}
+	.clothing {fill: #1f78b4; fill-opacity:1;}
+	.establishment {fill: #fb9a99; fill-opacity:1;}
+	.food {fill: #e31a1c; fill-opacity:1;}
+	.home {fill: #fdbf6f; fill-opacity:1;}
+	.vehicle {fill: #b15928; fill-opacity:1;}
+
+	#screen {
+		xwidth:1037px;
+		xheight:436px;
+		xborder:1px solid #000;
+
+		width:900px;
+		height:378px;
+		xbackground-color: #1b1b1b;
+		xbackground-color: #000;
+		background:#1a1a1a;
+		xbackground-image: url('../js/owl/assets/ajax-loader.gif');
+		xbackground-image: url('../images/loading_spinner.gif');
+		background-image: url('../images/loading.gif');
+   		background-repeat: no-repeat;
+    	xbackground-attachment: fixed;
+    	background-position: center; 
+		margin:0 auto;
+	}
+
+
+	/*.chart:hover {
+		background:#eee;
+	}*/
+
+				/* Tooltip */
+#tooltipBar {
+    position: absolute;
+    width: 230px;
+    line-height: 1.1em;
+    height: auto;
+    padding: 8px;
+    background-color: #fff;
+    pointer-events: none;
+    font-size: 12px;
+    -webkit-box-shadow: 8px 8px 14px rgba(0,0,0,0.4);
+    -moz-box-shadow: 8px 8px 14px rgba(0,0,0,0.4);
+    box-shadow: 8px 8px 14px rgba(0,0,0,0.4);
+    xborder: 1px solid #ddd;
+    z-index: 99;
+}
+#tooltipBar.hidden {
+    display: none;
+}
+#tooltipBar #brandName {font-size:16px;margin-bottom:5px;line-height: 16px;}
+#tooltipBar #quote {font-size:14px;margin-bottom:5px;line-height: 16px}
+#tooltipBar #catName {font-size:12px;margin-bottom:5px;text-transform: capitalize;line-height: 16px}
+
+#screen video {
+/*    -moz-transform: translateX(50%) translateY(50%);
+    -webkit-transform: translateX(50%) translateY(50%);
+    -ms-transform: translateX(50%) translateY(50%);
+    transform: translateX(50%) translateY(50%);
+    bottom: 50%;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    right: 50%;
+    width: auto;*/
+
+}

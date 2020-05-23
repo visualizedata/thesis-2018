@@ -1,0 +1,3264 @@
+[
+ {
+   "Num": 231,
+   "Number": 169,
+   "newClusters": 0,
+   "xs": -0.34382,
+   "ys": -0.1126
+ },
+ {
+   "Num": 119,
+   "Number": 211,
+   "newClusters": 0,
+   "xs": -0.30441,
+   "ys": -0.11245
+ },
+ {
+   "Num": 336,
+   "Number": 200,
+   "newClusters": 0,
+   "xs": -0.34263,
+   "ys": -0.15001
+ },
+ {
+   "Num": 355,
+   "Number": 199,
+   "newClusters": 0,
+   "xs": -0.30553,
+   "ys": -0.08098
+ },
+ {
+   "Num": 103,
+   "Number": 203,
+   "newClusters": 0,
+   "xs": -0.28149,
+   "ys": -0.13992
+ },
+ {
+   "Num": 116,
+   "Number": 210,
+   "newClusters": 0,
+   "xs": -0.3677,
+   "ys": -0.05533
+ },
+ {
+   "Num": 147,
+   "Number": 166,
+   "newClusters": 0,
+   "xs": -0.26412,
+   "ys": -0.09913
+ },
+ {
+   "Num": 389,
+   "Number": 202,
+   "newClusters": 0,
+   "xs": -0.36344,
+   "ys": -0.19303
+ },
+ {
+   "Num": 114,
+   "Number": 209,
+   "newClusters": 0,
+   "xs": -0.38666,
+   "ys": -0.18774
+ },
+ {
+   "Num": 400,
+   "Number": 149,
+   "newClusters": 0,
+   "xs": -0.23572,
+   "ys": -0.118
+ },
+ {
+   "Num": 82,
+   "Number": 137,
+   "newClusters": 0,
+   "xs": -0.38029,
+   "ys": -0.02357
+ },
+ {
+   "Num": 250,
+   "Number": 194,
+   "newClusters": 0,
+   "xs": -0.29205,
+   "ys": -0.01618
+ },
+ {
+   "Num": 249,
+   "Number": 183,
+   "newClusters": 0,
+   "xs": -0.24834,
+   "ys": -0.17354
+ },
+ {
+   "Num": 255,
+   "Number": 143,
+   "newClusters": 0,
+   "xs": -0.22948,
+   "ys": -0.14432
+ },
+ {
+   "Num": 205,
+   "Number": 184,
+   "newClusters": 0,
+   "xs": -0.30324,
+   "ys": -0.22233
+ },
+ {
+   "Num": 247,
+   "Number": 175,
+   "newClusters": 0,
+   "xs": -0.36,
+   "ys": 0.00017
+ },
+ {
+   "Num": 77,
+   "Number": 158,
+   "newClusters": 0,
+   "xs": -0.44157,
+   "ys": -0.16697
+ },
+ {
+   "Num": 165,
+   "Number": 186,
+   "newClusters": 0,
+   "xs": -0.28826,
+   "ys": -0.22915
+ },
+ {
+   "Num": 268,
+   "Number": 168,
+   "newClusters": 0,
+   "xs": -0.39149,
+   "ys": -0.00045
+ },
+ {
+   "Num": 48,
+   "Number": 144,
+   "newClusters": 0,
+   "xs": -0.2035,
+   "ys": -0.10241
+ },
+ {
+   "Num": 222,
+   "Number": 188,
+   "newClusters": 0,
+   "xs": -0.3655,
+   "ys": -0.23962
+ },
+ {
+   "Num": 215,
+   "Number": 132,
+   "newClusters": 0,
+   "xs": -0.24121,
+   "ys": -0.00575
+ },
+ {
+   "Num": 177,
+   "Number": 172,
+   "newClusters": 0,
+   "xs": -0.26682,
+   "ys": 0.01931
+ },
+ {
+   "Num": 438,
+   "Number": 201,
+   "newClusters": 0,
+   "xs": -0.45023,
+   "ys": -0.19906
+ },
+ {
+   "Num": 169,
+   "Number": 171,
+   "newClusters": 0,
+   "xs": -0.47947,
+   "ys": -0.0887
+ },
+ {
+   "Num": 309,
+   "Number": 196,
+   "newClusters": 0,
+   "xs": -0.471,
+   "ys": -0.17194
+ },
+ {
+   "Num": 361,
+   "Number": 146,
+   "newClusters": 0,
+   "xs": -0.23456,
+   "ys": -0.22923
+ },
+ {
+   "Num": 206,
+   "Number": 141,
+   "newClusters": 0,
+   "xs": -0.41705,
+   "ys": 0.02088
+ },
+ {
+   "Num": 131,
+   "Number": 156,
+   "newClusters": 0,
+   "xs": -0.31678,
+   "ys": -0.2683
+ },
+ {
+   "Num": 109,
+   "Number": 207,
+   "newClusters": 0,
+   "xs": -0.48807,
+   "ys": -0.13329
+ },
+ {
+   "Num": 173,
+   "Number": 142,
+   "newClusters": 0,
+   "xs": -0.43933,
+   "ys": 0.01108
+ },
+ {
+   "Num": 363,
+   "Number": 147,
+   "newClusters": 0,
+   "xs": -0.20471,
+   "ys": -0.21766
+ },
+ {
+   "Num": 256,
+   "Number": 140,
+   "newClusters": 0,
+   "xs": -0.18931,
+   "ys": -0.01744
+ },
+ {
+   "Num": 84,
+   "Number": 138,
+   "newClusters": 0,
+   "xs": -0.23999,
+   "ys": 0.03627
+ },
+ {
+   "Num": 161,
+   "Number": 178,
+   "newClusters": 0,
+   "xs": -0.33614,
+   "ys": 0.0636
+ },
+ {
+   "Num": 204,
+   "Number": 173,
+   "newClusters": 0,
+   "xs": -0.22674,
+   "ys": 0.02861
+ },
+ {
+   "Num": 106,
+   "Number": 205,
+   "newClusters": 0,
+   "xs": -0.41633,
+   "ys": -0.2668
+ },
+ {
+   "Num": 203,
+   "Number": 134,
+   "newClusters": 0,
+   "xs": -0.38746,
+   "ys": 0.06186
+ },
+ {
+   "Num": 95,
+   "Number": 139,
+   "newClusters": 0,
+   "xs": -0.50585,
+   "ys": -0.17698
+ },
+ {
+   "Num": 118,
+   "Number": 155,
+   "newClusters": 0,
+   "xs": -0.51516,
+   "ys": -0.06999
+ },
+ {
+   "Num": 274,
+   "Number": 167,
+   "newClusters": 0,
+   "xs": -0.15458,
+   "ys": -0.18165
+ },
+ {
+   "Num": 350,
+   "Number": 150,
+   "newClusters": 0,
+   "xs": -0.27808,
+   "ys": 0.0748
+ },
+ {
+   "Num": 230,
+   "Number": 135,
+   "newClusters": 0,
+   "xs": -0.19089,
+   "ys": 0.02259
+ },
+ {
+   "Num": 105,
+   "Number": 204,
+   "newClusters": 0,
+   "xs": -0.41232,
+   "ys": -0.29037
+ },
+ {
+   "Num": 80,
+   "Number": 163,
+   "newClusters": 0,
+   "xs": -0.51159,
+   "ys": -0.01923
+ },
+ {
+   "Num": 125,
+   "Number": 212,
+   "newClusters": 0,
+   "xs": -0.25584,
+   "ys": -0.30082
+ },
+ {
+   "Num": 252,
+   "Number": 170,
+   "newClusters": 0,
+   "xs": -0.37898,
+   "ys": 0.08709
+ },
+ {
+   "Num": 220,
+   "Number": 195,
+   "newClusters": 0,
+   "xs": -0.15397,
+   "ys": -0.22007
+ },
+ {
+   "Num": 137,
+   "Number": 165,
+   "newClusters": 0,
+   "xs": -0.49777,
+   "ys": -0.24824
+ },
+ {
+   "Num": 238,
+   "Number": 160,
+   "newClusters": 0,
+   "xs": -0.50166,
+   "ys": 0.02105
+ },
+ {
+   "Num": 283,
+   "Number": 145,
+   "newClusters": 0,
+   "xs": -0.29186,
+   "ys": -0.32467
+ },
+ {
+   "Num": 388,
+   "Number": 151,
+   "newClusters": 0,
+   "xs": -0.26276,
+   "ys": 0.09581
+ },
+ {
+   "Num": 307,
+   "Number": 198,
+   "newClusters": 0,
+   "xs": -0.412,
+   "ys": -0.3237
+ },
+ {
+   "Num": 78,
+   "Number": 162,
+   "newClusters": 0,
+   "xs": -0.48579,
+   "ys": -0.27835
+ },
+ {
+   "Num": 75,
+   "Number": 136,
+   "newClusters": 0,
+   "xs": -0.17586,
+   "ys": -0.27748
+ },
+ {
+   "Num": 159,
+   "Number": 133,
+   "newClusters": 0,
+   "xs": -0.49597,
+   "ys": 0.05268
+ },
+ {
+   "Num": 107,
+   "Number": 206,
+   "newClusters": 0,
+   "xs": -0.47954,
+   "ys": -0.29914
+ },
+ {
+   "Num": 354,
+   "Number": 126,
+   "newClusters": 0,
+   "xs": -0.21129,
+   "ys": 0.09416
+ },
+ {
+   "Num": 183,
+   "Number": 159,
+   "newClusters": 0,
+   "xs": -0.57068,
+   "ys": -0.13186
+ },
+ {
+   "Num": 320,
+   "Number": 197,
+   "newClusters": 0,
+   "xs": -0.43513,
+   "ys": -0.32936
+ },
+ {
+   "Num": 197,
+   "Number": 161,
+   "newClusters": 0,
+   "xs": -0.32343,
+   "ys": 0.13153
+ },
+ {
+   "Num": 135,
+   "Number": 164,
+   "newClusters": 0,
+   "xs": -0.52537,
+   "ys": -0.25962
+ },
+ {
+   "Num": 138,
+   "Number": 174,
+   "newClusters": 0,
+   "xs": -0.49005,
+   "ys": 0.07669
+ },
+ {
+   "Num": 123,
+   "Number": 213,
+   "newClusters": 0,
+   "xs": -0.1971,
+   "ys": -0.32795
+ },
+ {
+   "Num": 112,
+   "Number": 208,
+   "newClusters": 0,
+   "xs": -0.37715,
+   "ys": -0.36469
+ },
+ {
+   "Num": 426,
+   "Number": 128,
+   "newClusters": 0,
+   "xs": -0.38531,
+   "ys": 0.14194
+ },
+ {
+   "Num": 298,
+   "Number": 125,
+   "newClusters": 0,
+   "xs": -0.35359,
+   "ys": 0.14892
+ },
+ {
+   "Num": 184,
+   "Number": 193,
+   "newClusters": 0,
+   "xs": -0.07241,
+   "ys": -0.15261
+ },
+ {
+   "Num": 260,
+   "Number": 131,
+   "newClusters": 0,
+   "xs": -0.55207,
+   "ys": 0.04011
+ },
+ {
+   "Num": 199,
+   "Number": 152,
+   "newClusters": 0,
+   "xs": -0.15357,
+   "ys": 0.0874
+ },
+ {
+   "Num": 151,
+   "Number": 182,
+   "newClusters": 0,
+   "xs": -0.45318,
+   "ys": 0.12836
+ },
+ {
+   "Num": 208,
+   "Number": 187,
+   "newClusters": 0,
+   "xs": -0.29858,
+   "ys": -0.37888
+ },
+ {
+   "Num": 76,
+   "Number": 157,
+   "newClusters": 0,
+   "xs": -0.35056,
+   "ys": -0.38269
+ },
+ {
+   "Num": 265,
+   "Number": 177,
+   "newClusters": 0,
+   "xs": -0.22618,
+   "ys": -0.38221
+ },
+ {
+   "Num": 244,
+   "Number": 154,
+   "newClusters": 0,
+   "xs": -0.10471,
+   "ys": 0.07244
+ },
+ {
+   "Num": 155,
+   "Number": 176,
+   "newClusters": 0,
+   "xs": -0.54972,
+   "ys": 0.08914
+ },
+ {
+   "Num": 171,
+   "Number": 190,
+   "newClusters": 0,
+   "xs": -0.4813,
+   "ys": -0.36959
+ },
+ {
+   "Num": 186,
+   "Number": 153,
+   "newClusters": 0,
+   "xs": -0.30499,
+   "ys": 0.19251
+ },
+ {
+   "Num": 386,
+   "Number": 127,
+   "newClusters": 0,
+   "xs": -0.4548,
+   "ys": 0.16853
+ },
+ {
+   "Num": 210,
+   "Number": 180,
+   "newClusters": 0,
+   "xs": -0.51589,
+   "ys": 0.13932
+ },
+ {
+   "Num": 129,
+   "Number": 214,
+   "newClusters": 0,
+   "xs": -0.23844,
+   "ys": -0.41149
+ },
+ {
+   "Num": 132,
+   "Number": 215,
+   "newClusters": 0,
+   "xs": -0.27557,
+   "ys": -0.42344
+ },
+ {
+   "Num": 318,
+   "Number": 130,
+   "newClusters": 0,
+   "xs": -0.41241,
+   "ys": 0.20784
+ },
+ {
+   "Num": 15,
+   "Number": 185,
+   "newClusters": 0,
+   "xs": -0.15568,
+   "ys": -0.40553
+ },
+ {
+   "Num": 381,
+   "Number": 148,
+   "newClusters": 0,
+   "xs": -0.52142,
+   "ys": 0.19031
+ },
+ {
+   "Num": 136,
+   "Number": 192,
+   "newClusters": 0,
+   "xs": 0.03149,
+   "ys": -0.23238
+ },
+ {
+   "Num": 170,
+   "Number": 179,
+   "newClusters": 0,
+   "xs": -0.21481,
+   "ys": -0.48716
+ },
+ {
+   "Num": 239,
+   "Number": 191,
+   "newClusters": 0,
+   "xs": -0.28587,
+   "ys": -0.50389
+ },
+ {
+   "Num": 145,
+   "Number": 181,
+   "newClusters": 0,
+   "xs": -0.48466,
+   "ys": 0.26135
+ },
+ {
+   "Num": 292,
+   "Number": 129,
+   "newClusters": 0,
+   "xs": -0.47371,
+   "ys": 0.33744
+ },
+ {
+   "Num": 211,
+   "Number": 189,
+   "newClusters": 0,
+   "xs": -0.21635,
+   "ys": -0.58722
+ },
+ {
+   "Num": 353,
+   "Number": 216,
+   "newClusters": 0,
+   "xs": 0.54182,
+   "ys": -0.06777
+ },
+ {
+   "Num": 335,
+   "Number": 242,
+   "newClusters": 1,
+   "xs": 0.21198,
+   "ys": 0.00714
+ },
+ {
+   "Num": 301,
+   "Number": 258,
+   "newClusters": 1,
+   "xs": 0.2271,
+   "ys": -0.0319
+ },
+ {
+   "Num": 35,
+   "Number": 221,
+   "newClusters": 1,
+   "xs": 0.26014,
+   "ys": 0.01836
+ },
+ {
+   "Num": 333,
+   "Number": 241,
+   "newClusters": 1,
+   "xs": 0.19216,
+   "ys": -0.03277
+ },
+ {
+   "Num": 54,
+   "Number": 233,
+   "newClusters": 1,
+   "xs": 0.17276,
+   "ys": -0.0188
+ },
+ {
+   "Num": 324,
+   "Number": 271,
+   "newClusters": 1,
+   "xs": 0.27409,
+   "ys": 0.04734
+ },
+ {
+   "Num": 178,
+   "Number": 272,
+   "newClusters": 1,
+   "xs": 0.2043,
+   "ys": 0.07561
+ },
+ {
+   "Num": 359,
+   "Number": 246,
+   "newClusters": 1,
+   "xs": 0.29617,
+   "ys": -0.01565
+ },
+ {
+   "Num": 10,
+   "Number": 219,
+   "newClusters": 1,
+   "xs": 0.14645,
+   "ys": 0.03598
+ },
+ {
+   "Num": 5,
+   "Number": 223,
+   "newClusters": 1,
+   "xs": 0.23694,
+   "ys": -0.07904
+ },
+ {
+   "Num": 397,
+   "Number": 261,
+   "newClusters": 1,
+   "xs": 0.21023,
+   "ys": -0.0855
+ },
+ {
+   "Num": 23,
+   "Number": 220,
+   "newClusters": 1,
+   "xs": 0.23326,
+   "ys": 0.09099
+ },
+ {
+   "Num": 342,
+   "Number": 262,
+   "newClusters": 1,
+   "xs": 0.14901,
+   "ys": -0.05818
+ },
+ {
+   "Num": 4,
+   "Number": 226,
+   "newClusters": 1,
+   "xs": 0.29725,
+   "ys": 0.06895
+ },
+ {
+   "Num": 50,
+   "Number": 230,
+   "newClusters": 1,
+   "xs": 0.14311,
+   "ys": 0.07467
+ },
+ {
+   "Num": 455,
+   "Number": 255,
+   "newClusters": 1,
+   "xs": 0.2269,
+   "ys": 0.11121
+ },
+ {
+   "Num": 70,
+   "Number": 297,
+   "newClusters": 1,
+   "xs": 0.35192,
+   "ys": -0.00925
+ },
+ {
+   "Num": 39,
+   "Number": 231,
+   "newClusters": 1,
+   "xs": 0.0916,
+   "ys": 0.02426
+ },
+ {
+   "Num": 450,
+   "Number": 254,
+   "newClusters": 1,
+   "xs": 0.25882,
+   "ys": -0.12564
+ },
+ {
+   "Num": 369,
+   "Number": 248,
+   "newClusters": 1,
+   "xs": 0.33412,
+   "ys": 0.08163
+ },
+ {
+   "Num": 331,
+   "Number": 264,
+   "newClusters": 1,
+   "xs": 0.18686,
+   "ys": -0.13428
+ },
+ {
+   "Num": 37,
+   "Number": 217,
+   "newClusters": 1,
+   "xs": 0.08427,
+   "ys": -0.03095
+ },
+ {
+   "Num": 432,
+   "Number": 293,
+   "newClusters": 1,
+   "xs": 0.09719,
+   "ys": -0.07162
+ },
+ {
+   "Num": 280,
+   "Number": 269,
+   "newClusters": 1,
+   "xs": 0.28685,
+   "ys": 0.13323
+ },
+ {
+   "Num": 281,
+   "Number": 270,
+   "newClusters": 1,
+   "xs": 0.28685,
+   "ys": 0.13323
+ },
+ {
+   "Num": 352,
+   "Number": 245,
+   "newClusters": 1,
+   "xs": 0.37722,
+   "ys": 0.0261
+ },
+ {
+   "Num": 285,
+   "Number": 266,
+   "newClusters": 1,
+   "xs": 0.25276,
+   "ys": 0.15735
+ },
+ {
+   "Num": 461,
+   "Number": 256,
+   "newClusters": 1,
+   "xs": 0.2411,
+   "ys": -0.15594
+ },
+ {
+   "Num": 295,
+   "Number": 234,
+   "newClusters": 1,
+   "xs": 0.37825,
+   "ys": 0.07681
+ },
+ {
+   "Num": 175,
+   "Number": 294,
+   "newClusters": 1,
+   "xs": 0.04532,
+   "ys": 0.01165
+ },
+ {
+   "Num": 1,
+   "Number": 284,
+   "newClusters": 1,
+   "xs": 0.14402,
+   "ys": 0.16618
+ },
+ {
+   "Num": 338,
+   "Number": 267,
+   "newClusters": 1,
+   "xs": 0.31182,
+   "ys": 0.16592
+ },
+ {
+   "Num": 368,
+   "Number": 247,
+   "newClusters": 1,
+   "xs": 0.29697,
+   "ys": 0.17373
+ },
+ {
+   "Num": 401,
+   "Number": 250,
+   "newClusters": 1,
+   "xs": 0.40514,
+   "ys": -0.05487
+ },
+ {
+   "Num": 190,
+   "Number": 273,
+   "newClusters": 1,
+   "xs": 0.35474,
+   "ys": -0.13691
+ },
+ {
+   "Num": 31,
+   "Number": 283,
+   "newClusters": 1,
+   "xs": 0.06466,
+   "ys": 0.11796
+ },
+ {
+   "Num": 38,
+   "Number": 228,
+   "newClusters": 1,
+   "xs": 0.41632,
+   "ys": -0.01046
+ },
+ {
+   "Num": 55,
+   "Number": 232,
+   "newClusters": 1,
+   "xs": 0.07859,
+   "ys": -0.13588
+ },
+ {
+   "Num": 233,
+   "Number": 276,
+   "newClusters": 1,
+   "xs": 0.25778,
+   "ys": -0.19946
+ },
+ {
+   "Num": 33,
+   "Number": 218,
+   "newClusters": 1,
+   "xs": 0.03215,
+   "ys": -0.08435
+ },
+ {
+   "Num": 433,
+   "Number": 286,
+   "newClusters": 1,
+   "xs": 0.08804,
+   "ys": 0.16284
+ },
+ {
+   "Num": 299,
+   "Number": 265,
+   "newClusters": 1,
+   "xs": 0.0133,
+   "ys": 0.02482
+ },
+ {
+   "Num": 6,
+   "Number": 224,
+   "newClusters": 1,
+   "xs": 0.34496,
+   "ys": 0.17698
+ },
+ {
+   "Num": 329,
+   "Number": 240,
+   "newClusters": 1,
+   "xs": 0.42071,
+   "ys": -0.07856
+ },
+ {
+   "Num": 459,
+   "Number": 268,
+   "newClusters": 1,
+   "xs": 0.16785,
+   "ys": 0.21057
+ },
+ {
+   "Num": 410,
+   "Number": 257,
+   "newClusters": 1,
+   "xs": 0.3691,
+   "ys": 0.15971
+ },
+ {
+   "Num": 7,
+   "Number": 225,
+   "newClusters": 1,
+   "xs": 0.43222,
+   "ys": 0.08101
+ },
+ {
+   "Num": 296,
+   "Number": 235,
+   "newClusters": 1,
+   "xs": 0.41781,
+   "ys": -0.11665
+ },
+ {
+   "Num": 379,
+   "Number": 278,
+   "newClusters": 1,
+   "xs": 0.42825,
+   "ys": 0.10243
+ },
+ {
+   "Num": 334,
+   "Number": 291,
+   "newClusters": 1,
+   "xs": 0.40925,
+   "ys": 0.13607
+ },
+ {
+   "Num": 308,
+   "Number": 238,
+   "newClusters": 1,
+   "xs": 0.45627,
+   "ys": -0.03261
+ },
+ {
+   "Num": 32,
+   "Number": 289,
+   "newClusters": 1,
+   "xs": 0.06617,
+   "ys": -0.19052
+ },
+ {
+   "Num": 351,
+   "Number": 244,
+   "newClusters": 1,
+   "xs": 0.45855,
+   "ys": -0.07007
+ },
+ {
+   "Num": 303,
+   "Number": 237,
+   "newClusters": 1,
+   "xs": 0.28412,
+   "ys": -0.23929
+ },
+ {
+   "Num": 302,
+   "Number": 236,
+   "newClusters": 1,
+   "xs": 0.47689,
+   "ys": -0.05197
+ },
+ {
+   "Num": 139,
+   "Number": 275,
+   "newClusters": 1,
+   "xs": 0.38959,
+   "ys": 0.2115
+ },
+ {
+   "Num": 417,
+   "Number": 259,
+   "newClusters": 1,
+   "xs": 0.36664,
+   "ys": 0.23044
+ },
+ {
+   "Num": 59,
+   "Number": 277,
+   "newClusters": 1,
+   "xs": -0.04954,
+   "ys": -0.06829
+ },
+ {
+   "Num": 448,
+   "Number": 253,
+   "newClusters": 1,
+   "xs": 0.50264,
+   "ys": 0.00798
+ },
+ {
+   "Num": 345,
+   "Number": 290,
+   "newClusters": 1,
+   "xs": -0.06503,
+   "ys": -0.02078
+ },
+ {
+   "Num": 328,
+   "Number": 239,
+   "newClusters": 1,
+   "xs": 0.42583,
+   "ys": 0.20796
+ },
+ {
+   "Num": 452,
+   "Number": 263,
+   "newClusters": 1,
+   "xs": 0.47731,
+   "ys": -0.13915
+ },
+ {
+   "Num": 28,
+   "Number": 288,
+   "newClusters": 1,
+   "xs": -0.0479,
+   "ys": -0.11508
+ },
+ {
+   "Num": 445,
+   "Number": 252,
+   "newClusters": 1,
+   "xs": 0.49605,
+   "ys": -0.11444
+ },
+ {
+   "Num": 327,
+   "Number": 298,
+   "newClusters": 1,
+   "xs": 0.52093,
+   "ys": -0.02656
+ },
+ {
+   "Num": 236,
+   "Number": 274,
+   "newClusters": 1,
+   "xs": 0.18506,
+   "ys": -0.30044
+ },
+ {
+   "Num": 370,
+   "Number": 249,
+   "newClusters": 1,
+   "xs": 0.38146,
+   "ys": 0.26873
+ },
+ {
+   "Num": 57,
+   "Number": 281,
+   "newClusters": 1,
+   "xs": 0.45387,
+   "ys": 0.22675
+ },
+ {
+   "Num": 9,
+   "Number": 222,
+   "newClusters": 1,
+   "xs": 0.49501,
+   "ys": -0.18916
+ },
+ {
+   "Num": 341,
+   "Number": 285,
+   "newClusters": 1,
+   "xs": 0.38998,
+   "ys": 0.29473
+ },
+ {
+   "Num": 348,
+   "Number": 243,
+   "newClusters": 1,
+   "xs": 0.4225,
+   "ys": 0.28518
+ },
+ {
+   "Num": 418,
+   "Number": 251,
+   "newClusters": 1,
+   "xs": 0.5741,
+   "ys": -0.0187
+ },
+ {
+   "Num": 323,
+   "Number": 260,
+   "newClusters": 1,
+   "xs": -0.13054,
+   "ys": -0.04034
+ },
+ {
+   "Num": 356,
+   "Number": 292,
+   "newClusters": 1,
+   "xs": 0.37365,
+   "ys": 0.37044
+ },
+ {
+   "Num": 36,
+   "Number": 299,
+   "newClusters": 1,
+   "xs": 0.04266,
+   "ys": -0.35667
+ },
+ {
+   "Num": 61,
+   "Number": 287,
+   "newClusters": 1,
+   "xs": -0.15886,
+   "ys": -0.12916
+ },
+ {
+   "Num": 44,
+   "Number": 280,
+   "newClusters": 1,
+   "xs": 0.49459,
+   "ys": 0.32567
+ },
+ {
+   "Num": 8,
+   "Number": 229,
+   "newClusters": 1,
+   "xs": -0.03488,
+   "ys": -0.50394
+ },
+ {
+   "Num": 30,
+   "Number": 282,
+   "newClusters": 1,
+   "xs": -0.10152,
+   "ys": -0.5116
+ },
+ {
+   "Num": 110,
+   "Number": 296,
+   "newClusters": 1,
+   "xs": -0.13503,
+   "ys": -0.49076
+ },
+ {
+   "Num": 51,
+   "Number": 227,
+   "newClusters": 1,
+   "xs": -0.39881,
+   "ys": 0.25579
+ },
+ {
+   "Num": 2,
+   "Number": 300,
+   "newClusters": 1,
+   "xs": -0.38807,
+   "ys": 0.35454
+ },
+ {
+   "Num": 47,
+   "Number": 295,
+   "newClusters": 1,
+   "xs": -0.49868,
+   "ys": 0.09457
+ },
+ {
+   "Num": 56,
+   "Number": 279,
+   "newClusters": 1,
+   "xs": -0.33407,
+   "ys": -0.5263
+ },
+ {
+   "Num": 65,
+   "Number": 422,
+   "newClusters": 2,
+   "xs": 0.06801,
+   "ys": -0.26045
+ },
+ {
+   "Num": 201,
+   "Number": 440,
+   "newClusters": 2,
+   "xs": 0.15159,
+   "ys": -0.25504
+ },
+ {
+   "Num": 49,
+   "Number": 413,
+   "newClusters": 2,
+   "xs": 0.13229,
+   "ys": -0.17092
+ },
+ {
+   "Num": 311,
+   "Number": 415,
+   "newClusters": 2,
+   "xs": 0.10238,
+   "ys": -0.15352
+ },
+ {
+   "Num": 146,
+   "Number": 437,
+   "newClusters": 2,
+   "xs": -0.11134,
+   "ys": -0.27323
+ },
+ {
+   "Num": 134,
+   "Number": 426,
+   "newClusters": 2,
+   "xs": -0.09528,
+   "ys": -0.34643
+ },
+ {
+   "Num": 14,
+   "Number": 421,
+   "newClusters": 2,
+   "xs": -0.01416,
+   "ys": -0.43816
+ },
+ {
+   "Num": 371,
+   "Number": 416,
+   "newClusters": 2,
+   "xs": 0.30329,
+   "ys": -0.16771
+ },
+ {
+   "Num": 120,
+   "Number": 433,
+   "newClusters": 2,
+   "xs": -0.09933,
+   "ys": -0.3957
+ },
+ {
+   "Num": 180,
+   "Number": 428,
+   "newClusters": 2,
+   "xs": -0.15437,
+   "ys": -0.31797
+ },
+ {
+   "Num": 227,
+   "Number": 432,
+   "newClusters": 2,
+   "xs": -0.14241,
+   "ys": -0.3547
+ },
+ {
+   "Num": 423,
+   "Number": 418,
+   "newClusters": 2,
+   "xs": 0.29717,
+   "ys": -0.1042
+ },
+ {
+   "Num": 74,
+   "Number": 436,
+   "newClusters": 2,
+   "xs": 0.21204,
+   "ys": -0.46606
+ },
+ {
+   "Num": 98,
+   "Number": 427,
+   "newClusters": 2,
+   "xs": 0.1036,
+   "ys": -0.50472
+ },
+ {
+   "Num": 221,
+   "Number": 429,
+   "newClusters": 2,
+   "xs": -0.1263,
+   "ys": -0.4015
+ },
+ {
+   "Num": 225,
+   "Number": 424,
+   "newClusters": 2,
+   "xs": 0.01412,
+   "ys": -0.50305
+ },
+ {
+   "Num": 99,
+   "Number": 435,
+   "newClusters": 2,
+   "xs": 0.03033,
+   "ys": -0.51155
+ },
+ {
+   "Num": 27,
+   "Number": 412,
+   "newClusters": 2,
+   "xs": 0.35762,
+   "ys": -0.31281
+ },
+ {
+   "Num": 216,
+   "Number": 439,
+   "newClusters": 2,
+   "xs": -0.11617,
+   "ys": -0.44365
+ },
+ {
+   "Num": 34,
+   "Number": 414,
+   "newClusters": 2,
+   "xs": 0.33048,
+   "ys": -0.09864
+ },
+ {
+   "Num": 431,
+   "Number": 419,
+   "newClusters": 2,
+   "xs": 0.31819,
+   "ys": -0.07408
+ },
+ {
+   "Num": 196,
+   "Number": 425,
+   "newClusters": 2,
+   "xs": 0.23914,
+   "ys": -0.49348
+ },
+ {
+   "Num": 411,
+   "Number": 411,
+   "newClusters": 2,
+   "xs": 0.27811,
+   "ys": -0.4957
+ },
+ {
+   "Num": 434,
+   "Number": 420,
+   "newClusters": 2,
+   "xs": 0.34969,
+   "ys": -0.06535
+ },
+ {
+   "Num": 115,
+   "Number": 430,
+   "newClusters": 2,
+   "xs": -0.1646,
+   "ys": -0.46676
+ },
+ {
+   "Num": 100,
+   "Number": 434,
+   "newClusters": 2,
+   "xs": -0.18927,
+   "ys": -0.44225
+ },
+ {
+   "Num": 148,
+   "Number": 431,
+   "newClusters": 2,
+   "xs": 0.47048,
+   "ys": -0.11363
+ },
+ {
+   "Num": 421,
+   "Number": 417,
+   "newClusters": 2,
+   "xs": 0.40563,
+   "ys": 0.01926
+ },
+ {
+   "Num": 149,
+   "Number": 423,
+   "newClusters": 2,
+   "xs": 0.32243,
+   "ys": 0.33382
+ },
+ {
+   "Num": 436,
+   "Number": 410,
+   "newClusters": 2,
+   "xs": -0.22083,
+   "ys": 0.35056
+ },
+ {
+   "Num": 219,
+   "Number": 438,
+   "newClusters": 2,
+   "xs": -0.42924,
+   "ys": 0.39769
+ },
+ {
+   "Num": 104,
+   "Number": 444,
+   "newClusters": 3,
+   "xs": 0.46965,
+   "ys": 0.23166
+ },
+ {
+   "Num": 158,
+   "Number": 457,
+   "newClusters": 3,
+   "xs": 0.3697,
+   "ys": 0.12279
+ },
+ {
+   "Num": 92,
+   "Number": 448,
+   "newClusters": 3,
+   "xs": 0.49616,
+   "ys": 0.15879
+ },
+ {
+   "Num": 241,
+   "Number": 443,
+   "newClusters": 3,
+   "xs": 0.5054,
+   "ys": 0.16979
+ },
+ {
+   "Num": 86,
+   "Number": 445,
+   "newClusters": 3,
+   "xs": 0.53448,
+   "ys": 0.21044
+ },
+ {
+   "Num": 243,
+   "Number": 452,
+   "newClusters": 3,
+   "xs": 0.49947,
+   "ys": 0.11532
+ },
+ {
+   "Num": 229,
+   "Number": 451,
+   "newClusters": 3,
+   "xs": 0.52723,
+   "ys": 0.14993
+ },
+ {
+   "Num": 150,
+   "Number": 453,
+   "newClusters": 3,
+   "xs": 0.28002,
+   "ys": 0.35782
+ },
+ {
+   "Num": 162,
+   "Number": 463,
+   "newClusters": 3,
+   "xs": 0.26589,
+   "ys": 0.34994
+ },
+ {
+   "Num": 87,
+   "Number": 446,
+   "newClusters": 3,
+   "xs": 0.53861,
+   "ys": 0.12777
+ },
+ {
+   "Num": 140,
+   "Number": 449,
+   "newClusters": 3,
+   "xs": 0.51469,
+   "ys": 0.09413
+ },
+ {
+   "Num": 218,
+   "Number": 465,
+   "newClusters": 3,
+   "xs": 0.27381,
+   "ys": 0.37109
+ },
+ {
+   "Num": 154,
+   "Number": 462,
+   "newClusters": 3,
+   "xs": 0.22474,
+   "ys": 0.31459
+ },
+ {
+   "Num": 156,
+   "Number": 456,
+   "newClusters": 3,
+   "xs": 0.26024,
+   "ys": 0.36552
+ },
+ {
+   "Num": 202,
+   "Number": 464,
+   "newClusters": 3,
+   "xs": 0.21745,
+   "ys": 0.30978
+ },
+ {
+   "Num": 153,
+   "Number": 455,
+   "newClusters": 3,
+   "xs": 0.20592,
+   "ys": 0.29021
+ },
+ {
+   "Num": 152,
+   "Number": 454,
+   "newClusters": 3,
+   "xs": 0.19924,
+   "ys": 0.17994
+ },
+ {
+   "Num": 160,
+   "Number": 458,
+   "newClusters": 3,
+   "xs": 0.20886,
+   "ys": 0.29922
+ },
+ {
+   "Num": 306,
+   "Number": 460,
+   "newClusters": 3,
+   "xs": 0.28162,
+   "ys": 0.38683
+ },
+ {
+   "Num": 113,
+   "Number": 459,
+   "newClusters": 3,
+   "xs": 0.1972,
+   "ys": 0.27958
+ },
+ {
+   "Num": 142,
+   "Number": 461,
+   "newClusters": 3,
+   "xs": 0.33108,
+   "ys": 0.41685
+ },
+ {
+   "Num": 91,
+   "Number": 447,
+   "newClusters": 3,
+   "xs": 0.58758,
+   "ys": 0.16043
+ },
+ {
+   "Num": 269,
+   "Number": 450,
+   "newClusters": 3,
+   "xs": 0.52297,
+   "ys": 0.0565
+ },
+ {
+   "Num": 72,
+   "Number": 441,
+   "newClusters": 3,
+   "xs": 0.58914,
+   "ys": 0.08527
+ },
+ {
+   "Num": 83,
+   "Number": 442,
+   "newClusters": 3,
+   "xs": 0.55811,
+   "ys": 0.0164
+ },
+ {
+   "Num": 188,
+   "Number": 374,
+   "newClusters": 4,
+   "xs": -0.24263,
+   "ys": -0.21869
+ },
+ {
+   "Num": 121,
+   "Number": 406,
+   "newClusters": 4,
+   "xs": -0.28324,
+   "ys": -0.29889
+ },
+ {
+   "Num": 267,
+   "Number": 375,
+   "newClusters": 4,
+   "xs": -0.10985,
+   "ys": -0.06361
+ },
+ {
+   "Num": 63,
+   "Number": 387,
+   "newClusters": 4,
+   "xs": -0.06847,
+   "ys": -0.2107
+ },
+ {
+   "Num": 234,
+   "Number": 371,
+   "newClusters": 4,
+   "xs": -0.16016,
+   "ys": -0.00916
+ },
+ {
+   "Num": 235,
+   "Number": 402,
+   "newClusters": 4,
+   "xs": -0.3917,
+   "ys": -0.1474
+ },
+ {
+   "Num": 263,
+   "Number": 392,
+   "newClusters": 4,
+   "xs": -0.38166,
+   "ys": -0.09011
+ },
+ {
+   "Num": 192,
+   "Number": 400,
+   "newClusters": 4,
+   "xs": -0.35967,
+   "ys": -0.2749
+ },
+ {
+   "Num": 271,
+   "Number": 404,
+   "newClusters": 4,
+   "xs": -0.33327,
+   "ys": -0.31295
+ },
+ {
+   "Num": 62,
+   "Number": 379,
+   "newClusters": 4,
+   "xs": -0.04774,
+   "ys": -0.23253
+ },
+ {
+   "Num": 253,
+   "Number": 409,
+   "newClusters": 4,
+   "xs": -0.41141,
+   "ys": -0.22675
+ },
+ {
+   "Num": 22,
+   "Number": 382,
+   "newClusters": 4,
+   "xs": -0.11327,
+   "ys": -0.32869
+ },
+ {
+   "Num": 213,
+   "Number": 390,
+   "newClusters": 4,
+   "xs": -0.43153,
+   "ys": -0.12442
+ },
+ {
+   "Num": 41,
+   "Number": 384,
+   "newClusters": 4,
+   "xs": -0.04826,
+   "ys": -0.29192
+ },
+ {
+   "Num": 259,
+   "Number": 372,
+   "newClusters": 4,
+   "xs": -0.18115,
+   "ys": 0.05723
+ },
+ {
+   "Num": 69,
+   "Number": 380,
+   "newClusters": 4,
+   "xs": -0.02308,
+   "ys": -0.25981
+ },
+ {
+   "Num": 223,
+   "Number": 393,
+   "newClusters": 4,
+   "xs": 0.00255,
+   "ys": -0.13237
+ },
+ {
+   "Num": 275,
+   "Number": 403,
+   "newClusters": 4,
+   "xs": -0.4356,
+   "ys": -0.06671
+ },
+ {
+   "Num": 11,
+   "Number": 385,
+   "newClusters": 4,
+   "xs": 0.00503,
+   "ys": -0.20657
+ },
+ {
+   "Num": 144,
+   "Number": 399,
+   "newClusters": 4,
+   "xs": -0.20104,
+   "ys": -0.40302
+ },
+ {
+   "Num": 19,
+   "Number": 381,
+   "newClusters": 4,
+   "xs": -0.01031,
+   "ys": -0.28136
+ },
+ {
+   "Num": 214,
+   "Number": 376,
+   "newClusters": 4,
+   "xs": -0.00474,
+   "ys": -0.05176
+ },
+ {
+   "Num": 212,
+   "Number": 401,
+   "newClusters": 4,
+   "xs": -0.38425,
+   "ys": -0.35133
+ },
+ {
+   "Num": 25,
+   "Number": 386,
+   "newClusters": 4,
+   "xs": -0.01292,
+   "ys": -0.32655
+ },
+ {
+   "Num": 126,
+   "Number": 373,
+   "newClusters": 4,
+   "xs": -0.00616,
+   "ys": -0.00284
+ },
+ {
+   "Num": 0,
+   "Number": 383,
+   "newClusters": 4,
+   "xs": 0.03089,
+   "ys": -0.2711
+ },
+ {
+   "Num": 237,
+   "Number": 377,
+   "newClusters": 4,
+   "xs": -0.01528,
+   "ys": -0.37136
+ },
+ {
+   "Num": 133,
+   "Number": 370,
+   "newClusters": 4,
+   "xs": -0.22669,
+   "ys": 0.13464
+ },
+ {
+   "Num": 122,
+   "Number": 407,
+   "newClusters": 4,
+   "xs": -0.52476,
+   "ys": -0.12889
+ },
+ {
+   "Num": 207,
+   "Number": 396,
+   "newClusters": 4,
+   "xs": -0.52373,
+   "ys": -0.1049
+ },
+ {
+   "Num": 164,
+   "Number": 408,
+   "newClusters": 4,
+   "xs": 0.07383,
+   "ys": -0.22269
+ },
+ {
+   "Num": 128,
+   "Number": 395,
+   "newClusters": 4,
+   "xs": -0.47019,
+   "ys": 0.02559
+ },
+ {
+   "Num": 251,
+   "Number": 397,
+   "newClusters": 4,
+   "xs": -0.52392,
+   "ys": -0.06847
+ },
+ {
+   "Num": 392,
+   "Number": 369,
+   "newClusters": 4,
+   "xs": -0.40802,
+   "ys": 0.09889
+ },
+ {
+   "Num": 73,
+   "Number": 378,
+   "newClusters": 4,
+   "xs": -0.0612,
+   "ys": -0.44704
+ },
+ {
+   "Num": 111,
+   "Number": 391,
+   "newClusters": 4,
+   "xs": -0.51395,
+   "ys": -0.0052
+ },
+ {
+   "Num": 198,
+   "Number": 405,
+   "newClusters": 4,
+   "xs": -0.55385,
+   "ys": -0.24887
+ },
+ {
+   "Num": 157,
+   "Number": 398,
+   "newClusters": 4,
+   "xs": 0.05856,
+   "ys": 0.05152
+ },
+ {
+   "Num": 257,
+   "Number": 394,
+   "newClusters": 4,
+   "xs": -0.62793,
+   "ys": 0.01905
+ },
+ {
+   "Num": 102,
+   "Number": 389,
+   "newClusters": 4,
+   "xs": 0.00377,
+   "ys": -0.61065
+ },
+ {
+   "Num": 89,
+   "Number": 388,
+   "newClusters": 4,
+   "xs": -0.30878,
+   "ys": 0.34294
+ },
+ {
+   "Num": 163,
+   "Number": 29,
+   "newClusters": 5,
+   "xs": -0.10769,
+   "ys": 0.04947
+ },
+ {
+   "Num": 224,
+   "Number": 26,
+   "newClusters": 5,
+   "xs": -0.08607,
+   "ys": 0.09379
+ },
+ {
+   "Num": 278,
+   "Number": 106,
+   "newClusters": 5,
+   "xs": -0.04035,
+   "ys": 0.1112
+ },
+ {
+   "Num": 179,
+   "Number": 25,
+   "newClusters": 5,
+   "xs": -0.11947,
+   "ys": 0.13764
+ },
+ {
+   "Num": 117,
+   "Number": 101,
+   "newClusters": 5,
+   "xs": 0.01276,
+   "ys": 0.17067
+ },
+ {
+   "Num": 314,
+   "Number": 19,
+   "newClusters": 5,
+   "xs": -0.16459,
+   "ys": 0.17237
+ },
+ {
+   "Num": 414,
+   "Number": 72,
+   "newClusters": 5,
+   "xs": -0.09671,
+   "ys": 0.1979
+ },
+ {
+   "Num": 441,
+   "Number": 66,
+   "newClusters": 5,
+   "xs": -0.0388,
+   "ys": 0.19932
+ },
+ {
+   "Num": 262,
+   "Number": 31,
+   "newClusters": 5,
+   "xs": -0.20219,
+   "ys": 0.16471
+ },
+ {
+   "Num": 185,
+   "Number": 102,
+   "newClusters": 5,
+   "xs": 0.03245,
+   "ys": 0.19365
+ },
+ {
+   "Num": 377,
+   "Number": 88,
+   "newClusters": 5,
+   "xs": -0.11349,
+   "ys": 0.21108
+ },
+ {
+   "Num": 232,
+   "Number": 105,
+   "newClusters": 5,
+   "xs": 0.11823,
+   "ys": 0.16206
+ },
+ {
+   "Num": 277,
+   "Number": 110,
+   "newClusters": 5,
+   "xs": -0.13857,
+   "ys": 0.21908
+ },
+ {
+   "Num": 437,
+   "Number": 115,
+   "newClusters": 5,
+   "xs": -0.25856,
+   "ys": 0.15879
+ },
+ {
+   "Num": 344,
+   "Number": 100,
+   "newClusters": 5,
+   "xs": 0.05171,
+   "ys": 0.21215
+ },
+ {
+   "Num": 189,
+   "Number": 111,
+   "newClusters": 5,
+   "xs": -0.02124,
+   "ys": 0.23735
+ },
+ {
+   "Num": 429,
+   "Number": 116,
+   "newClusters": 5,
+   "xs": -0.21886,
+   "ys": 0.19975
+ },
+ {
+   "Num": 195,
+   "Number": 113,
+   "newClusters": 5,
+   "xs": -0.05307,
+   "ys": 0.24546
+ },
+ {
+   "Num": 217,
+   "Number": 112,
+   "newClusters": 5,
+   "xs": -0.09779,
+   "ys": 0.25823
+ },
+ {
+   "Num": 346,
+   "Number": 73,
+   "newClusters": 5,
+   "xs": -0.07121,
+   "ys": 0.27046
+ },
+ {
+   "Num": 240,
+   "Number": 30,
+   "newClusters": 5,
+   "xs": -0.24917,
+   "ys": 0.22439
+ },
+ {
+   "Num": 193,
+   "Number": 103,
+   "newClusters": 5,
+   "xs": -0.21049,
+   "ys": 0.24843
+ },
+ {
+   "Num": 330,
+   "Number": 83,
+   "newClusters": 5,
+   "xs": -0.04323,
+   "ys": 0.29247
+ },
+ {
+   "Num": 420,
+   "Number": 38,
+   "newClusters": 5,
+   "xs": 0.02634,
+   "ys": 0.28224
+ },
+ {
+   "Num": 246,
+   "Number": 122,
+   "newClusters": 5,
+   "xs": -0.32973,
+   "ys": 0.17833
+ },
+ {
+   "Num": 380,
+   "Number": 75,
+   "newClusters": 5,
+   "xs": -0.11967,
+   "ys": 0.29869
+ },
+ {
+   "Num": 228,
+   "Number": 28,
+   "newClusters": 5,
+   "xs": -0.29884,
+   "ys": 0.21908
+ },
+ {
+   "Num": 365,
+   "Number": 96,
+   "newClusters": 5,
+   "xs": 0.04667,
+   "ys": 0.29228
+ },
+ {
+   "Num": 446,
+   "Number": 64,
+   "newClusters": 5,
+   "xs": -0.06162,
+   "ys": 0.31336
+ },
+ {
+   "Num": 81,
+   "Number": 27,
+   "newClusters": 5,
+   "xs": -0.29118,
+   "ys": 0.23565
+ },
+ {
+   "Num": 79,
+   "Number": 114,
+   "newClusters": 5,
+   "xs": 0.06481,
+   "ys": 0.29676
+ },
+ {
+   "Num": 408,
+   "Number": 4,
+   "newClusters": 5,
+   "xs": 0.21048,
+   "ys": 0.20525
+ },
+ {
+   "Num": 168,
+   "Number": 23,
+   "newClusters": 5,
+   "xs": -0.22087,
+   "ys": 0.29177
+ },
+ {
+   "Num": 375,
+   "Number": 35,
+   "newClusters": 5,
+   "xs": -0.09644,
+   "ys": 0.32602
+ },
+ {
+   "Num": 425,
+   "Number": 86,
+   "newClusters": 5,
+   "xs": 0.136,
+   "ys": 0.28103
+ },
+ {
+   "Num": 276,
+   "Number": 108,
+   "newClusters": 5,
+   "xs": -0.19368,
+   "ys": 0.31487
+ },
+ {
+   "Num": 326,
+   "Number": 62,
+   "newClusters": 5,
+   "xs": 0.00911,
+   "ys": 0.33566
+ },
+ {
+   "Num": 289,
+   "Number": 74,
+   "newClusters": 5,
+   "xs": -0.14151,
+   "ys": 0.33716
+ },
+ {
+   "Num": 405,
+   "Number": 59,
+   "newClusters": 5,
+   "xs": -0.0581,
+   "ys": 0.34605
+ },
+ {
+   "Num": 396,
+   "Number": 79,
+   "newClusters": 5,
+   "xs": 0.07876,
+   "ys": 0.32757
+ },
+ {
+   "Num": 358,
+   "Number": 12,
+   "newClusters": 5,
+   "xs": -0.36504,
+   "ys": 0.22048
+ },
+ {
+   "Num": 293,
+   "Number": 7,
+   "newClusters": 5,
+   "xs": -0.27503,
+   "ys": 0.3003
+ },
+ {
+   "Num": 242,
+   "Number": 120,
+   "newClusters": 5,
+   "xs": -0.36281,
+   "ys": 0.23121
+ },
+ {
+   "Num": 254,
+   "Number": 22,
+   "newClusters": 5,
+   "xs": -0.23699,
+   "ys": 0.33194
+ },
+ {
+   "Num": 288,
+   "Number": 87,
+   "newClusters": 5,
+   "xs": 0.03642,
+   "ys": 0.35824
+ },
+ {
+   "Num": 317,
+   "Number": 84,
+   "newClusters": 5,
+   "xs": 0.00641,
+   "ys": 0.36492
+ },
+ {
+   "Num": 447,
+   "Number": 71,
+   "newClusters": 5,
+   "xs": -0.31544,
+   "ys": 0.29534
+ },
+ {
+   "Num": 424,
+   "Number": 77,
+   "newClusters": 5,
+   "xs": 0.16316,
+   "ys": 0.31286
+ },
+ {
+   "Num": 264,
+   "Number": 109,
+   "newClusters": 5,
+   "xs": -0.4432,
+   "ys": 0.15335
+ },
+ {
+   "Num": 294,
+   "Number": 9,
+   "newClusters": 5,
+   "xs": -0.02718,
+   "ys": 0.38302
+ },
+ {
+   "Num": 407,
+   "Number": 117,
+   "newClusters": 5,
+   "xs": -0.31818,
+   "ys": -0.41147
+ },
+ {
+   "Num": 248,
+   "Number": 21,
+   "newClusters": 5,
+   "xs": -0.27272,
+   "ys": 0.33412
+ },
+ {
+   "Num": 286,
+   "Number": 99,
+   "newClusters": 5,
+   "xs": -0.12878,
+   "ys": 0.38664
+ },
+ {
+   "Num": 419,
+   "Number": 69,
+   "newClusters": 5,
+   "xs": -0.103,
+   "ys": 0.39173
+ },
+ {
+   "Num": 399,
+   "Number": 16,
+   "newClusters": 5,
+   "xs": -0.18574,
+   "ys": 0.3774
+ },
+ {
+   "Num": 357,
+   "Number": 70,
+   "newClusters": 5,
+   "xs": -0.06196,
+   "ys": 0.39613
+ },
+ {
+   "Num": 385,
+   "Number": 41,
+   "newClusters": 5,
+   "xs": -0.26057,
+   "ys": 0.35133
+ },
+ {
+   "Num": 387,
+   "Number": 1,
+   "newClusters": 5,
+   "xs": 0.28068,
+   "ys": 0.23953
+ },
+ {
+   "Num": 435,
+   "Number": 46,
+   "newClusters": 5,
+   "xs": 0.11451,
+   "ys": 0.36476
+ },
+ {
+   "Num": 373,
+   "Number": 0,
+   "newClusters": 5,
+   "xs": 0.2746,
+   "ys": 0.25617
+ },
+ {
+   "Num": 64,
+   "Number": 104,
+   "newClusters": 5,
+   "xs": -0.35385,
+   "ys": 0.31166
+ },
+ {
+   "Num": 430,
+   "Number": 58,
+   "newClusters": 5,
+   "xs": 0.02213,
+   "ys": 0.40639
+ },
+ {
+   "Num": 337,
+   "Number": 60,
+   "newClusters": 5,
+   "xs": -0.0125,
+   "ys": 0.41151
+ },
+ {
+   "Num": 460,
+   "Number": 65,
+   "newClusters": 5,
+   "xs": 0.07975,
+   "ys": 0.39372
+ },
+ {
+   "Num": 444,
+   "Number": 80,
+   "newClusters": 5,
+   "xs": 0.18483,
+   "ys": 0.34694
+ },
+ {
+   "Num": 181,
+   "Number": 24,
+   "newClusters": 5,
+   "xs": -0.18907,
+   "ys": 0.4076
+ },
+ {
+   "Num": 413,
+   "Number": 95,
+   "newClusters": 5,
+   "xs": 0.10494,
+   "ys": 0.39713
+ },
+ {
+   "Num": 316,
+   "Number": 68,
+   "newClusters": 5,
+   "xs": -0.07514,
+   "ys": 0.42874
+ },
+ {
+   "Num": 366,
+   "Number": 15,
+   "newClusters": 5,
+   "xs": -0.44114,
+   "ys": 0.24681
+ },
+ {
+   "Num": 395,
+   "Number": 92,
+   "newClusters": 5,
+   "xs": -0.38635,
+   "ys": 0.30521
+ },
+ {
+   "Num": 463,
+   "Number": 81,
+   "newClusters": 5,
+   "xs": 0.04336,
+   "ys": 0.42015
+ },
+ {
+   "Num": 382,
+   "Number": 3,
+   "newClusters": 5,
+   "xs": 0.31045,
+   "ys": 0.2584
+ },
+ {
+   "Num": 391,
+   "Number": 8,
+   "newClusters": 5,
+   "xs": -0.17377,
+   "ys": 0.42637
+ },
+ {
+   "Num": 374,
+   "Number": 53,
+   "newClusters": 5,
+   "xs": -0.00261,
+   "ys": 0.4366
+ },
+ {
+   "Num": 325,
+   "Number": 52,
+   "newClusters": 5,
+   "xs": 0.15569,
+   "ys": 0.38988
+ },
+ {
+   "Num": 364,
+   "Number": 97,
+   "newClusters": 5,
+   "xs": -0.24137,
+   "ys": 0.40864
+ },
+ {
+   "Num": 404,
+   "Number": 32,
+   "newClusters": 5,
+   "xs": 0.28186,
+   "ys": 0.3209
+ },
+ {
+   "Num": 406,
+   "Number": 34,
+   "newClusters": 5,
+   "xs": -0.13363,
+   "ys": 0.45252
+ },
+ {
+   "Num": 360,
+   "Number": 63,
+   "newClusters": 5,
+   "xs": -0.06792,
+   "ys": 0.45865
+ },
+ {
+   "Num": 462,
+   "Number": 50,
+   "newClusters": 5,
+   "xs": 0.0684,
+   "ys": 0.44448
+ },
+ {
+   "Num": 194,
+   "Number": 121,
+   "newClusters": 5,
+   "xs": -0.32263,
+   "ys": 0.39162
+ },
+ {
+   "Num": 226,
+   "Number": 124,
+   "newClusters": 5,
+   "xs": -0.46107,
+   "ys": 0.27414
+ },
+ {
+   "Num": 290,
+   "Number": 57,
+   "newClusters": 5,
+   "xs": -0.03337,
+   "ys": 0.46558
+ },
+ {
+   "Num": 332,
+   "Number": 82,
+   "newClusters": 5,
+   "xs": 0.18007,
+   "ys": 0.41134
+ },
+ {
+   "Num": 166,
+   "Number": 123,
+   "newClusters": 5,
+   "xs": -0.50882,
+   "ys": 0.22557
+ },
+ {
+   "Num": 291,
+   "Number": 17,
+   "newClusters": 5,
+   "xs": -0.41635,
+   "ys": -0.44302
+ },
+ {
+   "Num": 451,
+   "Number": 37,
+   "newClusters": 5,
+   "xs": 0.02805,
+   "ys": 0.46631
+ },
+ {
+   "Num": 367,
+   "Number": 33,
+   "newClusters": 5,
+   "xs": 0.21299,
+   "ys": 0.39873
+ },
+ {
+   "Num": 454,
+   "Number": 43,
+   "newClusters": 5,
+   "xs": -0.26399,
+   "ys": 0.4397
+ },
+ {
+   "Num": 339,
+   "Number": 2,
+   "newClusters": 5,
+   "xs": 0.34437,
+   "ys": 0.30214
+ },
+ {
+   "Num": 322,
+   "Number": 93,
+   "newClusters": 5,
+   "xs": 0.09919,
+   "ys": 0.46371
+ },
+ {
+   "Num": 191,
+   "Number": 107,
+   "newClusters": 5,
+   "xs": -0.37607,
+   "ys": 0.39098
+ },
+ {
+   "Num": 390,
+   "Number": 56,
+   "newClusters": 5,
+   "xs": -0.11896,
+   "ys": 0.4883
+ },
+ {
+   "Num": 284,
+   "Number": 51,
+   "newClusters": 5,
+   "xs": -0.03412,
+   "ys": 0.49272
+ },
+ {
+   "Num": 297,
+   "Number": 45,
+   "newClusters": 5,
+   "xs": -0.22096,
+   "ys": 0.47129
+ },
+ {
+   "Num": 412,
+   "Number": 61,
+   "newClusters": 5,
+   "xs": -0.09961,
+   "ys": 0.49375
+ },
+ {
+   "Num": 305,
+   "Number": 78,
+   "newClusters": 5,
+   "xs": 0.13517,
+   "ys": 0.45893
+ },
+ {
+   "Num": 384,
+   "Number": 91,
+   "newClusters": 5,
+   "xs": 0.11988,
+   "ys": 0.46584
+ },
+ {
+   "Num": 347,
+   "Number": 36,
+   "newClusters": 5,
+   "xs": 0.05097,
+   "ys": 0.4931
+ },
+ {
+   "Num": 376,
+   "Number": 48,
+   "newClusters": 5,
+   "xs": 0.19529,
+   "ys": 0.44206
+ },
+ {
+   "Num": 310,
+   "Number": 119,
+   "newClusters": 5,
+   "xs": -0.44492,
+   "ys": 0.35599
+ },
+ {
+   "Num": 458,
+   "Number": 13,
+   "newClusters": 5,
+   "xs": -0.25287,
+   "ys": 0.47425
+ },
+ {
+   "Num": 321,
+   "Number": 14,
+   "newClusters": 5,
+   "xs": -0.08351,
+   "ys": 0.50817
+ },
+ {
+   "Num": 394,
+   "Number": 39,
+   "newClusters": 5,
+   "xs": -0.16387,
+   "ys": 0.49999
+ },
+ {
+   "Num": 442,
+   "Number": 76,
+   "newClusters": 5,
+   "xs": 0.15561,
+   "ys": 0.47727
+ },
+ {
+   "Num": 378,
+   "Number": 11,
+   "newClusters": 5,
+   "xs": -0.21351,
+   "ys": 0.50121
+ },
+ {
+   "Num": 457,
+   "Number": 10,
+   "newClusters": 5,
+   "xs": -0.00904,
+   "ys": 0.52201
+ },
+ {
+   "Num": 422,
+   "Number": 42,
+   "newClusters": 5,
+   "xs": -0.33395,
+   "ys": 0.45826
+ },
+ {
+   "Num": 287,
+   "Number": 49,
+   "newClusters": 5,
+   "xs": 0.04339,
+   "ys": 0.5166
+ },
+ {
+   "Num": 362,
+   "Number": 67,
+   "newClusters": 5,
+   "xs": -0.05766,
+   "ys": 0.52681
+ },
+ {
+   "Num": 304,
+   "Number": 47,
+   "newClusters": 5,
+   "xs": 0.23145,
+   "ys": 0.4519
+ },
+ {
+   "Num": 372,
+   "Number": 85,
+   "newClusters": 5,
+   "xs": 0.08739,
+   "ys": 0.52006
+ },
+ {
+   "Num": 409,
+   "Number": 40,
+   "newClusters": 5,
+   "xs": -0.09439,
+   "ys": 0.54114
+ },
+ {
+   "Num": 340,
+   "Number": 98,
+   "newClusters": 5,
+   "xs": -0.01899,
+   "ys": 0.54063
+ },
+ {
+   "Num": 465,
+   "Number": 94,
+   "newClusters": 5,
+   "xs": 0.17902,
+   "ys": 0.49204
+ },
+ {
+   "Num": 187,
+   "Number": 20,
+   "newClusters": 5,
+   "xs": -0.17079,
+   "ys": 0.53589
+ },
+ {
+   "Num": 439,
+   "Number": 55,
+   "newClusters": 5,
+   "xs": -0.28663,
+   "ys": 0.50997
+ },
+ {
+   "Num": 427,
+   "Number": 54,
+   "newClusters": 5,
+   "xs": -0.16238,
+   "ys": 0.54453
+ },
+ {
+   "Num": 428,
+   "Number": 90,
+   "newClusters": 5,
+   "xs": 0.12742,
+   "ys": 0.53807
+ },
+ {
+   "Num": 383,
+   "Number": 6,
+   "newClusters": 5,
+   "xs": 0.43491,
+   "ys": 0.35228
+ },
+ {
+   "Num": 319,
+   "Number": 5,
+   "newClusters": 5,
+   "xs": 0.35616,
+   "ys": 0.43653
+ },
+ {
+   "Num": 456,
+   "Number": 18,
+   "newClusters": 5,
+   "xs": 0.26755,
+   "ys": 0.50171
+ },
+ {
+   "Num": 453,
+   "Number": 44,
+   "newClusters": 5,
+   "xs": 0.13316,
+   "ys": 0.58332
+ },
+ {
+   "Num": 402,
+   "Number": 89,
+   "newClusters": 5,
+   "xs": 0.16917,
+   "ys": 0.58072
+ },
+ {
+   "Num": 282,
+   "Number": 118,
+   "newClusters": 5,
+   "xs": 0.34818,
+   "ys": 0.54068
+ },
+ {
+   "Num": 172,
+   "Number": 342,
+   "newClusters": 6,
+   "xs": 0.24728,
+   "ys": -0.35841
+ },
+ {
+   "Num": 97,
+   "Number": 343,
+   "newClusters": 6,
+   "xs": 0.25778,
+   "ys": -0.34849
+ },
+ {
+   "Num": 141,
+   "Number": 354,
+   "newClusters": 6,
+   "xs": 0.21092,
+   "ys": -0.34643
+ },
+ {
+   "Num": 415,
+   "Number": 315,
+   "newClusters": 6,
+   "xs": 0.27881,
+   "ys": -0.31928
+ },
+ {
+   "Num": 96,
+   "Number": 351,
+   "newClusters": 6,
+   "xs": 0.23473,
+   "ys": -0.40448
+ },
+ {
+   "Num": 85,
+   "Number": 345,
+   "newClusters": 6,
+   "xs": 0.29903,
+   "ys": -0.3437
+ },
+ {
+   "Num": 43,
+   "Number": 324,
+   "newClusters": 6,
+   "xs": 0.29178,
+   "ys": -0.3828
+ },
+ {
+   "Num": 90,
+   "Number": 348,
+   "newClusters": 6,
+   "xs": 0.21472,
+   "ys": -0.29473
+ },
+ {
+   "Num": 66,
+   "Number": 321,
+   "newClusters": 6,
+   "xs": 0.27529,
+   "ys": -0.2903
+ },
+ {
+   "Num": 67,
+   "Number": 326,
+   "newClusters": 6,
+   "xs": 0.17647,
+   "ys": -0.36894
+ },
+ {
+   "Num": 108,
+   "Number": 353,
+   "newClusters": 6,
+   "xs": 0.21307,
+   "ys": -0.42007
+ },
+ {
+   "Num": 88,
+   "Number": 347,
+   "newClusters": 6,
+   "xs": 0.31052,
+   "ys": -0.31103
+ },
+ {
+   "Num": 266,
+   "Number": 365,
+   "newClusters": 6,
+   "xs": 0.17002,
+   "ys": -0.33259
+ },
+ {
+   "Num": 101,
+   "Number": 352,
+   "newClusters": 6,
+   "xs": 0.16953,
+   "ys": -0.38505
+ },
+ {
+   "Num": 53,
+   "Number": 304,
+   "newClusters": 6,
+   "xs": 0.28593,
+   "ys": -0.43054
+ },
+ {
+   "Num": 209,
+   "Number": 361,
+   "newClusters": 6,
+   "xs": 0.25119,
+   "ys": -0.44038
+ },
+ {
+   "Num": 93,
+   "Number": 349,
+   "newClusters": 6,
+   "xs": 0.30294,
+   "ys": -0.27596
+ },
+ {
+   "Num": 315,
+   "Number": 312,
+   "newClusters": 6,
+   "xs": 0.34556,
+   "ys": -0.35564
+ },
+ {
+   "Num": 261,
+   "Number": 364,
+   "newClusters": 6,
+   "xs": 0.3019,
+   "ys": -0.43868
+ },
+ {
+   "Num": 94,
+   "Number": 350,
+   "newClusters": 6,
+   "xs": 0.21862,
+   "ys": -0.25555
+ },
+ {
+   "Num": 20,
+   "Number": 346,
+   "newClusters": 6,
+   "xs": 0.33694,
+   "ys": -0.40854
+ },
+ {
+   "Num": 403,
+   "Number": 314,
+   "newClusters": 6,
+   "xs": 0.33806,
+   "ys": -0.41998
+ },
+ {
+   "Num": 60,
+   "Number": 325,
+   "newClusters": 6,
+   "xs": 0.15981,
+   "ys": -0.42555
+ },
+ {
+   "Num": 40,
+   "Number": 335,
+   "newClusters": 6,
+   "xs": 0.12292,
+   "ys": -0.33877
+ },
+ {
+   "Num": 18,
+   "Number": 328,
+   "newClusters": 6,
+   "xs": 0.12827,
+   "ys": -0.4022
+ },
+ {
+   "Num": 300,
+   "Number": 309,
+   "newClusters": 6,
+   "xs": 0.37083,
+   "ys": -0.39824
+ },
+ {
+   "Num": 71,
+   "Number": 334,
+   "newClusters": 6,
+   "xs": 0.13726,
+   "ys": -0.26657
+ },
+ {
+   "Num": 143,
+   "Number": 355,
+   "newClusters": 6,
+   "xs": 0.10543,
+   "ys": -0.3748
+ },
+ {
+   "Num": 12,
+   "Number": 330,
+   "newClusters": 6,
+   "xs": 0.15144,
+   "ys": -0.46546
+ },
+ {
+   "Num": 68,
+   "Number": 331,
+   "newClusters": 6,
+   "xs": 0.11907,
+   "ys": -0.42703
+ },
+ {
+   "Num": 393,
+   "Number": 313,
+   "newClusters": 6,
+   "xs": 0.20984,
+   "ys": -0.49765
+ },
+ {
+   "Num": 245,
+   "Number": 338,
+   "newClusters": 6,
+   "xs": 0.38455,
+   "ys": -0.29393
+ },
+ {
+   "Num": 42,
+   "Number": 333,
+   "newClusters": 6,
+   "xs": 0.32376,
+   "ys": -0.22404
+ },
+ {
+   "Num": 21,
+   "Number": 329,
+   "newClusters": 6,
+   "xs": 0.16169,
+   "ys": -0.47808
+ },
+ {
+   "Num": 313,
+   "Number": 311,
+   "newClusters": 6,
+   "xs": 0.40051,
+   "ys": -0.33289
+ },
+ {
+   "Num": 26,
+   "Number": 327,
+   "newClusters": 6,
+   "xs": 0.13929,
+   "ys": -0.46694
+ },
+ {
+   "Num": 16,
+   "Number": 308,
+   "newClusters": 6,
+   "xs": 0.34662,
+   "ys": -0.22989
+ },
+ {
+   "Num": 279,
+   "Number": 341,
+   "newClusters": 6,
+   "xs": 0.34709,
+   "ys": -0.4799
+ },
+ {
+   "Num": 312,
+   "Number": 310,
+   "newClusters": 6,
+   "xs": 0.19389,
+   "ys": -0.50907
+ },
+ {
+   "Num": 124,
+   "Number": 367,
+   "newClusters": 6,
+   "xs": 0.17334,
+   "ys": -0.20113
+ },
+ {
+   "Num": 167,
+   "Number": 362,
+   "newClusters": 6,
+   "xs": 0.06838,
+   "ys": -0.3661
+ },
+ {
+   "Num": 46,
+   "Number": 303,
+   "newClusters": 6,
+   "xs": 0.14688,
+   "ys": -0.50499
+ },
+ {
+   "Num": 130,
+   "Number": 363,
+   "newClusters": 6,
+   "xs": 0.07254,
+   "ys": -0.40305
+ },
+ {
+   "Num": 200,
+   "Number": 360,
+   "newClusters": 6,
+   "xs": 0.40927,
+   "ys": -0.26551
+ },
+ {
+   "Num": 272,
+   "Number": 337,
+   "newClusters": 6,
+   "xs": 0.43105,
+   "ys": -0.32183
+ },
+ {
+   "Num": 174,
+   "Number": 339,
+   "newClusters": 6,
+   "xs": 0.32473,
+   "ys": -0.17351
+ },
+ {
+   "Num": 349,
+   "Number": 320,
+   "newClusters": 6,
+   "xs": 0.37412,
+   "ys": -0.20372
+ },
+ {
+   "Num": 29,
+   "Number": 306,
+   "newClusters": 6,
+   "xs": 0.39486,
+   "ys": -0.21791
+ },
+ {
+   "Num": 273,
+   "Number": 368,
+   "newClusters": 6,
+   "xs": 0.44426,
+   "ys": -0.40301
+ },
+ {
+   "Num": 52,
+   "Number": 323,
+   "newClusters": 6,
+   "xs": 0.45097,
+   "ys": -0.36929
+ },
+ {
+   "Num": 464,
+   "Number": 319,
+   "newClusters": 6,
+   "xs": 0.43189,
+   "ys": -0.26222
+ },
+ {
+   "Num": 45,
+   "Number": 305,
+   "newClusters": 6,
+   "xs": 0.45412,
+   "ys": -0.31053
+ },
+ {
+   "Num": 24,
+   "Number": 336,
+   "newClusters": 6,
+   "xs": 0.03628,
+   "ys": -0.32057
+ },
+ {
+   "Num": 58,
+   "Number": 332,
+   "newClusters": 6,
+   "xs": 0.36664,
+   "ys": -0.17282
+ },
+ {
+   "Num": 3,
+   "Number": 307,
+   "newClusters": 6,
+   "xs": 0.46928,
+   "ys": -0.28301
+ },
+ {
+   "Num": 440,
+   "Number": 317,
+   "newClusters": 6,
+   "xs": 0.44114,
+   "ys": -0.22039
+ },
+ {
+   "Num": 182,
+   "Number": 358,
+   "newClusters": 6,
+   "xs": 0.04237,
+   "ys": -0.47808
+ },
+ {
+   "Num": 127,
+   "Number": 344,
+   "newClusters": 6,
+   "xs": 0.12321,
+   "ys": -0.56412
+ },
+ {
+   "Num": 17,
+   "Number": 366,
+   "newClusters": 6,
+   "xs": 0.01102,
+   "ys": -0.41549
+ },
+ {
+   "Num": 270,
+   "Number": 356,
+   "newClusters": 6,
+   "xs": 0.07185,
+   "ys": -0.52382
+ },
+ {
+   "Num": 449,
+   "Number": 302,
+   "newClusters": 6,
+   "xs": 0.42204,
+   "ys": -0.17967
+ },
+ {
+   "Num": 258,
+   "Number": 359,
+   "newClusters": 6,
+   "xs": 0.0012,
+   "ys": -0.38437
+ },
+ {
+   "Num": 443,
+   "Number": 318,
+   "newClusters": 6,
+   "xs": 0.46515,
+   "ys": -0.23491
+ },
+ {
+   "Num": 343,
+   "Number": 301,
+   "newClusters": 6,
+   "xs": 0.39355,
+   "ys": -0.147
+ },
+ {
+   "Num": 416,
+   "Number": 316,
+   "newClusters": 6,
+   "xs": 0.37405,
+   "ys": -0.10507
+ },
+ {
+   "Num": 176,
+   "Number": 357,
+   "newClusters": 6,
+   "xs": -0.0263,
+   "ys": -0.42378
+ },
+ {
+   "Num": 13,
+   "Number": 340,
+   "newClusters": 6,
+   "xs": -0.05214,
+   "ys": -0.49228
+ },
+ {
+   "Num": 398,
+   "Number": 322,
+   "newClusters": 6,
+   "xs": -0.03616,
+   "ys": -0.57639
+ }
+]

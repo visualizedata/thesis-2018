@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Heebo:500|Merriweather+Sans|Mukta+Malar:500|Rubik" rel="stylesheet">
+<meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:600|Roboto|Roboto+Condensed|Cabin" rel="stylesheet">
+<!-- Example based on http://bl.ocks.org/mbostock/3887118 -->
+<!-- Tooltip example from http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html -->
+<!-- Coding style based on http://gist.github.com/mbostock/5977197 -->
+</head>
+<style>
+/*@import "compass/css3";*/
+
+.header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+}
+h2 {
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  font: 3em;
+}
+body {
+  font-family: 'Rubik', sans-serif;
+  font: 11px;
+  background: rgb(42, 42, 42);
+  padding: 1em; 
+}
+
+.dot, .dot2, .ClusterClass0, .ClusterClass1, .ClusterClass2, .ClusterClass3, .ClusterClass4, .ClusterClass5, .ClusterClass6, .ClusterClass7, .ClusterClass8 {
+  stroke: #2F4F4F;
+}
+
+#ClusterClass0, #ClusterClass1, #ClusterClass2, #ClusterClass3, #ClusterClass4, #ClusterClass5, #ClusterClass6, #ClusterClass7, #ClusterClass8 {
+  stroke: #2F4F4F;
+}
+
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+div.dvCluster {
+  width: .6;
+}
+.textHere, .boxDescription {
+    position: absolute;	
+    top: 0%;
+    right: 7%;
+    text-align: center;			
+    width: 85%;					
+    height: 11%;					
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    font: 1em;
+    background: rgba(245, 214, 205, .99);
+    z-index: 5;
+    border: 0px;
+}
+
+.wrapper {
+    display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  flex-flow: row wrap;
+  flex-direction: row;
+  font-weight: bold;
+  text-align: center;
+}
+
+.header {
+  background: rgb(42, 42, 42);
+  padding: 3em;
+  flex: 1 100%;
+}
+
+.footer {
+ background: rgb(42, 42, 42);
+  flex: 100%;
+}
+
+.main {
+  text-align: left;
+  flex: .6;
+  background: rgb(42, 42, 42);
+}
+
+.aside-1 {
+  background: rgb(42, 42, 42);
+  flex: .2; 
+  flex-direction: column;
+  display: flex;  
+  flex-flow: row wrap;
+  /*padding-top: 500px;*/
+  /*flex: .5;*/
+}
+
+.aside-2 {
+  background: rgb(42, 42, 42);
+  flex: .02;
+  flex-direction: column;
+  display: flex;  
+  flex-flow: row wrap;
+  
+}
+
+.button0 {
+  flex-grow: 1;
+  margin: 1.5em;
+  padding: 1.5em;
+  
+}
+
+.buttonX {
+  flex-grow: 1;
+  margin: 1.5em;
+  padding: 1.5em;
+  
+}
+
+.button1 {
+  flex-grow: 1;
+  margin: 2em;
+}
+.button2 {
+  flex-grow: 1;
+  margin: 2em;
+
+  
+}
+.button3 {
+  flex-grow: 1;
+  margin: 2em;
+
+  
+}
+.button4 {
+  flex-grow: 1;
+  margin: 2em;
+  
+}
+
+.button5 {
+  flex-grow: 1;
+  margin: 2em;
+
+}
+.button6 {
+  flex-grow: 1;
+  margin: 2em;
+
+  
+}
+.engagement {
+  flex-grow: 1;
+  margin: 2em;
+
+  
+}
+.enrollment {
+  flex-grow: 1;
+   margin: 2em;
+
+  
+}
+
+#plot {
+        width: 100%;
+        text-align: center;
+    }
+
+box.boxDescription {
+    position: absolute;	
+    top: 0%;
+    right: 7%;
+    text-align: center;			
+    width: 85%;					
+    height: 11%;					
+    font-family: 'Rubik', sans-serif;	
+    color: white;
+    z-index: 3;
+    border: 0px;	
+}
+
+
+@media all and (min-width: 300px) {
+  /*.aside { flex: 1 auto; }*/
+}
+
+@media all and (min-width: 700px) {
+  .main    { flex: .6; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+#overlay {
+    font-family: 'Rubik', sans-serif;
+    position: fixed; /* Sit on top of the page content */
+    display: visible; /* Hidden by default */
+    width: 85%; /* Full width (cover the whole page) */
+    height: 85%; /* Full height (cover the whole page) */
+    top: 10%; 
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    background-color: rgba(235,235,235,.95); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  transition: .3s ease;
+}
+
+
+    .explanationText {
+    text-align: left;
+    margin-top: 5%;
+    margin-left: 7%;
+    width: 45%;
+    padding: 0%;
+    position: absolute;
+    font-size: 1em;
+         }
+
+
+</style>
+
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+
+
+var margin = {top: (screen.height)/10, right: (screen.width)/15, bottom: (screen.height)/10, left: (screen.width)/10},
+    width = .6*(screen.width - margin.left - margin.right),
+    height = .7*(screen.height - margin.top - margin.bottom);
+
+var xValue = function(d) { return d.xVal;}, // data -> value
+    xEnd = function(d) { return d.spiralSevX;},
+    xCluster = function(d) { return d.equalX;},
+    xScatter = function(d) { return d.xs;},
+    xScale = d3.scaleLinear().range([0, width]), // value -> display
+    xMap = function(d) { return xScale(xValue(d));},
+    xMend = function(d) { return xScale(xEnd(d));},
+    xPlot = function(d) { return xScale(xScatter(d));},
+    xBig = function(d) { return xScale(xCluster(d));};
+   
+
+var yValue = function(d) { return d["yVal"];},
+    yEnd = function(d) { return d['spiralSevY'];},
+    yCluster = function(d) { return d['equalY'];},// data -> value
+    yScatter = function(d) { return d.ys;},
+    yScale = d3.scaleLinear().range([height, 0]), // value -> display
+    yMap = function(d) { return yScale(yValue(d));},
+    yMend = function(d) { return yScale(yEnd(d));},
+    yPlot = function(d) { return yScale(yScatter(d));},
+    yBig = function(d) { return yScale(yCluster(d));};// data -> display
+
+var cValue = function(d) { return d.newClusters;},
+     color = d3.scaleOrdinal(["rgb(117, 223, 233)", "rgb(158, 58, 156)","rgb(241, 244, 91)", "rgb(177, 62, 36)", "rgb(31, 92, 232)","rgb(220, 105, 200)", "rgb(210, 110, 50)"]);
+
+
+// add the tooltip area to the webpage
+// var tooltip = d3.select("body").append("div")
+//     .attr("class", "tooltip")
+//     .style("opacity", 0);
+    
+
+
+    
+// load data
+d3.csv("sunflwr.csv", function(error, data) {
+  // change string (from CSV) into number format
+  data.forEach(function(d) {
+    d.xVal = +d.xVal;
+    d["yVal"] = +d["yVal"];
+    d.spiralSevX = +d.spiralSevX;
+    d['spiralSevY'] = +d['spiralSevY'];
+    d.equalX = +d.equalX;
+    d['equalY'] = +d['equalY'];
+  });
+
+            
+BoxSpiral();
+
+function BoxSpiral() {
+
+d3.selectAll("input")
+    .on("click", changed);
+    
+function changed() {
+    if (this.value === "Box Spiral") newBoxSpiral();
+    else if (this.value === "Info") infoBox();
+    else if (this.value === "Spirals") NewDots();
+    else if (this.value === "Scatter") scatterPlot();
+    else if (this.value === "Cluster 5") Cluster5();
+            }
+
+  xScale.domain([d3.min(data, xValue)-1.2, d3.max(data, xValue)+1.2]);
+  yScale.domain([d3.min(data, yValue)+.13, d3.max(data, yValue)]);
+
+var svg = d3.select("div.dvCluster").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var div = d3.select(".header").append("div")
+            .attr("class", ".textHere")
+            .style("opacity", 0)
+            
+var dots = svg.selectAll()
+      .data(data)
+      .enter().append("rect")
+      .attr("rx", 6)
+      .attr("ry", 6)
+      .attr("x", xMap)
+      .attr("y", yMap)
+      .attr("width", 22)
+      .attr("height", 22)
+      .attr("class", "dot")
+      .attr("id", function(d) { return "ClusterClass"+d.newClusters;})
+      .style("fill", function(d) { return color(cValue(d));})
+      .on("mouseover", function(d) {
+            div.transition()		
+                .duration(200)		
+             div.html("In Cluster" + d.newClusters + "<<name>>, this cluster is awesome. Math & Science Teaching and Learning")	
+                .attr("class", ".boxDescription");	
+            })
+      .on("mouseout", function(d) {		
+            div.transition()		
+                .duration(500)		
+                .style("opacity", 1);	
+        });
+      
+
+
+function infoBox() {
+  on();
+}
+
+function scatterPlot() {
+  xScale.domain([d3.min(data, xScatter)-.7, d3.max(data, xScatter)+1]);
+  yScale.domain([d3.min(data, yScatter)-.5, d3.max(data, yScatter)]);
+  
+  var scatterDot = d3.selectAll('.dot')
+      .transition()
+      .duration(2000)
+      .attr("rx", 3)
+      .attr("ry", 3)
+      .attr("x", xPlot)
+      .attr("y", yPlot)
+      .attr("width", 15)
+      .attr("height", 15)
+      .attr("id", function(d) { return "ClusterClass"+d.newClusters;})
+      .style("opacity", 1)
+      .style("fill", function(d) { return color(cValue(d));});
+    
+    
+    
+  d3.selectAll("input")
+    .on("mouseover", scatterPlot)
+    .on("mouseout", scatterPlot);
+}
+
+
+function newBoxSpiral() {
+  xScale.domain([d3.min(data, xValue)-1.2, d3.max(data, xValue)+1.2]);
+  yScale.domain([d3.min(data, yValue)+.13, d3.max(data, yValue)]);
+  
+  
+    
+      dots.transition()
+      .duration(2000)
+      .attr("rx", 6)
+      .attr("ry", 6)
+      .attr("x", xMap)
+      .attr("y", yMap)
+      .attr("width", 25)
+      .attr("height", 25)
+      .attr('class', 'dot')
+      .style("opacity", 1)
+      .style("fill", function(d) { return color(cValue(d));});
+      
+    svg.append("text")
+        .attr("x", (width / 2))             
+        .attr("y", 0 - (margin.top / 2))
+        .attr("text-anchor", "middle")  
+        .style("font-size", "16px") 
+        .style('color', "white")
+        .style("text-decoration", "underline")  
+        .text("Value vs Date Graph");
+    
+  d3.selectAll("input")
+    .on("mouseover", newBoxSpiral)
+    .on("mouseout", newBoxSpiral);
+}
+   
+  
+ function NewDots() {
+      
+xScale.domain([d3.min(data, xEnd), d3.max(data, xEnd)]);
+yScale.domain([d3.min(data, yEnd), d3.max(data, yEnd)]);
+
+  var smallDot = d3.selectAll('.dot')
+      .transition()
+      .duration(2000)
+      .attr("rx", 3)
+      .attr("ry", 3)
+      .attr("x", xMend)
+      .attr("y", yMend)
+      .attr("width", 15)
+      .attr("height", 15)
+      .attr("id", function(d) { return "ClusterClass"+d.newClusters;})
+      .style("opacity", 1)
+      .style("fill", function(d) { return color(cValue(d));});
+  
+  d3.selectAll("input")
+    .on("mouseover", NewDots)
+    .on("mouseout", NewDots);
+   
+
+}
+
+function Cluster5() {
+      
+ xScale.domain([d3.min(data, xCluster)-60, d3.max(data, xCluster)+60]);
+  yScale.domain([d3.min(data, yCluster)-40, d3.max(data, yCluster)+40]);
+
+  var bSpiralDot = d3.selectAll('.dot')
+      .transition()
+      .duration(2000)
+      .style('opacity', function(d)  { if (d.newClusters != 5) {return 0}
+      ;})
+      .attr("rx", 3)
+      .attr("ry", 3)
+      .attr("x", xBig)
+      .attr("y", yBig)
+      .attr("width", 15)
+      .attr("height", 15)
+      .attr("id", function(d) { return "ClusterClass"+d.newClusters;})
+      .style("fill", function(d) { return color(cValue(d));});
+   
+d3.selectAll("input")
+    .on("mouseover", comparison)
+    .on("mouseout", backtoNormal);
+    
+function comparison() {
+    if (this.value == "Gender") gender();
+            }
+
+function backtoNormal() {
+    if (this.value == "Gender") Cluster5();
+}
+
+function gender() {
+  
+     var genderDot = d3.selectAll('#ClusterClass5')
+      .transition()
+      .duration(1000)
+      .attr("rx", 2)
+      .attr("ry", 2)
+    //   .attr('x', xGender)
+      .attr("x", function(d) { if (d.gender == 1) {return xScale(d['equalX']-45);} 
+      else {return xScale(d['equalX']+80)}
+      })
+      .attr("y", yBig)
+      .attr("width", 15)
+      .attr("height", 15)
+      .style("fill", function(d) { return color(cValue(d));})
+      .style('opacity', function(d)  { if (d.gender == 1) {return .5 };})
+}
+
+}
+
+
+}
+
+
+});
+</script>
+<container id="overlay"><div class="explanation"><h2>Professional Identity of Math & Science Educators</h2></div><p class="explanationText">The purpose of this study is to explore and visualize concepts of professional identity in math and science education to better help educators, educational administrators, educational non-profits, and policy makers create better solutions to teacher.  The study approaches this phenomenon in two parts. First, the study analyzes and interprets professional identity by using a data set from a science and math teaching fellowship program.  Second, the study will examine the effectiveness of using unsupervised machine learning (K-means clustering) and data visualization methods as a means to analyze written reflections of mid-career secondary educators who teach STEM courses.   Teachers in this study are participants in a fellowship program that encourages professional development and engagement. The sponsoring non-profit organization collected four years of data used for this study.  For the analysis, the data set was de-identified, and it includes biannual reflections required by the non-profit organization, text from open ended questions on their original application, enrollment rates in professional development workshops, engagement in professional activities, professional recognitions, program withdraw records, courses taught, gender, and race/ethnicity.</p></div><button class="oButton" onclick="off()">Enter</button></container>
+<div class="wrapper">
+  <header class="header"><div id="plot"></div></header>
+  <aside class="aside aside-1"><div class="button0"><label><input type="button" name="mode" value="Info" autofocus></label></div><div class="button1"><label><input type="button" name="mode" value="Box Spiral" autofocus></label></div><div class="buttonX"><label><input type="button" name="mode" value="Scatter" autofocus></label></div><div class="button2"><label><input type="button" name="mode" value="Spirals" autofocus></label></div><div class="button3"><label><input type="button" name="mode" value="Cluster 5" autofocus></label></div><div class="button5"><label><input type="button" name="gender" value="Gender" autofocus></label></div><div class="button6"><label><input type="button" name="status" value="Withdrawl" autofocus></label></div></aside>
+  <article class="main">
+    <div class='dvCluster'></div>  
+  </article>
+  <aside class="aside aside-2">Aside 2</aside>
+  <footer class="footer">Footer</footer>
+</div>
+
+</body>
+</html>

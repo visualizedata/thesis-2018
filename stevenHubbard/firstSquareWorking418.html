@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<!-- Example based on http://bl.ocks.org/mbostock/3887118 -->
+<!-- Tooltip example from http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html -->
+<!-- Coding style based on http://gist.github.com/mbostock/5977197 -->
+
+<style>
+body {
+  font: 11px sans-serif;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.dot, .dot2 {
+  stroke: #555;
+}
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+</style>
+<body>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+
+<script>
+var margin = {top: (screen.height)/9, right: (screen.width)/9, bottom: (screen.height)/9, left: (screen.width)/9},
+    width = screen.width - margin.left - margin.right,
+    height = screen.height - margin.top - margin.bottom;
+/* 
+ * value accessor - returns the value to encode for a given data object.
+ * scale - maps value to a visual display encoding, such as a pixel position.
+ * map function - maps from data value to display value
+ * axis - sets up axis
+ */ 
+// setup x 
+var xValue = function(d) { return d.xVal;}, // data -> value
+    xEnd = function(d) { return d.xs;},
+    xScale = d3.scale.linear().range([0, width]), // value -> display
+    xMap = function(d) { return xScale(xValue(d));},
+    xMend = function(d) { return xScale(xEnd(d));}, // data -> display
+    xAxis = d3.svg.axis().scale(xScale).orient("bottom");
+// setup y
+var yValue = function(d) { return d["yVal"];},
+    yEnd = function(d) { return d['ys'];},// data -> value
+    yScale = d3.scale.linear().range([height, 0]), // value -> display
+    yMap = function(d) { return yScale(yValue(d));},
+    yMend = function(d) { return yScale(yEnd(d));},// data -> display
+    yAxis = d3.svg.axis().scale(yScale).orient("left");
+// setup fill color
+var cValue = function(d) { return d.newClusters;},
+    color = d3.scale.category10();
+// add the graph canvas to the body of the webpage
+
+// add the tooltip area to the webpage
+var tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+// load data
+d3.csv("spiral2cluster.csv", function(error, data) {
+  // change string (from CSV) into number format
+  data.forEach(function(d) {
+    d.xVal = +d.xVal;
+    d["yVal"] = +d["yVal"];
+    d.xs = +d.xs;
+    d['ys'] = +d['ys'];
+//    console.log(d);
+  });
+  
+  // don't want dots overlapping axis, so add in buffer to data domain
+  xScale.domain([d3.min(data, xValue)-.15, d3.max(data, xValue)+.15]);
+  yScale.domain([d3.min(data, yValue)-.15, d3.max(data, yValue)+.15]);
+
+  
+  var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .on("click", function(d) {
+                
+                  transitionNewDots(d)
+            });
+            
+  svg.selectAll(".dot")
+      .data(data)
+      .enter().append("rect")
+      .attr("rx", 6)
+      .attr("ry", 6)
+      .attr("x", xMap)
+      .attr("y", yMap)
+      .attr("width", 30)
+      .attr("height", 30)
+      .attr("class", "dot")
+      .style("fill", function(d) { return color(cValue(d));})
+      .on("mouseover", function(d) {
+          tooltip.transition()
+               .duration(200)
+               .style("opacity", .9);
+          tooltip.html(d["point"] + "<br/> (" + xValue(d) 
+	        + ", " + yValue(d) + ")")
+               .style("left", (d3.event.pageX + 5) + "px")
+               .style("top", (d3.event.pageY - 28) + "px");
+      })
+      .on("mouseout", function(d) {
+          tooltip.transition()
+               .duration(500)
+               .style("opacity", 0);
+      });
+      
+  
+ function transitionNewDots() {
+      
+    xScale.domain([d3.min(data, xEnd)-.1, d3.max(data, xEnd)+.1]);
+  yScale.domain([d3.min(data, yEnd)-.1, d3.max(data, yEnd)+.1]);
+      
+        
+  svg.selectAll(".dot")
+      // .data(data)
+      // .enter()
+      .transition()
+      .duration(1750)
+      .attr("class", "dot2")
+      .attr("rx", 6)
+      .attr("ry", 6)
+      .attr("x", xMend)
+      .attr("y", yMend)
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", function(d) { return color(cValue(d));}) 
+      .on("mouseover", function(d) {
+          tooltip.transition()
+               .duration(200)
+               .style("opacity", .9);
+          tooltip.html(d["point"] + "<br/> (" + xMend(d) 
+	        + ", " + yMend(d) + ")")
+               .style("left", (d3.event.pageX + 5) + "px")
+               .style("top", (d3.event.pageY - 28) + "px");
+      })
+      .on("mouseout", function(d) {
+          tooltip.transition()
+               .duration(500)
+               .style("opacity", 0);
+      });
+  
+}
+
+});
+</script>
+</body>
+</html>

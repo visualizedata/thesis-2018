@@ -1,0 +1,362 @@
+/* Normalize */
+/*body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td, legend {
+	margin: 0;
+	padding: 0;
+}*/
+/*h1,h2,h3,h4,h5,h6 { font-family: Helvetica, Arial, sans-serif; font-weight: bold; font-size: 100%; }
+address, caption, cite, code, dfn, th, var { font-style: normal; font-weight: normal; }
+table { border-collapse: collapse; border-spacing: 0; }
+fieldset,img { border: 0; }
+caption,th { text-align: left; }*/
+/* @end Normalize */
+
+
+/* General */
+/*
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 1260px;
+}
+form {
+    font-size: 12px;
+}
+.clr { clear: both; }*/
+/* @end General */
+
+
+
+/* Filters */
+#filters {
+    height: 55px;
+}
+    #filters label {
+        font-size: 12px;
+        font-weight: bold;
+    }
+    #filters #leftfilters {
+        float: left;
+        width: 160px;
+        border-right: 1px solid #e0e0e0;
+        height: 90px;
+        margin-right: 20px;
+    }
+        #filters #stateselect {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+    #filters #rightfilters {
+        width: 763px;
+        float: left;
+    }
+/* @end Filters */    
+
+
+
+/* Progress loader */
+#loadprogress {
+    position: relative;
+    top: -350px;
+    left: 470px;
+    width: 100px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 1.4em;
+}
+/* @end Progress loader */
+
+
+/* Treemap */
+
+.node {
+    xborder: solid 1px #fff;
+    font: 10px Helvetica, sans-serif; /*child label font size, eg. category names*/
+    text-align: left;
+    vertical-align: middle;
+    line-height: 1.2em;
+    overflow: hidden;
+    position: absolute;
+    xcolor: #e0e0e0;
+    color:#bfbfbf;
+    cursor: default;
+    background: #fff; /*background of entire treemap that makes padding gutter color between shapes*/
+    text-shadow: 1px 0 0 #333, 0 -1px 0 #333, 0 1px 0 #333, -1px 0 0 #333;
+}
+
+.parent.node { /*the entire parent node itself*/
+    xborder: 1px solid #fff;
+    xbackground: #999;
+}
+.node .childlabel {
+    padding: 2px 0px 0 4px;
+}
+.parentlabel {
+    position: absolute;
+    text-transform: uppercase;
+    xfont-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 11px;
+    overflow: hidden;
+    color: #fff;
+    xopacity:0.8;
+    pointer-events: none;
+    display: none;
+    text-shadow: 1px 0 0 #333, 0 -1px 0 #333, 0 1px 0 #333, -1px 0 0 #333;
+    line-height: 12px
+}
+
+#occundefined {
+    background: #999;
+}
+.node.highlight {
+    background: #d1f77b;
+/*    background: black;*/
+    color: #c3c3c3;
+}
+.node.highlight:hover, .node:hover {
+    xbackground: #ff6 !important;
+    color:#fff;
+}
+.node.selected {
+    background: #ff6;
+    color: #000;
+}
+.parent.node:hover {
+    xbackground: #ff6;
+}
+/* @end Treemap */
+
+/* Brand Treemap */
+.brandMap .node {
+    xbackground:#666;
+    background:#fff;
+}
+.brandMap .parentlabel {
+    xcolor: #333;
+    xtext-shadow: 1px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff;
+}
+.brandMap .node.highlight:hover, 
+.brandMap .node:hover {
+    xcolor:#b0b0b0;
+}
+/* @end Brand Treemap */
+
+/* Movie by Category Treemap */
+.movCatMap .parentlabel {
+    font-size: 11px;
+}
+/* @end Movie By Category Treemap */
+
+
+
+/* Tooltip */
+#tooltip {
+    position: absolute;
+    width: 200px;
+    line-height: 1.1em;
+    height: auto;
+    xpadding: 8px;
+    background-color: #fff;
+    pointer-events: none;
+    font-size: 12px;
+    -webkit-box-shadow: 8px 8px 14px rgba(0,0,0,0.4);
+    -moz-box-shadow: 8px 8px 14px rgba(0,0,0,0.4);
+    box-shadow: 8px 8px 14px rgba(0,0,0,0.4);
+    xborder: 1px solid #ddd;
+    z-index: 9;
+}
+#tooltip.hidden {
+    display: none;
+}
+#tooltip #heading {
+    color:#fff;
+    padding:12px 10px;
+    background:#666;
+    line-height: 15px;
+}
+#tooltip #body {
+    padding:12px 10px;
+    line-height: 15px;
+}
+#tooltip #jobgroup {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    line-height: 18px;
+}
+#tooltip #catName {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom:5px;
+}
+#tooltip #jobtitle {
+    font-size:13px;
+    font-weight: bold;
+    xmargin-bottom: 8px;
+    text-transform: capitalize;
+}
+#tooltip #jobsalary {
+    font-size:13px;
+    margin-bottom: 5px;
+    xtext-align: center;
+}
+#tooltip #jobemptot {
+    xtext-align: center;
+}
+/* @end Tooltip */
+
+
+#credits { 
+    font-size: 10px; 
+    text-align: right;
+}
+
+#treeTabs {
+    font-family: 'akkuratbold';
+   float:left;
+   width:100%;
+   height: 60px;
+   background:#fff;
+   overflow:hidden;
+   position:relative;
+}
+#treeTabs ul {
+    clear:left;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   left:50%;
+   text-align:center;
+}
+#treeTabs ul li {
+    display:block;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   right:50%;
+}
+#treeTabs ul li a {
+    display:block;
+   xmargin:0 0 0 1px;
+   margin:10px 15px;
+   xpadding:10px 20px;
+   padding:5px 8px;
+   color:#929daf;
+   text-decoration:none;
+   line-height:1.3em;
+   font-size:14px;
+   font-family: 'akkurat3';
+}
+#treeTabs ul li a:hover {
+    outline: 0;
+    color: #333;
+    cursor: pointer !important;
+}
+#treeTabs ul li a.active,
+#treeTabs ul li a.active:hover {
+    color: #fff;
+    xbackground:#428BFF;
+    background:#333;
+    border-radius:1px;
+}
+
+#showTitles {margin-top:12px;margin-left:10px;}
+#showTitles label {color:#333;font-size:14px;font-family:'akkurat3';}
+#xshowTitles label:hover {color:#929daf;}
+
+
+/*#jobs {
+    display: none;
+  -webkit-animation-name: content;
+          animation-name: content;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+.tabs a[name="treeButton"]:clicked ~ .content > #jobs {
+  display: block;
+}
+@-webkit-keyframes #jobs {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes #jobs {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}*/
+
+/*.fade-in {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}*/
+
+/*#treemap {opacity:0;
+  transition:opacity 1s linear;*}
+
+  .fade-in {
+    opacity:1;
+  }*/
+
+#treeLeftCol {
+  margin-top:25px;
+}
+.desc {
+    float: left;
+    xwidth:240px;
+    xpadding: 10px 24px;
+  }
+ .desc p,
+ .desc li {
+    font-size: 0.75em;
+    color:#787878;
+  }
+  .desc h5 {
+    line-height: 22px;
+  }
+  #jobs {
+    float: left;
+    margin-bottom: 50px;
+  }

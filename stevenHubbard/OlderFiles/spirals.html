@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:600|Roboto|Roboto+Condensed|Cabin" rel="stylesheet">
+<!-- Example based on http://bl.ocks.org/mbostock/3887118 -->
+<!-- Tooltip example from http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html -->
+<!-- Coding style based on http://gist.github.com/mbostock/5977197 -->
+</head>
+<style>
+body {
+  font: 11px sans-serif;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.dot, .dot2, .ClusterClass0, .ClusterClass1, .ClusterClass2, .ClusterClass3, .ClusterClass4, .ClusterClass5, .Clusterclass6, .ClusterClass7, .ClusterClass8 {
+  stroke: #555;
+}
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+div.textHere {
+    position: absolute;	
+    top: 0%;
+    right: 7%;
+    text-align: center;			
+    width: 85%;					
+    height: 11%;					
+    padding: 1%;				
+    font: 1em Cabin, sans-serif;		
+    background: rgba(245, 214, 205, .99);
+    z-index: 3;
+    border: 0px;
+}
+</style>
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script>
+var margin = {top: (screen.height)/7, right: (screen.width)/7, bottom: (screen.height)/7, left: (screen.width)/7},
+    width = screen.width - margin.left - margin.right,
+    height = screen.height - margin.top - margin.bottom;
+/* 
+ * value accessor - returns the value to encode for a given data object.
+ * scale - maps value to a visual display encoding, such as a pixel position.
+ * map function - maps from data value to display value
+ * axis - sets up axis
+ */ 
+// setup x 
+var xValue = function(d) { return d.xVal;}, // data -> value
+    xEnd = function(d) { return d.spiral7X;},
+    xScale = d3.scaleLinear().range([0, width]), // value -> display
+    xMap = function(d) { return xScale(xValue(d));},
+    xMend = function(d) { return xScale(xEnd(d));}; // data -> display
+//    xAxis = d3.svg.axis().scale(xScale).orient("bottom");
+// setup y
+var yValue = function(d) { return d["yVal"];},
+    yEnd = function(d) { return d['spiralY'];},// data -> value
+    yScale = d3.scaleLinear().range([height, 0]), // value -> display
+    yMap = function(d) { return yScale(yValue(d));},
+    yMend = function(d) { return yScale(yEnd(d));};// data -> display
+//    yAxis = d3.svg.axis().scale(yScale).orient("left");
+// setup fill color
+var cValue = function(d) { return d.newClusters;},
+     color = d3.scaleOrdinal(['#5DA5DA', '#FAA43A', '#60BD68', '#F17CB0', '#B2912F', '#B276B2', '#DECF3F', '#F15854', '#4D4D4D']);
+    //color = d3.scaleOrdinal.range(['#4D4D4D','#5DA5DA', '#FAA43A', '#60BD68', '#F17CB0', '#B2912F', '#B276B2', '#DECF3F', '#F15854',]);
+
+// add the graph canvas to the body of the webpage
+
+// add the tooltip area to the webpage
+var tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+// load data
+d3.csv("newSpiral.csv", function(error, data) {
+  // change string (from CSV) into number format
+  data.forEach(function(d) {
+    d.xVal = +d.xVal;
+    d["yVal"] = +d["yVal"];
+    d.spiral7X = +d.spiral7X;
+    d['SpiralY'] = +d['spiralY'];
+//    console.log(d);
+  });
+  
+  // don't want dots overlapping axis, so add in buffer to data domain
+  xScale.domain([d3.min(data, xValue)-.15, d3.max(data, xValue)+.15]);
+  yScale.domain([d3.min(data, yValue)-.15, d3.max(data, yValue)+.15]);
+
+  
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .on("click", function(d) {
+            NewDots()
+            });
+            
+var dots = svg.selectAll()
+      .data(data)
+      .enter().append("rect")
+      .attr("rx", 6)
+      .attr("ry", 6)
+      .attr("x", xMap)
+      .attr("y", yMap)
+      .attr("width", 30)
+      .attr("height", 30)
+      .attr("class", "dot")
+      .style("fill", function(d) { return color(cValue(d));})
+      .on("mouseover", function(d) {
+          tooltip.transition()
+               .duration(200)
+               .style("opacity", .9);
+          tooltip.html(d["point"] + "<br/> (" + d['spiral7X'] 
+	        + ", " + d['spiralY'] + ")")
+               .style("left", (d3.event.pageX + 5) + "px")
+               .style("top", (d3.event.pageY - 28) + "px");
+      })
+      .on("mouseout", function(d) {
+          tooltip.transition()
+               .duration(500)
+               .style("opacity", 0);
+      });
+      
+  
+ function NewDots() {
+      
+xScale.domain([d3.min(data, xEnd)+1, d3.max(data, xEnd)-1]);
+yScale.domain([d3.min(data, yEnd)-12, d3.max(data, yEnd)+12]);
+
+  var smallDot = svg.selectAll(".dot")
+    .transition()
+      .duration(2000)
+      .attr("rx", 6)
+      .attr("ry", 6)
+      .attr("x", xMend)
+      .attr("y", yMend)
+      .attr("width", 5)
+      .attr("height", 5)
+      .attr("class", function(d) { return "ClusterClass"+d.newClusters;})
+      .style("fill", function(d) { return color(cValue(d));});
+    //   .on("mouseover", function(d) {
+    //       tooltip.transition()
+    //           .duration(200)
+    //           .style("opacity", .9);
+    //       tooltip.html(d["point"] + "<br/> (" + xMend(d) 
+	   //     + ", " + yMend(d) + ")")
+    //           .style("left", (d3.event.pageX + 5) + "px")
+    //           .style("top", (d3.event.pageY - 28) + "px");
+    //   })
+    //   .on("mouseout", function(d) {
+    //       tooltip.transition()
+    //           .duration(500)
+    //           .style("opacity", 0);
+    //   })
+    //   .classed("dot2", true);
+      
+    var scatterDot = d3.selectAll(".ClusterClass3")
+     scatterDot.on('click', function()
+     {
+         console.log("mario")
+        //  svg.selectAll('.dot2')
+        //     .style("opacity", 0)
+        // tooltip.transition()
+        //     .style("opacity", .1)
+        // zeroAppCluster.transition(d);
+        
+         });
+
+      
+function zeroAppCluster(d) {
+    svg.selectAll('.0C')
+        .style("opacity", 100);
+      
+      
+  }
+
+}
+
+
+});
+</script>
+</body>
+</html>
+
+
+<!--d3.selectAll(".0ClusterClass")-->
+<!--      .attr("rx", 6)-->
+<!--      .attr("ry", 6)-->
+<!--      .attr("x", xMend)-->
+<!--      .attr("y", yMend)-->
+<!--      .attr("width", 26)-->
+<!--      .attr("height", 26)-->
+<!--      .style("fill", function(d) { return color(cValue(d));}) -->
+<!--      .on("mouseover", function(d) {div.transition()		-->
+<!--                .duration(200)		-->
+<!--                .style("opacity", .9);-->
+<!--            div.html("In the <span>mean</span> years of school for females who are 25 years and older is  years. For males, the <span>mean</span> years of schooling is  years.</br> For female children, the <span>expected</span> years of schooling is  years. For male children, the <span>expected</span> years of schooling is  years.")	-->
+<!--                // .style("left", (.09*w)+"px")		-->
+<!--                // .style("top", (.98*h)+"px")-->
+<!--                .attr("class", "textHere");-->
+<!--            })-->
+<!--      .on("mouseout", function(d) {-->
+<!--          tooltip.transition()-->
+<!--               .duration(500)-->
+<!--               .style("opacity", 0);-->
+<!--      })-->
+<!--      .on('click', function(d){-->
+<!--          if (d.newClusters === "0") zeroAppCluster();-->
+          
+<!--      });-->

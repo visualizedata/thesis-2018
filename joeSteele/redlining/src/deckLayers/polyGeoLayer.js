@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
-import DeckGL, {GeoJsonLayer} from 'deck.gl';
-import {MapMode, DOT_COLORS, incMax, incMin, houseMin} from '../constants/map_constants';
+import DeckGL, {GeoJsonLayer, ScatterplotLayer, PolygonLayer} from 'deck.gl';
+import {MapMode, DOT_COLORS, incMax, incMin, houseMin, OLD_COLORS, HOLC_COLORS} from '../constants/map_constants';
 import * as d3 from "d3-ease";
 
 
@@ -14,6 +14,8 @@ const LIGHT_SETTINGS = {
 };
 
 const elevationScale = {min: 0.01, max: 1};
+const radiusScale = {min : 1, max: 10};
+
 
 
 export default class PolyOverlay extends PureComponent{
@@ -23,14 +25,19 @@ export default class PolyOverlay extends PureComponent{
 
         this.startAnimationTimer = null;
         this.intervalTimer = null;
+        this.reverse = false;
 
         this.state = {
-            elevationScale: elevationScale.min
+            elevationScale: elevationScale.min,
+            radiusScale: radiusScale.min,
+            holcColor: HOLC_COLORS.A,
+            hoveredObject: null
         };
 
         //bind here for convenience
         this._startAnimate = this._startAnimate.bind(this);
         this._animateHeight = this._animateHeight.bind(this);
+        this._animateRadius = this._animateRadius.bind(this);
 
     }
 
@@ -38,9 +45,16 @@ export default class PolyOverlay extends PureComponent{
         this._animate();
     }
 
+    getDerivedStateFromProps(nextProps, prevState){
+        if (nextProps.props.mapMode != prevState.props.props.mapMode){
+            this.setState({hoveredObject: null});
+        }
+    }
+
 
     //unsafe, should look for alternative
     componentWillReceiveProps(nextProps) {
+        // if(this.props.props.mapMode == MapMode.POLYINC || this.props.props.mapMode == MapMode.POLYHS){}
         if (nextProps.props.mapMode != this.props.props.mapMode) {
             this.setState({elevationScale: elevationScale.min});
             this._animate();
@@ -53,12 +67,17 @@ export default class PolyOverlay extends PureComponent{
 
     _animate() {
         this._stopAnimate();
+        if(this.props.props.mapMode == MapMode.POLYINC || this.props.props.mapMode == MapMode.POLYHS){
+            this.startAnimationTimer = window.setTimeout(this._startAnimate, 3000);
+        } else {
+            this.startAnimationTimer = window.setTimeout(this._startAnimate, 500);
 
-        this.startAnimationTimer = window.setTimeout(this._startAnimate, 1000);
+        }
     }
 
     _startAnimate() {
         this.intervalTimer = window.setInterval(this._animateHeight, 20);
+        this.intervalTimer = window.setInterval(this._animateRadius, 5);
     }
 
     _stopAnimate() {
@@ -70,35 +89,118 @@ export default class PolyOverlay extends PureComponent{
         if (this.state.elevationScale > elevationScale.max) {
             this._stopAnimate();
         } else {
-            this.setState({elevationScale: this.state.elevationScale + 0.005});
+            this.setState({elevationScale: this.state.elevationScale + 0.0025});
         }
     }
 
-    _renderTooltip() {
+    _animateRadius() {
+        if (this.state.radiusScale > radiusScale.max) {
+            this._stopAnimate();
+        } else {
+            this.setState({radiusScale: this.state.radiusScale + 0.025});
+        }
+    }
+
+    _onNeighborHover({x, y, object}) {
+        this.setState({x, y, hoveredObject: object});
+    }
+
+    _onHolcHover({object}) {
+        this.setState({holcColor: HOLC_COLORS[object.properties.holc_grade]});
+        // this.setState({x, y, hoveredObject: object});
+    }
+
+    _renderNeighborTooltip() {
         const {x, y, hoveredObject} = this.state;
 
-        if (!hoveredObject) {
+        if (!hoveredObject || this.props.props.mapMode != MapMode.DOTS) {
             return null;
         }
-        const lat = hoveredObject.centroid[1];
-        const lng = hoveredObject.centroid[0];
-        const count = hoveredObject.points.length;
+
+        const neighborhood = hoveredObject.properties.Name;
 
         return (
             <div className="tooltip"
                  style={{left: x, top: y}}>
-                <div>{`latitude: ${Number.isFinite(lat) ? lat.toFixed(6) : ''}`}</div>
-                <div>{`longitude: ${Number.isFinite(lng) ? lng.toFixed(6) : ''}`}</div>
-                <div>{`${count} Accidents`}</div>
+                <div>{neighborhood}</div>
+            </div>
+        );
+    }
+
+    _renderHolcTooltip() {
+        const {x, y, hoveredObject} = this.state;
+
+        if (!hoveredObject || this.props.props.mapMode != MapMode.OLD) {
+            return null;
+        }
+
+        const grade = hoveredObject.properties.holc_id;
+
+        return (
+            <div className="tooltip"
+                 style={{left: x, top: y}}>
+                <div>{`HOLC ID: ${grade}`}</div>
             </div>
         );
     }
 
 
     render(){
-        const { polygons, mapMode, mapViewState} = this.props.props;
+        const {mapViewState, popDots, oldDots, mapMode, polygons, holc, phPolygons} = this.props.props;
+        let colors = DOT_COLORS;
+        const holcColor = this.state.holcColor;
         const { width, height } = this.props.state;
-        const layer = new GeoJsonLayer({
+
+        const scatterLayer = new ScatterplotLayer({
+            id: 'dot-plot',
+            data: (mapMode == MapMode.DOTS ? popDots : oldDots),
+            visible: (mapMode == MapMode.DOTS || mapMode == MapMode.OLD),
+            radiusScale: this.state.radiusScale,
+            getPosition: d => [d[0], d[1], -1],
+            getColor: d => colors[d[2]],
+            getRadius: d => 1,
+            updateTriggers: {
+                getColor: colors,
+            },
+            transitions: {
+                getPosition: {
+                    duration: 4000,
+                    easing: d3.easeCubicInOut
+                },
+                getColor: 4000
+            }
+        });
+
+        const phillyLayer = new GeoJsonLayer({
+            id: 'philly-map',
+            data: phPolygons,
+            visible: mapMode == MapMode.DOTS,
+            opacity: 0,
+            stroked: true,
+            filled: true,
+            pickable: true,
+            wireframe: true,
+            onHover: this._onNeighborHover.bind(this),
+            autoHighlight: true,
+            fp64: false,
+        });
+
+        const holcLayer = new GeoJsonLayer({
+            id: 'holc-map',
+            data: holc,
+            visible: mapMode == MapMode.OLD,
+            opacity: 0,
+            stroked: true,
+            filled: true,
+            pickable: true,
+            onHover: this._onHolcHover.bind(this),
+            highlightColor: holcColor,
+            autoHighlight: true,
+            fp64: false,
+        });
+
+
+        const censusLayer = new GeoJsonLayer({
             id: 'poly-map',
             data: polygons,
             visible: (mapMode == MapMode.POLYHS || mapMode == MapMode.POLYINC),
@@ -120,7 +222,7 @@ export default class PolyOverlay extends PureComponent{
             },
             transitions:{
                 getElevation: {
-                    duration: 2000,
+                    duration: 4000,
                     easing: d3.easeCubicInOut,
                     onStart: evt => console.log('position transition started', evt)}
             },
@@ -128,13 +230,16 @@ export default class PolyOverlay extends PureComponent{
         });
 
         return (
-            <DeckGL
-                id="poly-overlay"
-                width={width}
-                height={height}
-                {...mapViewState}
-                layers={[layer]}
-            />
+            <div>
+                {this._renderNeighborTooltip()}
+                    <DeckGL
+                    id="overlays"
+                    width={width}
+                    height={height}
+                    {...mapViewState}
+                    layers={[ censusLayer, scatterLayer, holcLayer, phillyLayer]}
+                />
+            </div>
 
         )
     }

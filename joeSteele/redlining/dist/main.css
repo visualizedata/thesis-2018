@@ -1,5 +1,6 @@
 html {
     overflow-y: scroll;
+    cursor: default;
 }
 
 body {
@@ -28,13 +29,32 @@ body {
 
 h1, h2, h3{
     font-family: Bebas;
+    color: #000;
 }
 p {
     font-family: Garamond;
+    color: #000;
 }
 
 /*.control-panel:hover {*/
     /*width: 33%;*/
 /*}*/
+
+.tooltip {
+    position: absolute;
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    max-width: 300px;
+    font-size: 10px;
+    z-index: 9;
+    opacity: 0.45;
+    pointer-events: none
+}
+
+.btn {
+    font-family: Garamond;
+}
+
 
 
