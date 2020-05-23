@@ -423,7 +423,7 @@ function renderlinechart(data) {
         .attr("width", width)
         .attr("height", height)
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-        .on("click", click)
+        .on("mousemove", click)
         .on("touchmove", click)
         // .on('mouseover', hover)
 
@@ -547,7 +547,7 @@ d3.csv("data/malawi_landsat_5_7_8_1990-2018.csv").then(function(data) {
             return "Drought"
         }
         else if (dateMarker == 01) {
-            return "Drought"
+            return "Drought/Food Crisis"
         }
         else { return "" }
     }
@@ -579,9 +579,9 @@ d3.csv("data/malawi_landsat_5_7_8_1990-2018.csv").then(function(data) {
         var agriculture = []
 
         function productivityAnnotations(dateMarker) {
-            if (dateMarker == 2001) {
+            if (dateMarker == 1998) {
                 return "Starter Pack Subsidy Program"
-            }
+            } 
             else { return "" }
         }
 
@@ -589,6 +589,8 @@ d3.csv("data/malawi_landsat_5_7_8_1990-2018.csv").then(function(data) {
         function gdpAnnotations(dateMarker) {
             if (dateMarker == 2005) {
                 return "FISP Agricultural Subsidy"
+            } else if (dateMarker == 2010){
+                return "Macroeconomic Crisis"
             }
             else { return "" }
         }
